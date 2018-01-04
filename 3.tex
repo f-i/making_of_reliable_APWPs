@@ -62,7 +62,7 @@ For poor consistency of data, it is potentially because of different
 inclinations or declinations. The first thing we should consider about is
 their lithology. We want to check if the sample rock are igneous or
 sedimentary, because sediment compaction can result in anomalously shallow
-inclinations~\citep{T17}. In addition, we also can check if the rock are
+inclinations~\cite{T16}. In addition, we also can check if the rock are
 redbeds or non-redbeds. Although whether redbeds record a detrital signal or a
 later Chemical Remanent Magnetization (CRM) is still somewhat controversial,
 both sedimentary rocks and redbeds could lead to inconsistency in direction
@@ -131,7 +131,6 @@ reconstructing a `true' APWP, and for most studies after a basic filtering of
 
 papers in \LaTeX. The layout design for \textit{Geophysical Journal
 International} has been implemented as a \LaTeXe\ class file derived from the MN
-manual~\cite{la}. Commands which differ from the standard \LaTeX\ interface, or
 from the earlier version is provided by Kopka \& Daly \shortcite{kd}.
 
 \subsection{General style issues}
@@ -166,7 +165,6 @@ used with the GJI style:
 
 In \LaTeX2e the use of postscript fonts and the inclusion of non-standard
 options is carried out through the \verb"\usepackage" command, rather than as
-options as in earlier versions.  Thus the Times font can be used for text by
 including
 \begin{verbatim}
 \usepackage{times}
@@ -176,7 +174,6 @@ on the line immediately after the \verb"\documentclass". If necessary,
 
 \verb"lfonts.tex" that is distributed as part of \LaTeX. If you have access to
 the source file for this guide, \verb"gjilguid2e.tex", attempt to typeset it.
-If you find font problems you might investigate whether a non-standard version
 of \verb"lfonts.tex" has been installed in your system.
 
 \subsection{Additional document class options}\label{classoptions}
@@ -204,16 +201,8 @@ The following additional class options are available with the GJI style:
 
 \subsection{Landscape pages}
 
-The following procedure can be used to produce such pages.
 \begin{enumerate}
   \item Use the \verb"table*" or \verb"figure*" environments in your
-        document to create the space for your table or figure on the
-        appropriate page of your document. Include an empty
-        caption in this environment to ensure the correct
-        numbering of subsequent tables and figures. For instance, the
-        following code prints a page with the running head, a message
-        half way down and the figure number towards the bottom. If you
-        are including a plate, the running headline is different, and you
         need to key in the three lines which are marked with \verb"\% **",
         with an appropriate headline.
 \begin{verbatim}
@@ -277,7 +266,6 @@ includes the following features.
   \item An \verb"abstract" environment which produces the GJI style of
         Summary
   \item A \verb"keywords" environment and a \verb"\nokeywords" command;
-  \item Use of the \verb"description" environment for unnumbered lists.
   \item A starred version of the \verb"\caption" command to produce
         captions for continued figures or tables.
  \end{enumerate}
@@ -288,11 +276,7 @@ in your document, do not process it with a standard \LaTeX\ style file.
 
 must be a single line ($\leqslant 45$ characters). Moreover, the main
 heading can also incorporate new line commands (e.g. \verb"\\") but
-these are not acceptable in a running headline. To enable you to
-specify an alternative short title and an alternative short author's
 name, the standard \verb"\title" and \verb"\author" commands have been
-extended to take an optional argument to be used as the running
-headline. The running headlines for this guide were produced using the
 following code:
 \begin{verbatim}
 \title[Geophys.\ J.\ Int.:
@@ -314,13 +298,9 @@ The \verb"\thanks" note produces a footnote to the title or author.
 
 \subsection{Key words and Summary}
 
-At the beginning of your article, the title should be generated in the
 usual way using the \verb"\maketitle" command. Immediately following
-the title you should include a Summary followed by a list of key
 words. The summary should be enclosed within an \verb"summary"
-environment, followed immediately by the key words enclosed in a
 \verb"keywords" environment. For example, the titles for this guide
-were produced by the following source:
 \begin{verbatim}
 \maketitle
 \begin{summary}
@@ -338,12 +318,9 @@ were produced by the following source:
   :
 \end{verbatim}
 The heading `\textbf{Key words}' is included automatically and the key words are
-followed by vertical space. If, for any reason, there are no key words, you
 should insert the \verb"\nokeywords" command immediately after the end of the
 \verb"summary" or \verb"abstract" environment. This ensures that the vertical
 space after the abstract and/or title is correct and that any \verb"thanks"
-acknowledgments are correctly included at the bottom of the first column. For
-example,
 \begin{verbatim}
 \maketitle
 \begin{abstract}
@@ -371,7 +348,6 @@ The enumerated list numbers each list item with roman numerals:
   \item second item
   \item third item
 \end{enumerate}
-Alternative numbering styles can be achieved by inserting a redefinition of the
 number labelling command after the \verb"\begin{enumerate}". For example, the
 list
 \begin{enumerate}
@@ -407,9 +383,6 @@ was produced by,
 
 \subsection{Captions for continued figures and tables}
 
-The \verb"\caption*" command may be used to produce a caption with the same
-number as the previous caption (for the corresponding type of float). For
-instance, if a very large table does not fit on one page, it must be split into
 two floats; the second float should use the \verb"caption*" command with a
 suitable caption:
 \begin{verbatim}
@@ -428,9 +401,6 @@ suitable caption:
 
 \section[]{Some guidelines for using\\* standard facilities}
 
-The following notes may help you achieve the best effects with the GJI style
-file.
-
 \subsection{Sections}
 
 \LaTeX\ provides five levels of section headings and they are all defined in the
@@ -444,7 +414,6 @@ GJI style file:
 \end{description}
 
 Section numbers are given for section, subsection, subsubsection and paragraph
-headings. Section headings are automatically converted to upper case; if you
 need any other style, see the example in Section~\ref{headings}.
 
 If you find your section/subsection (etc.)\ headings are wrapping round, you
@@ -474,7 +443,6 @@ produced using the following commands:
 \end{figure}
 \end{verbatim}
 
-Where a figure needs to span two-columns the \verb"figure*" environment
 should be used as in  Fig.~\ref{twocol-figure} using the following commands
 \begin{verbatim}
 \begin{figure*}
@@ -513,7 +481,6 @@ following commands.
 
  \medskip
  The ICB represents the boundary between the inner and outer cores and
-the CMB the boundary between the core and the mantle.  Velocities with
 subscript $-$ are evaluated just below the discontinuity and
 those with subscript $+$ are evaluated just above the discontinuity.
 \end{table}
@@ -564,7 +531,6 @@ commands should {\em not\/} be used. Similarly, the commands
 \subsubsection{Displayed mathematics}
 
 provided that you use the \LaTeX\ standard of open and closed square brackets
-as delimiters. The equation
 \[
  \sum_{i=1}^p \lambda_i =
 {\mathrm{trace}}(\mathbf{S})
@@ -576,7 +542,6 @@ was typeset in the GJI style using the commands
 {\mathrm{trace}}(\mathbf{S})
 \]
 \end{verbatim}
-This correct positioning should be compared with that for the following centred
 equation, \[ \alpha_{j+1} > \bar{\alpha}+ks_{\alpha} \]
 which was (wrongly) typeset using double dollars as follows:
 \begin{verbatim}
@@ -587,7 +552,6 @@ Note that \verb"\mathrm" will produce a roman character in math mode.
 For numbered equations use the \verb"equation" and \verb"eqnarray" environments
 which will give the correct positioning. If equation numbering by section is
 required the command \verb"\eqsecnum" should appear after \verb"begin{document}"
-at the head of the file.
 
 \subsubsection{Bold math italic}\label{boldmathitalic}
 
@@ -626,8 +590,6 @@ to typeset the equation \[ \mitbf{{\alpha_{\mu}}} = \mitbf{\Theta} \alpha. \]
 
 \subsection{Points to note in formatting text}\label{formtext}
 
-The following characters must be preceded by a backslash or \LaTeX\ will
-interpret them as commands:
 \begin{quote}
 \$ \& \% \# \_ \{ and \}
 \end{quote}
@@ -639,22 +601,13 @@ must be typed
 \end{center}
 
 \LaTeX\ interprets all double quotes as closing quotes. Therefore quotation
-marks must be typed as pairs of opening and closing single quotes, for example,
 \texttt{``quoted text.''}
 
-Note that \LaTeX\ will not recognize greater than or less than symbols unless
 they are typed within math commands (\verb"$>$" or \verb"$<$").
 
 \subsubsection{Special symbols}
 
 The macros for the special symbols in Tables~\ref{mathmode} and~\ref{anymode}
-have been taken from the Springer Verlag `Astronomy and Astrophysics' design,
-with their permission. They are directly compatible and use the same macro
-names. These symbols will work in all text sizes, but are only guaranteed to
-work in text and displaystyles. Some of the symbols will not get any smaller
-when they are used in sub- or superscripts, and will therefore be displayed at
-the wrong size. Don't worry about this as the typesetter will be able to sort
-this out.
 %
 \begin{table*}
 \begin{minipage}{106mm}
@@ -723,19 +676,12 @@ approach uses the \verb"\begin{thebibliography}{}" and
 The second approach uses a simplified scheme using \verb"\begin{references}" and
 \verb"\end{references}" commands.
 
-References to published literature should be quoted in text by author and date;
 e.g. Draine (1978) or (Begelman, Blandford \& Rees 1984). Where more than one
 reference is cited having the same author$(s)$ and date, the letters a,b,c,
 \ldots\ should follow the date; e.g.\ Smith (1988a), Smith (1988b), etc. The
-first time you introduce a three-author paper, you should list all three authors
-at the first citation, and thereafter, use et al.
 
 \subsubsection{Biblography References in the text}
 
-References in the text are given by author and date, and, whichever method is
-used to produce the bibliography, the references in the text are done in the
-same way. Each bibliographical entry has a key, which is assigned by the author
-and used to refer to that entry in the text. There is one form of citation
 \textendash{} \verb"\cite{key}" \textendash{} to produce the author and date,
 and another form \textendash{} \verb"\shortcite{key}" \textendash{} which
 produces the date only. Thus, Rutherford \& Hawker \shortcite{rh} is produced by
@@ -749,17 +695,11 @@ while~\cite{hi} is produced by
 
 \subsubsection{The bibliography}
 
-The following listing shows some references prepared in the style of
-the journal; the code produces the references at the end of this guide.
-The following rules apply for the ordering of your references:
 \begin{enumerate}
   \item if an author has written several papers, some with other authors, the
-        rule is that the single-author papers precede the two-author papers,
         which, in turn, precede the multi-author papers;
   \item within the two-author paper citations, the order is determined by the
-        second author's surname, regardless of date;
   \item within the multi-author paper citations, the order is chronological,
-        regardless of author's surnames.
 \end{enumerate}
 %
 \begin{verbatim}
@@ -781,7 +721,7 @@ The following rules apply for the ordering of your references:
     in \textit{Solved and Unsolved Problems},
     pp. 277-296, ed. Cazenave A., Reidel,
     Dordrecht.
-  \bibitem[\protect\citename{Lamport }1986]{la}
+  \bibitem[\protect\citename{Lamport }1986]{T16}
     Lamport L., 1986,  \LaTeX: \textit{A Document
     Preparation System}, Addison--Wesley, New York
   \bibitem[\protect\citename{Lindberg }1986]{li}
@@ -815,29 +755,10 @@ the bibliography, suitably formatted.
 
 \subsubsection{Simplified References and Citations}
 
-The second approach to referencing is taken with permission from the American
-Geophysical Union Latex macros
-
-The reference section is started using a \verb"\begin{references}" command which
-will automatically produce a correctly formatted ``Reference'' head. Each
-reference is then preceded by a \verb"\reference" command. It is the author's
-responsibility to place bibliographic reference information in the proper order
-with correct punctuation. After the last reference in your reference section,
-type an \verb"\end{references}" command.
-
-Authors may enter properly formatted citations directly in the manuscript text
-and enclose those citations in \verb"\markcite{}" commands. This approach marks
-all citations in your manuscript, but there is no interaction between the
-\verb"\markcite" commands and the reference section.
-
-To create in-text citations, enclose each citation within a \verb"\markcite"
-command. There are two ways to include in-text citations, depending on the way
-you phrase your sentence. You may either include an entire reference within
 brackets \markcite{(Merritt et al., 1996)} or you may mention the author as part
 of your sentence and include only the year in brackets, as in \markcite{Ono
 (1996)}.
 
-As an example
 \begin{verbatim}
 \begin{references}
 \reference
@@ -882,11 +803,6 @@ mantle anelasticity using surface wave amplitude anomalies, \gji{} \textbf{114},
 
 \subsubsection{Common Journals}
 
-The following abbreviations are provided for commonly cited
-journals and can be used directly in the bibliography.
-
-In the following table the abbreviation and the form of the
-associated entry are presented
 \newline
 \begin{tabular}{ll}
 \verb"\areps" & \areps{} \\
@@ -962,7 +878,6 @@ associated entry are presented
 
 \subsection{Appendices}
 
-The appendices in this guide were generated by typing:
 \begin{verbatim}
 \appendix
 \section{For authors}
@@ -971,9 +886,6 @@ The appendices in this guide were generated by typing:
 \end{verbatim}
 You only need to type \verb"\appendix" once. Thereafter, every \verb"\section"
 command will generate a new appendix which will be numbered A, B, etc.
-
-If figure captions are to provided after an appendix the figure number can be
-reset to avoid extraneous labelling using the command \verb"\resetfigno".
 
 \section[]{Example of section heading with\\*
   {\mdseries \textsc{S}\lowercase{\textsc{mall}}
@@ -1002,13 +914,9 @@ with the \texttt{acknowledgments} environment, as
 We wish to thank ...
 \end{acknowledgments}
 \end{verbatim}
-There is also a corresponding \texttt{acknowledgment} environment for a single
-acknowledgment.
 
 \begin{acknowledgments}
-A number of colleagues have helped with suggestions for the improvement of this
-material and I would particularly like to thank Bob Geller, University of Tokyo
-for his criticisms and corrections.
+All images are produced using GMT~\citep{W13}.
 \end{acknowledgments}
 
 \begin{thebibliography}{}
@@ -1028,9 +936,10 @@ for his criticisms and corrections.
   \bibitem[\protect\citename{Kopka \& Daly}1995]{kd}
     Kopka H. \& Daly P.W., 1995, \textit{A guide to} \LaTeX2e,
     Addison\textendash{}Wesley, New York
-  \bibitem[\protect\citename{Lamport }1986]{la}
-    Lamport L., 1986, \LaTeX:\textit{A Document Preparation System},
-    Addison\textendash{}Wesley, New York
+  \bibitem[\protect\citename{Tauxe et al. }1986]{T16}
+	Tauxe L., Banerjee S.K., Butler R.F. \& van der Voo R., 2016, Essentials of
+	Paleomagnetism: Fourth Web Edition,
+    Available on line
   \bibitem[\protect\citename{Lindberg }1986]{bl}
     Lindberg, C., 1986. Multiple taper harmonic analysis of terrestrial free
     oscillations, \textit{PhD thesis}, University of California.
