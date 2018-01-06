@@ -79,7 +79,7 @@ such poles from our APWP calculation.
 
 In most cases, mean pole age (centre of age error) has just been binned. If
 any of the poles have large age errors, they could be different ages from each
-other and sample entirely different parts of the APWP\. Conversely, if any of
+other and sample entirely different parts of the APWP\@. Conversely, if any of
 the poles have too few samples, or were not sampled over enough time to average
 to a GAD field, a discordant pole may be due to unreduced secular variation.
 
@@ -110,47 +110,49 @@ only been in common use since the mid 1980s.
 
 In summary, not all paleomagnetic poles are created equal, which leads to an
 important question: how to best combine poles of varying quality into a
-coherent and accurate APWP\? Paleomagnetists have proposed a variety of methods
+coherent and accurate APWP\@?
+
+\subsection{Existing Solutions and General Issues}
+
+Paleomagnetists have proposed a variety of methods
 to filter so-called ``bad'' data, or give lower weights to those ``bad'' data
 before generating an APWP, e.g., two widely used methods: the V90 reliability
-criteria~\citep{v90} and the BC02 selection criteria~\citep{B02}. Briefly, the
-V90 criteria for paleomagnetic results includes seven criteria: (1) Well
-determined age; (2) At least 25 samples with Fisher~\citep{F53} precision
-$\kappa$ greater than 10 and $\alpha95$ less than 16°; (3) Detailed
-demagnetisation results reported; (4) Passed field tests; (5) Tectonic
-coherence with continent and good structural control; (6) Identified antipodal
-reversals; (7) Lack of similarity with younger poles~\citep{T92}.
-Compared with V90, the BC02 criteria suggests stricter filtering, e.g., using
-only poles with at least 6 sampling sites and 36 samples, each site having
-$\alpha95$ less than 10° in the Cenozoic and 15° in the Mesozoic. But there has
-been limited study of how effective these filtering methods are at
-reconstructing a `true' APWP, and for most studies after a basic filtering of
-`low quality' poles, the remaining poles are, in fact, treated equally.
+criteria~\cite{v90} and the BC02 selection criteria provided by Besse \&
+Courtillot \shortcite{B02}. Briefly, the V90 criteria for paleomagnetic results
+includes seven criteria: (1) Well determined age; (2) At least 25 samples with
+Fisher~\cite{F53} precision $\kappa$ greater than 10 and $\alpha95$ less than
+16\degree; (3) Detailed demagnetisation results reported; (4) Passed field
+tests; (5) Tectonic coherence with continent and good structural control; (6)
+Identified antipodal reversals; (7) Lack of similarity with younger
+poles~\cite{T92}. The total criteria satisfied (0\textendash7) is then used as
+a measure of a paleomagnetic result's overall reliability, which is known as Q
+(quality) factor~\cite{T92}. Q factor is indeed a very straightforward way to
+get a quantitalized reliability score. Also it then can be conveniently used in
+the later calculations of APWPs~\cite{T92}. But at the same time this is a
+fairly basic filter that lumps together criteria that may not be equally
+important. Compared with V90, the BC02 criteria suggests stricter filtering,
+e.g., using only poles with at least 6 sampling sites and 36 samples, each site
+having $\alpha95$ less than 10\degree\ in the Cenozoic and 15\degree\ in the
+Mesozoic. B02 is also straightforward and convenient to use, but some useful
+data may be filtered out and wasted especially for a period where there are
+only limited number of data. In addition, there has been limited study of how
+effective these marking/filtering methods are at reconstructing a `true' APWP,
+and for most studies after a basic filtering of `low quality' poles, the
+remaining poles are, in fact, treated equally.
+
+Above all, there haven't been any real attempts to study how APWP fits may be
+improved by filtering/weighting data. This paper is presented to address these
+issues.
 
 
-
-papers in \LaTeX. The layout design for \textit{Geophysical Journal
-International} has been implemented as a \LaTeXe\ class file derived from the MN
-from the earlier version is provided by Kopka \& Daly \shortcite{kd}.
-
-\subsection{General style issues}
-
-\shortcite{bu} and The Chicago Manual \shortcite{cm}. The language of
-Use should be made of symbolic references (\verb"\ref") in order to
-
-\subsection{Submission of \LaTeX\ articles to the journal}
-
-the EGS Editor,  {\em or\/} the DGG editor,  {\em or\/}
-should not attempt to include their figures inside a \TeX\ or \LaTeX\
 
 \section{Using the GJI class file}
 
+Use should be made of symbolic references (\verb"\ref"),  {\em or\/}
+should not attempt to include their figures inside a \TeX\ or \LaTeX\
 If the file \verb"gji.cls" is not already in the appropriate system directory
 http://www.blackwellpublishing.com/journals/gji under {\em Author Guidelines}.
 
-\begin{verbatim}
-\documentclass{gji}
-\end{verbatim}
 In general, the following standard document class options should {\em not\/} be
 used with the GJI style:
 \begin{enumerate}
@@ -174,28 +176,20 @@ on the line immediately after the \verb"\documentclass". If necessary,
 
 \verb"lfonts.tex" that is distributed as part of \LaTeX. If you have access to
 the source file for this guide, \verb"gjilguid2e.tex", attempt to typeset it.
-of \verb"lfonts.tex" has been installed in your system.
 
 \subsection{Additional document class options}\label{classoptions}
 
 The following additional class options are available with the GJI style:
 \begin{description}
   \item \texttt{onecolumn} \textendash{} to be used \textit{only} when two-column output
-        is unable to accommodate long equations;
   \item \texttt{landscape} \textendash{} for producing wide figures and tables which
         need to be included in landscape format (i.e.\ sideways) rather
-        than portrait (i.e.\ upright). This option is described below.
   \item \texttt{doublespacing} \textendash{} this will double-space your
         article by setting \verb"\baselinestretch" to 2.
   \item \texttt{referee} \textendash{} 12/20pt text size, single column,
-        designed for submission of papers.
   \item \texttt{mreferee} \textendash{} 11/17pt text size, single column
-        designed for submission of papers with mathematical content.
   \item \texttt{camera} \textendash{} designed for use with computer modern fonts to
-        produce a closer representation of GJI style for camera
-        ready material.
   \item \texttt{galley} \textendash{} no running heads, no attempt to align
-        the bottom of columns.
 \end{description}
 
 
@@ -204,7 +198,6 @@ The following additional class options are available with the GJI style:
 \begin{enumerate}
   \item Use the \verb"table*" or \verb"figure*" environments in your
         need to key in the three lines which are marked with \verb"\% **",
-        with an appropriate headline.
 \begin{verbatim}
 % ** \clearpage
 % ** \thispagestyle{plate}
@@ -225,10 +218,8 @@ The following additional class options are available with the GJI style:
 \end{verbatim}
   \item Include your complete tables and illustrations (or space for
         these) with captions using the \verb"table*" and \verb"figure*"
-        environments.
   \item Before each float environment, use the
         \verb"\setcounter" command to ensure the correct numbering of
-        the caption. For example,
 \begin{verbatim}
 \setcounter{table}{0}
 \begin{table*}
@@ -257,27 +248,20 @@ The corresponding example for a figure would be:
 \section{Additional facilities}
 
 In addition to all the standard \LaTeX\ design elements, the GJI style
-includes the following features.
 \begin{enumerate}
   \item Extended commands for specifying a short version of the title and
         author$(s)$ for the running headlines;
   \item A \verb"summary" environment to produce a suitably indented
-        Summary
   \item An \verb"abstract" environment which produces the GJI style of
-        Summary
   \item A \verb"keywords" environment and a \verb"\nokeywords" command;
   \item A starred version of the \verb"\caption" command to produce
-        captions for continued figures or tables.
  \end{enumerate}
- In general, once you have used the additional \verb"gji.cls" facilities
-in your document, do not process it with a standard \LaTeX\ style file.
 
 \subsection{Titles and author's name}
 
 must be a single line ($\leqslant 45$ characters). Moreover, the main
 heading can also incorporate new line commands (e.g. \verb"\\") but
-name, the standard \verb"\title" and \verb"\author" commands have been
-following code:
+name, the standard \verb"\title" and \verb"\author" commands:
 \begin{verbatim}
 \title[Geophys.\ J.\ Int.:
        \LaTeXe\ Guide for Authors]
@@ -711,10 +695,6 @@ while~\cite{hi} is produced by
   \bibitem[\protect\citename{The Chicago Manual }%
     1982]{cm} \textit{The Chicago Manual of Style},
     Univ. Chicago Press, Chicago, 1982.
-  \bibitem[\protect\citename{Chao }1985]{ch}
-    Chao, B. F., 1985. Normal mode study of the
-    Earth's rigid body motions,
-    \textit{Geophys. Res. Lett.}, \textbf{12}, 526-529.
   \bibitem[\protect\citename{Hinderer }1986]{hi}
     Hinderer, J., 1986. Resonance effects of the
     earth's fluid core in earth rotation,
@@ -728,11 +708,6 @@ while~\cite{hi} is produced by
     Lindberg, C., 1986.  Multiple taper harmonic
     analysis of terrestrial free oscillations,
     \textit{PhD thesis}, University of California.
-  \bibitem[\protect\citename{Maupin }1992]{ma}
-    Maupin, V., 1992. Modelling of laterally
-    trapped surface waves with application to
-    Rayleigh waves in the Hawaiian swell,
-    \textit{Geophys. J. Int.}, \textbf{110}, 553-570.
   \bibitem[\protect\citename{Rutherford
     \& Hawker }1981]{rh} Rutherford, S. R.
     \& Hawker, K. E.,  1981, Consistent coupled
@@ -803,6 +778,7 @@ mantle anelasticity using surface wave amplitude anomalies, \gji{} \textbf{114},
 
 \subsubsection{Common Journals}
 
+Common journals
 \newline
 \begin{tabular}{ll}
 \verb"\areps" & \areps{} \\
@@ -916,7 +892,7 @@ We wish to thank ...
 \end{verbatim}
 
 \begin{acknowledgments}
-All images are produced using GMT~\citep{W13}.
+All images are produced using GMT~\cite{W13}.
 \end{acknowledgments}
 
 \begin{thebibliography}{}
@@ -926,9 +902,18 @@ All images are produced using GMT~\citep{W13}.
   \bibitem[\protect\citename{The Chicago Manual }%
     1982]{cm} \textit{The Chicago Manual of Style}, Univ. Chicago Press,
     Chicago, 1982.
-  \bibitem[\protect\citename{Chao }1985]{ch}
-    Chao, B. F., 1985. Normal mode study of the Earth's rigid body motions,
-    \textit{Geophys. Res. Lett.}, \textbf{12}, 526\textendash529.
+  \bibitem[\protect\citename{Fisher }1953]{F53}
+    Fisher, R. A., 1953. Dispersion on a sphere,
+    \textit{Proc. Roy. Soc. London Ser. A.}, \textbf{217}, 295\textendash305.
+  \bibitem[\protect\citename{Torsvik et al. }1992]{T92}
+	Torsvik, T. H., Smethurst, M. A., van der Voo, R., Trench, A., Abrahamsen,
+	N. \& Halvorsen, E., 1992. Baltica. A synopsis of Vendian-Permian
+	palaeomagnetic data and their palaeotectonic implications, \textit{Earth
+	Sci. Rev.}, \textbf{33}, 133\textendash152.
+  \bibitem[\protect\citename{Wessel et al. }2013]{W13}
+	Wessel, P., Smith, W. H. F., Scharroo, R., Luis, J. \& Wobbe, F.,2013.
+	Generic Mapping Tools: Improved version released, \textit{Eos. Trans. AGU},
+	\textbf{94}, 409\textendash410.
   \bibitem[\protect\citename{Hinderer }1986]{hi}
     Hinderer, J., 1986. Resonance effects of the earth's fluid core in earth
     rotation, in \textit{Solved and Unsolved Problems}, pp. 277\textendash296,
@@ -936,21 +921,19 @@ All images are produced using GMT~\citep{W13}.
   \bibitem[\protect\citename{Kopka \& Daly}1995]{kd}
     Kopka H. \& Daly P.W., 1995, \textit{A guide to} \LaTeX2e,
     Addison\textendash{}Wesley, New York
-  \bibitem[\protect\citename{Tauxe et al. }1986]{T16}
-	Tauxe L., Banerjee S.K., Butler R.F. \& van der Voo R., 2016, Essentials of
-	Paleomagnetism: Fourth Web Edition,
-    Available on line
+  \bibitem[\protect\citename{Tauxe et al. }2016]{T16}
+	Tauxe L., Banerjee S.K., Butler R.F. \& van der Voo R., 2016.
+	\textit{Essentials of Paleomagnetism}, 4th web edn, Available on line
   \bibitem[\protect\citename{Lindberg }1986]{bl}
     Lindberg, C., 1986. Multiple taper harmonic analysis of terrestrial free
     oscillations, \textit{PhD thesis}, University of California.
-  \bibitem[\protect\citename{Maupin }1992]{ma}
-    Maupin, V., 1992. Modelling of laterally trapped surface waves with
-    application to Rayleigh waves in the Hawaiian swell, \textit{Geophys. J.
-    Int.}. \textbf{110}, 553\textendash570.
-  \bibitem[\protect\citename{Rutherford \& Hawker }%
-    1981]{rh}  Rutherford, S. R. \& Hawker, K. E., 1981, Consistent coupled mode
-    theory of sound propagation for a class of non-separable problems,
-   \textit{J. acoust. Soc. Am.}, \textbf{71}, 554\textendash564
+  \bibitem[\protect\citename{van der Voo }1990]{v90}
+    van der Voo, R., 1990. The reliability of paleomagnetic data,
+	\textit{Tectonophysics}. \textbf{184}, 1\textendash9.
+  \bibitem[\protect\citename{Besse \& Courtillot }%
+    2002]{B02}  Besse, J. \& Courtillot, V., 2002, Apparent and true polar
+    wander and the geometry of the geomagnetic field over the last 200 Myr,
+   \textit{J. Geophys. Res.}, \textbf{107}, 2300
 \end{thebibliography}
 
 
