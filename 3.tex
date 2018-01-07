@@ -97,8 +97,8 @@ influence.
 Data density also varies between different plates. E.g., we have a relatively
 high density of paleomagnetic data for North American Craton (NAC), but few
 poles exist for Greenland and Arabia. Based on mean age (mean of lower and
-upper magnetic ages), for 100\textendash0 Ma, GPMDB 4.6b has 198 NAC poles, but
-only 17 for Greenland and 24 for Arabia.
+upper magnetic ages), for 100\textendash0 Ma, GPMDB 4.6b~\cite{P05} has 198 NAC
+poles, but only 17 for Greenland and 24 for Arabia.
 
 \subsubsection{Publication Year}
 
@@ -146,32 +146,35 @@ issues.
 
 
 
-\section{Using the GJI class file}
+\section{Methods}
 
-Use should be made of symbolic references (\verb"\ref"),  {\em or\/}
-should not attempt to include their figures inside a \TeX\ or \LaTeX\
-If the file \verb"gji.cls" is not already in the appropriate system directory
-http://www.blackwellpublishing.com/journals/gji under {\em Author Guidelines}.
+The \textbf{Global Paleomagnetic Database} (GPMDB) Version 4.6b~\cite{P05},
+data source used here, includes 9360 paleopoles for ages of 3,500 Ma to the
+present published from 1925 to January 2011. A polygon can be drawn around a set
+of data, whose sampling sites we believe belong to a specific plate or rigid
+block. Then the {\em Spatial Join\/} technique~\cite{J07} helps join attributes
+from the polygon to the paleomagnetic data based on the spatial relationship
+allowing data within this polygon to be extracted from the whole raw large
+dataset without splitting a subset just for a specific plate. That allows us to
+quickly select subsets of the database based on geographic constraints just as
+easily as for age. Of course, the boundary of this polygon must be reasonably
+along a tectonic boundary.
 
-In general, the following standard document class options should {\em not\/} be
-used with the GJI style:
+Use should be made of symbolic references (\verb"\ref"), \TeX\ or \LaTeX\
 \begin{enumerate}
   \item \texttt{10pt}, \texttt{11pt}, \texttt{12pt} \textendash{} unavailable;
   \item \texttt{twoside} (no associated style file) \textendash{}
      \texttt{twoside} is the default;
    \item \texttt{fleqn}, \texttt{leqno}, \texttt{titlepage} \textendash{} should
      not be used (\verb"fleqn" is already incorporated into the GJI style);
-  \item \texttt{twocolumn} \textendash{} is not necessary as it is the default
-    style.
+  \item \texttt{twocolumn} \textendash{} is not necessary as it is the default.
 \end{enumerate}
 
 In \LaTeX2e the use of postscript fonts and the inclusion of non-standard
-options is carried out through the \verb"\usepackage" command, rather than as
-including
+options is carried out through the \verb"\usepackage" command
 \begin{verbatim}
 \usepackage{times}
 \end{verbatim}
-on the line immediately after the \verb"\documentclass". If necessary,
 \texttt{ifthen} and \texttt{bezier} can be included as packages.
 
 \verb"lfonts.tex" that is distributed as part of \LaTeX. If you have access to
@@ -209,17 +212,13 @@ The following additional class options are available with the GJI style:
   \label{landfig}
 \end{figure*}
 \end{verbatim}
-\item Create a separate document with the corresponding document style
-      but also with the \verb"landscape" document style option, and
-      include the \verb"\pagestyle" command, as follows:
+\item the \verb"landscape" the \verb"\pagestyle" command, as follows:
 \begin{verbatim}
 \documentclass[landscape]{gji}
 \pagestyle{empty}
 \end{verbatim}
-  \item Include your complete tables and illustrations (or space for
-        these) with captions using the \verb"table*" and \verb"figure*"
-  \item Before each float environment, use the
-        \verb"\setcounter" command to ensure the correct numbering of
+  \item using the \verb"table*" and \verb"figure*"
+  \item Before each float environment, use the \verb"\setcounter"
 \begin{verbatim}
 \setcounter{table}{0}
 \begin{table*}
@@ -252,9 +251,7 @@ In addition to all the standard \LaTeX\ design elements, the GJI style
   \item Extended commands for specifying a short version of the title and
         author$(s)$ for the running headlines;
   \item A \verb"summary" environment to produce a suitably indented
-  \item An \verb"abstract" environment which produces the GJI style of
   \item A \verb"keywords" environment and a \verb"\nokeywords" command;
-  \item A starred version of the \verb"\caption" command to produce
  \end{enumerate}
 
 \subsection{Titles and author's name}
@@ -686,37 +683,6 @@ while~\cite{hi} is produced by
   \item within the multi-author paper citations, the order is chronological,
 \end{enumerate}
 %
-\begin{verbatim}
-\begin{thebibliography}{}
-  \bibitem[\protect\citename{Butcher }1992]{bu}
-    Butcher J. 1992. \textit{Copy-editing: The
-    Cambridge Handbook}, 3rd edn, Cambridge
-    Univ. Press, Cambridge.
-  \bibitem[\protect\citename{The Chicago Manual }%
-    1982]{cm} \textit{The Chicago Manual of Style},
-    Univ. Chicago Press, Chicago, 1982.
-  \bibitem[\protect\citename{Hinderer }1986]{hi}
-    Hinderer, J., 1986. Resonance effects of the
-    earth's fluid core in earth rotation,
-    in \textit{Solved and Unsolved Problems},
-    pp. 277-296, ed. Cazenave A., Reidel,
-    Dordrecht.
-  \bibitem[\protect\citename{Lamport }1986]{T16}
-    Lamport L., 1986,  \LaTeX: \textit{A Document
-    Preparation System}, Addison--Wesley, New York
-  \bibitem[\protect\citename{Lindberg }1986]{li}
-    Lindberg, C., 1986.  Multiple taper harmonic
-    analysis of terrestrial free oscillations,
-    \textit{PhD thesis}, University of California.
-  \bibitem[\protect\citename{Rutherford
-    \& Hawker }1981]{rh} Rutherford, S. R.
-    \& Hawker, K. E.,  1981, Consistent coupled
-    mode theory of sound propagation for a
-    class of non-separable problems,
-    \textit{J. acoust. Soc. Am.}, \textbf{71},
-    554-564
-\end{thebibliography}
-\end{verbatim}
 Each entry takes the form
 \begin{verbatim}
 \bibitem[\protect\citename{Author(s), }%
@@ -930,6 +896,12 @@ All images are produced using GMT~\cite{W13}.
   \bibitem[\protect\citename{van der Voo }1990]{v90}
     van der Voo, R., 1990. The reliability of paleomagnetic data,
 	\textit{Tectonophysics}. \textbf{184}, 1\textendash9.
+  \bibitem[\protect\citename{Pisarevsky }2005]{P05}
+	Pisarevsky, S. A., 2005. New edition of the Global Paleomagnetic Database,
+	\textit{Eos. Trans. AGU}. \textbf{86}, 170.
+  \bibitem[\protect\citename{Jacox \& Samet }2007]{J07}
+	Jacox, E. H. \& Samet, H., 2007. Spatial Join Techniques, \textit{ACM
+	Trans. Database Syst.}. \textbf{32}, 7.
   \bibitem[\protect\citename{Besse \& Courtillot }%
     2002]{B02}  Besse, J. \& Courtillot, V., 2002, Apparent and true polar
     wander and the geometry of the geomagnetic field over the last 200 Myr,
