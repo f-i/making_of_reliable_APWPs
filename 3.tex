@@ -160,40 +160,29 @@ quickly select subsets of the database based on geographic constraints just as
 easily as for age. Of course, the boundary of this polygon must be reasonably
 along a tectonic boundary.
 
-Use should be made of symbolic references (\verb"\ref"), \TeX\ or \LaTeX\
-\begin{enumerate}
-  \item \texttt{10pt}, \texttt{11pt}, \texttt{12pt} \textendash{} unavailable;
-  \item \texttt{twoside} (no associated style file) \textendash{}
-     \texttt{twoside} is the default;
-   \item \texttt{fleqn}, \texttt{leqno}, \texttt{titlepage} \textendash{} should
-     not be used (\verb"fleqn" is already incorporated into the GJI style);
-  \item \texttt{twocolumn} \textendash{} is not necessary as it is the default.
-\end{enumerate}
+\subsection{120\textendash0 Ma North America APWP}
 
-In \LaTeX2e the use of postscript fonts and the inclusion of non-standard
-options is carried out through the \verb"\usepackage" command
-\begin{verbatim}
-\usepackage{times}
-\end{verbatim}
-\texttt{ifthen} and \texttt{bezier} can be included as packages.
+Plate ID 101 polygon in the recently published Plate Model~\cite{M16},
+including its children 108 and 109 polygons for 120\textendash0 Ma, is used to select the
+sampling sites of the paleopoles for North America. According to the plate model
+rotation data~\cite{M16}, the Avalon/Acadia block (108) is fixed to 101 during the
+geologic period from Cretaceous to the present day. The Piedmont block (109) is
+also fixed to 101 since about 300 Ma~\cite{C14}. Then in order to be compared
+with the Fix Hotspot Model (120\textendash0 Ma)~\cite{M93,M99}, the paleopoles with age
+ranging 120\textendash0 Ma are further selected through constraining the lower magnetic
+age ``LOMAGAGE <=120''. According to a published plate kinematic model of
+southwestern North America since 36 Ma~\cite{Mc06}, the paleopoles constrained
+by some western terranes whose Plate IDs are also 101 and those that are fixed to
+101 during 120\textendash0 Ma shown in the plate model rotation data~\cite{M16} except
+some constrained by a small terrane 101 are removed. So finally there are four
+polygons total for this Plate Model~\cite{M16}. According to the plate
+kinematic model of southwestern North America~\cite{Mc06}, the poles with age
+younger than 10 Ma located within the western 101 terrane (RANGE_ID=74 in the
+plate kinematic model~\cite{Mc06}) right south of the smallest 101 one should
+be included.
 
-\verb"lfonts.tex" that is distributed as part of \LaTeX. If you have access to
-the source file for this guide, \verb"gjilguid2e.tex", attempt to typeset it.
 
 \subsection{Additional document class options}\label{classoptions}
-
-The following additional class options are available with the GJI style:
-\begin{description}
-  \item \texttt{onecolumn} \textendash{} to be used \textit{only} when two-column output
-  \item \texttt{landscape} \textendash{} for producing wide figures and tables which
-        need to be included in landscape format (i.e.\ sideways) rather
-  \item \texttt{doublespacing} \textendash{} this will double-space your
-        article by setting \verb"\baselinestretch" to 2.
-  \item \texttt{referee} \textendash{} 12/20pt text size, single column,
-  \item \texttt{mreferee} \textendash{} 11/17pt text size, single column
-  \item \texttt{camera} \textendash{} designed for use with computer modern fonts to
-  \item \texttt{galley} \textendash{} no running heads, no attempt to align
-\end{description}
 
 
 \subsection{Landscape pages}
@@ -246,19 +235,15 @@ The corresponding example for a figure would be:
 
 \section{Additional facilities}
 
-In addition to all the standard \LaTeX\ design elements, the GJI style
 \begin{enumerate}
   \item Extended commands for specifying a short version of the title and
         author$(s)$ for the running headlines;
-  \item A \verb"summary" environment to produce a suitably indented
   \item A \verb"keywords" environment and a \verb"\nokeywords" command;
  \end{enumerate}
 
 \subsection{Titles and author's name}
 
 must be a single line ($\leqslant 45$ characters). Moreover, the main
-heading can also incorporate new line commands (e.g. \verb"\\") but
-name, the standard \verb"\title" and \verb"\author" commands:
 \begin{verbatim}
 \title[Geophys.\ J.\ Int.:
        \LaTeXe\ Guide for Authors]
