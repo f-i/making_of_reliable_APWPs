@@ -148,6 +148,21 @@ issues.
 
 \section{Methods}
 
+The only quantitative data
+we have prior to about 170 Ma are paleomagnetic data. After about 170 Ma, multiple
+data sources can help constrain plate motions in more accurate ways. One of the
+most developed and studied plate kinematics models is the Fixed Hotspot
+Model~\cite{M93,M99}, which assumes the Atlantic and Indian hotspots are relatively
+fixed. Such a model like the Fixed Hotspot can predict APWPs for main
+continents, e.g. the North America.
+
+\subsection{Reference Path: The Hotspot Model Predicted}
+
+The oldest pole that can be predicted from the Fixed Hotspot Model is about 120
+Ma.
+
+\subsection{120\textendash0 Ma North America APWP}
+
 The \textbf{Global Paleomagnetic Database} (GPMDB) Version 4.6b~\cite{P05},
 data source used here, includes 9360 paleopoles for ages of 3,500 Ma to the
 present published from 1925 to January 2011. A polygon can be drawn around a set
@@ -159,8 +174,6 @@ dataset without splitting a subset just for a specific plate. That allows us to
 quickly select subsets of the database based on geographic constraints just as
 easily as for age. Of course, the boundary of this polygon must be reasonably
 along a tectonic boundary.
-
-\subsection{120\textendash0 Ma North America APWP}
 
 Plate ID 101 polygon in the recently published Plate Model~\cite{M16},
 including its children 108 and 109 polygons for 120\textendash0 Ma, is used to select the
@@ -642,22 +655,10 @@ approach uses the \verb"\begin{thebibliography}{}" and
 The second approach uses a simplified scheme using \verb"\begin{references}" and
 \verb"\end{references}" commands.
 
-e.g. Draine (1978) or (Begelman, Blandford \& Rees 1984). Where more than one
 reference is cited having the same author$(s)$ and date, the letters a,b,c,
 \ldots\ should follow the date; e.g.\ Smith (1988a), Smith (1988b), etc. The
 
 \subsubsection{Biblography References in the text}
-
-\textendash{} \verb"\cite{key}" \textendash{} to produce the author and date,
-and another form \textendash{} \verb"\shortcite{key}" \textendash{} which
-produces the date only. Thus, Rutherford \& Hawker \shortcite{rh} is produced by
-\begin{verbatim}
-Rutherford \& Hawker \shortcite{rh}
-\end{verbatim}
-while~\cite{hi} is produced by
-\begin{verbatim}
-\cite{hi}
-\end{verbatim}
 
 \subsubsection{The bibliography}
 
@@ -675,9 +676,7 @@ Each entry takes the form
 \end{verbatim}
 where \verb"Author(s)" should be the author names as they are cited in the text,
 \verb"Date" is the date to be cited in the text, and \verb"tag" is the tag that
-is to be used as an argument for the \verb"\cite{}" and \verb"\shortcite{}"
 commands. \verb"Bibliography entry" should be the material that is to appear in
-the bibliography, suitably formatted.
 
 \subsubsection{Simplified References and Citations}
 
@@ -847,12 +846,6 @@ All images are produced using GMT~\cite{W13}.
 \end{acknowledgments}
 
 \begin{thebibliography}{}
-  \bibitem[\protect\citename{Butcher }1992]{bu}
-    Butcher J. 1992. \textit{Copy-editing: The Cambridge Handbook}, 3rd edn,
-    Cambridge Univ. Press, Cambridge.
-  \bibitem[\protect\citename{The Chicago Manual }%
-    1982]{cm} \textit{The Chicago Manual of Style}, Univ. Chicago Press,
-    Chicago, 1982.
   \bibitem[\protect\citename{Fisher }1953]{F53}
     Fisher, R. A., 1953. Dispersion on a sphere,
     \textit{Proc. Roy. Soc. London Ser. A.}, \textbf{217}, 295\textendash305.
@@ -865,19 +858,9 @@ All images are produced using GMT~\cite{W13}.
 	Wessel, P., Smith, W. H. F., Scharroo, R., Luis, J. \& Wobbe, F.,2013.
 	Generic Mapping Tools: Improved version released, \textit{Eos. Trans. AGU},
 	\textbf{94}, 409\textendash410.
-  \bibitem[\protect\citename{Hinderer }1986]{hi}
-    Hinderer, J., 1986. Resonance effects of the earth's fluid core in earth
-    rotation, in \textit{Solved and Unsolved Problems}, pp. 277\textendash296,
-    ed. Cazenave A., Reidel, Dordrecht.
-  \bibitem[\protect\citename{Kopka \& Daly}1995]{kd}
-    Kopka H. \& Daly P.W., 1995, \textit{A guide to} \LaTeX2e,
-    Addison\textendash{}Wesley, New York
   \bibitem[\protect\citename{Tauxe et al. }2016]{T16}
 	Tauxe L., Banerjee S.K., Butler R.F. \& van der Voo R., 2016.
 	\textit{Essentials of Paleomagnetism}, 4th web edn, Available on line
-  \bibitem[\protect\citename{Lindberg }1986]{bl}
-    Lindberg, C., 1986. Multiple taper harmonic analysis of terrestrial free
-    oscillations, \textit{PhD thesis}, University of California.
   \bibitem[\protect\citename{van der Voo }1990]{v90}
     van der Voo, R., 1990. The reliability of paleomagnetic data,
 	\textit{Tectonophysics}. \textbf{184}, 1\textendash9.
