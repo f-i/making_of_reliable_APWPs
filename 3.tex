@@ -148,13 +148,14 @@ issues.
 
 \section{Methods}
 
-The only quantitative data
-we have prior to about 170 Ma are paleomagnetic data. After about 170 Ma, multiple
-data sources can help constrain plate motions in more accurate ways. One of the
-most developed and studied plate kinematics models is the Fixed Hotspot
-Model~\cite{M93,M99}, which assumes the Atlantic and Indian hotspots are relatively
-fixed. Such a model like the Fixed Hotspot can predict APWPs for main
-continents, e.g. the North America.
+For most of Earth history, concretely for times before c. 170 Ma, the age of the
+oldest magnetic anomaly identification, paleomagnetism is the only accepted
+quantitative method for reconstructing plate motions and past paleogeographies.
+After about 170 Ma, multiple data sources can help constrain plate motions in
+more accurate ways. One of the most developed and studied plate kinematics
+models is the Fixed Hotspot Model~\cite{M93,M99}, which assumes the Atlantic and
+Indian hotspots are relatively fixed. Such a model like the Fixed Hotspot can
+predict APWPs for main continents, e.g.\ the North America.
 
 \subsection{Reference Path: The Hotspot Model Predicted}
 
@@ -201,8 +202,8 @@ be included.
 \subsection{Landscape pages}
 
 \begin{enumerate}
-  \item Use the \verb"table*" or \verb"figure*" environments in your
-        need to key in the three lines which are marked with \verb"\% **",
+  \item Use the \verb"table*" or \verb"figure*"
+        \verb"\% **"
 \begin{verbatim}
 % ** \clearpage
 % ** \thispagestyle{plate}
@@ -214,35 +215,12 @@ be included.
   \label{landfig}
 \end{figure*}
 \end{verbatim}
-\item the \verb"landscape" the \verb"\pagestyle" command, as follows:
+\item the \verb"\pagestyle" command, as follows:
 \begin{verbatim}
 \documentclass[landscape]{gji}
 \pagestyle{empty}
 \end{verbatim}
-  \item using the \verb"table*" and \verb"figure*"
   \item Before each float environment, use the \verb"\setcounter"
-\begin{verbatim}
-\setcounter{table}{0}
-\begin{table*}
- \begin{minipage}{115mm}
- \caption{Images of global seismic tomography.}
- \label{tab1}
- \begin{tabular}{@{}llllcll}
-   :
- \end{tabular}
- \end{minipage}
-\end{table*}
-\end{verbatim}
-The corresponding example for a figure would be:
-\begin{verbatim}
-\clearpage
-\setcounter{figure}{12}
-\begin{figure*}
- \vspace{144mm}
- \caption{Travel times for regional model.}
- \label{fig13}
-\end{figure*}
-\end{verbatim}
 \end{enumerate}
 
 
@@ -257,76 +235,13 @@ The corresponding example for a figure would be:
 \subsection{Titles and author's name}
 
 must be a single line ($\leqslant 45$ characters). Moreover, the main
-\begin{verbatim}
-\title[Geophys.\ J.\ Int.:
-       \LaTeXe\ Guide for Authors]
-  {Geophysical Journal International:
-   \LaTeXe\ style guide for authors}
-\end{verbatim}
-and
-\begin{verbatim}
-\author[B.L.N. Kennett]
-   {B.L.N. Kennett$^1$
-  \thanks{Pacific Region Office, GJI} \\
-  $^{1}$Research School of Earth Sciences,
-    Australian National University,
-    Canberra ACT \emph{0200}, Australia
-  }
-\end{verbatim}
-The \verb"\thanks" note produces a footnote to the title or author.
 
 \subsection{Key words and Summary}
 
-usual way using the \verb"\maketitle" command. Immediately following
-words. The summary should be enclosed within an \verb"summary"
-\verb"keywords" environment. For example, the titles for this guide
-\begin{verbatim}
-\maketitle
-\begin{summary}
- This guide is for authors who are preparing
- papers for \textit{Geophysical Journal
- International} using the \LaTeXe\ document
- preparation system and the GJI style file.
-\end{summary}
-\begin{keywords}
- \LaTeXe\ -- class files: \verb"gji.cls"\ --
- sample text -- user guide.
-\end{keywords}
-
-\section{Introduction}
-  :
-\end{verbatim}
 The heading `\textbf{Key words}' is included automatically and the key words are
-should insert the \verb"\nokeywords" command immediately after the end of the
-\verb"summary" or \verb"abstract" environment. This ensures that the vertical
-space after the abstract and/or title is correct and that any \verb"thanks"
-\begin{verbatim}
-\maketitle
-\begin{abstract}
-  :
-\end{abstract}
-\nokeywords
-
-\section{Introduction}
-  :
-\end{verbatim}
-
-Note that the \verb"summary" and \verb"abstract" environments have the same
-effect for the documentclass \verb"gji.cls"
 
 \subsection{Lists}
 
-The GJI style provides numbered lists using the \verb"enumerate" environment and
-unnumbered lists using the \verb"description" environment with an empty label.
-Bulleted lists are not part of the GJI style and the \verb"itemize" environment
-should not be used.
-
-The enumerated list numbers each list item with roman numerals:
-\begin{enumerate}
-  \item first item
-  \item second item
-  \item third item
-\end{enumerate}
 number labelling command after the \verb"\begin{enumerate}". For example, the
 list
 \begin{enumerate}
@@ -336,42 +251,14 @@ list
   \item etc\ldots
 \end{enumerate}
 was produced by:
-\begin{verbatim}
-\begin{enumerate}
- \renewcommand{\theenumi}{(\arabic{enumi})}
-  \item first item
-       :
-\end{enumerate}
-\end{verbatim}
-Unnumbered lists are provided using the \verb"description" environment. For
-example,
 \begin{description}
   \item First unnumbered item which has no label and is indented from the left
         margin.
   \item Second unnumbered item.
   \item Third unnumbered item.
 \end{description}
-was produced by,
-\begin{verbatim}
-\begin{description}
- \item First unnumbered item...
- \item Second unnumbered item.
- \item Third unnumbered item.
-\end{description}
-\end{verbatim}
 
 \subsection{Captions for continued figures and tables}
-
-two floats; the second float should use the \verb"caption*" command with a
-suitable caption:
-\begin{verbatim}
-\begin{table}
- \caption*{-- \textit{continued}}
-  \begin{tabular}{@{}lccll}
-  :
-  \end{tabular}
-\end{table}
-\end{verbatim}
 
  \begin{figure}
      \vspace{5.5cm}
@@ -383,69 +270,34 @@ suitable caption:
 \subsection{Sections}
 
 \LaTeX\ provides five levels of section headings and they are all defined in the
-GJI style file:
 \begin{description}
-  \item \verb"\section"
   \item \verb"\subsection"
   \item \verb"\subsubsection"
   \item \verb"\paragraph"
   \item \verb"\subparagraph"
 \end{description}
 
-Section numbers are given for section, subsection, subsubsection and paragraph
 need any other style, see the example in Section~\ref{headings}.
 
-If you find your section/subsection (etc.)\ headings are wrapping round, you
-must use the \verb"\\*" to end individual lines and include the optional
-argument \verb"[]" in the section command. This ensures that the turnover is
-flushleft.
+\verb"\\*" to end individual lines and include the optional argument \verb"[]" 
 
 \subsection{Illustrations (or figures)}
 
 \begin{figure*}
  \vspace{5.5cm}
-  \caption{An example figure spanning two-columns in which space has been left
-  for the artwork.}\label{twocol-figure}
+  \caption{An example space has been left for the artwork.}\label{twocol-figure}
 \end{figure*}
 
 \verb"figure" environment which would override these decisions. See
 `Instructions for Authors' in {\em Geophysical Journal International\/}
 the \verb"\caption" command should appear after the figure or space
 left for an illustration. For example, Fig.~\ref{sample-figure} is
-produced using the following commands:
-\begin{verbatim}
-\begin{figure}
- \vspace{5.5cm}
- \caption{An example figure in which space has
-          been left for the artwork.}
- \label{sample-figure}
-\end{figure}
-\end{verbatim}
 
 should be used as in  Fig.~\ref{twocol-figure} using the following commands
-\begin{verbatim}
-\begin{figure*}
- \vspace{5.5cm}
-   \caption{An example figure spanning two-columns
-     in which space has been left for the artwork.}
-   \label{twocol-figure}
-\end{figure*}
-\end{verbatim}
 
 \subsection{Tables}
 
-\verb"table" environment which would override these decisions. Table
-captions should be at the top, therefore the \verb"\caption" command
-
-The \verb"tabular" environment can be used to produce tables with
-following ways:
-\begin{enumerate}
-  \item additional vertical space is inserted on either side of a rule;
-  \item vertical lines are not produced.
-\end{enumerate}
-Commands to redefine quantities such as \verb"\arraystretch" should be
 omitted. For example, Table~\ref{symbols} is produced using the
-following commands.
 \begin{table}
  \caption{Seismic velocities at major discontinuities.}\label{symbols}
  \begin{tabular}{@{}lcccccc}
@@ -459,51 +311,14 @@ following commands.
  \end{tabular}
 
  \medskip
- The ICB represents the boundary between the inner and outer cores and
-subscript $-$ are evaluated just below the discontinuity and
-those with subscript $+$ are evaluated just above the discontinuity.
+subscript $-$ are evaluated just below the discontinuity and those with subscript $+$
 \end{table}
-\begin{verbatim}
-\begin{table}
- \caption{Seismic velocities at major
-          discontinuities.}
- \label{symbols}
- \begin{tabular}{@{}lcccccc}
-  Class & depth & radius
-        & $\alpha _{-}$ & $\alpha _{+}$
-        & $\beta _{-}$ & $\beta _{+}$ \\
-  ICB & 5154 & 1217 & 11.091 & 10.258
-        & 3.438 &  0. \\
-  CMB & 2889 & 3482 & 8.009 & 13.691
-        & 0. & 7.301 \\
- \end{tabular}
 
- \medskip
- The ICB represents the boundary ...
-... evaluated just above the discontinuity.
-
-\end{table}
-\end{verbatim}
-
-If you have a table that is to extend over two columns, you need to use
-\verb"table*" in a minipage environment, i.e., you can say
-\begin{verbatim}
-\begin{table*}
-\begin{minipage}{80mm}
- \caption{Caption which will wrap round to the
-          width of the minipage environment.}
- \begin{tabular}{%
-      :
- \end{tabular}
-\end{minipage}
-\end{table*}
-\end{verbatim}
 
 \subsection{Running headlines}
 
 three use et~al. The \verb"\pagestyle" and \verb"\thispagestyle"
 commands should {\em not\/} be used. Similarly, the commands
-\verb"\markright" and \verb"\markboth" should not be necessary.
 
 \subsection{Typesetting mathematics}
 
@@ -514,58 +329,24 @@ provided that you use the \LaTeX\ standard of open and closed square brackets
  \sum_{i=1}^p \lambda_i =
 {\mathrm{trace}}(\mathbf{S})
 \]
-was typeset in the GJI style using the commands
-\begin{verbatim}
-\[
- \sum_{i=1}^p \lambda_i =
-{\mathrm{trace}}(\mathbf{S})
-\]
-\end{verbatim}
 equation, \[ \alpha_{j+1} > \bar{\alpha}+ks_{\alpha} \]
-which was (wrongly) typeset using double dollars as follows:
-\begin{verbatim}
-$$ \alpha_{j+1} > \bar{\alpha}+ks_{\alpha} $$
-\end{verbatim}
-Note that \verb"\mathrm" will produce a roman character in math mode.
-
-For numbered equations use the \verb"equation" and \verb"eqnarray" environments
-which will give the correct positioning. If equation numbering by section is
 required the command \verb"\eqsecnum" should appear after \verb"begin{document}"
 
 \subsubsection{Bold math italic}\label{boldmathitalic}
 
 The class file provides a font \verb"\mitbf" defined as:
-\begin{verbatim}
-\newcommand{\mitbf}[1]{
-  \hbox{\mathversion{bold}$#1$}}
-\end{verbatim}
-Which can be used as follows, to typset the equation
 \begin{equation}
   d(\mitbf{s_{t_u}}) = \langle {[RM(\mitbf{x_y} + \mitbf{s_t}) - RM(\mitbf{x_y})]}^2 \rangle
 \end{equation}
-the input should be
-\begin{verbatim}
-\begin{equation}
-  d(\mitbf{s_{t_u}}) = \langle {[RM(\mitbf{x_y}
-  + \mitbf{s_t}) - RM(\mitbf{x_y})]}^2 \rangle
-\end{equation}
-\end{verbatim}
 
 messages in your log file that read something like ``Warning: Font/shape
 `cmm/b/it' in size~\hbox{$< \!\! 9 \!\! >$} not available on input line 649.
-Warning: Using external font `cmmi9' instead on input line 649.'' If you have
+Warning: Using external font `cmmi9' instead on input line 649.''
 
 
 \subsubsection{Bold Greek}\label{boldgreek}
 
-To get bold Greek you use the same method as for bold math italic. Thus you can
-input
-\begin{verbatim}
-\[ \mitbf{{\alpha_{\mu}}} =
-\mitbf{\Theta} \alpha. \]
-\end{verbatim}
 to typeset the equation \[ \mitbf{{\alpha_{\mu}}} = \mitbf{\Theta} \alpha. \]
-
 
 \subsection{Points to note in formatting text}\label{formtext}
 
@@ -579,10 +360,7 @@ must be typed
 \end{quote}
 \end{center}
 
-\LaTeX\ interprets all double quotes as closing quotes. Therefore quotation
-\texttt{``quoted text.''}
-
-they are typed within math commands (\verb"$>$" or \verb"$<$").
+\texttt{``quoted text.''} they are typed within math commands (\verb"$>$" or \verb"$<$").
 
 \subsubsection{Special symbols}
 
@@ -666,49 +444,15 @@ reference is cited having the same author$(s)$ and date, the letters a,b,c,
   \item if an author has written several papers, some with other authors, the
         which, in turn, precede the multi-author papers;
   \item within the two-author paper citations, the order is determined by the
-  \item within the multi-author paper citations, the order is chronological,
 \end{enumerate}
 %
-Each entry takes the form
-\begin{verbatim}
-\bibitem[\protect\citename{Author(s), }%
-  Date]{tag} Bibliography entry
-\end{verbatim}
 where \verb"Author(s)" should be the author names as they are cited in the text,
-\verb"Date" is the date to be cited in the text, and \verb"tag" is the tag that
 commands. \verb"Bibliography entry" should be the material that is to appear in
 
 \subsubsection{Simplified References and Citations}
 
 brackets \markcite{(Merritt et al., 1996)} or you may mention the author as part
-of your sentence and include only the year in brackets, as in \markcite{Ono
-(1996)}.
-
-\begin{verbatim}
-\begin{references}
-\reference
-Azimi, Sh.A., Kalinin, A.Y., Kalinin, V.B., \&
-  Pivovarov, B.L., 1968.
-Impulse and transient characteristics of media with
-  linear and quadratic
-absorption laws,
-\textit{Izv. Earth Phys.} (English Transl.),
-\textbf{2}, 88--93.
-\reference
-Dahlen, F.A., \& Smith, M.L., 1975.
-The influence of rotation on the free oscillations
-  of the Earth,
-\textit{Phil. Trans. R. Soc. London Ser. A},
-\textbf{279}, 143--167.
-\reference
-Durek, J.J., Ritzwoller, M.H., \& Woodhouse, J.H.,
-  1993.
-Constraining upper mantle anelasticity using
-  surface wave amplitude anomalies,
-\gji, \textbf{114}, 249--272.
-\end{references}
-\end{verbatim}
-produces the reference list
+of your sentence and include only the year in brackets, as in \markcite{Ono (1996)}.
 \begin{references}
   \reference{}
 Azimi, Sh.A., Kalinin, A.Y., Kalinin, V.B., \& Pivovarov, B.L., 1968.
@@ -804,14 +548,7 @@ Common journals
 
 \subsection{Appendices}
 
-\begin{verbatim}
-\appendix
-\section{For authors}
-     :
-\section{For editors}
-\end{verbatim}
 You only need to type \verb"\appendix" once. Thereafter, every \verb"\section"
-command will generate a new appendix which will be numbered A, B, etc.
 
 \section[]{Example of section heading with\\*
   {\mdseries \textsc{S}\lowercase{\textsc{mall}}
@@ -821,25 +558,9 @@ command will generate a new appendix which will be numbered A, B, etc.
   $\mitbf{{\mu^\kappa}}$}\label{headings}
 
 This can be built up using text commands and the \verb"mitbf" command introduced
-above
-
-\begin{verbatim}
-\section[]{Example of section heading with\\*
-  {\mdseries \textsc{S}\lowercase{\textsc{mall}}
-  \textsc{C}\lowercase{\textsc{aps}}},
-  \lowercase{lowercase},
-  \textit{ italic}, and bold\\* Greek such as
-  $\mitbf{{\mu^\kappa}}$}\label{headings}
-\end{verbatim}
 
 \subsection{Acknowledgments}
-Acknowledgments after the main text and before the appendices can be included
 with the \texttt{acknowledgments} environment, as
-\begin{verbatim}
-\begin{acknowledgments}
-We wish to thank ...
-\end{acknowledgments}
-\end{verbatim}
 
 \begin{acknowledgments}
 All images are produced using GMT~\cite{W13}.
@@ -881,12 +602,10 @@ All images are produced using GMT~\cite{W13}.
 \section{For authors}
 
 Table~\ref{authors} is a list of design macros which are unique to GJI\. The
-list displays each macro's name and description.
 
 \section{For editors}
 
 The additional features shown in Table~\ref{editors} may be used for production
-purposes.
 
 \bsp{} % ``This paper has been produced using the Blackwell
        %   Publishing GJI \LaTeXe\ class file.''
