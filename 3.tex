@@ -114,13 +114,13 @@ coherent and accurate APWP\@?
 
 \subsection{Existing Solutions and General Issues}
 
-Paleomagnetists have proposed a variety of methods
-to filter so-called ``bad'' data, or give lower weights to those ``bad'' data
-before generating an APWP, e.g., two widely used methods: the V90 reliability
-criteria~\cite{v90} and the BC02 selection criteria provided by Besse \&
-Courtillot \shortcite{B02}. Briefly, the V90 criteria for paleomagnetic results
-includes seven criteria: (1) Well determined age; (2) At least 25 samples with
-Fisher~\cite{F53} precision $\kappa$ greater than 10 and $\alpha95$ less than
+Paleomagnetists have proposed a variety of methods to filter so-called ``bad''
+data, or give lower weights to those ``bad'' data before generating an APWP,
+e.g., two widely used methods: the V90 reliability criteria~\cite{v90} and the
+BC02 selection criteria provided by Besse \& Courtillot \shortcite{B02}.
+Briefly, the V90 criteria for paleomagnetic results includes seven criteria: (1)
+Well determined age; (2) At least 25 samples with Fisher~\cite{F53} precision
+$\kappa$ greater than 10 and $\alpha95$ less than
 16\degree; (3) Detailed demagnetisation results reported; (4) Passed field
 tests; (5) Tectonic coherence with continent and good structural control; (6)
 Identified antipodal reversals; (7) Lack of similarity with younger
@@ -153,16 +153,18 @@ oldest magnetic anomaly identification, paleomagnetism is the only accepted
 quantitative method for reconstructing plate motions and past paleogeographies.
 After about 170 Ma, multiple data sources can help constrain plate motions in
 more accurate ways. One of the most developed and studied plate kinematics
-models is the Fixed Hotspot Model~\cite{M93,M99}, which assumes the Atlantic and
+models is the Fixed Hotspot Model (FHM)~\cite{M93,M99}, which assumes the Atlantic and
 Indian hotspots are relatively fixed. Such a model like the Fixed Hotspot can
 predict APWPs for main continents, e.g.\ the North America.
 
 \subsection{Reference Path: The Hotspot Model Predicted}
 
-The oldest pole that can be predicted from the Fixed Hotspot Model is about 120
-Ma.
+The oldest pole that can be predicted from the FHM is about 120 Ma. The North
+American 120\textendash0 Ma APWP predicted from this model will be taken as a
+reference path, which will be compared with paleomagnetic APWPs for the same
+plate or continent.
 
-\subsection{120\textendash0 Ma North America APWP}
+\subsection{120\textendash0 Ma North American Paleomagnetic APWP}
 
 The \textbf{Global Paleomagnetic Database} (GPMDB) Version 4.6b~\cite{P05},
 data source used here, includes 9360 paleopoles for ages of 3,500 Ma to the
@@ -176,24 +178,24 @@ quickly select subsets of the database based on geographic constraints just as
 easily as for age. Of course, the boundary of this polygon must be reasonably
 along a tectonic boundary.
 
-Plate ID 101 polygon in the recently published Plate Model~\cite{M16},
-including its children 108 and 109 polygons for 120\textendash0 Ma, is used to select the
-sampling sites of the paleopoles for North America. According to the plate model
-rotation data~\cite{M16}, the Avalon/Acadia block (108) is fixed to 101 during the
-geologic period from Cretaceous to the present day. The Piedmont block (109) is
-also fixed to 101 since about 300 Ma~\cite{C14}. Then in order to be compared
-with the Fix Hotspot Model (120\textendash0 Ma)~\cite{M93,M99}, the paleopoles with age
-ranging 120\textendash0 Ma are further selected through constraining the lower magnetic
-age ``LOMAGAGE <=120''. According to a published plate kinematic model of
-southwestern North America since 36 Ma~\cite{Mc06}, the paleopoles constrained
-by some western terranes whose Plate IDs are also 101 and those that are fixed to
-101 during 120\textendash0 Ma shown in the plate model rotation data~\cite{M16} except
-some constrained by a small terrane 101 are removed. So finally there are four
-polygons total for this Plate Model~\cite{M16}. According to the plate
-kinematic model of southwestern North America~\cite{Mc06}, the poles with age
-younger than 10 Ma located within the western 101 terrane (RANGE_ID=74 in the
-plate kinematic model~\cite{Mc06}) right south of the smallest 101 one should
-be included.
+Plate ID 101 polygon in the recently published Plate Model~\cite{M16}, including
+its children 108 (Avalon/Acadia block) and 109 (Piedmont block) polygons for
+120\textendash0 Ma, is used to select the sampling sites of the paleopoles for
+North America. According to the plate model rotation data~\cite{M16}, 108 is
+fixed to 101 during the geologic period from Cretaceous to the present day. 109
+is also fixed to 101 since about 300 Ma~\cite{C14}. Then in order to be compared
+with the FHM (120\textendash0 Ma)~\cite{M93,M99}, the paleopoles with age
+ranging 120\textendash0 Ma are further selected through constraining the lower
+magnetic age ``LOMAGAGE <= 120''. According to a published plate kinematic model
+of southwestern North America since 36 Ma~\cite{Mc06}, the paleopoles
+constrained by some western terranes whose Plate IDs are also 101 and those that
+are fixed to 101 during 120\textendash0 Ma shown in the plate model rotation
+data~\cite{M16} except some constrained by a small terrane 101 are removed. So
+finally there are four polygons total for this Plate Model~\cite{M16}. According
+to the plate kinematic model of southwestern North America~\cite{Mc06}, the
+poles with age younger than 10 Ma located within the western 101 terrane
+(RANGE_ID=74 in the plate kinematic model~\cite{Mc06}) right south of the
+smallest 101 one should be included.
 
 
 \subsection{Additional document class options}\label{classoptions}
