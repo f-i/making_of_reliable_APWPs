@@ -97,8 +97,9 @@ influence.
 Data density also varies between different plates. E.g., we have a relatively
 high density of paleomagnetic data for North American Craton (NAC), but few
 poles exist for Greenland and Arabia. Based on mean age (mean of lower and
-upper magnetic ages), for 100\textendash0 Ma, GPMDB 4.6b~\cite{P05} has 198 NAC
-poles, but only 17 for Greenland and 24 for Arabia.
+upper magnetic ages), for 100\textendash0 Ma, the \textbf{Global Paleomagnetic
+Database} (GPMDB) version 4.6b~\cite{P05} has 198 NAC poles, but only 17 for
+Greenland and 24 for Arabia.
 
 \subsubsection{Publication Year}
 
@@ -153,30 +154,29 @@ oldest magnetic anomaly identification, paleomagnetism is the only accepted
 quantitative method for reconstructing plate motions and past paleogeographies.
 After about 170 Ma, multiple data sources can help constrain plate motions in
 more accurate ways. One of the most developed and studied plate kinematics
-models is the Fixed Hotspot Model (FHM)~\cite{M93,M99}, which assumes the Atlantic and
-Indian hotspots are relatively fixed. Such a model like the Fixed Hotspot can
-predict APWPs for main continents, e.g.\ the North America.
+models is the Fixed Hotspot Model (FHM)~\cite{M93,M99}, which assumes the
+Atlantic and Indian hotspots are relatively fixed. Such a model like the Fixed
+Hotspot can predict APWPs for main continents, e.g.\ the North America.
 
 \subsection{Reference Path: The Hotspot Model Predicted}
 
 The oldest pole that can be predicted from the FHM is about 120 Ma. The North
-American 120\textendash0 Ma APWP predicted from this model will be taken as a
-reference path, which will be compared with paleomagnetic APWPs for the same
-plate or continent.
+American 120\textendash0 Ma APWP predicted from this rotation model will be
+taken as a reference path, which will be compared with paleomagnetic APWPs for
+the same plate or continent.
 
 \subsection{120\textendash0 Ma North American Paleomagnetic APWP}
 
-The \textbf{Global Paleomagnetic Database} (GPMDB) Version 4.6b~\cite{P05},
-data source used here, includes 9360 paleopoles for ages of 3,500 Ma to the
-present published from 1925 to January 2011. A polygon can be drawn around a set
-of data, whose sampling sites we believe belong to a specific plate or rigid
-block. Then the {\em Spatial Join\/} technique~\cite{J07} helps join attributes
-from the polygon to the paleomagnetic data based on the spatial relationship
-allowing data within this polygon to be extracted from the whole raw large
-dataset without splitting a subset just for a specific plate. That allows us to
-quickly select subsets of the database based on geographic constraints just as
-easily as for age. Of course, the boundary of this polygon must be reasonably
-along a tectonic boundary.
+The GPMDB 4.6b~\cite{P05}, data source used here, includes 9360 paleopoles for
+ages of 3,500 Ma to the present published from 1925 to January 2011. A polygon
+can be drawn around a set of data, whose sampling sites we believe belong to a
+specific plate or rigid block. Then the {\em Spatial Join\/}
+technique~\cite{J07} helps join attributes from the polygon to the paleomagnetic
+data based on the spatial relationship allowing data within this polygon to be
+extracted from the whole raw large dataset without splitting a subset just for a
+specific plate. That allows us to quickly select subsets of the database based
+on geographic constraints just as easily as for age. Of course, the boundary of
+this polygon must be reasonably along a tectonic boundary.
 
 Plate ID 101 polygon in the recently published Plate Model~\cite{M16}, including
 its children 108 (Avalon/Acadia block) and 109 (Piedmont block) polygons for
@@ -256,7 +256,6 @@ was produced by:
 \begin{description}
   \item First unnumbered item which has no label and is indented from the left
         margin.
-  \item Second unnumbered item.
   \item Third unnumbered item.
 \end{description}
 
@@ -421,40 +420,35 @@ Input & Explanation & Output & Input & Explanation & Output\\
 \end{table*}
 
 The command \verb"\chemical" is provided to set chemical species with an even
-level for subscripts (not produced in standard mathematics mode). Thus
 \verb"\chemical{Fe_{2}^{2+}Cr_{2}O_{4}}" will produce
 \chemical{Fe_{2}^{2+}Cr_{2}O_{4}}.
 
 
 \subsection{Bibliography}
 
-Two methods are provided for managing citations and references. The first
 approach uses the \verb"\begin{thebibliography}{}" and
 \verb"\end{thebibliography}{}" commands.
 
 The second approach uses a simplified scheme using \verb"\begin{references}" and
 \verb"\end{references}" commands.
 
-reference is cited having the same author$(s)$ and date, the letters a,b,c,
-\ldots\ should follow the date; e.g.\ Smith (1988a), Smith (1988b), etc. The
+the same author$(s)$ and date, the letters a,b,c, \ldots\
 
 \subsubsection{Biblography References in the text}
 
 \subsubsection{The bibliography}
 
 \begin{enumerate}
-  \item if an author has written several papers, some with other authors, the
+  \item if an author has written several papers,
         which, in turn, precede the multi-author papers;
-  \item within the two-author paper citations, the order is determined by the
+  \item within the two-author paper citations,
 \end{enumerate}
 %
-where \verb"Author(s)" should be the author names as they are cited in the text,
-commands. \verb"Bibliography entry" should be the material that is to appear in
+where \verb"Author(s)" should be commands. \verb"Bibliography entry" should be
 
 \subsubsection{Simplified References and Citations}
 
-brackets \markcite{(Merritt et al., 1996)} or you may mention the author as part
-of your sentence and include only the year in brackets, as in \markcite{Ono (1996)}.
+brackets \markcite{(Merritt et al., 1996)}, as in \markcite{Ono (1996)}.
 \begin{references}
   \reference{}
 Azimi, Sh.A., Kalinin, A.Y., Kalinin, V.B., \& Pivovarov, B.L., 1968.
