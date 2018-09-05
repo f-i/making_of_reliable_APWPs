@@ -178,20 +178,20 @@ specific plate. That allows us to quickly select subsets of the database based
 on geographic constraints just as easily as for age. Of course, the boundary of
 this polygon must be reasonably along a tectonic boundary.
 
-Plate ID 101 polygon in the recently published Plate Model~\cite{M16}, including
+Plate ID 101 polygon in the recently published Plate Model~\cite{Y18}, including
 its children 108 (Avalon/Acadia block) and 109 (Piedmont block) polygons for
 120\textendash0 Ma, is used to select the sampling sites of the paleopoles for
-North America. According to the plate model rotation data~\cite{M16}, 108 is
+North America. According to the plate model rotation data~\cite{Y18}, 108 is
 fixed to 101 during the geologic period from Cretaceous to the present day. 109
 is also fixed to 101 since about 300 Ma~\cite{C14}. Then in order to be compared
 with the FHM (120\textendash0 Ma)~\cite{M93,M99}, the paleopoles with age
 ranging 120\textendash0 Ma are further selected through constraining the lower
-magnetic age ``LOMAGAGE <= 120''. According to a published plate kinematic model
+magnetic age ``LOMAGAGE $<=$ 120''. According to a published plate kinematic model
 of southwestern North America since 36 Ma~\cite{Mc06}, the paleopoles
 constrained by some western terranes whose Plate IDs are also 101 and those that
 are fixed to 101 during 120\textendash0 Ma shown in the plate model rotation
-data~\cite{M16} except some constrained by a small terrane 101 are removed. So
-finally there are four polygons total for this Plate Model~\cite{M16}. According
+data~\cite{Y18} except some constrained by a small terrane 101 are removed. So
+finally there are four polygons total for this Plate Model~\cite{Y18}. According
 to the plate kinematic model of southwestern North America~\cite{Mc06}, the
 poles with age younger than 10 Ma located within the western 101 terrane
 (RANGE\_ID=74 in the plate kinematic model~\cite{Mc06}) right south of the
@@ -419,10 +419,6 @@ Input & Explanation & Output & Input & Explanation & Output\\
 \end{minipage}
 \end{table*}
 
-The command \verb"\chemical" is provided to set chemical species with an even
-\verb"\chemical{Fe_{2}^{2+}Cr_{2}O_{4}}" will produce
-\chemical{Fe_{2}^{2+}Cr_{2}O_{4}}.
-
 
 \subsection{Bibliography}
 
@@ -472,21 +468,15 @@ Common journals
 \newline
 \begin{tabular}{ll}
 \verb"\areps" & \areps{} \\
-\verb"\bssa"  & \bssa{} \\
 \verb"\eos"   & \eos{}  \\
-\verb"\eps"   & \eps{} \\
 \verb"\epsl"  & \epsl{} \\
-\verb"\gca"   & \gca{} \\
 \verb"\geo"   & \geo{} \\
 \verb"\geop"  & \geop{} \\
 \verb"\gji"   & \gji{} \\
-\verb"\gjras" & \gjras{} \\
 \verb"\grl"   & \grl{} \\
 \verb"\gsab"  & \gsab{} \\
 \verb"\gs"    & \gs{} \\
 \verb"\jgr"   & \jgr{} \\
-\verb"\jseis" & \jseis{} \\
-\verb"\mnras" & \mnras{} \\
 \verb"\pag"   & \pag{} \\
 \verb"\pepi"  & \pepi{} \\
 \verb"\rg"    & \rg{} \\
@@ -563,34 +553,57 @@ All images are produced using GMT~\cite{W13}.
 \end{acknowledgments}
 
 \begin{thebibliography}{}
-  \bibitem[\protect\citename{Fisher }1953]{F53}
-    Fisher, R. A., 1953. Dispersion on a sphere,
-    \textit{Proc. Roy. Soc. London Ser. A.}, \textbf{217}, 295\textendash305.
-  \bibitem[\protect\citename{Torsvik et al. }1992]{T92}
-	Torsvik, T. H., Smethurst, M. A., van der Voo, R., Trench, A., Abrahamsen,
-	N. \& Halvorsen, E., 1992. Baltica. A synopsis of Vendian-Permian
-	palaeomagnetic data and their palaeotectonic implications, \textit{Earth
-	Sci. Rev.}, \textbf{33}, 133\textendash152.
-  \bibitem[\protect\citename{Wessel et al. }2013]{W13}
-	Wessel, P., Smith, W. H. F., Scharroo, R., Luis, J. \& Wobbe, F.,2013.
-	Generic Mapping Tools: Improved version released, \eos{}
-	\textbf{94}, 409\textendash410.
-  \bibitem[\protect\citename{Tauxe et al. }2016]{T16}
-	Tauxe L., Banerjee S.K., Butler R.F. \& van der Voo R., 2016.
-	\textit{Essentials of Paleomagnetism}, 4th web edn, Available on line
-  \bibitem[\protect\citename{van der Voo }1990]{v90}
-    van der Voo, R., 1990. The reliability of paleomagnetic data,
-	\textit{Tectonophysics}. \textbf{184}, 1\textendash9.
-  \bibitem[\protect\citename{Pisarevsky }2005]{P05}
-	Pisarevsky, S. A., 2005. New edition of the Global Paleomagnetic Database,
-	\eos{}\textbf{86}, 170.
-  \bibitem[\protect\citename{Jacox \& Samet }2007]{J07}
-	Jacox, E. H. \& Samet, H., 2007. Spatial Join Techniques, \textit{ACM
-	Trans. Database Syst.}. \textbf{32}, 7.
-  \bibitem[\protect\citename{Besse \& Courtillot }%
-    2002]{B02}  Besse, J. \& Courtillot, V., 2002, Apparent and true polar
-    wander and the geometry of the geomagnetic field over the last 200 Myr,
-	\jgr{}\textbf{107}, 2300
+\bibitem[\protect\citename{Besse \& Courtillot }2002]{B02}
+  Besse, J. \& Courtillot, V., 2002, Apparent and true polar wander and the
+  geometry of the geomagnetic field over the last 200 Myr, \jgr{}\textbf{107},
+  2300.
+\bibitem[\protect\citename{Christeson et al. }2014]{C14}
+  Christeson, G. L., Van Avendonk, H. J. A., Norton, I. O., Snedden, J. W.,
+  Eddy, D. R., Karner, G. D. \& Johnson, C. A., 2014. Deep crustal structure in
+  the eastern Gulf of Mexico, \textit{J. Geophys. Res. Solid Earth},
+  \textbf{401}, 183\textendash195.
+\bibitem[\protect\citename{Fisher }1953]{F53}
+  Fisher, R. A., 1953. Dispersion on a sphere, \textit{Proc. Roy. Soc. London
+  Ser. A.}, \textbf{217}, 295\textendash305.
+\bibitem[\protect\citename{Jacox \& Samet }2007]{J07}
+  Jacox, E. H. \& Samet, H., 2007. Spatial Join Techniques, \textit{ACM Trans.
+  Database Syst.}. \textbf{32}, 7.
+\bibitem[\protect\citename{M{\"{u}}ller et al. }1993]{M93}
+  M{\"{u}}ller, R. D., Royer, J. Y. \& Lawver, L. A., 1993. Revised plate
+  motions relative to the hotspots from combined Atlantic and Indian-Ocean
+  hotspot tracks, \textit{Geology}, \textbf{21}, 275\textendash278.
+\bibitem[\protect\citename{M{\"{u}}ller et al. }1999]{M99}
+  M{\"{u}}ller, R. D., Royer, J. Y., Cande, S. C., Roest, W. R. \& Maschenkov,
+  S., 1999. New constraints on the Late Cretaceous/Tertiary plate tectonic
+  evolution of the Caribbean, \textit{Sedimentary Basins of the World}.
+  \textbf{4}, 33\textendash59.
+\bibitem[\protect\citename{McQuarrie \& Wernicke }2006]{Mc06}
+  McQuarrie, N. \& Wernicke, B. P., 2006. An animated tectonic reconstruction of
+  southwestern North America since 36 Ma, \textit{Geosphere}, \textbf{1},
+  147\textendash172.
+\bibitem[\protect\citename{Pisarevsky }2005]{P05}
+  Pisarevsky, S. A., 2005. New edition of the Global Paleomagnetic Database,
+  \eos{}\textbf{86}, 170.
+\bibitem[\protect\citename{Torsvik et al. }1992]{T92}
+  Torsvik, T. H., Smethurst, M. A., van der Voo, R., Trench, A., Abrahamsen, N.
+  \& Halvorsen, E., 1992. Baltica. A synopsis of Vendian-Permian palaeomagnetic
+  data and their palaeotectonic implications, \textit{Earth Sci. Rev.},
+  \textbf{33}, 133\textendash152.
+\bibitem[\protect\citename{Tauxe et al. }2016]{T16}
+  Tauxe L., Banerjee S.K., Butler R.F. \& van der Voo R., 2016.
+  \textit{Essentials of Paleomagnetism}, 4th web edn, Available on line
+\bibitem[\protect\citename{van der Voo }1990]{v90}
+  van der Voo, R., 1990. The reliability of paleomagnetic data,
+  \tecto{}\textbf{184}, 1\textendash9.
+\bibitem[\protect\citename{Wessel et al. }2013]{W13}
+  Wessel, P., Smith, W. H. F., Scharroo, R., Luis, J. \& Wobbe, F.,2013. Generic
+  Mapping Tools: Improved version released, \eos{}\textbf{94}, 409\textendash410.
+\bibitem[\protect\citename{Young et al. }2018]{Y18}
+  Young, A., Flament, N., Maloney, K., Williams, S., Matthews, K., Zahirovic,
+  S.
+  \& Müller, D., 2018. Global kinematics of tectonic plates and subduction zones
+  since the late Paleozoic Era, \textit{Geosci. Front.},
+  \textbf{in press}, 000\textendash000.
 \end{thebibliography}
 
 
