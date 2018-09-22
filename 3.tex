@@ -179,11 +179,23 @@ on geographic constraints just as easily as for age. Of course, the boundary of
 this polygon must be reasonably along a tectonic boundary (see the details
 about data filtering for North America in the Supplementary Material).
 
+\subsection{Picking Data for A Certain Time Window}
 
-\subsection{Additional document class options}\label{classoptions}
+\subsubsection{Moving Average}
 
+The moving average method, also called ``running mean'' or ``moving
+window''~\cite{T08} method, calculates the average of values between a certain
+data (age in our case) range; the average is then recalculated as the limits of
+the bin are repeatedly incremented upwards. In addition to the traditional
+moving windows averaging algorithm, a newly developed moving average method is
+also used, referred to here as the ``Age Position Picking'' method. The
+difference of this moving average method from the one built in
+GMAP~\cite{T99,T08} is that the whole magnetic age range is taken into account
+in each window, while GMAP only considers the mid-point of the low and high
+magnetic age of each pole, an algorithm referred to as the ``Age Mean Picking''
+method.
 
-\subsection{Landscape pages}
+\subsection{Landscape pages}\label{classoptions}
 
 \begin{enumerate}
   \item Use the \verb"table*" or \verb"figure*"
@@ -216,16 +228,9 @@ about data filtering for North America in the Supplementary Material).
   \item A \verb"keywords" environment and a \verb"\nokeywords" command;
  \end{enumerate}
 
-\subsection{Titles and author's name}
-
-must be a single line ($\leqslant 45$ characters). Moreover, the main
-
-\subsection{Key words and Summary}
-
-The heading `\textbf{Key words}' is included automatically and the key words are
-
 \subsection{Lists}
 
+must be a single line ($\leqslant 45$ characters).
 number labelling command after the \verb"\begin{enumerate}". For example, the
 list
 \begin{enumerate}
@@ -450,7 +455,6 @@ Common journals
 \newline
 \begin{tabular}{ll}
 \verb"\areps" & \areps{} \\
-\verb"\eos"   & \eos{}  \\
 \verb"\epsl"  & \epsl{} \\
 \verb"\geo"   & \geo{} \\
 \verb"\geop"  & \geop{} \\
@@ -458,11 +462,9 @@ Common journals
 \verb"\grl"   & \grl{} \\
 \verb"\gsab"  & \gsab{} \\
 \verb"\gs"    & \gs{} \\
-\verb"\jgr"   & \jgr{} \\
 \verb"\pag"   & \pag{} \\
 \verb"\pepi"  & \pepi{} \\
 \verb"\rg"    & \rg{} \\
-\verb"\tecto" & \tecto{} \\
 \end{tabular}
 %
 % The following 2 tables have been moved back in the text to improve page layout
@@ -571,6 +573,13 @@ All images are produced using GMT~\cite{W13}.
   \& Halvorsen, E., 1992. Baltica. A synopsis of Vendian-Permian palaeomagnetic
   data and their palaeotectonic implications, \textit{Earth Sci. Rev.},
   \textbf{33}, 133\textendash152.
+\bibitem[\protect\citename{Torsvik \& Smethurst }1999]{T99}
+  Torsvik, T. H. \& Smethurst, M. A., 1999. Plate tectonic modelling: virtual
+  reality with GMAP, \textit{Comput. Geosci.}, \textbf{25}, 395\textendash402.
+\bibitem[\protect\citename{Torsvik et al. }2008]{T08}
+  Torsvik, T. H., M{\"{u}}ller, R. D., van der Voo, R., Steinberger, B., \&
+  Gaina, C., 2008. Global plate motion frames: Toward a unified model,
+  \textit{Rev. Geophys.}, \textbf{46}, RG3004.
 \bibitem[\protect\citename{Tauxe et al. }2016]{T16}
   Tauxe L., Banerjee S.K., Butler R.F. \& van der Voo R., 2016.
   \textit{Essentials of Paleomagnetism}, 4th web edn, Available on line
