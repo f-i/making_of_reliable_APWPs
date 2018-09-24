@@ -32,10 +32,10 @@ shows magnetisation acquired prior to a folding event tens of millions of years
 after initial rock formation.
 
 The most obvious characteristic we can observe from paleomagnetic data is that
-some poles have very large age ranges, e.g., more than 100 myr. The
+some poles have very large age ranges, e.g., more than 100 Myr. The
 magnetization age should be some time between the information of the rock and
 folding events. There are also others where we have similar position but the
-age constraint is much narrower, e.g. 10 myr window or less. Obviously the
+age constraint is much narrower, e.g. 10 Myr window or less. Obviously the
 latter kind of data is more valuable than the one with large age range.
 
 \subsubsection{Position Error}
@@ -121,13 +121,13 @@ e.g., two widely used methods: the V90 reliability criteria~\cite{v90} and the
 BC02 selection criteria provided by Besse \& Courtillot \shortcite{B02}.
 Briefly, the V90 criteria for paleomagnetic results includes seven criteria: (1)
 Well determined age; (2) At least 25 samples with Fisher~\cite{F53} precision
-$\kappa$ greater than 10 and $\alpha95$ less than
-16\degree; (3) Detailed demagnetisation results reported; (4) Passed field
-tests; (5) Tectonic coherence with continent and good structural control; (6)
-Identified antipodal reversals; (7) Lack of similarity with younger
-poles~\cite{T92}. The total criteria satisfied (0\textendash7) is then used as
-a measure of a paleomagnetic result's overall reliability, which is known as Q
-(quality) factor~\cite{T92}. Q factor is indeed a very straightforward way to
+$\kappa$ greater than 10 and $\alpha95$ less than 16\degree; (3) Detailed
+demagnetisation results reported; (4) Passed field tests; (5) Tectonic coherence
+with continent and good structural control; (6) Identified antipodal reversals;
+(7) Lack of similarity with younger poles~\cite{T92}. The total criteria
+satisfied (0\textendash7) is then used as a measure of a paleomagnetic result's
+overall reliability, which is known as Q (quality) factor~\cite{T92}. Q factor
+is indeed a very straightforward way to
 get a quantitalized reliability score. Also it then can be conveniently used in
 the later calculations of APWPs~\cite{T92}. But at the same time this is a
 fairly basic filter that lumps together criteria that may not be equally
@@ -194,6 +194,39 @@ GMAP~\cite{T99,T08} is that the whole magnetic age range is taken into account
 in each window, while GMAP only considers the mid-point of the low and high
 magnetic age of each pole, an algorithm referred to as the ``Age Mean Picking''
 method.
+
+Normally each VGP in the paleomagnetic database is treated as a point with an
+age that is the mid-point between the upper and lower age limits, i.e. ``Age
+Mean Picking'', but this is problematic for paleomagnetic data with large age
+ranges (especially if they turn out to be primary magnetization that should
+plot at old end of age range). We are trying a method (``Age Position Picking'')
+that includes a VGP in the moving average bin if any part of its specified age
+range falls within that bin. If, for example, we have a pole which is
+constrained to within 10 and 20 Ma of age, and we have a 2 Myr moving window
+with a 1 Myr age step, then it shouldn't just be in the 14\textendash16 Ma bin
+(for the mid-point age of 15 Ma)\textemdash{}it should be in the 9\textendash11,
+10\textendash12,11\textendash13,12\textendash14\ldots17\textendash19,
+18\textendash20, and 19\textendash21 Ma bins. So the average poles are produced
+from each bin, and each original pole is represented over its entire possible
+acquisition age. Fig.~\ref{fig-nac-maplat} shows an example of moving average
+with a 10 Myr window and a 5 Myr step. So, for example, for the window of 15 Ma
+to 5 Ma (the light blue shades in Fig.~\ref{fig-nac-maplat}), the ``Age Mean
+Picking'' method calculates the Fisher mean pole of only 8 poles, while the
+``Age Position Picking'' method calculates the mean pole of 17 poles. From
+comparison of mean poles of the picked poles for the light blue age window with
+the two different algorithms (the 10 Ma mean poles of brown paths in
+Fig.~\ref{fig-nac-maplat}), the mean pole from ``Age Position Picking'' method
+is closer to the 10 Ma pole in the Fixed-Hotpost-Model predicted path.
+
+\begin{figure*}[tbp]
+\centering
+\includegraphics[width=1.01\textwidth]{../../../gpmdb/apwp/moving_mean/ma_paleolat_nac.png}
+\caption[Moving average (MA) methods]{An example of 10 Myr moving window and 5
+Myr step in the moving average method, based on poles of the NAC. Every age
+window has a different color. Red points are the midpoints of low and high
+magnetic ages. The vertical axis has no specific meaning here.
+}\label{fig-nac-maplat}
+\end{figure*}
 
 \subsection{Landscape pages}\label{classoptions}
 
