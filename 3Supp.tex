@@ -1,3 +1,24 @@
+\documentclass{gji}
+
+\usepackage[pdftex, pdfauthor={Chenjian Fu cfu3@kent.edu}, pdfcreator={PDF},
+            pdftitle={how to make an APWP}, pdfsubject={Paleomagnetism},
+            pdfkeywords={APWP Plate Tectonics}, pdfproducer={PDF}]{hyperref}
+\usepackage{timet,booktabs,gensymb,graphicx}
+
+\title{Methods for Producing a Reliable APWP}
+\author[Chenjian Fu]{Chenjian Fu$^1$\thanks{GJI template} Christopher J.
+Rowan$^2$ \\$^1$ Department of Geology, Kent State University, 325 S Lincoln St,
+Kent, OH \emph{44242}, USA \\$^2$ Department of Geology, Kent State University,
+325 S Lincoln St, Kent, OH \emph{44242}, USA}
+\date{Received 2018 December 18; in original form 2018 November 22}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\volume{0}
+\pubyear{2018}
+
+\begin{document}\label{firstpage}
+
+\maketitle
+
 \section{Supplementary Materials}
 
 \subsection{How to Constrain Plate 101's Data}
@@ -52,8 +73,40 @@ poles that had been influenced by local tectonic rotations are shown as white
 dots.}\label{fig_NAfinal}
 \end{figure}
 
-\subsection{2}
-2
+\subsection{How to Constrain Plate 801's Data}
+Plate ID 801 polygon in the recently published Plate Model~\cite{Y18}, including
+its children 675 (Sumba block) and 684 (Timor block) polygons for
+120\textendash0 Ma (Fig.~\ref{fig_AUpolygon}), is used to select the sampling
+sites of the paleopoles for Australia (Fig.~\ref{fig_AUpmdata}). According to
+the plate model rotation data~\cite{Y18}, 675 and 684 are fixed to 101 during
+the geologic period from c.145 Ma to the present.
+
+\begin{figure}
+\includegraphics[scale=.32]{figures/801children.pdf}
+\caption{The Plate ID 801 polygons (yellow) with its children 675 and 684
+(yellow with labels) used to constrain the 120\textendash0 Ma data for
+Australia.}\label{fig_AUpolygon}
+\end{figure}
+
+On the southeast of the main Australia plate (the largest polygon in
+Fig.~\ref{fig_AUpolygon}), there is a triangle-shaped polygon 850 (Tasmania
+block) which is fixed to 801 since c.100 Ma according to the~\cite{Y18}
+rotation data. With that attribute, 805 contributes more data younger than
+c.100Ma for the later analysis. Ultimately the final 97 extracted datasets is
+shown in Fig.~\ref{fig_AUfinal}.
+
+\begin{figure}
+\includegraphics[scale=.32]{figures/801children_2.pdf}
+\caption{All the 120\textendash0 Ma data constrained by the Plate ID 801, 675
+and 684 polygons for Australia.}\label{fig_AUpmdata}
+\end{figure}
+
+\begin{figure}
+\includegraphics[scale=.35]{figures/801children_3.pdf}
+\caption{The final filtered datasets (red stars) for later analysis on
+Australia. The Plate ID 850 helps increase the amount of qualified datasets for
+100\textendash0 Ma.}\label{fig_AUfinal}
+\end{figure}
 
 \subsection{3}
 3
@@ -96,3 +149,5 @@ dots.}\label{fig_NAfinal}
   since the late Paleozoic Era, \textit{Geosci. Front.},
   \textbf{in press}, 000\textendash000.
 \end{thebibliography}\label{lastpage}
+
+\end{document}
