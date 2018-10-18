@@ -249,9 +249,12 @@ magnetic ages. The vertical axis has no specific meaning here.
 \end{figure*}
 
 \subsubsection{Picking}
-\begin{table}[]
+
+\begin{table}
 \centering
-\caption{Table 1 caption}\label{tab-picking}
+\caption{Table 1 List of all Picking (i.e. Binning) algorithms developed in this
+         paper. AMP, Age Mean Picking (See Section ``Moving Average''); APP, Age
+         Position Picking.}\label{tab-pick}
 \begin{tabular}{@{}ll@{}}
 \toprule
 No. & Picking Algorithm \\ \midrule
@@ -261,31 +264,60 @@ No. & Picking Algorithm \\ \midrule
 2 & APP (``$\alpha$95/Age range'' no more than ``15/20'') \\
 16 & AMP (mainly or only igneous) \\
 3 & APP (mainly or only igneous) \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\
- &  \\ \bottomrule
+17 & AMP (contain igneous but not mainly) \\
+4 & APP (contain igneous but not mainly) \\
+12 & AMP (unflatten sedimentary) \\
+5 & APP (unflatten sedimentary) \\
+19 & AMP (nonredbeds) \\
+6 & APP (nonredbeds) \\
+20 & AMP (unflatten redbeds) \\
+7 & APP (unflatten redbeds) \\
+21 & AMP (published after 1983) \\
+8 & APP (published after 1983) \\
+22 & AMP (published before 1983) \\
+9 & APP (published before 1983) \\
+23 & AMP (exclude commented local rot or secondary print) \\
+10 & APP (exclude commented local rot or secondary print) \\
+24 & AMP (exclude local rot or correct it if suggested) \\
+11 & APP (exclude local rot or correct it if suggested) \\
+25 & AMP (filtered using SS05 palaeomagnetic reliability criteria) \\
+13 & APP (filtered using SS05 palaeomagnetic reliability criteria) \\
+26 & AMP (exclude superseded data already included in other results) \\
+14 & APP (exclude superseded data already included in other results) \\
+27 & AMP (comb of 25 and 26) \\
+15 & APP (comb of 13 and 14) \\ \bottomrule
 \end{tabular}
 \end{table}
 
+\subsubsection{Weighting}
+
+Because all data is not created equal, we want to calculate a weighted mean
+pole for a time interval with `better' (more likely to be reliable) poles
+counting more than `worse'. For example, a pole with small $\alpha$95
+and very well constrained age is more likely to reflect APWP position at the
+selected age point than a pole with large $\alpha$95 and very broad age
+range. There are many potential ways to weight this data set which can
+obviously greatly influence the final result, and we want to test this.
+
+Six weighting algorithms (Table.~\ref{tab-weit}) have currently been developed
+or reproduced according to published work to give different weights to data with
+different qualities.
+
+\begin{table}
+\centering
+\caption{Table 1 List of all weighting algorithms developed in this
+         paper.}\label{tab-weit}
+\begin{tabular}{@{}ll@{}}
+\toprule
+No. & Weighting Algorithm \\ \midrule
+0 & None \\
+1 & Numbers of sites (B), Observations (N) \\
+2 & Age uncertainty \\
+3 & $\alpha$95 \\
+4 & Age error Position to bin \\
+5 & comb of 3 and 4 \\ \bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Landscape pages}\label{classoptions}
 
