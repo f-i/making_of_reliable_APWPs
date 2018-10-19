@@ -127,19 +127,19 @@ with continent and good structural control; (6) Identified antipodal reversals;
 (7) Lack of similarity with younger poles~\cite{T92}. The total criteria
 satisfied (0\textendash7) is then used as a measure of a paleomagnetic result's
 overall reliability, which is known as Q (quality) factor~\cite{T92}. Q factor
-is indeed a very straightforward way to
-get a quantitalized reliability score. Also it then can be conveniently used in
-the later calculations of APWPs~\cite{T92}. But at the same time this is a
-fairly basic filter that lumps together criteria that may not be equally
-important. Compared with V90, the BC02 criteria suggests stricter filtering,
-e.g., using only poles with at least 6 sampling sites and 36 samples, each site
-having $\alpha95$ less than 10\degree\ in the Cenozoic and 15\degree\ in the
-Mesozoic. B02 is also straightforward and convenient to use, but some useful
-data may be filtered out and wasted especially for a period where there are
-only limited number of data. In addition, there has been limited study of how
-effective these marking/filtering methods are at reconstructing a `true' APWP,
-and for most studies after a basic filtering of `low quality' poles, the
-remaining poles are, in fact, treated equally.
+is indeed a very straightforward way to get a quantitalized reliability score.
+Also it then can be conveniently used in the later calculations of
+APWPs~\cite{T92}. But at the same time this is a fairly basic filter that lumps
+together criteria that may not be equally important. Compared with V90, the BC02
+criteria suggests stricter filtering, e.g., using only poles with at least 6
+sampling sites and 36 samples, each site having $\alpha95$ less than 10\degree\
+in the Cenozoic and 15\degree\ in the Mesozoic. B02 is also straightforward and
+convenient to use, but some useful data may be filtered out and wasted
+especially for a period where there are only limited number of data. In
+addition, there has been limited study of how effective these marking/filtering
+methods are at reconstructing a `true' APWP, and for most studies after a basic
+filtering of `low quality' poles, the remaining poles are, in fact, treated
+equally.
 
 Above all, there haven't been any real attempts to study how APWP fits may be
 improved by filtering/weighting data. This paper is presented to address these
@@ -176,17 +176,17 @@ Myr.}\label{fig-fhsPred}
 \subsection{120\textendash0 Ma North American Paleomagnetic APWP}
 
 The GPMDB 4.6b~\cite{P05}, data source used here, includes 9514 paleopoles for
-ages of 3,500 Ma to the present published from 1925 to 2016. A polygon
-can be drawn around a set of data, whose sampling sites we believe belong to a
-specific plate or rigid block. Then the {\em Spatial Join\/}
-technique~\cite{J07} helps join attributes from the polygon to the paleomagnetic
-data based on the spatial relationship allowing data within this polygon to be
-extracted from the whole raw large dataset without splitting a subset just for a
-specific plate. That allows us to quickly select subsets of the database based
-on geographic constraints just as easily as for age. Of course, the boundary of
-this polygon must be reasonably along a tectonic boundary (see the details
-about data filtering for North America in the Supplementary Material). The
-temporal distribution of North American 120\textendash0 Ma poles is shown in
+ages of 3,500 Ma to the present published from 1925 to 2016. A polygon can be
+drawn around a set of data, whose sampling sites we believe belong to a specific
+plate or rigid block. Then the {\em Spatial Join\/} technique~\cite{J07} helps
+join attributes from the polygon to the paleomagnetic data based on the spatial
+relationship allowing data within this polygon to be extracted from the whole
+raw large dataset without splitting a subset just for a specific plate. That
+allows us to quickly select subsets of the database based on geographic
+constraints just as easily as for age. Of course, the boundary of this polygon
+must be reasonably along a tectonic boundary (see the details about data
+filtering for North America in the Supplementary Material). The temporal
+distribution of North American 120\textendash0 Ma poles is shown in
 Fig.~\ref{fig-120NAhist}.
 
 \begin{figure*}
@@ -194,9 +194,9 @@ Fig.~\ref{fig-120NAhist}.
 \includegraphics[width=1.01\textwidth]{figures/120NAhist.pdf}
 \caption[Distribution of 120\textendash0 Ma North American poles]{Temporal
 distribution 120\textendash0 Ma $NAC$ paleomagnetic poles. For distribution a,
-each bin only counts in the midpoints of pole error bars; For distribution b, as
-long as the bar intersects with the bin, it is counted in.
-}\label{fig-120NAhist}
+each bin (spanning 10 Myr here) only counts in the midpoints of pole error bars;
+For distribution b, as long as the bar intersects with the bin, it is counted
+in.}\label{fig-120NAhist}
 \end{figure*}
 
 \subsection{Picking Data for A Certain Time Window}
@@ -208,35 +208,34 @@ window''~\cite{T08} method, calculates the average of values between a certain
 data (age in our case) range; the average is then recalculated as the limits of
 the bin are repeatedly incremented upwards. In addition to the traditional
 moving windows averaging algorithm, a newly developed moving average method is
-also used, referred to here as the ``Age Position Picking'' method. The
+also used, referred to here as the ``Age Position Picking (APP)'' method. The
 difference of this moving average method from the one built in
 GMAP~\cite{T99,T08} is that the whole magnetic age range is taken into account
 in each window, while GMAP only considers the mid-point of the low and high
-magnetic age of each pole, an algorithm referred to as the ``Age Mean Picking''
-method.
+magnetic age of each pole, an algorithm referred to as the ``Age Mean Picking
+(AMP)'' method.
 
 Normally each VGP in the paleomagnetic database is treated as a point with an
-age that is the mid-point between the upper and lower age limits, i.e. ``Age
-Mean Picking'', but this is problematic for paleomagnetic data with large age
-ranges (especially if they turn out to be primary magnetization that should
-plot at old end of age range). We are trying a method (``Age Position Picking'')
-that includes a VGP in the moving average bin if any part of its specified age
-range falls within that bin. If, for example, we have a pole which is
-constrained to within 10 and 20 Ma of age, and we have a 2 Myr moving window
-with a 1 Myr age step, then it shouldn't just be in the 14\textendash16 Ma bin
-(for the mid-point age of 15 Ma)\textemdash{}it should be in the 9\textendash11,
-10\textendash12,11\textendash13,12\textendash14\ldots17\textendash19,
-18\textendash20, and 19\textendash21 Ma bins. So the average poles are produced
-from each bin, and each original pole is represented over its entire possible
-acquisition age. Fig.~\ref{fig-nac-maplat} shows an example of moving average
-with a 10 Myr window and a 5 Myr step. So, for example, for the window of 15 Ma
-to 5 Ma (the light blue shades in Fig.~\ref{fig-nac-maplat}), the ``Age Mean
-Picking'' method calculates the Fisher mean pole of only 8 poles, while the
-``Age Position Picking'' method calculates the mean pole of 17 poles. From
+age that is the mid-point between the upper and lower age limits, i.e. AMP, but
+this is problematic for paleomagnetic data with large age ranges (especially if
+they turn out to be primary magnetization that should plot at old end of age
+range). We are trying a method, APP, that includes a VGP in the moving average
+bin if any part of its specified age range falls within that bin. If, for
+example, we have a pole which is constrained to within 10 and 20 Ma of age, and
+we have a 2 Myr moving window with a 1 Myr age step, then it shouldn't just be
+in the 14\textendash16 Ma bin (for the mid-point age of 15 Ma)\textemdash{}it
+should be in the 9\textendash11,10\textendash12,11\textendash13,12\textendash14
+\ldots17\textendash19,18\textendash20, and 19\textendash21 Ma bins. So the
+average poles are produced from each bin, and each original pole is represented
+over its entire possible acquisition age. Fig.~\ref{fig-nac-maplat} shows an
+example of moving average with a 10 Myr window and a 5 Myr step. So, for
+example, for the window of 15 Ma to 5 Ma (the light blue bin in
+Fig.~\ref{fig-nac-maplat}), the AMP method calculates the Fisher mean pole of
+only 4 poles, while the APP method calculates the mean pole of 8 poles. From
 comparison of mean poles of the picked poles for the light blue age window with
 the two different algorithms (the 10 Ma mean poles of brown paths in
-Fig.~\ref{fig-nac-maplat}), the mean pole from ``Age Position Picking'' method
-is closer to the 10 Ma pole in the Fixed-Hotpost-Model predicted path.
+Fig.~\ref{fig-fhsPred}), the mean pole from the APP method is closer to the 10
+Ma pole in the FHM predicted path.
 
 \begin{figure*}
 \centering
@@ -248,7 +247,7 @@ magnetic ages. The vertical axis has no specific meaning here.
 }\label{fig-nac-maplat}
 \end{figure*}
 
-\subsubsection{Picking}
+\paragraph{Picking}
 
 \begin{table}
 \centering
@@ -280,8 +279,8 @@ No. & Picking Algorithm \\ \midrule
 10 & APP (exclude commented local rot or secondary print) \\
 24 & AMP (exclude local rot or correct it if suggested) \\
 11 & APP (exclude local rot or correct it if suggested) \\
-25 & AMP (filtered using SS05 palaeomagnetic reliability criteria) \\
-13 & APP (filtered using SS05 palaeomagnetic reliability criteria) \\
+25 & AMP (filtered using~\cite{S05} palaeomagnetic reliability criteria) \\
+13 & APP (filtered using~\cite{S05} palaeomagnetic reliability criteria) \\
 26 & AMP (exclude superseded data already included in other results) \\
 14 & APP (exclude superseded data already included in other results) \\
 27 & AMP (comb of 25 and 26) \\
@@ -289,15 +288,15 @@ No. & Picking Algorithm \\ \midrule
 \end{tabular}
 \end{table}
 
-\subsubsection{Weighting}
+\paragraph{Weighting}
 
 Because all data is not created equal, we want to calculate a weighted mean
 pole for a time interval with `better' (more likely to be reliable) poles
-counting more than `worse'. For example, a pole with small $\alpha$95
-and very well constrained age is more likely to reflect APWP position at the
-selected age point than a pole with large $\alpha$95 and very broad age
-range. There are many potential ways to weight this data set which can
-obviously greatly influence the final result, and we want to test this.
+counting more than `worse'. For example, a pole with small $\alpha$95 and very
+well constrained age is more likely to reflect APWP position at the selected age
+point than a pole with large $\alpha$95 and very broad age range. There are many
+potential ways to weight this data set which can obviously greatly influence the
+final result, and we want to test this.
 
 Six weighting algorithms (Table.~\ref{tab-weit}) have currently been developed
 or reproduced according to published work to give different weights to data with
@@ -319,321 +318,6 @@ No. & Weighting Algorithm \\ \midrule
 \end{tabular}
 \end{table}
 
-\subsection{Landscape pages}\label{classoptions}
-
-\begin{enumerate}
-  \item Use the \verb"table*" or \verb"figure*"
-        \verb"\% **"
-\begin{verbatim}
-% ** \clearpage
-% ** \thispagestyle{plate}
-% ** \plate{Opposite p.~812, GJI, \textbf{135}}
-\begin{figure*}
-  \vbox to220mm{\vfil Landscape figure to
-                go here. \vfil}
-  \caption{}
-  \label{landfig}
-\end{figure*}
-\end{verbatim}
-\item the \verb"\pagestyle" command, as follows:
-\begin{verbatim}
-\documentclass[landscape]{gji}
-\pagestyle{empty}
-\end{verbatim}
-  \item Before each float environment, use the \verb"\setcounter"
-\end{enumerate}
-
-
-\section{Additional facilities}
-
-\begin{enumerate}
-  \item Extended commands for specifying a short version of the title and
-        author$(s)$ for the running headlines;
-  \item A \verb"keywords" environment and a \verb"\nokeywords" command;
- \end{enumerate}
-
-\subsection{Lists}
-
-must be a single line ($\leqslant 45$ characters).
-number labelling command after the \verb"\begin{enumerate}". For example, the
-list
-\begin{enumerate}
-\renewcommand{\theenumi}{(\arabic{enumi})}
-  \item first item
-  \item second item
-  \item etc\ldots
-\end{enumerate}
-was produced by:
-\begin{description}
-  \item First unnumbered item which has no label and is indented from the left
-        margin.
-  \item Third unnumbered item.
-\end{description}
-
-\section[]{Some guidelines for using\\* standard facilities}
-
-\subsection{Sections}
-
-\LaTeX\ provides five levels of section headings and they are all defined in the
-\begin{description}
-  \item \verb"\subsection"
-  \item \verb"\subsubsection"
-  \item \verb"\paragraph"
-  \item \verb"\subparagraph"
-\end{description}
-
-need any other style, see the example in Section~\ref{headings}.
-
-\verb"\\*" to end individual lines and include the optional argument \verb"[]"
-
-\subsection{Tables}
-
-omitted. For example, Table~\ref{symbols} is produced using the
-\begin{table}
- \caption{Seismic velocities at major discontinuities.}\label{symbols}
- \begin{tabular}{@{}lcccccc}
-  Class & depth & radius
-        & $\alpha _{-}$ & $\alpha _{+}$
-        & $\beta _{-}$ & $\beta _{+}$ \\
-  ICB & 5154 & 1217 & 11.091 & 10.258
-        & 3.438 &  0. \\
-  CMB & 2889 & 3482 & 8.009 & 13.691
-        & 0. & 7.301 \\
- \end{tabular}
-
- \medskip
-subscript $-$ are evaluated just below the discontinuity and those with subscript $+$
-\end{table}
-
-
-\subsection{Running headlines}
-
-three use et~al. The \verb"\pagestyle" and \verb"\thispagestyle"
-commands should {\em not\/} be used. Similarly, the commands
-
-\subsection{Typesetting mathematics}
-
-\subsubsection{Displayed mathematics}
-
-provided that you use the \LaTeX\ standard of open and closed square brackets
-\[
- \sum_{i=1}^p \lambda_i =
-{\mathrm{trace}}(\mathbf{S})
-\]
-equation, \[ \alpha_{j+1} > \bar{\alpha}+ks_{\alpha} \]
-required the command \verb"\eqsecnum" should appear after \verb"begin{document}"
-
-\subsubsection{Bold math italic}\label{boldmathitalic}
-
-The class file provides a font \verb"\mitbf" defined as:
-\begin{equation}
-  d(\mitbf{s_{t_u}}) = \langle {[RM(\mitbf{x_y} + \mitbf{s_t}) - RM(\mitbf{x_y})]}^2 \rangle
-\end{equation}
-
-messages in your log file that read something like ``Warning: Font/shape
-`cmm/b/it' in size~\hbox{$< \!\! 9 \!\! >$} not available on input line 649.
-Warning: Using external font `cmmi9' instead on input line 649.''
-
-
-\subsubsection{Bold Greek}\label{boldgreek}
-
-to typeset the equation \[ \mitbf{{\alpha_{\mu}}} = \mitbf{\Theta} \alpha. \]
-
-\subsection{Points to note in formatting text}\label{formtext}
-
-\begin{quote}
-\$ \& \% \# \_ \{ and \}
-\end{quote}
-must be typed
-\begin{center}
-\begin{quote}
-\verb"\$" \verb"\&" \verb"\%" \verb"\#" \verb"\_" \verb"\{" and \verb"\}".
-\end{quote}
-\end{center}
-
-\texttt{``quoted text.''} they are typed within math commands (\verb"$>$" or \verb"$<$").
-
-\subsubsection{Special symbols}
-
-The macros for the special symbols in Tables~\ref{mathmode} and~\ref{anymode}
-%
-\begin{table*}
-\begin{minipage}{106mm}
-\caption{Special symbols which can only be used in math mode.}\label{mathmode}
-\begin{tabular}{@{}llllll}
-Input & Explanation & Output & Input & Explanation & Output\\
-\toprule
-\verb"\la"     & less or approx       & $\la$     &
-\verb"\ga"     & greater or approx    & $\ga$\\[2pt]
-\verb"\getsto" & gets over to         & $\getsto$ &
-\verb"\cor"    & corresponds to       & $\cor$\\[2pt]
-\verb"\lid"    & less or equal        & $\lid$    &
-\verb"\gid"    & greater or equal     & $\gid$\\[2pt]
-\verb"\sol"    & similar over less    & $\sol$    &
-\verb"\sog"    & similar over greater & $\sog$\\[2pt]
-\verb"\lse"    & less over simeq      & $\lse$    &
-\verb"\gse"    & greater over simeq   & $\gse$\\[2pt]
-\verb"\grole"  & greater over less    & $\grole$  &
-\verb"\leogr"  & less over greater    & $\leogr$\\[2pt]
-\verb"\loa"    & less over approx     & $\loa$    &
-\verb"\goa"    & greater over approx  & $\goa$\\
-\bottomrule
-\end{tabular}
-\end{minipage}
-\end{table*}
-%
-\begin{table*}
-\begin{minipage}{115mm}
-\caption{Special symbols which don't have to be used in math mode.}\label{anymode}
-\begin{tabular}{@{}llllll}
-Input & Explanation & Output & Input & Explanation & Output\\
-\toprule
-\verb"\sun"      & sun symbol            & $\sun$     &
-  \verb"\earth"     & earth symbol         & $\earth$   \\[2pt]
-\verb"\degr"     & degree                &$\degr$     &
-  \verb"\micron"   & \micron{}               & \micron{}    \\[2pt]
-  \verb"\diameter" & diameter              & \diameter{}  &
-  \verb"\sq"       & square                & \squareforqed\\[2pt]
-  \verb"\fd"       & fraction of day       & \fd{}        &
-  \verb"\fh"       & fraction of hour      & \fh\\[2pt]
-  \verb"\fm"       & fraction of minute    & \fm{}        &
-  \verb"\fs"       & fraction of second    & \fs\\[2pt]
-  \verb"\fdg"      & fraction of degree    & \fdg{}       &
-  \verb"\fp"       & fraction of period    & \fp\\[2pt]
-  \verb"\farcs"    & fraction of arcsecond & \farcs{}     &
-  \verb"\farcm"    & fraction of arcmin    & \farcm\\[2pt]
-  \verb"\arcsec"   & arcsecond             & \arcsec{}    &
-  \verb"\arcmin"   & arcminute             & \arcmin\\
-\bottomrule
-\end{tabular}
-\end{minipage}
-\end{table*}
-
-
-\subsection{Bibliography}
-
-approach uses the \verb"\begin{thebibliography}{}" and
-\verb"\end{thebibliography}{}" commands.
-
-The second approach uses a simplified scheme using \verb"\begin{references}" and
-\verb"\end{references}".
-
-the same author$(s)$ and date, the letters a,b,c, \ldots\
-
-\subsubsection{Biblography References in the text}
-
-\subsubsection{The bibliography}
-
-\begin{enumerate}
-  \item if an author has written several papers,
-        which, in turn, precede the multi-author papers;
-  \item within the two-author paper citations,
-\end{enumerate}
-%
-where \verb"Author(s)" should be commands. \verb"Bibliography entry" should be
-
-\subsubsection{Simplified References and Citations}
-
-brackets \markcite{(Merritt et al., 1996)}, as in \markcite{Ono (1996)}.
-\begin{references}
-  \reference{}
-Azimi, Sh.A., Kalinin, A.Y., Kalinin, V.B., \& Pivovarov, B.L., 1968.
-Impulse and transient characteristics of media with linear and  quadratic
-absorption laws,
-\textit{Izv. Earth Phys.} (English Transl.),
-\textbf{2}, 88--93.
-\reference{}
-Dahlen, F.A., \& Smith, M.L., 1975.
-The influence of rotation on the free oscillations of the Earth,
-\textit{Phil. Trans. R. Soc. London Ser. A}, \textbf{279}, 143--167.
-\reference{}
-Durek, J.J., Ritzwoller, M.H., \& Woodhouse, J.H., 1993. Constraining upper
-mantle anelasticity using surface wave amplitude anomalies, \gji{} \textbf{114},
-249\textendash272.
-\end{references}
-
-\subsubsection{Common Journals}
-
-Common journals
-\newline
-\begin{tabular}{ll}
-\verb"\areps" & \areps{} \\
-\verb"\epsl"  & \epsl{} \\
-\verb"\geo"   & \geo{} \\
-\verb"\geop"  & \geop{} \\
-\verb"\gji"   & \gji{} \\
-\verb"\grl"   & \grl{} \\
-\verb"\gsab"  & \gsab{} \\
-\verb"\gs"    & \gs{} \\
-\verb"\pag"   & \pag{} \\
-\verb"\pepi"  & \pepi{} \\
-\verb"\rg"    & \rg{} \\
-\end{tabular}
-%
-% The following 2 tables have been moved back in the text to improve page layout
-%
-\begin{table*}
-\begin{minipage}{130mm}
-\caption{Authors' notes.}\label{authors}
-\begin{tabular}{@{}ll}
-\verb"\title[optional short title]{long title}"
-                    & short title used in running head\\
-\verb"\author[optional short author(s)]{long author(s)}"
-                    & short author$(s)$ used in running head\\
-\verb"\begin{abstract}...\end{abstract}"& for summary on titlepage\\
-\verb"\begin{summary}...\end{summary}"& for abstract on titlepage\\
-\verb"\begin{keywords}...\end{keywords}"& for keywords on titlepage\\
-\verb"\nokeywords"  & if there are no keywords on titlepage\\
-\verb"\begin{figure*}...\end{figure*}" & for a double spanning figure in two-column mode\\
-\verb"\begin{table*}...\end{table*}" & for a double spanning table in
-                                       two-column mode\\
-\verb"\caption*"    & for continuation figure captions\\
-\verb"\resetfigno" & resets figures numbers after an appendix\\
-\verb"[referee]" & documentclass option for 12/20pt, single col,
-                   for manuscript submission\\
-\verb"[mreferee]" & documentclass option for 11/17pt, single col,
-                   for submission of papers with extensive mathematics\\
-\end{tabular}
-\end{minipage}
-\end{table*}
-%
-\begin{table*}
-\begin{minipage}{130mm}
-\caption{Editors' notes.}\label{editors}
-\begin{tabular}{@{}lp{270pt}}
-\verb"\pagerange{000--000}"& for catchline, note use of en-rule\\
-\verb"\pagerange{L00--L00}"& for letters option, used in catchline\\
-\verb"\volume{000}" & volume number, for catchline\\
-\verb"\pubyear{0000}" & publication year, for catchline\\
-\verb"\microfiche{GJI000/0}" & for articles accompanied by microfiche\\
-\verb"\journal" & replace the whole catchline at one go\\
-\verb"[doublespacing]" & documentclass option for doublespacing\\
-\verb"[galley]" & documentclass option for running to galley\\
-\verb"[landscape]" & documentclass option for landscape illustrations\\
-\verb"[fasttrack]" & documentclass option, for rapid short communications
-                   (adds F to folios)\\
-\verb"[onecolumn]" & documentclass option for one-column \\
-\verb"\bsp"& typesets the final phrase `This paper has been produced
- using the Blackwell Publishing GJI \LaTeX2e\ class file.'\\
-\end{tabular}
-\end{minipage}
-\end{table*}
-
-\subsection{Appendices}
-
-You only need to type \verb"\appendix" once. Thereafter, every \verb"\section"
-
-\section[]{Example of section heading with\\*
-  {\mdseries \textsc{S}\lowercase{\textsc{mall}}
-  \textsc{C}\lowercase{\textsc{aps}}},
-  \lowercase{lowercase},
-  \textit{italic}, and bold\\* Greek such as
-  $\mitbf{{\mu^\kappa}}$}\label{headings}
-
-This can be built up using text commands and the \verb"mitbf" command introduced
-
-\subsection{Acknowledgments}
-with the \texttt{acknowledgments} environment, as
 
 \begin{acknowledgments}
 All images are produced using GMT~\cite{W13}.
@@ -666,6 +350,11 @@ All images are produced using GMT~\cite{W13}.
 \bibitem[\protect\citename{Pisarevsky }2005]{P05}
   Pisarevsky, S. A., 2005. New edition of the Global Paleomagnetic Database,
   \eos{}\textbf{86}, 170.
+\bibitem[\protect\citename{Schettino \& Scotese }2005]{S05}
+  Schettino, A. \& Scotese, C. R., 2005. Apparent polar wander paths for the
+  major continents (200 Ma to the present day): a palaeomagnetic reference frame
+  for global plate tectonic reconstructions, \gji{}\textbf{163},
+  727\textendash759.
 \bibitem[\protect\citename{Torsvik et al. }1992]{T92}
   Torsvik, T. H., Smethurst, M. A., van der Voo, R., Trench, A., Abrahamsen, N.
   \& Halvorsen, E., 1992. Baltica. A synopsis of Vendian-Permian palaeomagnetic
@@ -693,18 +382,4 @@ All images are produced using GMT~\cite{W13}.
   \& Müller, D., 2018. Global kinematics of tectonic plates and subduction zones
   since the late Paleozoic Era, \textit{Geosci. Front.},
   \textbf{in press}, 000\textendash000.
-\end{thebibliography}
-
-
-\appendix
-\section{For authors}
-
-Table~\ref{authors} is a list of design macros which are unique to GJI\. The
-
-\section{For editors}
-
-The additional features shown in Table~\ref{editors} may be used for production
-
-\bsp{} % ``This paper has been produced using the Blackwell
-       %   Publishing GJI \LaTeXe\ class file.''
-~\label{lastpage}
+\end{thebibliography}~\label{lastpage}
