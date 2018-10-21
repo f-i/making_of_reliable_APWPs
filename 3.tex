@@ -291,6 +291,18 @@ No. & Picking Algorithm \\ \midrule
 \raggedright{Notes: SS05,~\cite{S05}}
 \end{table}
 
+\subparagraph{Inclination Shallowing and Unflattening}
+
+To test if unflattening possible inclination shallowing in sedimentary rocks can
+improve the APWP fitting outcomes, the flattening function~\cite{K55} $\tan I_o
+= f \tan I_f$ is used to unflatten assumed existing inclination shallowing in
+sedimentary-based or redbeds-based paleomagnetic data (No $5$ and $7$ in
+Table.~\ref{tab-pick}), where $I_o$ is the observed inclination, $I_f$ is the
+unflattened inclination, and $f$ is the flattening factor (or shallowing
+coefficient) ranging from unity (no flattening) to 0 (completely flattened).
+Here $f=0.6$ is used in our calculations, according to the previous
+experience~\cite{T12}.
+
 \paragraph{Weighting}
 
 Because all data is not created equal, we want to calculate a weighted mean pole
@@ -334,6 +346,31 @@ $\leq$ 1 and N$>$1, weight=$(1- \frac{1}{N})*0.5$; if B $\leq$ 1 and N $\leq$ 1
 (there are only 26 for the whole GPMDB, including 18 without any B and N
 information), weight=0.4.
 
+As for the ``Age uncertainty'' weighting (No $2$ in Table.~\ref{tab-weit}), a
+well-constrained age should be known to within a half of a geological period or
+within a numerical age of $\pm$4\% for Phanerozoic data~\cite{T16}, so for NAC's
+100\textendash0 Ma data, I calculated 4\%*100*2=8 Myr as the standard, i.e.\ the
+age of the formation must be known to within 8 Myr. In other words, the weights
+from this weighting algorithm are randomly (i.e.\ pseudo-randomly) picked from a
+Gaussian (i.e.\ normal) distribution centered on 0 with standard deviation of 8;
+when (the high magnetic age $-$ the low magnetic age) $\leq$ 8, its weight = 1;
+when (high magnetic age $-$ low magnetic age) $>$ 8, its weight $<$ 1.
+
+For the ``$\alpha$95'' weighting (No $3$ in Table.~\ref{tab-weit}), smaller
+radius of circle of 95\% confidence about mean remanence direction means less
+error, so should get larger weight. Here, weight is from a Gaussian distribution
+centered on 0 with standard deviation of 10, i.e., when $\alpha$95 $\leq$ 10,
+weight=1; when $\alpha$95$>$10, weight$<$1.
+
+For the ``Age error Position to window'' weighting (No $4$ in
+Table.~\ref{tab-weit}), if window intersects with young/old end of age bracket
+or whole window overlaps with a part of age range, weight= (overlapping part)
+/ (age range width); if whole age range is within window, weight= (window width)
+/ (age range width).
+
+The ``Age error Position to window, and $\alpha$95'' weighting (No $5$ in
+Table.~\ref{tab-weit}), is a combination of No $3$ and No $4$.
+
 
 \begin{acknowledgments}
 All images are produced using GMT~\cite{W13}.
@@ -350,6 +387,10 @@ All images are produced using GMT~\cite{W13}.
 \bibitem[\protect\citename{Jacox \& Samet }2007]{J07}
   Jacox, E. H. \& Samet, H., 2007. Spatial Join Techniques, \textit{ACM Trans.
   Database Syst.}. \textbf{32}, 7.
+\bibitem[\protect\citename{King }1955]{K55}
+  King, R. F., 1955. The remanent magnetism of artificially deposited sediments,
+  \textit{Geophys. Suppl. Mon. Not. Roy. Astron. Soc. Lett.}, \textbf{7},
+  115\textendash134.
 \bibitem[\protect\citename{M{\"{u}}ller et al. }1993]{M93}
   M{\"{u}}ller, R. D., Royer, J. Y. \& Lawver, L. A., 1993. Revised plate
   motions relative to the hotspots from combined Atlantic and Indian-Ocean
@@ -383,6 +424,12 @@ All images are produced using GMT~\cite{W13}.
   Torsvik, T. H., M{\"{u}}ller, R. D., van der Voo, R., Steinberger, B., \&
   Gaina, C., 2008. Global plate motion frames: Toward a unified model,
   \textit{Rev. Geophys.}, \textbf{46}, RG3004.
+\bibitem[\protect\citename{Torsvik et al. }2012]{T12}
+  Torsvik, T. H., van der Voo, R., Preeden, U., Mac Niocaill, C., Steinberger,
+  B., Doubrovine, P. V., van Hinsbergen, D. J. J., Domeier, M., Gaina, C.,
+  Tohver, E., Meert, J. G., McCausland, P. J. A. \& Cocks, L. R. M., 2012.
+  Phanerozoic polar wander, palaeogeography and dynamics, \textit{Earth Sci.
+  Rev.}, \textbf{114}, 325\textendash368.
 \bibitem[\protect\citename{Tauxe et al. }2016]{T16}
   Tauxe L., Banerjee S.K., Butler R.F. \& van der Voo R., 2016.
   \textit{Essentials of Paleomagnetism}, 4th web edn, Available on line
