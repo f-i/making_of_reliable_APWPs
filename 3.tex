@@ -160,9 +160,11 @@ Hotspot can predict APWPs for main continents, e.g.\ the North America.
 \subsection{Reference Path: The Hotspot Model Predicted}
 
 The oldest pole that can be predicted from the FHM is about 120 Ma. The North
-American 120\textendash0 Ma APWP predicted from this rotation model will be
-taken as a reference path (Fig.~\ref{fig-fhsPred}), which will be compared with
-paleomagnetic APWPs for the same plate or continent.
+American 120\textendash0 Ma APWP predicted from this rotation model and
+latest published spreading ridge rotations (collected data will be shared as a
+supplementary material) will be taken as a reference path
+(Fig.~\ref{fig-fhsPred}), which will be compared with paleomagnetic APWPs for
+the same plate or continent.
 
 \begin{figure*}
 \centering
@@ -265,8 +267,8 @@ No. & Picking Algorithm \\ \midrule
 2 & APP (``$\alpha$95/Age range'' no more than ``15/20'') \\
 16 & AMP (mainly or only igneous) \\
 3 & APP (mainly or only igneous) \\
-17 & AMP (contain igneous but not mainly) \\
-4 & APP (contain igneous but not mainly) \\
+17 & AMP (contain igneous and not necessarily mainly) \\
+4 & APP (contain igneous and not necessarily mainly) \\
 12 & AMP (unflatten sedimentary) \\
 5 & APP (unflatten sedimentary) \\
 19 & AMP (nonredbeds) \\
@@ -291,6 +293,22 @@ No. & Picking Algorithm \\ \midrule
 \raggedright{Notes: SS05,~\cite{S05}}
 \end{table}
 
+\subparagraph{Filtering through $\alpha$95 and Age Range}
+
+For this specific filter, the poles are picked out through setting $\alpha$95 of
+$\leq15\degree$ and age uncertainty of $\leq20\degree$.
+
+\subparagraph{Filtering Out Igneous Derived Poles}
+
+With this filter, the poles are mainly or only from igneous rocks with extrusive
+or intrusive type.
+
+\subparagraph{Filtering Out Igneous Related Poles}
+
+With this filter, the poles are from rocks that contain extrusive or intrusive
+igneous type. In other words, the rock type could be mainly sedimentary or
+metamorphic.
+
 \subparagraph{Inclination Shallowing and Unflattening}
 
 To test if unflattening possible inclination shallowing in sedimentary rocks can
@@ -302,6 +320,18 @@ unflattened inclination, and $f$ is the flattening factor (or shallowing
 coefficient) ranging from unity (no flattening) to 0 (completely flattened).
 Here $f=0.6$ is used in our calculations, according to the previous
 experience~\cite{T12}.
+
+\subparagraph{Filtering Out Poles Unrelated to Red-beds}
+
+Bias toward shallow inclinations is also observed in paleomagnetic data derived
+from red-beds~\cite{T04}. For this filter, the poles derived from red-beds are
+simply removed.
+
+\subparagraph{Filtering Out Poles Published Earlier or Later}
+
+It is also worthy to see if recently published data is able to produce a more
+reliable APWP than relatively older data. Here 1983 is chosen as the division,
+because the mean of the data publication years is about 1983.
 
 \paragraph{Weighting}
 
@@ -420,6 +450,11 @@ All images are produced using GMT~\cite{W13}.
 \bibitem[\protect\citename{Torsvik \& Smethurst }1999]{T99}
   Torsvik, T. H. \& Smethurst, M. A., 1999. Plate tectonic modelling: virtual
   reality with GMAP, \textit{Comput. Geosci.}, \textbf{25}, 395\textendash402.
+\bibitem[\protect\citename{Tauxe \& Kent }2004]{T04}
+  Tauxe, L. \& Kent, D. V., 2004. A simplified statistical model for the
+  geomagnetic field and the detection of shallow bias in paleomagnetic
+  inclinations: Was the ancient magnetic field dipolar? \textit{Geophys.
+  Monogr. AGU}, \textbf{145}, 101\textendash115.
 \bibitem[\protect\citename{Torsvik et al. }2008]{T08}
   Torsvik, T. H., M{\"{u}}ller, R. D., van der Voo, R., Steinberger, B., \&
   Gaina, C., 2008. Global plate motion frames: Toward a unified model,
