@@ -298,12 +298,12 @@ No. & Picking Algorithm \\ \midrule
 For this specific filter, the poles are picked out through setting $\alpha$95 of
 $\leq15\degree$ and age uncertainty of $\leq20\degree$.
 
-\subparagraph{Filtering Out Igneous Derived Poles}
+\subparagraph{Filtering Out Non-igneous Derived Poles}
 
 With this filter, the poles are mainly or only from igneous rocks with extrusive
 or intrusive type.
 
-\subparagraph{Filtering Out Igneous Related Poles}
+\subparagraph{Filtering Out Igneous Unrelated Poles}
 
 With this filter, the poles are from rocks that contain extrusive or intrusive
 igneous type. In other words, the rock type could be mainly sedimentary or
@@ -321,7 +321,7 @@ coefficient) ranging from unity (no flattening) to 0 (completely flattened).
 Here $f=0.6$ is used in our calculations, according to the previous
 experience~\cite{T12}.
 
-\subparagraph{Filtering Out Poles Unrelated to Red-beds}
+\subparagraph{Filtering Out Poles Related to Red-beds}
 
 Bias toward shallow inclinations is also observed in paleomagnetic data derived
 from red-beds~\cite{T04}. For this filter, the poles derived from red-beds are
@@ -332,6 +332,20 @@ simply removed.
 It is also worthy to see if recently published data is able to produce a more
 reliable APWP than relatively older data. Here 1983 is chosen as the division,
 because the mean of the data publication years is about 1983.
+
+\subparagraph{Filtering Out Poles Influenced by Local Rotations or Secondary
+Print}
+
+Some publications of paleomagnetic data suggest the data has probably been
+affected by local rotations or secondary overprints. So for this filter, this
+type of data are removed.
+
+\subparagraph{Filtering Out Poles Influenced by Local Rotations or Correcting
+Them if Suggested}
+
+Some publications suggest the data has been through local rotation and propose a
+solution of correction. With this filter, if there is a correction suggestion,
+the data is corrected; if no, the data is simply removed.
 
 \paragraph{Weighting}
 
