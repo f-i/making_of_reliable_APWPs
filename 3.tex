@@ -296,7 +296,7 @@ No. & Picking Algorithm \\ \midrule
 \subparagraph{Filtering through $\alpha$95 and Age Range}
 
 For this specific filter, the poles are picked out through setting $\alpha$95 of
-$\leq15\degree$ and age uncertainty of $\leq20\degree$.
+$\leq15\degree$ and age uncertainty of $\leq20$ Myr.
 
 \subparagraph{Filtering Out Non-igneous Derived Poles}
 
@@ -346,6 +346,19 @@ Them if Suggested}
 Some publications suggest the data has been through local rotation and propose a
 solution of correction. With this filter, if there is a correction suggestion,
 the data is corrected; if no, the data is simply removed.
+
+\subparagraph{Filtering Using SS05 Liability Criteria}
+
+SS05~\cite{S05} provided their criteria of picking paleomagnetic data for
+producing their APWPs. This filter is reproducing their criteria by setting
+$\alpha$95 of $\leq15\degree$, age uncertainty of $\leq40$ Myr, sampling sites'
+quantity of $\geq4$, samples' quantity of at least 4 times of the sites, and
+laboratory analytical procedure code of at least 2.
+
+\subparagraph{Filtering Out Superseded Data}
+
+In this filter, those superseded data already included in other newer results
+are excluded.
 
 \paragraph{Weighting}
 
