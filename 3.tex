@@ -407,14 +407,20 @@ datasets for the whole GPMDB 4.6b, including 18 with both B and N informations
 missing), weight=0.2.
 
 As for the ``Age uncertainty'' weighting (No $2$ in Table.~\ref{tab-weit}), a
-well-constrained age should be known to within a half of a geological period or
-within a numerical age of $\pm$4\% for Phanerozoic data~\cite{T18}, so for NAC's
-120\textendash0 Ma data, I calculated 4\%*100*2=8 Myr as the standard, i.e.\ the
-age of the formation must be known to within 8 Myr. In other words, the weights
-from this weighting algorithm are randomly (i.e.\ pseudo-randomly) picked from a
-Gaussian (i.e.\ normal) distribution centered on 0 with standard deviation of 8;
-when (the high magnetic age $-$ the low magnetic age) $\leq$ 8, its weight = 1;
-when (high magnetic age $-$ low magnetic age) $>$ 8, its weight $<$ 1.
+well-constrained age should be known to within a half of a geological period
+(e.g., Quaternary, Neogene, Triassic) for Phanerozoic data~\cite{v90,T18}.
+Generally, this work follows this principle. However, for the periods of
+Paleogene, Cretaceous, and Jurassic, their halves are all beyond a time span of
+at least 20 Myr, which is relatively large for these relatively young geologic
+periods. So for these three periods, a tighter age constraint is set using age
+uncertainties of $\leq15$ Myr. So, for example, for NAC's Neogene
+(23.03\textendash2.58 Ma according to GSA Geologic Time Scale) data, if age
+uncertainty (the high magnetic age $-$ the low magnetic age) $\leq$ 10.225 (from
+0.5* (23.03$-$2.58)) Myr, its weight = 1; if age uncertainty $>$ 10.225 Myr, its
+weight = 10.225 / (high magnetic age $-$ low magnetic age). For the periods
+spanning Jurassic to Paleogene, if age uncertainty $\leq15$ Myr, it get its
+weight of 1; if age uncertainty $>15$ Myr, a weight of 15 / (high magnetic age
+$-$ low magnetic age) is assigned instead.
 
 For the ``$\alpha$95'' weighting (No $3$ in Table.~\ref{tab-weit}), smaller
 radius of circle of 95\% confidence about mean remanence direction means less
