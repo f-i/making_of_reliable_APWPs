@@ -426,13 +426,16 @@ For the ``$\alpha$95'' weighting (No $3$ in Table.~\ref{tab-weit}), smaller
 radius of circle of 95\% confidence about mean remanence direction means less
 error, so should get larger weight. Here, weight is from a Gaussian distribution
 centered on 0 with standard deviation of 10, i.e., when $\alpha$95 $\leq$ 10,
-weight=1; when $\alpha$95$>$10, weight$<$1.
+weight=1; when $\alpha$95$>$10, weight$<$1. It is also worthwhile to mention
+that if samples, where two poles are derived, are exactly from the same place
+and same rock, and one A95 is completely inside the other A95, a zero is
+assigned as the weight of the data with the larger A95.
 
 For the ``Age error Position to window'' weighting (No $4$ in
 Table.~\ref{tab-weit}), if window intersects with young/old end of age bracket
 or whole window overlaps with a part of age range, weight= (overlapping part)
 / (age range width); if whole age range is within window, weight= (window width)
-/ (age range width).
+/ (age range width) (note that when weight $>1$, it is set back to 1).
 
 The ``Age error Position to window, and $\alpha$95'' weighting (No $5$ in
 Table.~\ref{tab-weit}), is a combination of No $3$ and No $4$.
