@@ -7,6 +7,6 @@ repository: https://github.com/f-i/APWP_similarity)
 ## Supplementary Materials
 
 The ``data'' folder contains the results from comparisons of Plate 101 paths and
-FHS model predicted path. Here is the visualizations of 96 different
+FHS model predicted path. Here is the visualizations of 168 different
 comparisons (Click on the image below to view the video):
-[![Paleomagnetic APWPs vs. Fixed Hotspot Model Predicted APWP: An Example from North America](https://img.youtube.com/vi/m5nMDzJtVxE/0.jpg)](https://www.youtube.com/watch?v=m5nMDzJtVxE "Paleomagnetic APWPs vs. Fixed Hotspot Model Predicted APWP: An Example from North America")
+[![Paleomagnetic APWPs vs. Fixed Hotspot Model Predicted APWP: An Example from North America](https://img.youtube.com/vi/KNEdqo5jcOY/0.jpg)](https://www.youtube.com/watch?v=KNEdqo5jcOY "Paleomagnetic APWPs vs. Fixed Hotspot Model Predicted APWP: An Example from North America")
