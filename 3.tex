@@ -469,8 +469,10 @@ error, so should get larger weight. Here, weight is from a Gaussian distribution
 centered on 0 with standard deviation of 10, i.e., when $\alpha$95 $\leq$ 10,
 weight=1; when $\alpha$95$>$10, weight$<$1. It is also worthwhile to mention
 that if samples, where two poles are derived, are exactly from the same place
-and same rock, and one A95 is completely inside the other A95, a zero is
-assigned as the weight of the data with the larger A95.
+and same rock, and one $\alpha$95 is completely inside the other $\alpha$95, a
+zero is assigned as the weight of the data with the larger $\alpha$95. Here,
+the same procedure can be applied on A95 (circle of 95\% confidence about mean
+pole) instead of $\alpha$95.
 
 For the ``Age error Position to window'' weighting (No $4$ in
 Table.~\ref{tab-weit}), if window intersects with young/old end of age bracket
@@ -483,18 +485,46 @@ Table.~\ref{tab-weit}), is a combination of No $3$ and No $4$.
 
 \section{Results and Discussions}
 
-Only from the results of North American paleomagnetic APWPs comparing with its
-projected APWP from FHM through the North
-America\textendash{}Nubia\textendash{}Mantle plate circuit
-(Fig.~\ref{fig-nac-dif}), we can see generally (1) the APP methods (adding data
-to a time window with overlapping age selection criterion) produce better
-similarities than the AMP methods; (2) the picking methods
-(Table.~\ref{tab-pick}) influence the similarity more than the weighting methods
-(Table.~\ref{tab-weit}); (3) weighting also seems to make things worse (for many
-of the methods, no weighting is the best performer); (4) the groups of
-picking-method-no 25 (filtering out superseded studies), 1 and 15 (filtering out
-old studies) (Table.~\ref{tab-pick}) are the best, while the groups of
-picking-method-no 16, 2, 22 and 26 (Table.~\ref{tab-pick}) are the worst.
+\begin{enumerate}
+  \item Only from the results with both space and shape tested of North American
+        (101) paleomagnetic APWPs comparing with its projected APWP from FHM
+        through the North America\textendash{}Nubia\textendash{}Mantle plate
+        circuit (Fig.~\ref{fig-nac-dif}), we can see generally (1) the APP
+        methods (adding data to a time window with overlapping age selection
+        criterion) produce better similarities than the AMP methods; (2) the
+        picking methods (Table.~\ref{tab-pick}) influence the similarity more
+        than the weighting methods (Table.~\ref{tab-weit}); (3) weighting also
+        seems to make things worse (for many of the methods, no weighting is the
+        best performer); (4) the groups of picking-method-no 25 (APP with those
+        superseded studies filtered out), 1 (APP) and 15 (APP with
+        older-than-1983 studies excluded) (Table.~\ref{tab-pick}) are the best,
+        while the groups of picking-method-no 16 (AMP with only
+        earlier-than-1983 studies), 2 (AMP with ``$\alpha$95/Age range'' no
+        more than ``15\degree/20 Myr''), 22 (AMP with SS05 palaeomagnetic
+        reliability criteria) and 26 (AMP with SS05 palaeomagnetic reliability
+        criteria and also excluding superseded data already included in other
+        results) (Table.~\ref{tab-pick}) are the worst.
+  \item Only from the results with both space and shape tested
+        (Fig.~\ref{fig-nac-dif}, Fig.~\ref{fig-ind-dif} and
+        Fig.~\ref{fig-au-dif}), for both North America (101) and Australia
+        (801), the groups of picking-method-no 25 and 1 (Table.~\ref{tab-pick})
+        are the best; however, for India (501), picking-method-no 26 is the
+        best; interestingly, picking-method-no 26 is one of the worst for both
+        North America (101) and Australia (801).
+  \item For both North America (101) and Australia (801), both the results with
+        space and shape tested (Fig.~\ref{fig-nac-dif} and
+        Fig.~\ref{fig-au-dif}) and the results with only space tested
+        (Fig.~\ref{fig-nant-dif} and Fig.~\ref{fig-aunt-dif}) show that the
+        groups of picking-method-no 25 and 1 (Table.~\ref{tab-pick}) are the
+        best.
+  \item For both North America (101) and India (501), both the results with
+        space and shape tested (Fig.~\ref{fig-nac-dif} and
+        Fig.~\ref{fig-ind-dif}) and the results with only space tested
+        (Fig.~\ref{fig-nant-dif} and Fig.~\ref{fig-indnt-dif}) show that more
+        recent studies give better results than older studies. However, this is
+        not true for Australia (801) (Fig.~\ref{fig-au-dif} and
+        Fig.~\ref{fig-aunt-dif}).
+\end{enumerate}
 
 \begin{figure*}
 \centering
@@ -552,7 +582,8 @@ plate circuit.}\label{fig-aunt-dif}
 
 
 \begin{acknowledgments}
-All images are produced using GMT~\cite{W13}.
+All images are produced using GMT~\cite{W13}. Thanks to Ohio Supercomputer
+Center for their HPC resources.
 \end{acknowledgments}
 
 \begin{thebibliography}{}
