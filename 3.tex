@@ -487,153 +487,140 @@ Table.~\ref{tab-weit}), is a combination of No $3$ and No $4$.
 
 \section{Results and Discussions}
 
+According to the results of 10 Myr binning and 5 Myr stepping with both space
+and shape tested (Fig.~\ref{fig-nac-dif}, Fig.~\ref{fig-ind-dif} and
+Fig.~\ref{fig-au-dif}), we can observe:
+
 \begin{enumerate}
-  \item Only from the results with both space and shape tested of North American
-        (101) paleomagnetic APWPs comparing with its projected APWP from FHM
-        through the North America\textendash{}Nubia\textendash{}Mantle plate
-        circuit (Fig.~\ref{fig-nac-dif}), we can see generally (1) the APP
-        methods (adding data to a time window with overlapping age selection
-        criterion) produce better similarities than the AMP methods; (2) the
-        picking methods (Table.~\ref{tab-pick}) influence the similarity more
-        than the weighting methods (Table.~\ref{tab-weit}); (3) weighting also
-        seems to make things worse (for many of the methods, no weighting is the
-        best performer); (4) the groups of picking-method-no 25 (APP with those
-        superseded studies filtered out), 1 (APP) and 15 (APP with
-        older-than-1983 studies excluded) (Table.~\ref{tab-pick}) are the best,
-        while the groups of picking-method-no 16 (AMP with only
-        earlier-than-1983 studies), 2 (AMP with ``$\alpha$95/Age range'' no
-        more than ``15\degree/20 Myr''), 22 (AMP with SS05 palaeomagnetic
-        reliability criteria) and 26 (AMP with SS05 palaeomagnetic reliability
-        criteria and also excluding superseded data already included in other
-        results) (Table.~\ref{tab-pick}) are the worst.
-  \item Only from the results with both space and shape tested
-        (Fig.~\ref{fig-nac-dif}, Fig.~\ref{fig-ind-dif} and
-        Fig.~\ref{fig-au-dif}), for both North America (101) and Australia
-        (801), the groups of picking-method-no 25 and 1 (Table.~\ref{tab-pick})
-        are the best; however, for India (501), picking-method-no 26 is the
-        best; interestingly, picking-method-no 26 is one of the worst for both
-        North America (101) and Australia (801).
-  \item For both North America (101) and Australia (801), both the results with
-        space and shape tested (Fig.~\ref{fig-nac-dif} and
-        Fig.~\ref{fig-au-dif}) and the results with only space tested
-        (Fig.~\ref{fig-nant-dif} and Fig.~\ref{fig-aunt-dif}) show that the
-        groups of picking-method-no 25 and 1 (Table.~\ref{tab-pick}) are the
-        best.
-  \item For both North America (101) and India (501), both the results with
-        space and shape tested (Fig.~\ref{fig-nac-dif} and
-        Fig.~\ref{fig-ind-dif}) and the results with only space tested
-        (Fig.~\ref{fig-nant-dif} and Fig.~\ref{fig-indnt-dif}) show that more
-        recent studies give better results than older studies. However, this is
-        not true for Australia (801) (Fig.~\ref{fig-au-dif} and
-        Fig.~\ref{fig-aunt-dif}).
+  \item North America (101) owns better similarity results than Australia (801)
+        and India (501), because its worst composite difference is still less
+        than 0.1.
+  \item generally (1) the APP methods (adding data to a time window with
+        overlapping age selection criterion) produce better similarities than
+        the AMP methods; (2) the picking methods (Table.~\ref{tab-pick})
+        influence the similarity more than the weighting methods
+        (Table.~\ref{tab-weit}); (3) weighting is not always making similarities
+        better (in fact, for quite many of the methods, no weighting is the best
+        performer); (4) the groups of picking-method-no 4 (AMP with mainly or
+        only igneous based data) and 19 (APP with commented local-rotation or
+        secondary-print studies excluded) (Table.~\ref{tab-pick}) are among the
+        best ones for all the three continents, while the groups of
+        picking-method-no 2 (AMP with ``$\alpha$95/Age range'' no more than
+        ``15\degree/20 Myr''), 14 (AMP with only studies since 1983) and 16 (AMP
+        with only earlier-than-1983 studies), (Table.~\ref{tab-pick}) are among
+        the worst for them three.
+  \item for both North America (101) and Australia (801), the groups of
+        picking-method-no 1, 4, 5, 7, 9, 11, 13, 19, 21 and 25
+        (Table.~\ref{tab-pick}) are the best; however, for India (501),
+        picking-method-no 26 is one of the best; interestingly,
+        picking-method-no 26 is one of the worst for both North America (101)
+        and Australia (801).
 \end{enumerate}
 
 \begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/101_120_0.pdf}
-\caption[Differences with test of plate 101's paleomagnetic APWPs versus its FHM
-predicted APWP]{Difference values with test between North American (101)
+	\centering
+	\begin{subfigure}{1.01\textwidth} % width of left subfigure
+		\includegraphics[width=\textwidth]{figures/101_120_0.pdf}
+		\caption{North America (101)}\label{fig-nac-dif} % subcaption
+	\end{subfigure}
+	\vspace{1em} % here you can insert horizontal or vertical space
+	\begin{subfigure}{1.01\textwidth} % width of right subfigure
+		\includegraphics[width=\textwidth]{figures/501_120_0.pdf}
+		\caption{India (501)}\label{fig-ind-dif} % subcaption
+	\end{subfigure}
+	\vspace{1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/801_120_0.pdf}
+		\caption{Australia (801)}\label{fig-au-dif} % subcaption
+	\end{subfigure}
+	\caption[Differences with test of each plate's paleomagnetic APWPs versus
+its FHM predicted APWP]{Difference values with test between each continent's
 paleomagnetic APWPs and its predicted APWP from FHM and related plate
-circuit. The paths are in 5 Myr step.}\label{fig-nac-dif}
+circuit. The paths are in 10 Myr bin and 5 Myr step.}\label{fig-dif} % caption for whole figure
+\end{figure*}
+
+According to the results of 10 Myr binning and 5 Myr stepping with only space
+tested (Fig.~\ref{fig-nant-dif}, Fig.~\ref{fig-indnt-dif} and
+Fig.~\ref{fig-aunt-dif}), we can observe:
+
+\begin{enumerate}
+  \item the groups of picking-method-no 1, 11, 13, 19, 21 and 25 are the best
+        for all the three continents.
+\end{enumerate}
+
+According to all the results of 10 Myr binning and 5 Myr stepping
+(Fig.~\ref{fig-nac-dif}, Fig.~\ref{fig-ind-dif}, Fig.~\ref{fig-au-dif},
+Fig.~\ref{fig-nant-dif}, Fig.~\ref{fig-indnt-dif} and Fig.~\ref{fig-aunt-dif}),
+we can observe:
+
+\begin{enumerate}
+  \item for both North America (101) and India (501), more recent studies give
+        better results than older studies. However, this is not true for
+        Australia (801) (Fig.~\ref{fig-au-dif} and Fig.~\ref{fig-aunt-dif}).
+\end{enumerate}
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{1.01\textwidth} % width of left subfigure
+		\includegraphics[width=\textwidth]{figures/101_120_0_.pdf}
+		\caption{North America (101)}\label{fig-nant-dif} % subcaption
+	\end{subfigure}
+	\vspace{1em} % here you can insert horizontal or vertical space
+	\begin{subfigure}{1.01\textwidth} % width of right subfigure
+		\includegraphics[width=\textwidth]{figures/501_120_0_.pdf}
+		\caption{India (501)}\label{fig-indnt-dif} % subcaption
+	\end{subfigure}
+	\vspace{1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/801_120_0_.pdf}
+		\caption{Australia (801)}\label{fig-aunt-dif} % subcaption
+	\end{subfigure}
+	\caption[Differences without shape test of each plate's paleomagnetic APWPs
+versus its FHM predicted APWP]{Difference values without shape test between each
+continent's paleomagnetic APWPs and its predicted APWP from FHM and related
+plate circuit. The paths are in 10 Myr bin and 5 Myr step.}\label{fig-dif2010} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/101_120_0_.pdf}
-\caption[Differences without shape test of plate 101's paleomagnetic APWPs
-versus its FHM predicted APWP]{Difference values without shape test between
-North American (101) paleomagnetic APWPs and its predicted APWP from FHM and
-related plate circuit. The paths are in 5 Myr step.}\label{fig-nant-dif}
+	\centering
+	\begin{subfigure}{1.01\textwidth} % width of left subfigure
+		\includegraphics[width=\textwidth]{figures/101_20_10_120_0.pdf}
+		\caption{North America (101)}\label{fig-nac-dif2010} % subcaption
+	\end{subfigure}
+	\vspace{1em} % here you can insert horizontal or vertical space
+	\begin{subfigure}{1.01\textwidth} % width of right subfigure
+		\includegraphics[width=\textwidth]{figures/501_20_10_120_0.pdf}
+		\caption{India (501)}\label{fig-ind-dif2010} % subcaption
+	\end{subfigure}
+	\vspace{1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/801_20_10_120_0.pdf}
+		\caption{Australia (801)}\label{fig-au-dif2010} % subcaption
+	\end{subfigure}
+	\caption[Differences with test of each plate's paleomagnetic APWPs versus
+its FHM predicted APWP]{Same as Fig.~\ref{fig-dif}. The only difference is here
+the paths are in 20 Myr bin and 10 Myr step.} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/501_120_0.pdf}
-\caption[Differences with test of plate 501's paleomagnetic APWPs versus its FHM
-predicted APWP]{Difference values with test between Indian (501) paleomagnetic
-APWPs and its predicted APWP from FHM and related plate circuit. The paths are
-in 5 Myr step.}\label{fig-ind-dif}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/501_120_0_.pdf}
-\caption[Differences without shape test of plate 501's paleomagnetic APWPs
-versus its FHM predicted APWP]{Difference values without shape test between
-Indian (501) paleomagnetic APWPs and its predicted APWP from FHM and related
-plate circuit. The paths are in 5 Myr step.}\label{fig-indnt-dif}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/801_120_0.pdf}
-\caption[Differences with test of plate 801's paleomagnetic APWPs versus its FHM
-predicted APWP]{Difference values with test between Australian (801)
-paleomagnetic APWPs and its predicted APWP from FHM and related plate circuit.
-The paths are in 5 Myr step.}\label{fig-au-dif}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/801_120_0_.pdf}
-\caption[Differences without shape test of plate 801's paleomagnetic APWPs
-versus its FHM predicted APWP]{Difference values without shape test between
-Australian (801) paleomagnetic APWPs and its predicted APWP from FHM and related
-plate circuit. The paths are in 5 Myr step.}\label{fig-aunt-dif}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/101_20_10_120_0.pdf}
-\caption[Differences with test of plate 101's paleomagnetic APWPs versus its FHM
-predicted APWP]{Difference values with test between North American (101)
-paleomagnetic APWPs and its predicted APWP from FHM and related plate
-circuit. The paths are in 10 Myr step.}\label{fig-nac-dif2010}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/101_20_10_120_0_.pdf}
-\caption[Differences without shape test of plate 101's paleomagnetic APWPs
-versus its FHM predicted APWP]{Difference values without shape test between
-North American (101) paleomagnetic APWPs and its predicted APWP from FHM and
-related plate circuit. The paths are in 10 Myr step.}\label{fig-nant-dif2010}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/501_20_10_120_0.pdf}
-\caption[Differences with test of plate 501's paleomagnetic APWPs versus its FHM
-predicted APWP]{Difference values with test between Indian (501) paleomagnetic
-APWPs and its predicted APWP from FHM and related plate circuit. The paths are
-in 10 Myr step.}\label{fig-ind-dif2010}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/501_20_10_120_0_.pdf}
-\caption[Differences without shape test of plate 501's paleomagnetic APWPs
-versus its FHM predicted APWP]{Difference values without shape test between
-Indian (501) paleomagnetic APWPs and its predicted APWP from FHM and related
-plate circuit. The paths are in 10 Myr step.}\label{fig-indnt-dif2010}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/801_20_10_120_0.pdf}
-\caption[Differences with test of plate 801's paleomagnetic APWPs versus its FHM
-predicted APWP]{Difference values with test between Australian (801)
-paleomagnetic APWPs and its predicted APWP from FHM and related plate circuit.
-The paths are in 10 Myr step.}\label{fig-au-dif2010}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/801_20_10_120_0_.pdf}
-\caption[Differences without shape test of plate 801's paleomagnetic APWPs
-versus its FHM predicted APWP]{Difference values without shape test between
-Australian (801) paleomagnetic APWPs and its predicted APWP from FHM and related
-plate circuit. The paths are in 10 Myr step.}\label{fig-aunt-dif2010}
+	\centering
+	\begin{subfigure}{1.01\textwidth} % width of left subfigure
+		\includegraphics[width=\textwidth]{figures/101_20_10_120_0_.pdf}
+		\caption{North America (101)}\label{fig-nant-dif2010} % subcaption
+	\end{subfigure}
+	\vspace{1em} % here you can insert horizontal or vertical space
+	\begin{subfigure}{1.01\textwidth} % width of right subfigure
+		\includegraphics[width=\textwidth]{figures/501_20_10_120_0_.pdf}
+		\caption{India (501)}\label{fig-indnt-dif2010} % subcaption
+	\end{subfigure}
+	\vspace{1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/801_20_10_120_0_.pdf}
+		\caption{Australia (801)}\label{fig-aunt-dif2010} % subcaption
+	\end{subfigure}
+	\caption[Differences without shape test of each plate's paleomagnetic APWPs
+versus its FHM predicted APWP]{Same as Fig.~\ref{fig-dif2010}. The only
+difference is here the paths are in 20 Myr bin and 10 Myr step.} % caption for whole figure
 \end{figure*}
 
 
