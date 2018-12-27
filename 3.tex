@@ -291,6 +291,9 @@ magnetic ages. The vertical axis has no specific meaning here.
 }\label{fig-nac-maplat}
 \end{figure*}
 
+In addition, technically we don't want to let the step length more than the
+window length, in which cases we would lose data between windows.
+
 \paragraph{Picking}
 
 The 28 picking methods include AMP, APP and also those with filtering or
@@ -835,11 +838,57 @@ the picking method 16 is still a relatively worse one.
 
 \subsubsection{Do time window size and step affect the results?}
 
+A balance needs to be made between having windows that are too wide and steps
+that are too long which will smooth the data so much we miss actual details in
+the APWP (e.g. those 20 Myr window 10 Myr step paleomagnetic paths in
+Fig~\ref{fig-dif2010bw} and Fig~\ref{fig-dif2010ntbw}) and windows that are too
+narrow and steps that are too short which introduces noise by having too few
+poles in each window (e.g. those 10 Myr window 5 Myr step paleomagnetic paths in
+Fig~\ref{fig-difbw} and Fig~\ref{fig-difntbw}). There is a dependence here on
+data density: higher density allows smaller windows/steps (this is one of the
+things we want to test with selective data removal mentioned in Chapter 4).
+Fitting curves by moving averaging change with different time window lengths and
+time increment lengths (i.e. steps) (e.g., the similarity of the pair in
+Fig~\ref{fig-au-2010223} is improved a bit compared to Fig~\ref{fig-au-105223}).
+A variety of ways of binning the data (here both 20 Myr window 10 Myr step and
+10 Myr window 5 Myr step) are being tested to see which one produces the better
+and more appropriately smoothed fit.
+
+\paragraph{What to expect:}
+
+The difference values for 20/10 window/step should be generally lower than those
+for 10/5 window/step.
+
+\paragraph{Summary of results:}
+
+\begin{table*}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|l|l|l|p{2cm}|l|p{3cm}|l|lllllll}
+\multicolumn{2}{c|}{Comparisons} & \multicolumn{3}{c|}{Consistency of Best} & \multicolumn{3}{c|}{Consistency of Worst} & \multicolumn{7}{c}{If Difference Values for 20/10 Bin/Step Are Lower (Y/N)} \\ \hline
+\multicolumn{1}{c|}{10/5} & \multicolumn{1}{c|}{20/10} & \multicolumn{1}{c|}{Y/N} & \multicolumn{1}{c|}{If No, Unexpected Case(s)} & \multicolumn{1}{c|}{Notes} & \multicolumn{1}{c|}{Y/N} & \multicolumn{1}{c|}{If No, Unexpected Case(s)} & \multicolumn{1}{c|}{Notes} & \multicolumn{1}{c|}{Mean} & \multicolumn{1}{c|}{Median} & \multicolumn{1}{c|}{Maximum} & \multicolumn{1}{c|}{Minimum} & \multicolumn{1}{c|}{All} & \multicolumn{1}{c|}{If No, Unexpected Case (s)} & \multicolumn{1}{c}{Notes} \\ \hline
+Fig.~\ref{fig-nac-dif} & Fig.~\ref{fig-nac-dif2010} & Y &\textendash &
+  \multirow{2}{*}{\parbox{2cm}{Picking no. 1, 4, 5, 7, 11, 13, 15, 19, 21 and
+  25}} & N & \multirow{2}{*}{\parbox{3cm}{Picking no. 2, 5, 7, 22 and 26 for
+  10/5 bin/step; 0, 10, 12, 20 and 24 for 20/10 bin/step}} &  &
+  \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &
+  \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  \\ \cline{3-6}
+ &  &  &  &  &  &  &  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  \\ \hline
+ &  &  &  &  &  &  &  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  \\ \hline
+ &  &  &  &  &  &  &  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  \\ \hline
+ &  &  &  &  &  &  &  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} &  \\ \hline
+ &  &  &  &  &  &  &  & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & \multicolumn{1}{l|}{} & 
+\end{tabular}%
+}
+\end{table*}
+
 \paragraph{For North America (101) with both space and shape tested:}
 
 As shown in Fig.~\ref{fig-nac-dif} and Fig.~\ref{fig-nac-dif2010}, all the best
 picking methods (no. 1, 4, 5, 7, 11, 13, 15, 19, 21 and 25) are consistent.
-However, not all the worst picking methods are consistent. Only four  (8, 14,
+However, not all the worst picking methods are consistent. Only four (8, 14,
 16 and 18) of them are the same.
 
 \paragraph{For North America (101) with only space tested:}
