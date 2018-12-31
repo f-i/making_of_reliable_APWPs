@@ -505,13 +505,6 @@ and shape tested (Fig.~\ref{fig-nac-dif}, Fig.~\ref{fig-ind-dif} and
 Fig.~\ref{fig-au-dif}), we can observe:
 
 \begin{enumerate}
-  \item the picking methods (Table.~\ref{tab-pick}) influence the similarity
-        more than the weighting methods (Table.~\ref{tab-weit}) do.
-  \item weighting is not always making similarities better. In fact, for quite
-        many of the methods, no weighting is the best performer.
-  \item generally the APP methods (adding data to a time window with overlapping
-        age selection criterion) produce better similarities than the AMP
-        methods.
   \item North America (101) owns better similarity results than Australia (801)
         and India (501), because its worst composite difference is still less
         than 0.1.
@@ -789,10 +782,54 @@ step)]{Path comparisons with best and worst difference values shown in
 Fig.~\ref{fig-dif2010nt}.}\label{fig-dif2010ntbw}
 \end{figure*}
 
+\begin{table*}
+\centering
+\caption{Perfermance statistics of all the picking and weighting methods.}
+\label{my-label}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l|l}
+\multirow{2}{*}{Grid} & \multicolumn{2}{l|}{Best No.} &
+  \multicolumn{2}{l|}{Worst No.} & \multirow{2}{*}{\parbox{1.8cm}{Proportion of
+  APP Better Than AMP}} & \multicolumn{6}{l|}{\multirow{2}{*}{\parbox{5cm}{For
+  All 28 Picking Methods, Count of Occurrences of Each Weighting No. Being
+  Best}}} & \multirow{2}{*}{\parbox{2.8cm}{Picking 14/15 (Studies After 1983) Better Than 16/17 (Older)}} \\ \\ \cline{2-5} \cline{7-12}
+ & Picking & Weighting & Picking & Weighting &  & 0 & 1 & 2 & 3 & 4 & 5 &  \\ \hline
+Fig.~\ref{fig-nac-dif} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13, 15,
+  19, 21, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 5}} &
+  \multirow{2}{*}{\parbox{2cm}{2, 5, 7, 8, 14, 16, 17, 18, 22, 26}} &
+  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 27/28 & 15 & 4 & 2 & 3 & 1
+  & 4 & Y/Y \\ \\ \hline
+Fig.~\ref{fig-nant-dif} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 15, 19, 21, 25}} &
+  \multirow{2}{*}{\parbox{2cm}{0, 1, 2, 4, 5}} &
+  \multirow{2}{*}{\parbox{2.4cm}{0, 2, 3, 8, 10, 12, 14, 16, 17, 18, 20, 24}} &
+  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 71/84 & 9 & 13 & 0 & 1 & 1
+  & 4 & N/Y \\ \\ \hline
+Fig.~\ref{fig-ind-dif} &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+Fig.~\ref{fig-indnt-dif} &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+Fig.~\ref{fig-au-dif} &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+Fig.~\ref{fig-aunt-dif} &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+Fig.~\ref{fig-nac-dif2010} &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+Fig.~\ref{fig-nant-dif2010} &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+Fig.~\ref{fig-ind-dif2010} &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+Fig.~\ref{fig-indnt-dif2010} &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+Fig.~\ref{fig-au-dif2010} &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+Fig.~\ref{fig-aunt-dif2010} &  &  &  &  &  &  &  &  &  &  &  & 
+\end{tabular}%
+}
+\end{table*}
+
 According to all the above results (Fig.~\ref{fig-dif}, Fig.~\ref{fig-difnt},
 Fig.~\ref{fig-dif2010}, Fig.~\ref{fig-dif2010nt}), we can observe:
 
 \begin{enumerate}
+  \item the self-explanatory topography of bands indicates that the picking
+        methods (Table.~\ref{tab-pick}) influence the similarity more than the
+        weighting methods (Table.~\ref{tab-weit}) do.
+  \item weighting is not always making similarities better. In fact, for quite
+        many of the methods, no weighting is the best performer.
+  \item generally the APP methods (adding data to a time window with overlapping
+        age selection criterion) produce better similarities than the AMP
+        methods.
   \item the picking method no 19 is always the best.
   \item the weighting method no 0, 1 and 5 are generally producing better
         similarity than 2, 3 and 4.
@@ -854,18 +891,19 @@ A variety of ways of binning the data (here both 20 Myr window 10 Myr step and
 10 Myr window 5 Myr step) are being tested to see which one produces the better
 and more appropriately smoothed fit.
 
-\paragraph{What to expect:}
-
-The difference values for 20/10 window/step should be generally lower than those
+\paragraph{What to expect is}
+the difference values for 20/10 window/step should be generally lower than those
 for 10/5 window/step, which further could result in more best methods and less
 worst methods.
 
-\paragraph{Summary of results:}
+\paragraph{The results}
+are summarised in Table.~\ref{tab-2010vs105F}.
 
 \begin{table*}
 \centering
-\caption{My caption}
-\label{my-label}
+\caption{Consistency check on comparisons of 20/10 window/step and 10/5
+  window/step. Notes: E: expected; UE: unexpected.}
+\label{tab-2010vs105F}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{l|l|l|l|p{2cm}|l|p{2.4cm}|l|lllllll}
 \multicolumn{2}{c|}{Comparisons} & \multicolumn{3}{c|}{Consistency of Best} & \multicolumn{3}{c|}{Consistency of Worst} & \multicolumn{7}{c}{If Difference Values for 20/10 Bin/Step Are Lower (Y/N)} \\ \hline
@@ -876,7 +914,7 @@ worst methods.
 Fig.~\ref{fig-nac-dif} & Fig.~\ref{fig-nac-dif2010} & Y &\textendash &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 4, 5, 7, 11, 13, 15, 19, 21 and 25}} &
   N & \multirow{2}{*}{\parbox{2.4cm}{Picking no. 2, 5, 7, 22 and 26 for
-  10/5 bin/step; 0, 10, 12, 20 and 24 for 20/10 bin/step}} &
+  10/5 (E); 0, 10, 12, 20 and 24 for 20/10 (UE)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 8, 14, 16 and 18}} &
   \multicolumn{1}{l|}{N} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
   \multicolumn{1}{l|}{N} & \multicolumn{1}{l|}{N} &
@@ -884,9 +922,9 @@ Fig.~\ref{fig-nac-dif} & Fig.~\ref{fig-nac-dif2010} & Y &\textendash &
   24,25)(0-5) (3,4,14),(0-3,5) (5,7,13,15),(0-2,4,5) 9,(0,2,4,5) 23,(2,3) 27,(0-2); account for 29/42}}} &
   \\ \\ \\ \\ \\ \hline
 Fig.~\ref{fig-nant-dif} & Fig.~\ref{fig-nant-dif2010} & Y &
-  \multirow{2}{*}{\parbox{2.5cm}{5 more best: Picking no. 4, 5, 6, 7 and 9 only for 20/10 bin/step (EXPECTED)}} &
+  \multirow{2}{*}{\parbox{2.5cm}{5 more best: Picking no. 4, 5, 6, 7 and 9 only for 20/10 (E)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 11, 13, 15, 19, 21 and 25}} &
-  \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} & \multirow{2}{*}{\parbox{2cm}{Picking no. 2 for 10/5 bin/step; 11 for 20/10 bin/step}} &
+  \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} & \multirow{2}{*}{\parbox{2cm}{Picking no. 2 for 10/5 (E); 11 for 20/10 (UE)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 0, 3, 8, 10, 12, 14, 16, 17, 18, 20 and 24}} &
   \multicolumn{1}{l|}{N} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
   \multicolumn{1}{l|}{N} & \multicolumn{1}{l|}{N} &
@@ -896,10 +934,10 @@ Fig.~\ref{fig-nant-dif} & Fig.~\ref{fig-nant-dif2010} & Y &
   for 17/42}}} &
   \\ \\ \\ \\ \\ \\ \\ \\ \hline
 Fig.~\ref{fig-ind-dif} & Fig.~\ref{fig-ind-dif2010} & Y &
-  \multirow{2}{*}{\parbox{2.5cm}{2 more best: Picking no. 9 and 21 only for 10/5 bin/step}} &
+  \multirow{2}{*}{\parbox{2.5cm}{2 more best: Picking no. 9 and 21 only for 10/5 (UE)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 4, 5, 6, 7 and 19}} &
   \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} &
-  \multirow{2}{*}{\parbox{2.4cm}{Picking no. 8 for 10/5 bin/step; 23 and 27 for 20/10 bin/step}} &
+  \multirow{2}{*}{\parbox{2.4cm}{Picking no. 8 for 10/5 (E); 23 and 27 for 20/10 (UE)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 0, 2, 10, 12, 16, 18, 20 and 24}} &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{N} &
@@ -907,10 +945,10 @@ Fig.~\ref{fig-ind-dif} & Fig.~\ref{fig-ind-dif2010} & Y &
   (22,26),(0-5) 23,(1,3,4) 27,(1,3); account for 23/168}}} &  \\ \\ \\ \\ \hline
 Fig.~\ref{fig-indnt-dif} & Fig.~\ref{fig-indnt-dif2010} &
   \multirow{2}{*}{\parbox{1cm}{N (partially Y)}} &
-  \multirow{2}{*}{\parbox{2.5cm}{Picking no. 1, 17, 25 and 26 for 10/5 bin/step;
-  5, 7, 11 and 13 for 20/10 bin/step}} & \multirow{2}{*}{\parbox{2cm}{Same:
+  \multirow{2}{*}{\parbox{2.5cm}{Picking no. 1, 17, 25 and 26 for 10/5 (UE);
+  5, 7, 11 and 13 for 20/10 (E)}} & \multirow{2}{*}{\parbox{2cm}{Same:
   Picking no. 4, 6, 9, 19 and 21}} & \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} &
-  \multirow{2}{*}{\parbox{2.4cm}{Picking no. 14 and 18 for 10/5 bin/step; 23 and 27 for 20/10 bin/step}} &
+  \multirow{2}{*}{\parbox{2.4cm}{Picking no. 14 and 18 for 10/5 (E); 23 and 27 for 20/10 (UE)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 0, 2, 8, 10, 12, 16 and 24}} &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{N} &
@@ -918,8 +956,7 @@ Fig.~\ref{fig-indnt-dif} & Fig.~\ref{fig-indnt-dif2010} &
   23,(0-3) 26,(2,3,5) 27,(0,2,3); account for 17/168}}} &  \\ \\ \\ \\ \hline
 Fig.~\ref{fig-au-dif} & Fig.~\ref{fig-au-dif2010} & Y &\textendash &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 11, 13, 17, 19, 21 and 25}} &
-  Y & \multirow{2}{*}{\parbox{2.4cm}{1 more worst: Picking no. 6 only for 10/5
-  bin/step (EXPECTED)}} &
+  Y & \multirow{2}{*}{\parbox{2.4cm}{1 more worst: Picking no. 6 only for 10/5 (E)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 2, 14, 16, 22 and 26}} &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{N} &
@@ -927,9 +964,9 @@ Fig.~\ref{fig-au-dif} & Fig.~\ref{fig-au-dif2010} & Y &\textendash &
   7,0 (8,10,20),(2,5) 9,1 11,3 (12,24),(1,2) 13,(0,1,3) (14,22,26),(0-2,4,5)
   (16,17),(0-5) 19,5 21,(0,1,5); account for 33/84}}} &  \\ \\ \\ \\ \\ \\ \\ \\ \hline
 Fig.~\ref{fig-aunt-dif} & Fig.~\ref{fig-aunt-dif2010} & \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} &
-  \multirow{2}{*}{\parbox{2.5cm}{Picking no. 7 for 10/5 bin/step; 15 for 20/10 bin/step}} &
+  \multirow{2}{*}{\parbox{2.5cm}{Picking no. 7 for 10/5 (UE); 15 for 20/10 (E)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 11, 13, 17, 19, 21 and 25}} &
-  N & \multirow{2}{*}{\parbox{2.4cm}{Picking no. 6 for 10/5 bin/step; 4, 5 and 16 for 20/10 bin/step}} &
+  N & \multirow{2}{*}{\parbox{2.4cm}{Picking no. 6 for 10/5 (E); 4, 5 and 16 for 20/10 (UE)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 2, 14, 22 and 26}} &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{N} &
@@ -938,6 +975,13 @@ Fig.~\ref{fig-aunt-dif} & Fig.~\ref{fig-aunt-dif2010} & \multirow{2}{*}{\parbox{
 \end{tabular}%
 }
 \end{table*}
+
+\paragraph{Conclusions:}
+
+\subparagraph{The different values for 20/10 window/step are indeed generally
+lower than those for 10/5 window/step, excluding the unexpected case of North
+America with both space and shape tested (Fig.~\ref{fig-nac-dif} and
+Fig.~\ref{fig-nac-dif2010}).}
 
 
 \begin{acknowledgments}
