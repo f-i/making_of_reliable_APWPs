@@ -1,3 +1,37 @@
+% gjilguid2e.tex
+% V2.1 released 2003 Oct 7 -- Gregor Hutton, updated the web address for the style files.
+
+\documentclass{gji}
+
+\usepackage{timet,booktabs,gensymb,graphicx,caption,multirow}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+\title[How to generate APWPs]{Methods for Producing a Reliable APWP}
+\author[Chenjian Fu]{Chenjian Fu$^1$\thanks{Email: cfu3@kent.edu} Chris
+Rowan$^2$ \\$^1$ Department of Geology, Kent State University, 325 S Lincoln St,
+Kent, OH \emph{44242}, USA \\$^2$ Department of Geology, Kent State University,
+325 S Lincoln St, Kent, OH \emph{44242}, USA}
+\date{Received 2018 December 28; in original form 2018 November 22}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\volume{0}
+\pubyear{2018}
+
+%\def\LaTeX{L\kern-.36em\raise.3ex\hbox{{\small A}}\kern-.15em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
+%\def\LATeX{L\kern-.36em\raise.3ex\hbox{{\Large A}}\kern-.15em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
+% Authors with AMS fonts and mssymb.tex can comment out the following
+% line to get the correct symbol for Geophysical Journal International.
+\let\leqslant=\leq{}
+
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}\label{firstpage}
+
+\maketitle
+
+
 \begin{summary}
 First, new picking/weighting methods developed here and previously published
 picking/weighting methods are compiled together to generate 168 different
@@ -784,8 +818,8 @@ Fig.~\ref{fig-dif2010nt}.}\label{fig-dif2010ntbw}
 
 \begin{table*}
 \centering
-\caption{Perfermance statistics of all the picking and weighting methods.}
-\label{my-label}
+\caption{Performance statistics of all the picking and weighting methods.}
+\label{tab-bw}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l|l}
 \multirow{2}{*}{Grid} & \multicolumn{2}{l|}{Best No.} &
@@ -844,8 +878,16 @@ Fig.~\ref{fig-indnt-dif2010} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7, 9, 11,
   \multirow{2}{*}{\parbox{2cm}{0, 2, 8, 10, 12, 16, 23, 24,
   27}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 11/14 & 9 & 3 & 2 &
   8 & 3 & 3 & Y(4y2n)/N(5n1y) \\ \\ \hline
-Fig.~\ref{fig-au-dif2010} &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
-Fig.~\ref{fig-aunt-dif2010} &  &  &  &  &  &  &  &  &  &  &  & 
+Fig.~\ref{fig-au-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 17, 19, 21,
+  25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 4, 5}} &
+  \multirow{2}{*}{\parbox{2cm}{2, 14, 16, 22, 26}} &
+  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 41/42 & 7 & 9 & 0 & 11 & 1
+  & 2 & N/N(4n2y) \\ \\ \hline
+Fig.~\ref{fig-aunt-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 15, 17,
+  19, 21, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
+  \multirow{2}{*}{\parbox{2cm}{2, 4, 5, 14, 16, 22, 26}} &
+  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 41/42 & 6 & 8 & 0 & 10 & 1
+  & 3 & N/N(4n2y)
 \end{tabular}%
 }
 \end{table*}
@@ -858,10 +900,10 @@ Fig.~\ref{fig-dif2010}, Fig.~\ref{fig-dif2010nt}), we can observe:
         methods (Table.~\ref{tab-pick}) influence the similarity more than the
         weighting methods (Table.~\ref{tab-weit}) do.
   \item weighting is not always making similarities better. In fact, for quite
-        many of the methods, no weighting is the best performer.
+        many of the methods, no weighting is the best performer (Table.~\ref{tab-bw}).
   \item generally the APP methods (adding data to a time window with overlapping
         age selection criterion) produce better similarities than the AMP
-        methods.
+        methods (Table.~\ref{tab-bw}).
   \item the picking method no 19 is always the best.
   \item the weighting method no 0, 1 and 5 are generally producing better
         similarity than 2, 3 and 4.
@@ -1095,3 +1137,5 @@ Center for their remote HPC resources.
   since the late Paleozoic Era, \textit{Geosci. Front.},
   \textbf{in press}, 000\textendash000.
 \end{thebibliography}~\label{lastpage}
+
+\end{document}
