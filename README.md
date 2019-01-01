@@ -6,13 +6,18 @@ repository: https://github.com/f-i/APWP_similarity)
 
 ## Supplementary Materials
 
-The ``data'' folder contains the results from comparisons of Plate 101 paths and
-FHS model predicted path. Here is the video visualising the 168 different
-comparisons (Click on the image below to view the video):
+The "data" folder contains two subfolders. The "FHM" includes all the results
+from comparisons of Plates 101, 501 and 801's paleomagnetic paths and their
+Fixed Hotspot model predicted paths. The "MHM" includes all the results from
+comparisons of Plates 101, 501 and 801's paleomagnetic paths and their Moving
+Hotspot model predicted paths. Here is the video visualising the 168 different
+comparisons for Plate 101's paleomagnetic paths and its Fixed Hotspot model
+predicted & plate circuit projected path (Click on the image below to view the
+video):
 
 [![Paleomagnetic APWPs vs. Fixed Hotspot Model Predicted APWP: An Example from North America](https://img.youtube.com/vi/KNEdqo5jcOY/0.jpg)](https://www.youtube.com/watch?v=KNEdqo5jcOY "Paleomagnetic APWPs vs. Fixed Hotspot Model Predicted APWP: An Example from North America")
 
-And here are the distributions of paleomagnetic data picked from 28 different
-picking methods and then weighted by 6 different weighting methods:
+And here are the corresponding distributions of paleomagnetic data picked from
+28 different picking methods and then weighted by 6 different weighting methods:
 
 [![How to Generate Paleomagnetic APWPs: An Example from North America](https://img.youtube.com/vi/GMhG3wwZAfw/0.jpg)](https://www.youtube.com/watch?v=GMhG3wwZAfw "How to Generate Paleomagnetic APWPs: An Example from North America")
