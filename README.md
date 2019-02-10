@@ -13,41 +13,29 @@ paths. The "MHM" includes all the results from comparisons of Plates 101, 501
 and 801's paleomagnetic paths and their Moving Hotspot model (MHM) predicted
 paths.
 
-    data/101FHS120predictPWP105.d: FHM and plate circuit predicted APWP (10 Myr
-	sliding window, 5 Myr step) for Plate 101
+    data/101FHS120predictPWP105.d: FHM and plate circuit predicted APWP (10 Myr sliding window, 5 Myr step) for Plate 101
 
-    data/101FHS120predictPWP2010.d: FHM and plate circuit predicted APWP (20 Myr
-	sliding window, 10 Myr step) for Plate 101
+    data/101FHS120predictPWP2010.d: FHM and plate circuit predicted APWP (20 Myr sliding window, 10 Myr step) for Plate 101
 
-    data/501FHS120predictPWP105.d: FHM and plate circuit predicted APWP (10 Myr
-	sliding window, 5 Myr step) for Plate 501
+    data/501FHS120predictPWP105.d: FHM and plate circuit predicted APWP (10 Myr sliding window, 5 Myr step) for Plate 501
 
-    data/501FHS120predictPWP2010.d: FHM and plate circuit predicted APWP (20 Myr
-	sliding window, 10 Myr step) for Plate 501
+    data/501FHS120predictPWP2010.d: FHM and plate circuit predicted APWP (20 Myr sliding window, 10 Myr step) for Plate 501
 
-    data/801FHS120predictPWP105.d: FHM and plate circuit predicted APWP (10 Myr
-	sliding window, 5 Myr step) for Plate 801
+    data/801FHS120predictPWP105.d: FHM and plate circuit predicted APWP (10 Myr sliding window, 5 Myr step) for Plate 801
 
-    data/801FHS120predictPWP2010.d: FHM and plate circuit predicted APWP (20 Myr
-	sliding window, 10 Myr step) for Plate 801
+    data/801FHS120predictPWP2010.d: FHM and plate circuit predicted APWP (20 Myr sliding window, 10 Myr step) for Plate 801
 
-    data/101MHS120predictPWP105.d: MHM and plate circuit predicted APWP (10 Myr
-	sliding window, 5 Myr step) for Plate 101
+    data/101MHS120predictPWP105.d: MHM and plate circuit predicted APWP (10 Myr sliding window, 5 Myr step) for Plate 101
 
-    data/101MHS120predictPWP2010.d: MHM and plate circuit predicted APWP (20 Myr
-	sliding window, 10 Myr step) for Plate 101
+    data/101MHS120predictPWP2010.d: MHM and plate circuit predicted APWP (20 Myr sliding window, 10 Myr step) for Plate 101
 
-    data/501MHS120predictPWP105.d: MHM and plate circuit predicted APWP (10 Myr
-	sliding window, 5 Myr step) for Plate 501
+    data/501MHS120predictPWP105.d: MHM and plate circuit predicted APWP (10 Myr sliding window, 5 Myr step) for Plate 501
 
-    data/501MHS120predictPWP2010.d: MHM and plate circuit predicted APWP (20 Myr
-	sliding window, 10 Myr step) for Plate 501
+    data/501MHS120predictPWP2010.d: MHM and plate circuit predicted APWP (20 Myr sliding window, 10 Myr step) for Plate 501
 
-    data/801MHS120predictPWP105.d: MHM and plate circuit predicted APWP (10 Myr
-	sliding window, 5 Myr step) for Plate 801
+    data/801MHS120predictPWP105.d: MHM and plate circuit predicted APWP (10 Myr sliding window, 5 Myr step) for Plate 801
 
-    data/801MHS120predictPWP2010.d: MHM and plate circuit predicted APWP (20 Myr
-	sliding window, 10 Myr step) for Plate 801
+    data/801MHS120predictPWP2010.d: MHM and plate circuit predicted APWP (20 Myr sliding window, 10 Myr step) for Plate 801
 
     data/ay18_101comb contains: Plate 101's paleomagnetic paths
 
