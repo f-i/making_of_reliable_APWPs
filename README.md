@@ -51,7 +51,7 @@ paths.
 
 
 
-Here is the video visualising the 168 different comparisons for Plate 101's
+Here is the video visualising the comparisons for Plate 101's 168 different
 paleomagnetic paths and its Fixed Hotspot model predicted & plate circuit
 projected path (Click on the image below to view the video):
 
