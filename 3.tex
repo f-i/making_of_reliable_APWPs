@@ -608,11 +608,12 @@ observe:
 		\caption{Australia (801): minimum 0.0037 (17, 0), maximum 0.3954 (22, 3), mean 0.0813, median 0.0453}\label{fig-au-dif} % subcaption
 	\end{subfigure}
 	\caption[Differences with test of each plate's paleomagnetic APWPs versus
-its FHM predicted APWP]{Difference values with test between each continent's
-paleomagnetic APWPs and its predicted APWP from FHM and related plate circuit.
-The paths are in 10 Myr bin and 5 Myr step. The difference values less than
-one-standard-deviation interval of the whole 168 values are labeled in green,
-more than one-standard-deviation interval labeled in red.}\label{fig-dif} % caption for whole figure
+its FHM predicted APWP]{Equal-weight composite path difference ($\mathcal{CPD}$)
+values with test between each continent's paleomagnetic APWPs and its predicted
+APWP from FHM and related plate circuit. The paths are in 10 Myr bin and 5 Myr
+step. The difference values less than one-standard-deviation interval of the
+whole 168 values are labeled in green, more than one-standard-deviation interval
+labeled in red.}\label{fig-dif} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -1313,12 +1314,28 @@ The following discussions will be in Q\&A style.
 similarities than AMP methods do?}
 
 \begin{figure}
+\captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
 \centering
-\includegraphics[width=.5\textwidth]{figures/a95gcd_10_5F.pdf}
+  \begin{subfigure}[htbp]{.49\textwidth}
+	\caption{}\includegraphics[width=\textwidth]{figures/a95gcd_10_5F.pdf}\label{fig-A95GCD105F}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.49\textwidth}
+	\caption{}\includegraphics[width=\textwidth]{figures/a95Sgcd_10_5F.pdf}\label{fig-A95SGCD105F}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.49\textwidth}
+	\caption{}\includegraphics[width=\textwidth]{figures/a95mSad10_5F.pdf}\label{fig-A95mSad105F}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.49\textwidth}
+	\caption{}\includegraphics[width=\textwidth]{figures/a95mSld10_5F.pdf}\label{fig-A95mSld105F}
+  \end{subfigure}
 \caption[APP spatially better than AMP]{Paleomagnetic APWPs' mean A95 versus
-mean GCDs between Paleomagnetic APWP and FHM and plate circuit predicted APWP\@.
-Starting points of the vectors are results from AMP, while ending points are
-from APP.}\label{fig-A95GCD105F}
+(a) ``mean GCD'', (b) ``mean significant GCD'', (c) ``mean significant
+orientation difference'', and (d) ``mean significant length difference'' between
+paleomagnetic APWP and its corresponding FHM-and-plate-circuit predicted APWP\@.
+Starting points of the arrows are results from AMP, while ending points are from
+APP\@. Black color filled arrow heads are the small number of special cases of
+AMP derived equal-weight CPDs better than APP (see details in
+Fig.~\ref{fig-dif}).}\label{fig-A95mG105F}
 \end{figure}
 
 
