@@ -255,12 +255,16 @@ Fig.~\ref{fig-120NAhist}.
 
 \begin{figure*}
 \centering
-\includegraphics[width=1.01\textwidth]{figures/120NAhist.pdf}
+\includegraphics[width=.9\textwidth]{figures/120NAhist.pdf}
 \caption[Distribution of 120\textendash0 Ma North American poles]{Temporal
-distribution of 120\textendash0 Ma $NAC$ (101) paleomagnetic poles. For
-distribution a, each bin (spanning 10 Myr here) only counts in the midpoints of
-pole error bars; For distribution b, as long as the bar intersects with the bin,
-it is counted in.}\label{fig-120NAhist}
+distribution of 120\textendash0 Ma $NAC$ (101) paleomagnetic poles in 10 Myr
+binning and 5 Myr step. For distribution a, each bin only counts in the
+midpoints of pole error bars (not including those right at bin edges); For
+distribution b, as long as the bar intersects with the bin (not including those
+intersecting only at one of bin edges), it is counted in. Inside the
+parentheses, i means igneous rocks derived, r means sedimentary rocks with
+redbeds involved derived, and m means metamorphic-dominated rocks
+derived.}\label{fig-120NAhist}
 \end{figure*}
 
 \begin{figure*}
@@ -1287,6 +1291,8 @@ Fig.~\ref{fig-dif2010}, Fig.~\ref{fig-dif2010nt}), we can observe:
   \item the self-explanatory topography of bands indicates that the picking
         methods (Table.~\ref{tab-pick}) influence the similarity more than the
         weighting methods (Table.~\ref{tab-weit}) do.
+  \item filtering (picking no 2\textendash7, 10, 11, and 14\textendash27) and
+        correcting (picking no 8, 9, 12 and 13) has limited effectiveness.
   \item weighting is not always making similarities better. In fact, for quite
         many of the methods, no weighting is the best performer
 		(Table.~\ref{tab-bw}).
@@ -1312,6 +1318,9 @@ The following discussions will be in Q\&A style.
 
 \subsubsection{Question: Why the APP methods generally produce better
 similarities than AMP methods do?}
+
+Paleomagnetic (Mean) A95 represents precision, and (mean) coeval poles' GCD
+represents accuracy (Fig.~\ref{fig-A95GCD105F} and Fig.~\ref{fig-A95SGCD105F}).
 
 \begin{figure}
 \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
