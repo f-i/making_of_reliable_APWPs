@@ -264,7 +264,7 @@ distribution b, as long as the bar intersects with the bin (not including those
 intersecting only at one of bin edges), it is counted in. Inside the
 parentheses, i means igneous rocks derived, r means sedimentary rocks with
 redbeds involved derived, and m means metamorphic-dominated rocks
-derived; the left are sedimentary rocks derived.}\label{fig-120NAhist}
+derived; the left are pure sedimentary rocks derived.}\label{fig-120NAhist}
 \end{figure*}
 
 \begin{figure*}
@@ -1364,6 +1364,22 @@ AMP derived equal-weight CPDs better than APP (see details in
 Fig.~\ref{fig-dif}).}\label{fig-A95mG105Fd}
 \end{figure}
 
+Obviously APP increases the number of VGPs (N) for each sliding window. This
+potentially would average out some ``bad'' poles and improves the fit between
+the paleomagnetic APWPs and the model-predicted APWPs. However, if the increased
+VGPs are all or mostly ``bad'' ones, the improvement of fit would not occur. So
+the improvement of fit is not only because of the increase in N, but also
+because most of the additional poles are ``good''. As we know, AMP only regards
+the time uncertainty of each pole as one mid-point, which is actually incorrect,
+because the mid-point is not known as the most likely age of the pole, but most
+reasonably regarded as one possibility of all uniformly (not necessarily
+normally bell shaped, or U shaped, or left or right skewed) distributed ages
+between the two time limits.
+
+The time uncertainty's lower (older) limit is a stratigraphic age, and its upper
+(younger) limit could be constrained by a tectonic event by some field tests
+(e.g.\ fold/tilt test and conglomerate test).
+
 
 \subsubsection{Question: Why the AMP methods sometimes unexceptionally produce
 better similarities than APP methods do?}
@@ -1390,6 +1406,29 @@ contemporary model-predicted pole, so when this negative effect is beyond the
 positive effect the other mean poles contribute, the composite difference score
 would increase (Situation 3). However this phenomenon seldom occur
 (Table.~\ref{tab-bw}).
+
+\begin{table*}
+\centering
+\caption{My caption}
+\label{my-label}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|l|l|l|l|l|l|l|l|l}
+\hline
+\multicolumn{2}{|c|}{\multirow{2}{*}{FHM predicted}} & \multicolumn{3}{c|}{picking 4 + weighting 3} & \multicolumn{5}{c|}{picking 5 + weighting 3} \\ \cline{3-10} 
+\multicolumn{2}{|c|}{} & \multicolumn{3}{c|}{ds} & \multicolumn{3}{c|}{ds} & \multicolumn{2}{c|}{da} \\ \hline
+Age (Ma) & \multicolumn{1}{c|}{A95 ()} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{Pmag A95 ()} & \multicolumn{1}{c|}{Dist ()} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{A95 ()} & \multicolumn{1}{c|}{Dist ()} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{Diff ()} \\ \hline
+0 & 0 & 0 & 8.3 & \textbf{4.29} & 0 & 7.6 & \textbf{3.885} & \textit{\textbf{10-15-20}} & \multicolumn{1}{l|}{\textbf{126.59}} \\ \hline
+5 & 1.56039/0.87367 & 5 & 7 & \textbf{4.853} & 5 & 6.8 & \textbf{4.3453} & \multicolumn{2}{l|}{} \\ \hline
+10 & 2.89214/1.58743 & 10 & 12 & \textbf{9.91} & 10 & 8.6 & \textbf{5.79} & \multicolumn{2}{c|}{dl} \\ \hline
+15 & 2.575/1.63303 & 15 & 58/49 & \textbf{6.72} & 15 & 2.0857 & \textbf{11.8} & Age (Ma) & \multicolumn{1}{l|}{Diff ()} \\ \hline
+20 & 3.16077/2.20094 & \textit{\textbf{20}} & 12.43 & \textbf{8.58} & \multicolumn{3}{l|}{} & \textit{\textbf{10-15}} & \multicolumn{1}{l|}{\textbf{13.52}} \\ \hline
+25 & 4.96061/2.2183 & 25 & 6.76 & \textbf{6.96} & 25 & 6.3358 & \textbf{6.873} & \textit{\textbf{15-20}} & \multicolumn{1}{l|}{\textbf{14.68}} \\ \hline
+30 & 3.39692/2.57114 & 30 & 6.68 & \textbf{6.46} & 30 & 6.68 & \textbf{6.4583} & \multicolumn{2}{l|}{\multirow{3}{*}{}} \\ \cline{1-8}
+115 & 9.27023/5.16012 & 115 & 8.6 & \textbf{12.2535} & 115 & 8.5 & \textbf{11.7} & \multicolumn{2}{l|}{} \\ \cline{1-8}
+120 & 14.6882/8.12086 & 120 & 7.76 & \textbf{15.5744} & 120 & 7.728 & \textbf{15.258} & \multicolumn{2}{l|}{} \\ \cline{1-8}
+\end{tabular}%
+}
+\end{table*}
 
 Situation 1: Fig.~\ref{fig-nac-dif2010} picking/weighting 22/3 vs 23/3.
 Fig.~\ref{fig-nac-difm} 6/3 vs 7/3.
