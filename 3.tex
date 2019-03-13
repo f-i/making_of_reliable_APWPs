@@ -1386,6 +1386,10 @@ better similarities than APP methods do?}
 
 \paragraph{Measure 1:}
 
+Because of small number of VGPs (not necessarily ``bad'') involved in each
+sliding window, the produced mean poles by AMP should be relatively far from
+its contemporary model-predicted pole. This also could potentially bring more
+distinguishable $d_s$ for AMP\@ if the corresponding A95 is not large enough.
 For example, for Fig.~\ref{fig-nac-dif}, there are only three special (of 84 APP
 vs. AMP comparisons) cases picking/weighting 4/3, 4/5, 6/3 better than 5/3, 5/5,
 7/3 respectively. Compared with the picking/weighting 4/3 APWP, although most of
@@ -1409,23 +1413,34 @@ greater distinguishable mean $d_s$ from the APP methods. The similar phenomenon
 occurs to Fig.~\ref{fig-ind-dif} picking 4 vs 5 with all the six types of
 weightings.
 
-In addition, APP
-potentially could generate more mean poles than AMP, because sometimes for some
-sliding window there is no VGP at all for AMP\@. If so, because of small number
-of VGPs, the newly produced mean poles by APP could be far from its contemporary
-model-predicted pole. This also could potentially bring more distinguishable
-$d_s$, $d_a$ and $d_l$ for APP\@. Admittedly, at the same time, the mean poles
-at other ages also should be derived from more VGPs from APP, but the extended
-mean poles from small number of VGPs should be extremely far from its
-contemporary model-predicted pole, so when this negative effect is beyond the
-positive effect the other mean poles contribute, the composite difference score
-would increase (Situation 3). However this phenomenon seldom occur
-(Table.~\ref{tab-bw}).
+In addition, compared with AMP, APP potentially could generate more mean poles,
+because sometimes for some sliding window there is no VGP involved at all for
+AMP\@ while there is(are) VGP(s) involved for APP\@. For APP, the mean poles at
+all ages should be composed of more VGPs than it is for AMP, which should
+generally decrease both coeval pole distance and paleomagnetic A95. However,
+sometimes a rare case (e.g.\ the 0 Ma comparison shown in
+Table.~\ref{tab-501w0p22vs23}) happens. It is sometimes that an additional
+very ``bad'' VGP gets included by APP and this increases both coeval pole
+distance and paleomagnetic A95 even though N increases. Such cases include
+Fig.~\ref{fig-ind-dif} picking 22 vs 23 (actually exactly the same as picking 26
+vs 27) with all the six types of weightings.
+
+So generally as we discussed in the last section APP decreases the distances
+between paleomagnetic APWPs and the hotspot and sea-floor spreading model
+predicted APWP, and also the uncertainties of paleomagnetic APWPs. However, as
+we described in this section, special cases like decreased A95 potentially
+intends to make coeval poles differentiated if the coeval poles' distance is
+not decreased effectively or even increased, or very ``bad'' VGPs got involved
+in some sliding windows, occurs. In summary, when the negative effect from
+these types of rare cases is beyond the positive effect the generally improved
+mean poles contribute, the composite difference score would increase. However,
+this phenomenon seldom occur (Table.~\ref{tab-bw}).
 
 \begin{table*}
 \centering
 \caption{One example of the Type 1 rare cases where AMP gives better similarity
-  result than APP does. Only statistically significant values are listed here.}
+  result than APP does from North America (101). Only statistically significant
+  values are listed here.}
 \label{tab-w3p4vs5}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|l|l|l|l|l|l|l|l}
@@ -1448,7 +1463,8 @@ Age (Ma) & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & 
 
 \begin{table*}
 \caption{One example of the Type 2 rare cases where AMP gives better similarity
-  result than APP does. Only statistically significant values are listed here.}
+  result than APP does from North America (101). Only statistically significant
+  values are listed here.}
 \label{tab-w5p4vs5}
 \begin{tabular}{|c|l|l|l|l|l|}
 \hline
@@ -1466,11 +1482,39 @@ Age (Ma) & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & 
 \end{tabular}%
 \end{table*}
 
+\begin{table*}
+\centering
+\caption{One example of the Type 3 rare cases where AMP gives better similarity
+  result than APP does from India (501). Only statistically significant values
+  are listed here. Note that for the bold-number ages, there is no mean poles
+  at all for the ``picking 22 (AMP) + weighting 0'' case.}
+\label{tab-501w0p22vs23}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l}
+\hline
+\multicolumn{2}{|c|}{\multirow{2}{*}{FHM predicted}} & \multicolumn{3}{c|}{picking 22 + weighting 0} & \multicolumn{5}{c|}{picking 23 + weighting 0} \\ \cline{3-10} 
+\multicolumn{2}{|c|}{} & \multicolumn{3}{c|}{ds} & \multicolumn{3}{c|}{ds} & \multicolumn{2}{c|}{dl} \\ \hline
+\multicolumn{1}{|c|}{Age (Ma)} & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & Dist (\degree) & N & \multicolumn{1}{c|}{Pmag A95 (\degree)} & Dist (\degree) & N & Age (Ma) & \multicolumn{1}{l|}{Diff (\degree)} \\ \hline
+0 & 0 & \textbf{6.85} & \textbf{12.973} & \textit{\textbf{2}} & \textbf{23.6214} & \textbf{17.698} & \textit{\textbf{3}} & \textbf{80-85} & \multicolumn{1}{l|}{6.286} \\ \hline
+5 & 1.415/0.965 & 23.6214 & 15.941 & 3 & 23.6214 & 15.941 & 3 & \textbf{110-115} & \multicolumn{1}{l|}{16.684} \\ \hline
+10 & 2.2425/1.34645 & 5.4/3.1 & 29.897 & 1 & 5.4/3.1 & 29.897 & 1 & \multicolumn{2}{l|}{\multirow{12}{*}{}} \\ \cline{1-8}
+\textbf{15} & 2.2694/1.62543 & \multicolumn{3}{l|}{\textbf{}} & 5.4/3.1 & 28.28 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-8}
+70 & 8.53016/4.97567 & 4.0164 & 4.864 & 16 & 3.246 & 4.436 & 20 & \multicolumn{2}{l|}{} \\ \cline{1-8}
+\textbf{75} & 5.3554/3.1595 & \multicolumn{3}{l|}{\multirow{2}{*}{\textbf{}}} & 5 & 4.477 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
+\textbf{80} & 8.41657/5.00588 & \multicolumn{3}{l|}{} & 5 & 3.358 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-8}
+85 & 5.01489/2.49492 & 5 & 7.632 & 1 & 5 & 7.632 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-8}
+\textbf{90} & 7.77997/2.86845 & \multicolumn{3}{l|}{\multirow{5}{*}{}} & 5 & 10.884 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
+\textbf{95} & 4.46779/3.24941 & \multicolumn{3}{l|}{} & 5 & 11.099 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
+\textbf{100} & 5.6124/5.19639 & \multicolumn{3}{l|}{} & 5 & 11.4155 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
+\textbf{105} & 4.64657/3.49277 & \multicolumn{3}{l|}{} & 5 & 14.908 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
+\textbf{110} & 9.11039/4.98436 & \multicolumn{3}{l|}{} & 6.8/4.9 & 13.962 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-8}
+115 & 9.27023/5.16012 & 10.73 & 10.508 & 5 & 10.73 & 10.508 & 5 & \multicolumn{2}{l|}{} \\ \cline{1-8}
+\end{tabular}
+\end{table*}
+
 Situation 1: Fig.~\ref{fig-nac-dif2010} picking/weighting 22/3 vs 23/3.
 Fig.~\ref{fig-nac-difm} 6/3 vs 7/3.
 
-Situation 2: Fig.~\ref{fig-ind-dif} picking/weighting
-22/3 vs 23/3, 26/3 vs 27/3; Fig.~\ref{fig-au-dif}
+Situation 2: Fig.~\ref{fig-au-dif}
 picking/weighting 4/2\textendash3 vs 5/2\textendash3, 4/5 vs 5/5.
 Fig.~\ref{fig-nac-dif2010} picking/weighting 2/0\textendash5 vs
 3/0\textendash5, 4/0\textendash2 vs 5/0\textendash2, 4/4 vs 5/4, 6/5 vs 7/5,
@@ -1483,10 +1527,8 @@ Fig.~\ref{fig-au-difm} 4/3 vs 5/3, 4/0 vs 5/0, 8/5 vs 9/5, 8/3 vs 9/3.
 Fig.~\ref{fig-ind-dif2010m} 14/2\textendash3 vs 15/2\textendash3.
 Fig.~\ref{fig-au-dif2010m} 4/4 vs 5/4.
 
-Combination of both Situation 1 and Situation 2: Fig.~\ref{fig-ind-dif}
-picking/weighting 22/0\textendash2 vs 23/0\textendash2, 22/4\textendash5 vs
-23/4\textendash5, 26/0\textendash2 vs 27/0\textendash2, 26/4\textendash5 vs
-27/4\textendash5, Fig.~\ref{fig-nac-dif2010} picking/weighting 26/0\textendash1
+Combination of both Situation 1 and Situation 2:
+Fig.~\ref{fig-nac-dif2010} picking/weighting 26/0\textendash1
 vs 27/0\textendash1. Fig.~\ref{fig-nac-difm} 4/3 vs 5/3. Fig.~\ref{fig-ind-difm}
 22/2 vs 23/2, 22/5 vs 23/5, 26/0\textendash5 vs 27/0\textendash5.
 
