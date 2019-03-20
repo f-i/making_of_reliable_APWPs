@@ -164,12 +164,16 @@ indicate large motions of the Indo-Atlantic hotspots. Such a model like FHM or
 MHM can predict APWPs for main continents, e.g.\ the North America (Plate ID
 101) (Fig.~\ref{fig-fhsPred} and Fig.~\ref{fig-mhsPred}), the India (501)
 (Fig.~\ref{fig-fhsPred501} and Fig.~\ref{fig-mhsPred501}) and the Australia
-(801) (Fig.~\ref{fig-fhsPred801} and Fig.~\ref{fig-mhsPred801}). For about 120
-Ma to the present, India drifts much faster than North America and Australia.
-North America has been drifting rather slow. Australia's drifting rate is
-between them. In addition, India drifts almost north, whereas North America
-east and then north, and Australia west and then north. So these three
-continents are representatives for three different types of plate kinematics.
+(801) (Fig.~\ref{fig-fhsPred801} and Fig.~\ref{fig-mhsPred801}), with the help
+of global plate motion data from the ocean basins that has been reconstructed
+for the last c. 180\textendash200 Myr (although the extrapolation is required;
+hard to constrain uncertainties). These more accurate model-predicted APWPs can
+be compared to data from the paleomagnetic database. For about 120 Ma to the
+present, India drifts much faster than North America and Australia. North
+America has been drifting rather slow. Australia's drifting rate is between
+them. In addition, India drifts almost north, whereas North America east and
+then north, and Australia west and then north. So these three continents are
+representatives for three different types of plate kinematics.
 
 \subsection{Reference Path: The Hotspot Model Predicted}
 
@@ -1728,14 +1732,15 @@ differences in shape metrics, which causes the difference score even larger
 }
 \end{table*}
 
-Generally, no weighting (i.e.\ Wt 0) is better. Wt 2 or 4 is not recommended,
-because they never have generated the best similarities (Table.~\ref{tab-bw}),
-compared with other weighting methods. There is no general pattern about which
-weighting (of Wt 1\textendash5) is better or worse. So weighting, for making a
-paleomagnetic APWP, is not absolutely necessary. However, there are some
-patterns about which weighting is better or worse for some specific continent.
-For example, Wt 3 prefers Australia (Table.~\ref{tab-bw}). Wt 3 works fine with
-India. However, Wt 3 is not recommended for North America.
+Generally, weighting does not improve fit. In other words, Wt 0 is generaly the
+best. Wt 2 or 4 is not recommended, because they never have generated the best
+similarities (Table.~\ref{tab-bw}), compared with other weighting methods. There
+is no general pattern about which weighting (of Wt 1\textendash5) is better or
+worse. So weighting, for making a paleomagnetic APWP, is not absolutely
+necessary. However, there are some patterns about which weighting is better or
+worse for some specific continent. For example, Wt 3 prefers Australia
+(Table.~\ref{tab-bw}). Wt 3 works fine with India. However, Wt 3 is not
+recommended for North America.
 
 \subsubsection{Question: Why best and worst methods are not consistent?}
 \paragraph{Question: Why the picking method 21 is not among the best for
@@ -1753,8 +1758,8 @@ method 21 are still closer to the left bound of the one-standard-deviation
 interval 0.0359\textendash0.1072 and relatively farther from the mean 0.074,
 which means the picking method 21 is still a relatively better one.
 
-\paragraph{Question: Why the picking method 16 is not among the worst for
-10 Myr binning and 5 Myr stepping with only space tested?}
+\paragraph{Question: Why the picking method 16 is not among the worst for 10 Myr
+binning and 5 Myr stepping with only space tested?}
 
 As shown in Fig.~\ref{fig-dif}, Fig.~\ref{fig-dif2010} and
 Fig.~\ref{fig-dif2010nt}, the picking method 16 is always one of the worst.
@@ -1767,9 +1772,6 @@ Australia (801). However, even for Australia (801), the difference values
 closer to the right bound of the one-standard-deviation interval
 0.3102\textendash0.6548 and relatively farther from the mean 0.502, which means
 the picking method 16 is still a relatively worse one.
-
-\subsubsection{Question: Why the 10/5 bin/step methods sometimes unexceptionally
-produce better similarities than the 20/10 methods do?}
 
 \subsubsection{Question: Do time window size and step affect the results?}
 
@@ -1788,6 +1790,32 @@ Fig~\ref{fig-au-2010223} is improved a bit compared to Fig~\ref{fig-au-105223}).
 A variety of ways of binning the data (here both 20 Myr window 10 Myr step and
 10 Myr window 5 Myr step) are being tested to see which one produces the better
 and more appropriately smoothed fit.
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/101f105d2010.pdf}
+		\caption{North America (101): Genrally Bin/Step 10/5 Myr is better}\label{fig-101f105d2010}
+	\end{subfigure}
+	\vspace{1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/501f105d2010.pdf}
+		\caption{India (501): Genrally Bin/Step 20/10 Myr is better}\label{fig-501f105d2010}
+	\end{subfigure}
+	\vspace{1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/801f105d2010.pdf}
+		\caption{Australia (801): Genrally Bin/Step 20/10 Myr is better}\label{fig-801f105d2010}
+	\end{subfigure}
+	\caption[]{Differences between grids in Fig.~\ref{fig-dif} (10 Myr bin, 5
+Myr step) and Fig.~\ref{fig-dif2010} (20 Myr bin, 10 Myr step). The absolute
+difference values less than 1.96-standard-deviation interval of the whole 168
+values are labeled in green, more than 1.96-standard-deviation interval labeled
+in red.}\label{fig-f105d2010}
+\end{figure*}
+
+Interestingly, only for North America, the 10/5 bin/step methods generally and
+unexceptionally produce better similarities than the 20/10 methods do.
 
 \paragraph{What to expect is}
 the difference values for 20/10 window/step should be generally lower than those
