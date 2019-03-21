@@ -1778,34 +1778,37 @@ the picking method 16 is still a relatively worse one.
 A balance needs to be made between having windows that are too wide and steps
 that are too long which will smooth the data so much we miss actual details in
 the APWP (e.g.\ those 20 Myr window 10 Myr step paleomagnetic paths in
-Fig~\ref{fig-dif2010bw} and Fig~\ref{fig-dif2010ntbw}) and windows that are too
-narrow and steps that are too short which introduces noise by having too few
+Fig.~\ref{fig-dif2010bw} and Fig.~\ref{fig-dif2010ntbw}) and windows that are
+too narrow and steps that are too short which introduces noise by having too few
 poles in each window (e.g.\ those 10 Myr window 5 Myr step paleomagnetic paths in
-Fig~\ref{fig-difbw} and Fig~\ref{fig-difntbw}). There is a dependence here on
+Fig.~\ref{fig-difbw} and Fig.~\ref{fig-difntbw}). There is a dependence here on
 data density: higher density allows smaller windows/steps (this is one of the
 things we want to test with selective data removal mentioned in Chapter 4).
 Fitting curves by moving averaging change with different time window lengths and
 time increment lengths (i.e.\ steps) (e.g., the similarity of the pair in
-Fig~\ref{fig-au-2010223} is improved a bit compared to Fig~\ref{fig-au-105223}).
-A variety of ways of binning the data (here both 20 Myr window 10 Myr step and
-10 Myr window 5 Myr step) are being tested to see which one produces the better
-and more appropriately smoothed fit.
+Fig.~\ref{fig-au-2010223} is improved a bit compared to
+Fig.~\ref{fig-au-105223}). A variety of ways of binning the data (here both 20
+Myr window 10 Myr step and 10 Myr window 5 Myr step) are being tested to see
+which one produces the better and more appropriately smoothed fit.
 
 \begin{figure*}
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/101f105d2010.pdf}
-		\caption{North America (101): Genrally Bin/Step 10/5 Myr is better}\label{fig-101f105d2010}
+		\caption{North America (101): Generally Bin/Step 10/5 Myr is better
+		($\frac{29}{42}\approx69.05\%$)}\label{fig-101f105d2010}
 	\end{subfigure}
 	\vspace{1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/501f105d2010.pdf}
-		\caption{India (501): Genrally Bin/Step 20/10 Myr is better}\label{fig-501f105d2010}
+		\caption{India (501): Generally Bin/Step 20/10 Myr is better
+		($\frac{145}{168}\approx86.31\%$)}\label{fig-501f105d2010}
 	\end{subfigure}
 	\vspace{1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/801f105d2010.pdf}
-		\caption{Australia (801): Genrally Bin/Step 20/10 Myr is better}\label{fig-801f105d2010}
+		\caption{Australia (801): Generally Bin/Step 20/10 Myr is better
+		($\frac{17}{28}\approx60.71\%$)}\label{fig-801f105d2010}
 	\end{subfigure}
 	\caption[]{Differences between grids in Fig.~\ref{fig-dif} (10 Myr bin, 5
 Myr step) and Fig.~\ref{fig-dif2010} (20 Myr bin, 10 Myr step). The absolute
@@ -1814,8 +1817,31 @@ values are labeled in green, more than 1.96-standard-deviation interval labeled
 in red.}\label{fig-f105d2010}
 \end{figure*}
 
-Interestingly, only for North America, the 10/5 bin/step methods generally and
-unexceptionally produce better similarities than the 20/10 methods do.
+For Pk 2 (AMP with ``$\alpha$95/Age range'' no more than
+``15\degree/20\degree''), the 20/10 Myr bin/step methods always generate better
+similarities than the 10/5 Myr ones.
+
+Interestingly, only for North America, the 10/5 Myr bin/step methods generally
+and unexceptionally produce better similarities than the 20/10 Myr methods do.
+Note that as mentioned in the Supplementary materials and also Chapter 4, there
+are 135, 75 and 99 VGPs that compose of 120\textendash0 Ma APWPs of North
+America, India and Australia respectively. Does the reason could be because of
+the relatively larger number of VGPs for North America? Since theoretically for
+each sliding window, the more ``bad'' VGPs it contains, the worse similarity we
+should obtain. In the contrary, the less VGPs the window contains, the weaker
+the effect of averaging out ``bad'' poles' influence would be. So is there a
+threshold number of VGPs for making an paleomagnetic APWP\@? For example, for
+making a 120\textendash0 Ma APWP, do the results indicate the best number of
+VGPs we need should be some value between 99 and 135? We did the test in
+Chapter 2 on the 530\textendash0 Ma paleomagnetic APWP using the AMP method,
+and we did find that larger windows and steps bring the paleomagnetic APWPs
+closer to the reference path. Here another test will be implemented as follows.
+12/6, 14/7, 16/8 and 18/9 Myr bin/step will be used to generate paleomagnetic
+APWP for North America to see which one would make the paleomagnetic APWPs
+closest to the reference path. Will the similarities they generate be generally
+worse than those the 10/5 Myr bin/step generates? Or will they be better first and
+then worse than those the 10/5 Myr bin/step generates when the bin/step sizes
+increase up to 20/10 Myr? First we test it using the 16/8 Myr bin/step.
 
 \paragraph{What to expect is}
 the difference values for 20/10 window/step should be generally lower than those
