@@ -1823,26 +1823,59 @@ similarities than the 10/5 Myr ones.
 
 Interestingly, only for North America, the 10/5 Myr bin/step methods generally
 and unexceptionally produce better similarities than the 20/10 Myr methods do
-(Fig.~\ref{fig-f105d2010}). Note that as mentioned in the Supplementary
-materials and also Chapter 4, there are 135, 75 and 99 VGPs that compose of
-120\textendash0 Ma APWPs of North America, India and Australia respectively.
-Does the reason could be because of the relatively larger number of VGPs for
-North America? Since theoretically for each sliding window, the more ``bad''
-VGPs it contains, the worse similarity we should obtain. In the contrary, the
-less VGPs the window contains, the weaker the effect of averaging out ``bad''
-poles' influence would be. So is there a threshold number of VGPs for making an
-paleomagnetic APWP\@? For example, for making a 120\textendash0 Ma APWP, do the
-results indicate the best number of VGPs we need should be some value between 99
-and 135? We did the test in Chapter 2 on the 530\textendash0 Ma paleomagnetic
-APWP using the AMP method, and we did find that larger windows and steps bring
-the paleomagnetic APWPs closer to the reference path. Here another test will be
-implemented as follows. 12/6, 14/7, 16/8 and 18/9 Myr bin/step will be used to
-generate paleomagnetic APWP for North America to see which one would make the
-paleomagnetic APWPs closest to the reference path. Will the similarities they
+(Fig.~\ref{fig-f105d2010}), which mainly depends on the picking methods. Note
+that as mentioned in the Supplementary materials and also Chapter 4, there are
+135, 75 and 99 VGPs that compose of 120\textendash0 Ma APWPs of North America,
+India and Australia respectively. Does the reason could be because of the
+relatively larger number of VGPs for North America? Since theoretically for each
+sliding window, the more ``bad'' VGPs it contains, the worse similarity we
+should obtain. In the contrary, the less VGPs the window contains, the weaker
+the effect of averaging out ``bad'' poles' influence would be. So is there a
+threshold number of VGPs for making an paleomagnetic APWP\@? For example, for
+making a 120\textendash0 Ma APWP, do the results indicate the best number of
+VGPs we need should be some value between 99 and 135? We did the test in Chapter
+2 on the 530\textendash0 Ma paleomagnetic APWP using the AMP method, and we did
+find that larger windows and steps bring the paleomagnetic APWPs closer to the
+reference path. Here another test will be implemented as follows. With the
+results from the 10/5 and 20/10 bin/step together, 2/1, 4/2, 6/3, 8/4, 12/6,
+14/7, 16/8, 20/10, 24/12 and 30/15 Myr bin/step will be used to generate
+paleomagnetic APWPs for North America to see which one would make the
+paleomagnetic APWP closest to the reference path. Will the similarities they
 generate be generally worse than those the 10/5 Myr bin/step generates? Or will
 they be better first and then worse than those the 10/5 Myr bin/step generates
-when the bin/step sizes increase up to 20/10 Myr? First we test it using the
-16/8 Myr bin/step.
+when the bin/step sizes increase up to 20/10 Myr? For the best results
+(Table.~\ref{tab-pk0vs1bs}), as expected, AMP needs wider sliding window and
+step to get close to the reference while APP does not. Even the best sizes of
+sliding window and step are assigned for AMP, the results from APP are still
+much better than those from AMP\@. Picking methods are still the key influence
+factor of choosing a better sliding window size and step size of moving
+averaging, although weighting methods are also important.
+
+\begin{table*}
+\centering
+\caption{Equal-weight 120\textendash0 Ma CPDs for North American paleomagnetic
+APWPs compared with the FHM predicted APWP\@. The best are in dark green and
+underlined, second best in green and third in light green.}
+\label{tab-pk0vs1bs}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{} & \multicolumn{6}{c|}{Pk 0} & \multicolumn{6}{c|}{Pk 1} \\ \cline{2-13} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{Window, Step (size in Myr)}} & Wt 0 & Wt 1 & Wt 2 & Wt 3 & Wt 4 & Wt 5 & Wt 0 & Wt 1 & Wt 2 & Wt 3 & Wt 4 & Wt 5 \\ \hline
+2, 1 & 0.2864 & 0.26 & 0.2877 & 0.2801 & 0.2632 & 0.2619 & 0.00747 & {\color[HTML]{34FF34} \textbf{0.00776}} & {\color[HTML]{34FF34} \textbf{0.01688}} & 0.01283 & 0.0372 & {\color[HTML]{34FF34} \textbf{0.0097}} \\ \hline
+4, 2 & 0.08205 & 0.08422 & 0.1034 & 0.09653 & 0.10295 & 0.09863 & 0.0064145 & {\color[HTML]{32CB00} \textbf{0.00711}} & 0.0182 & {\color[HTML]{009901} {\ul \textbf{0.011423}}} & 0.03606 & {\color[HTML]{32CB00} \textbf{0.00909}} \\ \hline
+6, 3 & 0.06657 & 0.06817 & 0.06788 & 0.06229 & 0.08557 & 0.07634 & {\color[HTML]{34FF34} \textbf{0.00627}} & 0.007797 & 0.01754 & {\color[HTML]{34FF34} \textbf{0.01254}} & 0.02113 & {\color[HTML]{009901} {\ul \textbf{0.008955}}} \\ \hline
+8, 4 & 0.0614 & 0.0772 & 0.0653 & 0.06214 & 0.0903 & 0.0646 & {\color[HTML]{32CB00} {\ul \textbf{0.006}}} & 0.01099 & {\color[HTML]{32CB00} \textbf{0.01576}} & 0.01399 & {\color[HTML]{34FF34} \textbf{0.02027}} & 0.01271 \\ \hline
+10, 5 & 0.0349 & 0.0458 & 0.0486 & 0.046 & 0.0488 & 0.0344 & {\color[HTML]{009901} \textit{\textbf{0.0059}}} & {\color[HTML]{009901} {\ul \textbf{0.0062}}} & {\color[HTML]{009901} {\ul \textbf{0.0136}}} & 0.0151 & {\color[HTML]{009901} {\ul \textbf{0.0153}}} & 0.0121 \\ \hline
+12, 6 & {\color[HTML]{32CB00} \textbf{0.0318}} & {\color[HTML]{34FF34} \textbf{0.0316}} & {\color[HTML]{32CB00} \textbf{0.0325}} & {\color[HTML]{009901} {\ul \textbf{0.0298}}} & {\color[HTML]{34FF34} \textbf{0.0323}} & {\color[HTML]{009901} {\ul \textbf{0.0299}}} & 0.0087 & 0.009 & 0.017 & 0.0126 & {\color[HTML]{32CB00} \textbf{0.0191}} & 0.0145 \\ \hline
+14, 7 (119-0 Ma path) & 0.0367 & 0.0348 & 0.0353 & 0.0369 & {\color[HTML]{32CB00} \textbf{0.0319}} & 0.0352 & 0.00996 & 0.01198 & 0.023922 & 0.013 & 0.0203 & 0.0113 \\ \hline
+16, 8 & 0.0493 & 0.0492 & 0.0496 & 0.0486 & 0.0477 & 0.0485 & 0.0114 & 0.0117 & 0.023902 & {\color[HTML]{32CB00} \textbf{0.0123}} & 0.0207 & 0.0129 \\ \hline
+20, 10 & 0.0497 & 0.0536 & 0.0538 & 0.0557 & 0.0517 & 0.0526 & 0.014 & 0.0174 & 0.029 & 0.0181 & 0.027 & 0.0156 \\ \hline
+24, 12 & {\color[HTML]{009901} {\ul \textbf{0.0274}}} & {\color[HTML]{32CB00} \textbf{0.0304}} & {\color[HTML]{34FF34} \textbf{0.0327}} & {\color[HTML]{34FF34} \textbf{0.0324}} & {\color[HTML]{009901} {\ul \textbf{0.0315}}} & {\color[HTML]{34FF34} \textbf{0.0313}} & 0.0138 & 0.0143 & 0.0221 & 0.0191 & 0.0203 & 0.0192 \\ \hline
+30, 15 & {\color[HTML]{34FF34} \textbf{0.0345}} & {\color[HTML]{009901} {\ul \textbf{0.0298}}} & {\color[HTML]{009901} {\ul \textbf{0.0317}}} & {\color[HTML]{32CB00} \textbf{0.0307}} & 0.03402 & {\color[HTML]{32CB00} \textbf{0.0307}} & 0.0174 & 0.01797 & 0.0276 & 0.02402 & 0.0252 & 0.02414 \\ \hline
+\end{tabular}%
+}
+\end{table*}
 
 \paragraph{What to expect is}
 the difference values for 20/10 window/step should be generally lower than those
