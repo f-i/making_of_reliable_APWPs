@@ -601,12 +601,12 @@ observe:
 		\includegraphics[width=\textwidth]{figures/101_120_0.pdf}
 		\caption{North America (101): minimum 0.0053 (11, 0), maximum 0.0921 (16, 3), mean 0.0329, median 0.0334}\label{fig-nac-dif} % subcaption
 	\end{subfigure}
-	\vspace{1em} % here you can insert horizontal or vertical space
+	\vspace{.1em} % here you can insert horizontal or vertical space
 	\begin{subfigure}{1.01\textwidth} % width of right subfigure
 		\includegraphics[width=\textwidth]{figures/501_120_0.pdf}
 		\caption{India (501): minimum 0.023 (19, 0), maximum 0.5137 (8, 3), mean 0.1174, median 0.0818}\label{fig-ind-dif} % subcaption
 	\end{subfigure}
-	\vspace{1em}
+	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/801_120_0.pdf}
 		\caption{Australia (801): minimum 0.0037 (17, 0), maximum 0.3954 (22, 3), mean 0.0813, median 0.0453}\label{fig-au-dif} % subcaption
@@ -707,8 +707,8 @@ versus its FHM predicted APWP]{Difference values without shape test between each
 continent's paleomagnetic APWPs and its predicted APWP from FHM and related
 plate circuit. The paths are in 10 Myr bin and 5 Myr step. The difference values
 less than one-standard-deviation interval of the whole 168 values are labeled in
-green, more than one-standard-deviation interval labeled in
-red.}\label{fig-difnt} % caption for whole figure
+green, more than one-standard-deviation interval labeled in red. See the numbers
+of picked VGPs in Fig.~\ref{fig-dif}.}\label{fig-difnt} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -775,7 +775,8 @@ According to the results (Fig.~\ref{fig-dif2010}), we can observe:
 its FHM predicted APWP]{Same as Fig.~\ref{fig-dif}. The only difference is here
 the paths are in 20 Myr bin and 10 Myr step. The difference values less than
 one-standard-deviation interval of the whole 168 values are labeled in green,
-more than one-standard-deviation interval labeled in red.}\label{fig-dif2010} % caption for whole figure
+more than one-standard-deviation interval labeled in red. See the numbers
+of picked VGPs in Fig.~\ref{fig-dif}.}\label{fig-dif2010} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -840,8 +841,8 @@ According to the results (Fig.~\ref{fig-dif2010nt}), we can observe:
 versus its FHM predicted APWP]{Same as Fig.~\ref{fig-difnt}. The only difference
 is here the paths are in 20 Myr bin and 10 Myr step. The difference values less
 than one-standard-deviation interval of the whole 168 values are labeled in
-green, more than one-standard-deviation interval labeled in
-red.}\label{fig-dif2010nt} % caption for whole figure
+green, more than one-standard-deviation interval labeled in red. See the numbers
+of picked VGPs in Fig.~\ref{fig-dif}.}\label{fig-dif2010nt} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -901,7 +902,8 @@ Fig.~\ref{fig-mhsPred801}) as the reference path.
 	\end{subfigure}
 	\caption[Differences with test of each plate's paleomagnetic APWPs versus
 its MHM predicted APWP]{Same as Fig.~\ref{fig-dif} except that the reference
-path is predicted from MHM here.}\label{fig-difm} % caption for whole figure
+path is predicted from MHM here. See the numbers of picked VGPs in
+Fig.~\ref{fig-dif}.}\label{fig-difm} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -967,7 +969,8 @@ Fig.~\ref{fig-au-difm}), we can observe:
 	\end{subfigure}
 	\caption[Differences without shape test of each plate's paleomagnetic APWPs
 versus its MHM predicted APWP]{Same as Fig.~\ref{fig-difnt} except that the
-reference path is predicted from MHM here.}\label{fig-difntm} % caption for whole figure
+reference path is predicted from MHM here. See the numbers of picked VGPs in
+Fig.~\ref{fig-dif}.}\label{fig-difntm} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -1031,7 +1034,8 @@ and Fig.~\ref{fig-aunt-difm}), we can observe:
 	\end{subfigure}
 	\caption[Differences with test of each plate's paleomagnetic APWPs versus
 its MHM predicted APWP]{Same as Fig.~\ref{fig-dif2010} except that the reference
-path is predicted from MHM here.}\label{fig-dif2010m} % caption for whole figure
+path is predicted from MHM here. See the numbers of picked VGPs in
+Fig.~\ref{fig-dif}.}\label{fig-dif2010m} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -1096,7 +1100,8 @@ According to the results (Fig.~\ref{fig-dif2010m}), we can observe:
 	\end{subfigure}
 	\caption[Differences without shape test of each plate's paleomagnetic APWPs
 versus its MHM predicted APWP]{Same as Fig.~\ref{fig-dif2010nt} except that the
-reference path is predicted from MHM here.}\label{fig-dif2010ntm} % caption for whole figure
+reference path is predicted from MHM here. See the numbers of picked VGPs in
+Fig.~\ref{fig-dif}.}\label{fig-dif2010ntm} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -1847,9 +1852,9 @@ when the bin/step sizes increase up to 20/10 Myr? For the best results
 (Table.~\ref{tab-pk0vs1bs}), as expected, AMP needs wider sliding window and
 step to get close to the reference while APP does not. Even the best sizes of
 sliding window and step are assigned for AMP, the results from APP are still
-much better than those from AMP\@. Picking methods are still the key influence
-factor of choosing a better sliding window size and step size of moving
-averaging, although weighting methods are also important.
+much better than those from AMP\@. Picking methods (directly related to N) are
+still the key influence factor of choosing a better sliding window size and step
+size of moving averaging, although weighting methods are also important.
 
 \begin{table*}
 \centering
@@ -1865,8 +1870,8 @@ underlined, second best in green and third in light green.}
 2, 1 & 0.2864 & 0.26 & 0.2877 & 0.2801 & 0.2632 & 0.2619 & 0.00747 & {\color[HTML]{34FF34} \textbf{0.00776}} & {\color[HTML]{34FF34} \textbf{0.01688}} & 0.01283 & 0.0372 & {\color[HTML]{34FF34} \textbf{0.0097}} \\ \hline
 4, 2 & 0.08205 & 0.08422 & 0.1034 & 0.09653 & 0.10295 & 0.09863 & 0.0064145 & {\color[HTML]{32CB00} \textbf{0.00711}} & 0.0182 & {\color[HTML]{009901} {\ul \textbf{0.011423}}} & 0.03606 & {\color[HTML]{32CB00} \textbf{0.00909}} \\ \hline
 6, 3 & 0.06657 & 0.06817 & 0.06788 & 0.06229 & 0.08557 & 0.07634 & {\color[HTML]{34FF34} \textbf{0.00627}} & 0.007797 & 0.01754 & {\color[HTML]{34FF34} \textbf{0.01254}} & 0.02113 & {\color[HTML]{009901} {\ul \textbf{0.008955}}} \\ \hline
-8, 4 & 0.0614 & 0.0772 & 0.0653 & 0.06214 & 0.0903 & 0.0646 & {\color[HTML]{32CB00} {\ul \textbf{0.006}}} & 0.01099 & {\color[HTML]{32CB00} \textbf{0.01576}} & 0.01399 & {\color[HTML]{34FF34} \textbf{0.02027}} & 0.01271 \\ \hline
-10, 5 & 0.0349 & 0.0458 & 0.0486 & 0.046 & 0.0488 & 0.0344 & {\color[HTML]{009901} \textit{\textbf{0.0059}}} & {\color[HTML]{009901} {\ul \textbf{0.0062}}} & {\color[HTML]{009901} {\ul \textbf{0.0136}}} & 0.0151 & {\color[HTML]{009901} {\ul \textbf{0.0153}}} & 0.0121 \\ \hline
+8, 4 & 0.0614 & 0.0772 & 0.0653 & 0.06214 & 0.0903 & 0.0646 & {\color[HTML]{32CB00} \textbf{0.006}} & 0.01099 & {\color[HTML]{32CB00} \textbf{0.01576}} & 0.01399 & {\color[HTML]{34FF34} \textbf{0.02027}} & 0.01271 \\ \hline
+10, 5 & 0.0349 & 0.0458 & 0.0486 & 0.046 & 0.0488 & 0.0344 & {\color[HTML]{009901} {\ul \textbf{0.0059}}} & {\color[HTML]{009901} {\ul \textbf{0.0062}}} & {\color[HTML]{009901} {\ul \textbf{0.0136}}} & 0.0151 & {\color[HTML]{009901} {\ul \textbf{0.0153}}} & 0.0121 \\ \hline
 12, 6 & {\color[HTML]{32CB00} \textbf{0.0318}} & {\color[HTML]{34FF34} \textbf{0.0316}} & {\color[HTML]{32CB00} \textbf{0.0325}} & {\color[HTML]{009901} {\ul \textbf{0.0298}}} & {\color[HTML]{34FF34} \textbf{0.0323}} & {\color[HTML]{009901} {\ul \textbf{0.0299}}} & 0.0087 & 0.009 & 0.017 & 0.0126 & {\color[HTML]{32CB00} \textbf{0.0191}} & 0.0145 \\ \hline
 14, 7 (119-0 Ma path) & 0.0367 & 0.0348 & 0.0353 & 0.0369 & {\color[HTML]{32CB00} \textbf{0.0319}} & 0.0352 & 0.00996 & 0.01198 & 0.023922 & 0.013 & 0.0203 & 0.0113 \\ \hline
 16, 8 & 0.0493 & 0.0492 & 0.0496 & 0.0486 & 0.0477 & 0.0485 & 0.0114 & 0.0117 & 0.023902 & {\color[HTML]{32CB00} \textbf{0.0123}} & 0.0207 & 0.0129 \\ \hline
@@ -2031,17 +2036,24 @@ Fig.~\ref{fig-aunt-difm} & Fig.~\ref{fig-aunt-dif2010m} &
 
 \paragraph{Conclusions:}
 
-\subparagraph{The APP methods (except with weighting no. 3) is recommended.}
+\subparagraph{The sizes of sliding window and step can be optimised.}
 
-\subparagraph{The different values for 20/10 window/step are indeed generally
-lower than those for 10/5 window/step, excluding the unexpected case of North
-America with both space and shape tested (Fig.~\ref{fig-nac-dif} and
+\subparagraph{APP is recommended. We should be cautious when Wt 3 is used with
+AMP.}
+
+\subparagraph{The different values for 20/10 Myr window/step are indeed
+generally lower than those for 10/5 window/step, excluding the unexpected case
+of North America with both space and shape tested (Fig.~\ref{fig-nac-dif} and
 Fig.~\ref{fig-nac-dif2010}).}
 
 
 \section{Final Conclusions}
 
 \begin{description}
+  \item APP is better than AMP for making paleomagnetic APWPs.
+  \item Weighting is actually not affecting, and in some cases makes it much
+		worse, for example, likely worse for the combined methods of Wt 3 and
+		AMP.
   \item Picking method no. 16 (AMP with data from old studies) is not
 		recommended, e.g.\ before 1983) for generating a paleomagnetic APWP.
 \end{description}
