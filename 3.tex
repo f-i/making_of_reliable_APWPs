@@ -160,27 +160,27 @@ more accurate ways. One of the most developed and studied plate kinematics
 models is the Fixed Hotspot Model (FHM)~\cite{M93,M99}, which assumes the
 Atlantic and Indian hotspots are relatively fixed. Another one is the Moving
 Hotspot Model (MHM)~\cite{O05}, which is based on mantle convection models that
-indicate large motions of the Indo-Atlantic hotspots. Such a model like FHM or
-MHM can predict APWPs for main continents, e.g.\ the North America (Plate ID
-101) (Fig.~\ref{fig-fhsPred} and Fig.~\ref{fig-mhsPred}), the India (501)
-(Fig.~\ref{fig-fhsPred501} and Fig.~\ref{fig-mhsPred501}) and the Australia
-(801) (Fig.~\ref{fig-fhsPred801} and Fig.~\ref{fig-mhsPred801}), with the help
-of global plate motion data from the ocean basins that has been reconstructed
-for the last c. 180\textendash200 Myr (although the extrapolation is required;
-hard to constrain uncertainties). These more accurate model-predicted APWPs can
-be compared to data from the paleomagnetic database. For about 120 Ma to the
-present, India drifts much faster than North America and Australia. North
-America has been drifting rather slow. Australia's drifting rate is between
-them. In addition, India drifts almost north, whereas North America east and
-then north, and Australia west and then north. So these three continents are
-representatives for three different types of plate kinematics.
+indicate large motions of the Indo-Atlantic hotspots.
 
-\subsection{Reference Path: The Hotspot Model Predicted}
+\subsection{Reference Paths: The Hotspot and Seafloor Spreading Model Predicted}
 
-The oldest pole that can be predicted from the FHM is about 120 Ma. The North
-American 120\textendash0 Ma APWP predicted from this rotation model and
-latest published spreading ridge rotations (collected data will be shared as a
-supplementary material) will be taken as a reference path
+Such a model like FHM or MHM can predict APWPs for main continents, e.g.\ the
+North America (Plate ID 101) (Fig.~\ref{fig-fhsPred} and
+Fig.~\ref{fig-mhsPred}), the India (501) (Fig.~\ref{fig-fhsPred501} and
+Fig.~\ref{fig-mhsPred501}) and the Australia (801) (Fig.~\ref{fig-fhsPred801}
+and Fig.~\ref{fig-mhsPred801}), with the help of global plate motion data from
+the ocean basins that has been reconstructed for the last c. 180\textendash200
+Myr (although the extrapolation is required; hard to constrain uncertainties).
+These more accurate model-predicted APWPs can be compared to data from the
+paleomagnetic database. For about 120 Ma to the present, India drifts much
+faster than North America and Australia. North America has been drifting rather
+slow. Australia's drifting rate is between them. In addition, India drifts
+almost north, whereas North America east and then north, and Australia west and
+then north. So these three continents are representatives for three different
+types of plate kinematics. The oldest pole that can be predicted from the FHM is
+about 120 Ma. The North American 120\textendash0 Ma APWP predicted from this
+rotation model and latest published spreading ridge rotations (collected data
+will be shared as a supplementary material) will be taken as a reference path
 (Fig.~\ref{fig-fhsPred}), which will be compared with paleomagnetic APWPs for
 the same plate or continent.
 
@@ -241,7 +241,7 @@ circuit. Its age step is 5 Myr. The dashed line is the FHM predicted path shown
 in Fig.~\ref{fig-fhsPred801}.}\label{fig-mhsPred801}
 \end{figure*}
 
-\subsection{120\textendash0 Ma North American Paleomagnetic APWP}
+\subsection{120\textendash0 Ma Paleomagnetic APWPs}
 
 The GPMDB 4.6b~\cite{P05}, data source used here, includes 9514 paleopoles for
 ages of 3,500 Ma to the present published from 1925 to 2016. A polygon can be
@@ -254,8 +254,12 @@ allows us to quickly select subsets of the database based on geographic
 constraints just as easily as for age. Of course, the boundary of this polygon
 must be reasonably along a tectonic boundary (see the details about data
 filtering for North America in the Supplementary Material). The temporal
-distribution of North American 120\textendash0 Ma poles is shown in
-Fig.~\ref{fig-120NAhist}.
+distributions of North American, Indian and Australian 120\textendash0 Ma poles
+are shown in Fig.~\ref{fig-120NAhist}, Fig.~\ref{fig-120INhist} and
+Fig.~\ref{fig-120AUhist}. Compared with North American and Australian
+paleomagnetic VGPs, Indian paleomagnetic VGPs are in relatively lower density
+in general except during the period of about 60\textendash70 Ma
+(Fig.~\ref{fig-120INhist}).
 
 \begin{figure*}
 \centering
@@ -516,13 +520,13 @@ $-$ low magnetic age) is assigned instead.
 For the ``$\alpha$95'' weighting (No $3$ in Table.~\ref{tab-weit}), smaller
 radius of circle of 95\% confidence about mean remanence direction means less
 error, so should get larger weight. Here, weight is from a Gaussian distribution
-centered on 0 with standard deviation of 10, i.e., when $\alpha$95 $\leq$ 10,
-weight=1; when $\alpha$95$>$10, weight$<$1. It is also worthwhile to mention
-that if samples, where two poles are derived, are exactly from the same place
-and same rock, and one $\alpha$95 is completely inside the other $\alpha$95, a
-zero is assigned as the weight of the data with the larger $\alpha$95. Here,
-the same procedure can be applied on A95 (circle of 95\% confidence about mean
-pole) instead of $\alpha$95.
+centered on 0 with standard deviation of 10, i.e., when $\alpha$95 $=$ 0,
+weight=1; when $\alpha$95$>$0, weight$<$1. It is also worthwhile to mention that
+if samples, where two poles are derived, are exactly from the same place and
+same rock, and one $\alpha$95 is completely inside the other $\alpha$95, a zero
+is assigned as the weight of the data with the larger $\alpha$95. Here, the same
+procedure can be applied on A95 (circle of 95\% confidence about mean pole)
+instead of $\alpha$95.
 
 For the ``Age error Position to window'' weighting (No $4$ in
 Table.~\ref{tab-weit}), if window intersects with young/old end of age bracket
@@ -531,7 +535,8 @@ or whole window overlaps with a part of age range, weight= (overlapping part)
 / (age range width) (note that when weight $>1$, it is set back to 1).
 
 The ``Age error Position to window, and $\alpha$95'' weighting (No $5$ in
-Table.~\ref{tab-weit}), is a combination of No $3$ and No $4$.
+Table.~\ref{tab-weit}), is a combination of No $3$ (but here the standard
+deviation is 15 though) and No $4$.
 
 \subsection{Path Comparison Method}
 
@@ -594,6 +599,18 @@ observe:
 		both North America and India.
   \item the results of North America (101) and Australia (801) are closer
 		(Fig.~\ref{fig-d-dif}).
+  \item For North America and India, newer studies (later than 1983) give
+		better results, whereas for Australia older studies (before 1983) give
+		better results, mainly because the number of older studies (65;
+		Fig.~\ref{fig-au-dif}) is much greater than the number of newer studies
+		(27).
+  \item Weighting influences more to APP than AMP, especially for the cases
+		when there are plenty of VGPs (e.g., for North America and Australia;
+		Fig.~\ref{fig-difAMPvsAPP}). Wt 0 and 1 generally work well with APP.
+  \item Lithology related picking methods (Pt 4\textendash13) are generally
+		improving the fits, compared with other picking methods. However,
+		sometimes, Wt 3 does not work well with these lithology-related methods
+		(Fig.~\ref{fig-dif} and Fig.~\ref{fig-difAMPvsAPP}).
 \end{enumerate}
 
 \begin{figure*}
@@ -1358,8 +1375,9 @@ similarities than AMP methods do?}
 Paleomagnetic (Mean) A95 represents precision (how well constrained calculated
 poles are), and (mean) coeval poles' GCD represents accuracy (how close
 calculated poles are to the reference path; Fig.~\ref{fig-A95GCD105F} and
-Fig.~\ref{fig-A95SGCD105F}). APP usually improves both and generates paths with
-higher accuracy and also higher precision.
+Fig.~\ref{fig-A95SGCD105F}). Compared with AMP, APP usually improves both and
+generates paths with higher accuracy and also higher precision (generally
+increasing N).
 
 \begin{figure}
 \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
@@ -2080,11 +2098,23 @@ Fig.~\ref{fig-nac-dif2010}).}
 
 \section{Final Conclusions}
 
+\subsection{Universal Rules of Ways of Processing Paleomagnetic Data:}
+%
 \begin{description}
+  \item Although effects of filters (all the picking methods except Pk 1) have
+		marginal change in reducing N (precision going down), some filters do
+		improve the similarity score generally, for example, Pt 11 (APP without
+		redbed-derived data) and 13 (APP with redbed-derived data corrected) are
+		better than Pt 0 for all the three continents.
   \item APP is better than AMP for making paleomagnetic APWPs.
   \item Weighting is actually not affecting, and in some cases makes it much
 		worse, for example, likely worse for the combined methods of Wt 3 and
 		AMP.
+\end{description}
+
+\subsection{Conditional Rules of Ways of Processing Paleomagnetic Data:}
+%
+\begin{description}
   \item Picking method no. 16 (AMP with data from old studies) is not
 		recommended, e.g.\ before 1983) for generating a paleomagnetic APWP.
 \end{description}
