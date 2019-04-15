@@ -168,19 +168,20 @@ Such a model like FHM or MHM can predict APWPs for main continents, e.g.\ the
 North America (Plate ID 101) (Fig.~\ref{fig-fhsPred} and
 Fig.~\ref{fig-mhsPred}), the India (501) (Fig.~\ref{fig-fhsPred501} and
 Fig.~\ref{fig-mhsPred501}) and the Australia (801) (Fig.~\ref{fig-fhsPred801}
-and Fig.~\ref{fig-mhsPred801}), with the help of global plate motion data from
-the ocean basins that has been reconstructed for the last c. 180\textendash200
-Myr (although the extrapolation is required; hard to constrain uncertainties).
-These more accurate model-predicted APWPs can be compared to data from the
-paleomagnetic database. For about 120 Ma to the present, India drifts much
-faster than North America and Australia. North America has been drifting rather
-slow. Australia's drifting rate is between them. In addition, India drifts
-almost north, whereas North America east and then north, and Australia west and
-then north. So these three continents are representatives for three different
-types of plate kinematics. The oldest pole that can be predicted from the FHM is
-about 120 Ma. The North American 120\textendash0 Ma APWP predicted from this
-rotation model and latest published spreading ridge rotations (collected data
-will be shared as a supplementary material) will be taken as a reference path
+and Fig.~\ref{fig-mhsPred801}), with the help of global tectonic plate motion
+data (i.e.\ plate circuits) from the ocean basins (i.e.\ spreading sea floors)
+that has been reconstructed for the last c. 180\textendash200 Myr (although the
+extrapolation is required; hard to constrain uncertainties). These more accurate
+model-predicted APWPs can be compared to data from the paleomagnetic database.
+For about 120 Ma to the present, India drifts much faster than North America and
+Australia. North America has been drifting rather slow. Australia's drifting
+rate is between them. In addition, India drifts almost north, whereas North
+America east and then north, and Australia west and then north. So these three
+continents are representatives for three different types of plate kinematics.
+The oldest pole that can be predicted from the FHM is about 120 Ma. The North
+American 120\textendash0 Ma APWP predicted from this rotation model and latest
+published spreading ridge rotations (collected plate circuit data will be shared
+as a supplementary material) will be taken as a reference path
 (Fig.~\ref{fig-fhsPred}), which will be compared with paleomagnetic APWPs for
 the same plate or continent.
 
@@ -564,10 +565,11 @@ the data values), more than the one-standard-deviation interval as the ``worst''
 ones (upper about 15.866\%). Then we will see if there is one method or several
 methods labeled as ``best'' or ``worst'' for all the three continents.
 
-\subsubsection{When FHM and Plate Circuit Predicted APWP as Reference}
+\subsubsection{When FHM and Global Plate Tectonic Circuits Predicted APWP as
+Reference}
 
-First, we focus on analysing the results with FHM and plate circuit predicted
-APWP (Fig.~\ref{fig-fhsPred}, Fig.~\ref{fig-fhsPred501},
+First, we focus on analysing the results with FHM and global plate circuits
+predicted APWP (Fig.~\ref{fig-fhsPred}, Fig.~\ref{fig-fhsPred501},
 Fig.~\ref{fig-fhsPred801}) as the reference path.
 
 \paragraph{10 Myr Binning and 5 Myr Stepping}
@@ -632,7 +634,7 @@ observe:
 	\caption[Differences with test of each plate's paleomagnetic APWPs versus
 its FHM predicted APWP]{Equal-weight composite path difference ($\mathcal{CPD}$)
 values with test between each continent's paleomagnetic APWPs and its predicted
-APWP from FHM and related plate circuit. The paths are in 10 Myr bin and 5 Myr
+APWP from FHM and related plate circuits. The paths are in 10 Myr bin and 5 Myr
 step. The difference values less than one-standard-deviation interval of the
 whole 168 values are labeled in green, more than one-standard-deviation interval
 labeled in red.}\label{fig-dif} % caption for whole figure
@@ -753,10 +755,10 @@ Fig.~\ref{fig-aunt-dif}), we can observe:
 	\caption[Differences without shape test of each plate's paleomagnetic APWPs
 versus its FHM predicted APWP]{Difference values without shape test between each
 continent's paleomagnetic APWPs and its predicted APWP from FHM and related
-plate circuit. The paths are in 10 Myr bin and 5 Myr step. The difference values
-less than one-standard-deviation interval of the whole 168 values are labeled in
-green, more than one-standard-deviation interval labeled in red. See the numbers
-of picked VGPs in Fig.~\ref{fig-dif}.}\label{fig-difnt}
+plate circuits. The paths are in 10 Myr bin and 5 Myr step. The difference
+values less than one-standard-deviation interval of the whole 168 values are
+labeled in green, more than one-standard-deviation interval labeled in red. See
+the numbers of picked VGPs in Fig.~\ref{fig-dif}.}\label{fig-difnt}
 \end{figure*}
 
 \begin{figure*}
@@ -926,10 +928,11 @@ step)]{Path comparisons with best and worst difference values shown in
 Fig.~\ref{fig-dif2010nt}.}\label{fig-dif2010ntbw}
 \end{figure*}
 
-\subsubsection{When MHM and Plate Circuit Predicted APWP as Reference}
+\subsubsection{When MHM and Global Plate Tectonic Circuits Predicted APWP as
+Reference}
 
-Then, we focus on analysing the results with MHM and plate circuit predicted
-APWP (Fig.~\ref{fig-mhsPred}, Fig.~\ref{fig-mhsPred501},
+Then, we focus on analysing the results with MHM and global plate circuits
+predicted APWP (Fig.~\ref{fig-mhsPred}, Fig.~\ref{fig-mhsPred501},
 Fig.~\ref{fig-mhsPred801}) as the reference path.
 
 \begin{figure*}
@@ -1756,7 +1759,15 @@ mentioned general cases. Only for Wt 3, APP worsens precision and improves
 accuracy of most poles at the same time. This makes the difference score
 dramatically larger than others. In addition, Wt 3 brings more significant
 differences in shape metrics, which causes the difference score even larger
-(Table.~\ref{tab-101p5}).
+(Table.~\ref{tab-101p5}). That Wt 3 sometimes gives dramatical worse similarity
+could be related to the way we do the weighting according to the size of
+$\alpha$95, i.e.\, the smaller the $\alpha$95 is, the larger the assigned
+weight is (see more details about Weighting No. 3 in the Weighting paragraph).
+However, small size of $\alpha$95 (high accuracy) could be becausei of those
+sampled directions not covering enough long period (thought to be at least about
+$10^4$ years) to ``average out'' secular variation for giving a paleomagnetic
+pole. That is to say, the smallest $\alpha$95s could get the greatest weights
+that they should not deserve.
 
 \begin{table*}
 \centering
@@ -2094,6 +2105,47 @@ AMP.}
 generally lower than those for 10/5 window/step, excluding the unexpected case
 of North America with both space and shape tested (Fig.~\ref{fig-nac-dif} and
 Fig.~\ref{fig-nac-dif2010}).}
+
+
+\subsubsection{Question: Is there any difference between choosing FHM and MHM
+as the reference path?}
+
+The differences (Fig.~\ref{fig-dmf}) are all lower than 0.041, and most are less
+than 0.01. That indicates the uncertainties of paleomagnetic mean poles are
+relatively large enough to make uses of Fixed and Moving Hotspot Models as
+references not quite differentiated. So far choosing Fixed or Moving model is
+not a priority.
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/mf101.pdf}
+		\caption{Fig.~\ref{fig-nac-difm}-Fig.~\ref{fig-nac-dif}; Percentage for
+		positive values: about 61.31\%}\label{fig-mf101}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/mf501.pdf}
+		\caption{Fig.~\ref{fig-ind-difm}-Fig.~\ref{fig-ind-dif}; Percentage for
+		positive values: about 21.19\%}\label{fig-mf501}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/mf801.pdf}
+		\caption{Fig.~\ref{fig-au-difm}-Fig.~\ref{fig-au-dif}; Percentage for
+		positive values: about 18.45\%}\label{fig-mf801}
+	\end{subfigure}
+	\caption[Differences between results from FHM and MHM]{Differences between
+	results from FHM (Fig.~\ref{fig-dif}) and MHM (Fig.~\ref{fig-difm}) as
+	reference paths.}\label{fig-dmf}
+\end{figure*}
+
+However, through looking at the signs of these differences
+(Fig.~\ref{fig-dmf}), for North America (Fig.~\ref{fig-mf101}), FHM and the
+North America\textendash{}Nubia\textendash{}Mantle plate circuit derived
+path is a better reference option in general, while for both India
+(Fig.~\ref{fig-mf501}) and Australia (Fig.~\ref{fig-mf801}), MHM and the related
+plate circuit derived path is a generally better choice.
 
 
 \section{Final Conclusions}
