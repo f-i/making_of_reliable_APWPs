@@ -336,7 +336,7 @@ only 5 poles, while the APP method calculates the mean pole of 9 poles. From
 comparison of mean poles of the picked poles for the light blue age window with
 the two different algorithms (the 10 Ma mean poles in Fig.~\ref{fig-fhsPred}),
 the mean pole from the APP method is closer to the 10 Ma pole in the FHM
-predicted path.
+predicted path, which indicates more data diluting the effect of outliers.
 
 \begin{figure*}
 \centering
@@ -2186,6 +2186,10 @@ plate circuit derived path is a generally better choice.
   \item Weighting is actually not affecting, and in some cases makes it much
 		worse, for example, likely worse for the combined methods of Wt 3 and
 		AMP.
+  \item APP itself helps integrate temporal uncertainty into the algorithm. With
+		the bootstraps test helping integrate spatial uncertainty into the
+		algorithm together, both spacial and temporal uncertainties are
+		successfully considered in APP methods.
 \end{description}
 
 \subsection{Conditional Rules of Ways of Processing Paleomagnetic Data:}
@@ -2193,13 +2197,17 @@ plate circuit derived path is a generally better choice.
 \begin{description}
   \item Picking method no. 16 (AMP with data from old studies) is not
 		recommended, e.g.\ before 1983) for generating a paleomagnetic APWP.
+  \item If AMP has to be used, we have to use wide sliding window/step sizes
+		(e.g.\ more than 20/10 Myr). In addition, AMP works relatively better
+		with igneous-derived data (i.e.\ Picking No. 4 and 6), which indicates
+		that if we have fewer data, these data need to be better in quality.
 \end{description}
 
 \begin{figure*}
 \centering
 \includegraphics[width=1.01\textwidth]{figures/flowchart.pdf}
-\caption[Flowchart]{
-Flowchart of processing paleomagnetic data.}\label{fig-flow}
+\caption[Flowchart]{Flowchart for recommended procedure of processing
+  paleomagnetic data.}\label{fig-flow}
 \end{figure*}
 
 \begin{acknowledgments}
