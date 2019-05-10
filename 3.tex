@@ -1843,7 +1843,9 @@ the 80\textendash85 segment length difference between North American
 paleomagnetic APWPs derived from picking 0 and weightings 0 and 1 and the FHM
 predicted APWP (Fig.~\ref{fig-fhsPred}; Table.~\ref{tab-101p0w0vs1}). (a) The
 thin segment through stars is from FHM predicted path, and the bold solid and
-dashed are from paleomagnetic paths.}\label{fig-101_8085}
+dashed are from paleomagnetic paths. (b) The results from Wt 1 are
+differentiated (Fig.~\ref{fig-na-dlw0} and
+Fig.~\ref{fig-na-dlw1}).}\label{fig-101_8085}
 \end{figure}
 
 For Fig.~\ref{fig-nac-dif} Pk 1, Wt 0 generates the best similarity. Wt
@@ -1973,6 +1975,14 @@ Australia (801). However, even for Australia (801), the difference values
 closer to the right bound of the one-standard-deviation interval
 0.3102\textendash0.6548 and relatively farther from the mean 0.502, which means
 the picking method 16 is still a relatively worse one.
+
+\subsubsection{Question: Are there particular parts of the path that are more
+variable? Do different methods affect different parts of the path differently?}
+
+The results may highlight the trade-off between more data diluting the effect of
+outliers, and fewer but `better' data being more easily affected by a bad point
+that gets through the filters (Fig.~\ref{fig-nads}, Fig.~\ref{fig-nadl} and
+Fig.~\ref{fig-nada}).
 
 \subsubsection{Question: Do time window size and step affect the results?}
 
@@ -2314,11 +2324,30 @@ plate circuit derived path is a generally better choice.
 \begin{description}
   \item Picking method no. 16 (AMP with data from old studies) is not
 		recommended, e.g.\ before 1983) for generating a paleomagnetic APWP.
-  \item If AMP has to be used, we have to use wide sliding window/step sizes
-		(e.g.\ more than 20/10 Myr). In addition, AMP works relatively better
-		with igneous-derived data (i.e.\ Picking No. 4 and 6), which indicates
-		that if we have fewer data, these data need to be better in quality.
 \end{description}
+
+\subsection{Summary}
+
+According to the results we have from the three continents, North America, India
+and Australia, using the similarity measuring tool developed in Chapter 2, it is
+recommended that APP should be used to select the input paleomagnetic poles.
+According to all the paleomagnetic data we have from the three continents, the
+10 Myr sliding window size and 5 Myr step size is reasonably good for the APP
+method. Then filtering is actually not necessary. However, some filtering
+methods (e.g.\ Picking No. 5, 7 (igneous-derived), 11, 13 (nonredbeds or
+corrected redbeds derived), 19, 21 (non-local-rotation/reprinted or
+corrected-rotation derived) and 25 (non-superseded data derived)) are fine too
+and will not give worst or worse results than the other filtering methods (i.e.\
+the left Picking methods). With APP used, weighting is actually not necessary
+either. If a weighting has to be used, Weighting No. 1 (related to the number
+of paleomagnetic sampling sites and observations) is generally better than the
+other four given weighting methods (Fig.~\ref{fig-flow}).
+
+If AMP has to be used, relatively wide sliding window and step are needed.
+According to our tests, more than 20/10 Myr is recommended. In addition, AMP
+works relatively better with igneous-derived data (i.e.\ Picking No. 4 and 6),
+which indicates that if we have fewer data, these data need to be better in
+quality (Fig.~\ref{fig-flow}).
 
 \begin{figure*}
 \centering
