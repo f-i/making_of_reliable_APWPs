@@ -265,8 +265,8 @@ filtering for North America in the Supplementary Material). The temporal
 distributions of North American, Indian and Australian 120\textendash0 Ma poles
 are shown in Fig.~\ref{fig-120NAhist}, Fig.~\ref{fig-120INhist} and
 Fig.~\ref{fig-120AUhist}. Compared with North American and Australian
-paleomagnetic VGPs, Indian paleomagnetic VGPs are in relatively lower density
-in general except during the period of about 60\textendash70 Ma
+paleomagnetic Paleo-poles, Indian paleomagnetic Paleo-poles are in relatively
+lower density in general except during the period of about 60\textendash70 Ma
 (Fig.~\ref{fig-120INhist}).
 
 \begin{figure*}
@@ -316,27 +316,28 @@ in each window, while GMAP only considers the mid-point of the low and high
 magnetic age of each pole, an algorithm referred to as the ``Age Mean Picking
 (AMP)'' method.
 
-Normally each VGP in the paleomagnetic database is treated as a point with an
-age that is the mid-point between the upper and lower age limits, i.e. AMP, but
-this is problematic for paleomagnetic data with large age ranges (especially if
-they turn out to be primary magnetization that should plot at old end of age
-range). We are trying a method, APP, that includes a VGP in the moving average
-bin if any part of its specified age range falls within that bin. If, for
-example, we have a pole which is constrained to within 10 and 20 Ma of age, and
-we have a 2 Myr moving window with a 1 Myr age step, then it shouldn't just be
-in the 14\textendash16 Ma bin (for the mid-point age of 15 Ma)\textemdash{}it
-should be in the 9\textendash11,10\textendash12,11\textendash13,12\textendash14
-\ldots17\textendash19,18\textendash20, and 19\textendash21 Ma bins. So the
-average poles are produced from each bin, and each original pole is represented
-over its entire possible acquisition age. Fig.~\ref{fig-nac-maplat} shows an
-example of moving average with a 10 Myr window and a 5 Myr step. So, for
-example, for the window of 15 Ma to 5 Ma (the light blue bin in
-Fig.~\ref{fig-nac-maplat}), the AMP method calculates the Fisher mean pole of
-only 5 poles, while the APP method calculates the mean pole of 9 poles. From
-comparison of mean poles of the picked poles for the light blue age window with
-the two different algorithms (the 10 Ma mean poles in Fig.~\ref{fig-fhsPred}),
-the mean pole from the APP method is closer to the 10 Ma pole in the FHM
-predicted path, which indicates more data diluting the effect of outliers.
+Normally each paleo-pole in the paleomagnetic database is treated as a point
+with an age that is the mid-point between the upper and lower age limits, i.e.
+AMP, but this is problematic for paleomagnetic data with large age ranges
+(especially if they turn out to be primary magnetization that should plot at old
+end of age range). We are trying a method, APP, that includes a paleo-pole in
+the moving average bin if any part of its specified age range falls within that
+bin. If, for example, we have a pole which is constrained to within 10 and 20 Ma
+of age, and we have a 2 Myr moving window with a 1 Myr age step, then it
+shouldn't just be in the 14\textendash16 Ma bin (for the mid-point age of 15
+Ma)\textemdash{}it should be in the 9\textendash11,10\textendash12,
+11\textendash13,12\textendash14\ldots17\textendash19,18\textendash20, and
+19\textendash21 Ma bins. So the average poles are produced from each bin, and
+each original pole is represented over its entire possible acquisition age.
+Fig.~\ref{fig-nac-maplat} shows an example of moving average with a 10 Myr
+window and a 5 Myr step. So, for example, for the window of 15 Ma to 5 Ma (the
+light blue bin in Fig.~\ref{fig-nac-maplat}), the AMP method calculates the
+Fisher mean pole of only 5 poles, while the APP method calculates the mean pole
+of 9 poles. From comparison of mean poles of the picked poles for the light blue
+age window with the two different algorithms (the 10 Ma mean poles in
+Fig.~\ref{fig-fhsPred}), the mean pole from the APP method is closer to the 10
+Ma pole in the FHM predicted path, which indicates more data diluting the effect
+of outliers.
 
 \begin{figure*}
 \centering
@@ -626,8 +627,9 @@ observe:
 		Fig.~\ref{fig-au-dif}) is much greater than the number of newer studies
 		(27).
   \item Weighting influences more to APP than AMP, especially for the cases
-		when there are plenty of VGPs (e.g., for North America and Australia;
-		Fig.~\ref{fig-difAMPvsAPP}). Wt 0 and 1 generally work well with APP.
+		when there are plenty of paleo-poles (e.g., for North America and
+		Australia; Fig.~\ref{fig-difAMPvsAPP}). Wt 0 and 1 generally work well
+		with APP.
   \item Lithology related picking methods (Pt 4\textendash13) are generally
 		improving the fits, compared with other picking methods. However,
 		sometimes, Wt 3 does not work well with these lithology-related methods
@@ -894,7 +896,7 @@ continent's paleomagnetic APWPs and its predicted APWP from FHM and related
 plate circuits. The paths are in 10 Myr bin and 5 Myr step. The difference
 values less than one-standard-deviation interval of the whole 168 values are
 labeled in green, more than one-standard-deviation interval labeled in red. See
-the numbers of picked VGPs in Fig.~\ref{fig-dif}.}\label{fig-difnt}
+the numbers of picked paleo-poles in Fig.~\ref{fig-dif}.}\label{fig-difnt}
 \end{figure*}
 
 \begin{figure*}
@@ -962,7 +964,7 @@ its FHM predicted APWP]{Same as Fig.~\ref{fig-dif}. The only difference is here
 the paths are in 20 Myr bin and 10 Myr step. The difference values less than
 one-standard-deviation interval of the whole 168 values are labeled in green,
 more than one-standard-deviation interval labeled in red. See the numbers
-of picked VGPs in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
+of picked paleo-poles in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
 \end{figure*}
 
 \begin{figure*}
@@ -1028,7 +1030,7 @@ versus its FHM predicted APWP]{Same as Fig.~\ref{fig-difnt}. The only difference
 is here the paths are in 20 Myr bin and 10 Myr step. The difference values less
 than one-standard-deviation interval of the whole 168 values are labeled in
 green, more than one-standard-deviation interval labeled in red. See the numbers
-of picked VGPs in Fig.~\ref{fig-dif}.}\label{fig-dif2010nt}
+of picked paleo-poles in Fig.~\ref{fig-dif}.}\label{fig-dif2010nt}
 \end{figure*}
 
 \begin{figure*}
@@ -1089,7 +1091,7 @@ Fig.~\ref{fig-mhsPred801}) as the reference path.
 	\end{subfigure}
 	\caption[Differences with test of each plate's paleomagnetic APWPs versus
 its MHM predicted APWP]{Same as Fig.~\ref{fig-dif} except that the reference
-path is predicted from MHM here. See the numbers of picked VGPs in
+path is predicted from MHM here. See the numbers of picked paleo-poles in
 Fig.~\ref{fig-dif}.}\label{fig-difm}
 \end{figure*}
 
@@ -1156,8 +1158,8 @@ Fig.~\ref{fig-au-difm}), we can observe:
 	\end{subfigure}
 	\caption[Differences without shape test of each plate's paleomagnetic APWPs
 versus its MHM predicted APWP]{Same as Fig.~\ref{fig-difnt} except that the
-reference path is predicted from MHM here. See the numbers of picked VGPs in
-Fig.~\ref{fig-dif}.}\label{fig-difntm}
+reference path is predicted from MHM here. See the numbers of picked paleo-poles
+in Fig.~\ref{fig-dif}.}\label{fig-difntm}
 \end{figure*}
 
 \begin{figure*}
@@ -1221,7 +1223,7 @@ and Fig.~\ref{fig-aunt-difm}), we can observe:
 	\end{subfigure}
 	\caption[Differences with test of each plate's paleomagnetic APWPs versus
 its MHM predicted APWP]{Same as Fig.~\ref{fig-dif2010} except that the reference
-path is predicted from MHM here. See the numbers of picked VGPs in
+path is predicted from MHM here. See the numbers of picked paleo-poles in
 Fig.~\ref{fig-dif}.}\label{fig-dif2010m}
 \end{figure*}
 
@@ -1287,8 +1289,8 @@ According to the results (Fig.~\ref{fig-dif2010m}), we can observe:
 	\end{subfigure}
 	\caption[Differences without shape test of each plate's paleomagnetic APWPs
 versus its MHM predicted APWP]{Same as Fig.~\ref{fig-dif2010nt} except that the
-reference path is predicted from MHM here. See the numbers of picked VGPs in
-Fig.~\ref{fig-dif}.}\label{fig-dif2010ntm}
+reference path is predicted from MHM here. See the numbers of picked paleo-poles
+in Fig.~\ref{fig-dif}.}\label{fig-dif2010ntm}
 \end{figure*}
 
 \begin{figure*}
@@ -1564,46 +1566,46 @@ AMP derived equal-weight CPDs better than APP (see details in
 Fig.~\ref{fig-dif}).}\label{fig-A95mG105Fd}
 \end{figure}
 
-The fact that APP increases the number of VGPs (N) in each sliding window
+The fact that APP increases the number of paleo-poles (N) in each sliding window
 would potentially average out some ``bad'' (i.e.\ inaccurate) poles and improves
 the fit between the paleomagnetic APWPs and the model-predicted APWPs. The
 general effects that APP brings include the decreases in paleomagnetic A95s,
 or/and distances between compared coeval poles of paleomagnetic APWP and
 reference APWP (Fig.~\ref{fig-A95mG105F} and Fig.~\ref{fig-A95mG105Fd}).
-However, if the added VGPs were all or mostly ``bad'', the improvement of fit
-would not occur. So the improvement of fit is not only because of the increase
-in N, but also because the majority of the additional poles are ``good''. AMP
-only regards the time uncertainty of each pole as one mid-point. Then this
-mid-point is treated as the most likely age of that mean pole. This is actually
-incorrect. The age uncertainty of paleomagnetic pole is not obtained from a
-probability density function derived from an observed frequency distribution.
-As defined, the time uncertainty's lower (older) limit is a stratigraphic age,
-and its upper (younger) limit could be also a stratigraphic age or be
-constrained by a tectonic event using the field tests (e.g.\ fold/tilt test and
-conglomerate test). So the true age of the pole could be any one that is not
-older than the lower limit and also not younger than the upper limit. In other
-words, the mid-point could be the true age of the pole, but it is not known as
-the most likely age of that pole. If the mid-point is the most likely age of a
-pole, AMP should generate a path that is closer to the reference. However,
-mostly APP generates better similarities (See the high proportions of APP better
-than AMP in Table.~\ref{tab-bw}). Most reasonably, the mid-point should be
-regarded as one possibility of all uniformly (not necessarily normally bell
-shaped, or U shaped, or left or right skewed) distributed ages between the two
-time limits.
+However, if the added paleo-poles were all or mostly ``bad'', the improvement of
+fit would not occur. So the improvement of fit is not only because of the
+increase in N, but also because the majority of the additional poles are
+``good''. AMP only regards the time uncertainty of each pole as one mid-point.
+Then this mid-point is treated as the most likely age of that mean pole. This is
+actually incorrect. The age uncertainty of paleomagnetic pole is not obtained
+from a probability density function derived from an observed frequency
+distribution. As defined, the time uncertainty's lower (older) limit is a
+stratigraphic age, and its upper (younger) limit could be also a stratigraphic
+age or be constrained by a tectonic event using the field tests (e.g.\ fold/tilt
+test and conglomerate test). So the true age of the pole could be any one that
+is not older than the lower limit and also not younger than the upper limit. In
+other words, the mid-point could be the true age of the pole, but it is not
+known as the most likely age of that pole. If the mid-point is the most likely
+age of a pole, AMP should generate a path that is closer to the reference.
+However, mostly APP generates better similarities (See the high proportions of
+APP better than AMP in Table.~\ref{tab-bw}). Most reasonably, the mid-point
+should be regarded as one possibility of all uniformly (not necessarily normally
+bell shaped, or U shaped, or left or right skewed) distributed ages between the
+two time limits.
 
-So APP remains the effect of a VGP borne on the mean poles during all the period
-of its age uncertainty, and use the increased number of VGPs (N) to average out
-the negative effect of those ``bad'' poles, including the VGPs that should not
-be included at that age for mean pole.
+So APP remains the effect of a paleo-pole borne on the mean poles during all the
+period of its age uncertainty, and use the increased number of paleo-poles (N)
+to average out the negative effect of those ``bad'' poles, including the
+paleo-poles that should not be included at that age for mean pole.
 
 \subsubsection{Question: Why the AMP methods sometimes unexceptionally produce
 better similarities than APP methods do?}
 
 \paragraph{Measure 1:}
 
-Because of small number of VGPs (not necessarily ``bad'') involved in each
-sliding window, the produced mean poles by AMP should be relatively far from
-its contemporary model-predicted pole. In other words, AMP intends to give
+Because of small number of paleo-poles (not necessarily ``bad'') involved in
+each sliding window, the produced mean poles by AMP should be relatively far
+from its contemporary model-predicted pole. In other words, AMP intends to give
 fairly small change in accuracy. This also could potentially bring more
 distinguishable $d_s$ for AMP\@ if the corresponding A95 is not large enough.
 For example, for Fig.~\ref{fig-nac-dif}, there are only three special (of 84 APP
@@ -1631,13 +1633,13 @@ weightings, Fig.~\ref{fig-au-dif} picking/weighting 4/2\textendash3 vs
 5/2\textendash3, 4/5 vs 5/5.
 
 In addition, compared with AMP, APP potentially could generate more mean poles,
-because sometimes for some sliding window there is no VGP involved at all for
-AMP\@ while there is(are) VGP(s) involved for APP\@. For APP, the mean poles at
-all ages should be composed of more VGPs than it is for AMP, which should
-generally decrease both coeval pole distance and paleomagnetic A95. However,
-sometimes a rare case (e.g.\ the 0 Ma comparison shown in
+because sometimes for some sliding window there is no paleo-pole involved at all
+for AMP\@ while there is(are) paleo-pole(s) involved for APP\@. For APP, the
+mean poles at all ages should be composed of more paleo-poles than it is for
+AMP, which should generally decrease both coeval pole distance and paleomagnetic
+A95. However, sometimes a rare case (e.g.\ the 0 Ma comparison shown in
 Table.~\ref{tab-501w0p22vs23}) happens. It is sometimes that an additional
-very ``bad'' VGP gets included by APP and this increases both coeval pole
+very ``bad'' paleo-pole gets included by APP and this increases both coeval pole
 distance and paleomagnetic A95 even though N increases. Such cases include
 Fig.~\ref{fig-ind-dif} picking 22 vs 23 (actually exactly the same as picking 26
 vs 27) with all the six types of weightings.
@@ -1647,11 +1649,11 @@ between paleomagnetic APWPs and the hotspot and sea-floor spreading model
 predicted APWP, and also the uncertainties of paleomagnetic APWPs. However, as
 we described in this section, special cases like decreased A95 potentially
 intends to make coeval poles differentiated if the coeval poles' distance is
-not decreased effectively or even increased, or very ``bad'' VGPs got involved
-in some sliding windows, occurs. In summary, when the negative effect from
-these types of rare cases is beyond the positive effect the generally improved
-mean poles contribute, the composite difference score would increase. However,
-this phenomenon seldom occur (Table.~\ref{tab-bw}).
+not decreased effectively or even increased, or very ``bad'' paleo-poles got
+involved in some sliding windows, occurs. In summary, when the negative effect
+from these types of rare cases is beyond the positive effect the generally
+improved mean poles contribute, the composite difference score would increase.
+However, this phenomenon seldom occur (Table.~\ref{tab-bw}).
 
 \begin{table*}
 \centering
@@ -1989,18 +1991,19 @@ Fig.~\ref{fig-nada}).
 A balance needs to be made between having windows that are too wide and steps
 that are too long which will smooth the data so much we miss actual details in
 the APWP (e.g.\ those 20 Myr window 10 Myr step paleomagnetic paths in
-Fig.~\ref{fig-dif2010bw} and Fig.~\ref{fig-dif2010ntbw}) and windows that are
-too narrow and steps that are too short which introduces noise by having too few
-poles in each window (e.g.\ those 10 Myr window 5 Myr step paleomagnetic paths in
-Fig.~\ref{fig-difbw} and Fig.~\ref{fig-difntbw}). There is a dependence here on
-data density: higher density allows smaller windows/steps (this is one of the
-things we want to test with selective data removal mentioned in Chapter 4).
-Fitting curves by moving averaging change with different time window lengths and
-time increment lengths (i.e.\ steps) (e.g., the similarity of the pair in
+Fig.~\ref{fig-dif2010bw} and Fig.~\ref{fig-dif2010ntbw} and even 30/15 Myr
+window and step; Table.~\ref{tab-pk0vs1bs} and Fig.~\ref{fig-WinStpVsCPD}) and
+windows that are too narrow and steps that are too short which introduces noise
+by having too few poles in each window (e.g.\ 2 Myr window 1 Myr step;
+Table.~\ref{tab-pk0vs1bs} and Fig.~\ref{fig-WinStpVsCPD}). There is a dependence
+here on data density: higher density allows smaller windows/steps (this is one
+of the things we want to test with selective data removal mentioned in Chapter
+4). Fitting curves by moving averaging change with different time window lengths
+and time increment lengths (i.e.\ steps) (e.g., the similarity of the pair in
 Fig.~\ref{fig-au-2010223} is improved a bit compared to
-Fig.~\ref{fig-au-105223}). A variety of ways of binning the data (here both 20
-Myr window 10 Myr step and 10 Myr window 5 Myr step) are being tested to see
-which one produces the better and more appropriately smoothed fit.
+Fig.~\ref{fig-au-105223}). A variety of ways of binning the data (here
+30\textendash2 Myr window size and half of the size as step) are being tested to
+see which one produces the better and more appropriately smoothed fit.
 
 \begin{figure*}
 	\centering
@@ -2030,37 +2033,39 @@ in red.}\label{fig-f105d2010}
 
 For Pk 2 (AMP with ``$\alpha$95/Age range'' no more than
 ``15\degree/20\degree''), the 20/10 Myr bin/step methods always generate better
-similarities than the 10/5 Myr ones.
+similarities than the 10/5 Myr ones (e.g.\ Fig.~\ref{fig-nac-dif2010} versus
+Fig.~\ref{fig-nac-dif}).
 
 Interestingly, only for North America, the 10/5 Myr bin/step methods generally
 and unexceptionally produce better similarities than the 20/10 Myr methods do
 (Fig.~\ref{fig-f105d2010}), which mainly depends on the picking methods. Note
 that as mentioned in the Supplementary materials and also Chapter 4, there are
-135, 75 and 99 VGPs that compose of 120\textendash0 Ma APWPs of North America,
-India and Australia respectively. Does the reason could be because of the
-relatively larger number of VGPs for North America? Since theoretically for each
-sliding window, the more ``bad'' VGPs it contains, the worse similarity we
-should obtain. In the contrary, the less VGPs the window contains, the weaker
-the effect of averaging out ``bad'' poles' influence would be. So is there a
-threshold number of VGPs for making an paleomagnetic APWP\@? For example, for
-making a 120\textendash0 Ma APWP, do the results indicate the best number of
-VGPs we need should be some value between 99 and 135? We did the test in Chapter
-2 on the 530\textendash0 Ma paleomagnetic APWP using the AMP method, and we did
-find that larger windows and steps bring the paleomagnetic APWPs closer to the
-reference path. Here another test will be implemented as follows. With the
-results from the 10/5 and 20/10 bin/step together, 2/1, 4/2, 6/3, 8/4, 12/6,
-14/7, 16/8, 20/10, 24/12 and 30/15 Myr bin/step will be used to generate
-paleomagnetic APWPs for North America to see which one would make the
-paleomagnetic APWP closest to the reference path. Will the similarities they
-generate be generally worse than those the 10/5 Myr bin/step generates? Or will
-they be better first and then worse than those the 10/5 Myr bin/step generates
-when the bin/step sizes increase up to 20/10 Myr? For the best results
-(Table.~\ref{tab-pk0vs1bs}), as expected, AMP needs wider sliding window and
-step to get close to the reference while APP does not. Even the best sizes of
-sliding window and step are assigned for AMP, the results from APP are still
-much better than those from AMP\@. Picking methods (directly related to N) are
-still the key influence factor of choosing a better sliding window size and step
-size of moving averaging, although weighting methods are also important.
+135, 75 and 99 Paleo-poles that compose of 120\textendash0 Ma APWPs of North
+America, India and Australia respectively. Does the reason could be because of
+the relatively larger number of Paleo-poles for North America? Since
+theoretically for each sliding window, the more ``bad'' Paleo-poles it contains,
+the worse similarity we should obtain. In the contrary, the less Paleo-poles the
+window contains, the weaker the effect of averaging out ``bad'' poles' influence
+would be. So is there a threshold number of Paleo-poles for making an
+paleomagnetic APWP\@? For example, for making a 120\textendash0 Ma APWP, do the
+results indicate the best number of Paleo-poles we need should be some value
+between 99 and 135? We did the test in Chapter 2 on the 530\textendash0 Ma
+paleomagnetic APWP using the AMP method, and we did find that larger windows and
+steps bring the paleomagnetic APWPs closer to the reference path. Here another
+test will be implemented as follows. With the results from the 10/5 and 20/10
+bin/step together, 2/1, 4/2, 6/3, 8/4, 12/6, 14/7, 16/8, 20/10, 24/12 and 30/15
+Myr bin/step will be used to generate paleomagnetic APWPs for North America,
+India and Australia to see which one would make the paleomagnetic APWP closest
+to the reference paths. Will the similarities they generate be generally worse
+than those the 10/5 Myr bin/step generates? Or will they be better first and
+then worse than those the 10/5 Myr bin/step generates when the bin/step sizes
+increase up to 20/10 Myr? For the best results (Table.~\ref{tab-pk0vs1bs}), as
+expected, AMP needs wider sliding window and step to get close to the reference
+while APP does not (Fig.~\ref{fig-WinStpVsCPD}). Even the best sizes of sliding
+window and step are assigned for AMP, the results from APP are still much better
+than those from AMP\@. Picking methods (directly related to N) are still the key
+influence factor of choosing a better sliding window size and step size of
+moving averaging, although weighting methods are also important.
 
 \begin{table*}
 \centering
@@ -2135,6 +2140,14 @@ dark green and underlined, second best in green and third in light green.}
 \end{tabular}%
 }
 \end{table*}
+
+\begin{figure}
+\centering
+\includegraphics[width=.49\textwidth]{figures/WinStpVsCPD.pdf}
+\caption[Sliding window and step sizes versus CPD]{Plot of the data shown in
+  Table.~\ref{tab-pk0vs1bs}. Note that here the step size is always half of the
+  sliding window size and the reference path is the FHM derived.}\label{fig-WinStpVsCPD}
+\end{figure}
 
 \paragraph{What to expect is}
 the difference values for 20/10 window/step should be generally lower than those
