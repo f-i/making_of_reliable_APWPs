@@ -265,7 +265,7 @@ filtering for North America in the Supplementary Material). The temporal
 distributions of North American, Indian and Australian 120\textendash0 Ma poles
 are shown in Fig.~\ref{fig-120NAhist}, Fig.~\ref{fig-120INhist} and
 Fig.~\ref{fig-120AUhist}. Compared with North American and Australian
-paleomagnetic Paleo-poles, Indian paleomagnetic Paleo-poles are in relatively
+paleomagnetic paleo-poles, Indian paleomagnetic paleo-poles are in relatively
 lower density in general except during the period of about 60\textendash70 Ma
 (Fig.~\ref{fig-120INhist}).
 
@@ -2040,15 +2040,15 @@ Interestingly, only for North America, the 10/5 Myr bin/step methods generally
 and unexceptionally produce better similarities than the 20/10 Myr methods do
 (Fig.~\ref{fig-f105d2010}), which mainly depends on the picking methods. Note
 that as mentioned in the Supplementary materials and also Chapter 4, there are
-135, 75 and 99 Paleo-poles that compose of 120\textendash0 Ma APWPs of North
+135, 75 and 99 paleo-poles that compose of 120\textendash0 Ma APWPs of North
 America, India and Australia respectively. Does the reason could be because of
-the relatively larger number of Paleo-poles for North America? Since
-theoretically for each sliding window, the more ``bad'' Paleo-poles it contains,
-the worse similarity we should obtain. In the contrary, the less Paleo-poles the
+the relatively larger number of paleo-poles for North America? Since
+theoretically for each sliding window, the more ``bad'' paleo-poles it contains,
+the worse similarity we should obtain. In the contrary, the less paleo-poles the
 window contains, the weaker the effect of averaging out ``bad'' poles' influence
-would be. So is there a threshold number of Paleo-poles for making an
+would be. So is there a threshold number of paleo-poles for making an
 paleomagnetic APWP\@? For example, for making a 120\textendash0 Ma APWP, do the
-results indicate the best number of Paleo-poles we need should be some value
+results indicate the best number of paleo-poles we need should be some value
 between 99 and 135? We did the test in Chapter 2 on the 530\textendash0 Ma
 paleomagnetic APWP using the AMP method, and we did find that larger windows and
 steps bring the paleomagnetic APWPs closer to the reference path. Here another
@@ -2155,7 +2155,8 @@ for 10/5 window/step, which further could result in more best methods and less
 worst methods.
 
 \paragraph{The results}
-are summarised in Table.~\ref{tab-2010vs105F}.
+are summarised in Table.~\ref{tab-2010vs105F}, Table.~\ref{tab-pk0vs1bs} and
+Fig.~\ref{fig-WinStpVsCPD}.
 
 \begin{table*}
 \centering
@@ -2303,15 +2304,17 @@ Fig.~\ref{fig-aunt-difm} & Fig.~\ref{fig-aunt-dif2010m} &
 
 \paragraph{Conclusions:}
 
-\subparagraph{The sizes of sliding window and step can be optimised.}
+\subparagraph{If AMP has to be used, better results can be obtained through
+using large sizes of sliding window and step, commonly more than 24/12 Myr. In
+addition, we should be cautious when Wt 3 is used with AMP.}
 
-\subparagraph{APP is recommended. We should be cautious when Wt 3 is used with
-AMP.}
-
-\subparagraph{The different values for 20/10 Myr window/step are indeed
-generally lower than those for 10/5 window/step, excluding the unexpected case
-of North America with both space and shape tested (Fig.~\ref{fig-nac-dif} and
-Fig.~\ref{fig-nac-dif2010}).}
+\subparagraph{APP is recommended, not only because the temporal uncertainty is
+integrated into the algorithm but also the results from APP are not as that
+sensitive as AMP to the changes of sliding window and step sizes. In fact, for
+APP the results from different window and step sizes are much more stable than
+those from AMP (Fig.~\ref{fig-WinStpVsCPD}). This means we actually do not need
+to worry about what sizes should be chosen for the sliding window and step when
+we use APP method.}
 
 
 \subsubsection{Question: Is there any difference between choosing FHM and MHM
