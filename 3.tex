@@ -354,8 +354,9 @@ window length, in which cases we would lose data between windows.
 
 \paragraph{Picking}
 
-The 28 picking methods include AMP, APP and also those with filtering or
-corrections implemented onto the two (Table.~\ref{tab-pick}).
+The 28 picking methods include AMP (Picking No 0), APP (Picking No 1) and also
+those with filtering or corrections implemented onto the two
+(Table.~\ref{tab-pick}).
 
 \begin{table}
 \centering
@@ -399,13 +400,15 @@ No. & Picking Algorithm \\ \midrule
 
 \subparagraph{Filtering through $\alpha$95 and Age Range}
 
-For this specific filter, the poles are picked out through setting $\alpha$95 of
-$\leq15\degree$ and age uncertainty of $\leq20$ Myr.
+For this specific filter (Picking No 2 and 3; Table.~\ref{tab-pick}), the
+paleopoles are picked out through setting $\alpha$95 of $\leq15\degree$ and age
+uncertainty of $\leq20$ Myr.
 
 \subparagraph{Filtering Out Non-igneous Derived Poles}
 
-With this filter, the poles are mainly or only from igneous rocks with extrusive
-or intrusive type.
+With this filter (Picking No 4 and 5; Table.~\ref{tab-pick}), the paleopoles are
+mainly (mostly but also containing sedimentary or metamorphic or both) or only
+from igneous rocks with extrusive or intrusive type.
 
 \subparagraph{Filtering Out Igneous Unrelated Poles}
 
@@ -425,7 +428,7 @@ coefficient) ranging from unity (no flattening) to 0 (completely flattened).
 Here $f=0.6$ is used for the sedimentary-dominated rocks derived paleopoles in
 our calculations, according to the previous experience~\cite{T12}. And $f=0.8$
 (the minimum anisotropy-of-thermal-remanence-determined
-f-correction;~\cite{D11,Do11}) is used for the sedimentary-contained (not
+f-correction)~\cite{D11,Do11} is used for the sedimentary-contained (not
 dominated) rocks derived paleopoles in the calculations.
 
 \subparagraph{Filtering Out Poles Related to Red-beds}
@@ -492,11 +495,11 @@ different qualities.
 \begin{tabular}{@{}ll@{}}
 \toprule
 No. & Weighting Algorithm \\ \midrule
-0 & None \\
-1 & Numbers of sites (B), Observations (N) \\
-2 & Age uncertainty \\
-3 & $\alpha$95 \\
-4 & Age error Position to bin \\
+0 & None (No weighting) \\
+1 & Larger Numbers of sites (B), Observations (N), greater weight \\
+2 & Lower Age uncertainty, greater weight \\
+3 & $\alpha$95 (Normal distribution: standard deviation 10) \\
+4 & Age error Position to bin (more overlap, greater weight) \\
 5 & comb of 3 and 4 \\ \bottomrule
 \end{tabular}
 \end{table}
@@ -536,13 +539,25 @@ $-$ low magnetic age) is assigned instead.
 For the ``$\alpha$95'' weighting (No $3$ in Table.~\ref{tab-weit}), smaller
 radius of circle of 95\% confidence about mean remanence direction means less
 error, so should get larger weight. Here, weight is from a Gaussian distribution
-centered on 0 with standard deviation of 10, i.e., when $\alpha$95 $=$ 0,
-weight=1; when $\alpha$95$>$0, weight$<$1. It is also worthwhile to mention that
-if samples, where two poles are derived, are exactly from the same place and
-same rock, and one $\alpha$95 is completely inside the other $\alpha$95, a zero
-is assigned as the weight of the data with the larger $\alpha$95. Here, the same
-procedure can be applied on A95 (circle of 95\% confidence about mean pole)
-instead of $\alpha$95.
+centered on 0 with standard deviation of 10, i.e., when $\alpha$95$>$0,
+weight$<$1. There is no such case as $\alpha$95$=$0, while there exists a blank
+$\alpha$95 in the database. If $\alpha$95 is not given, DP (the semi-axis of
+the confidence ellipse along the great circle path from site to pole) is
+assigned as $\alpha$95. If DP is also not given, $\alpha$95 was further
+approximated by $\frac{140}{KD*N}$, where KD is Fisher precision parameter for
+mean direction if this parameter is given, or Fisher precision parameter for
+Normal directions (K\_NORM) if only K\_NORM is given when KD is missing. If N is
+not given, B is used as N. If even K\_NORM is also missing, the lowest KD value
+1.7 that can be found in GPMDB 4.6b is used as KD. It is also worthwhile to
+mention that if samples, where two poles are derived, are exactly from the same
+place and same rock, and one $\alpha$95 is completely inside the other
+$\alpha$95, a zero is assigned as the weight of the data with the larger
+$\alpha$95. In fact, in the above described procedure A95 (circle of 95\%
+confidence about mean pole) is a better alternative instead of $\alpha$95,
+because A95 is directly reflecting the uncertainty of the paleopoles. However,
+the A95s of the most paleopoles are not given in GPMDB 4.6b, so $\alpha$95 is
+used instead since $\alpha$95 is also indirectly reflecting the quality of the
+dataset.
 
 For the ``Age error Position to window'' weighting (No $4$ in
 Table.~\ref{tab-weit}), if window intersects with young/old end of age bracket
@@ -2444,6 +2459,18 @@ Center for their remote HPC resources.
   Besse, J. \& Courtillot, V., 2002, Apparent and true polar wander and the
   geometry of the geomagnetic field over the last 200 Myr, \jgr{}\textbf{107},
   2300.
+\bibitem[\protect\citename{Domeier et al. }2011a]{D11}
+  Domeier, M., van der Voo, R. \& Denny, F. B., 2011. Widespread inclination
+  shallowing in Permian and Triassic paleomagnetic data from Laurentia: Support
+  from new paleomagnetic data from Middle Permian shallow intrusions in
+  southern Illinois (USA) and virtual geomagnetic pole distributions,
+  \textit{Tectonophysics}, \textbf{511}, 38\textendash52.
+\bibitem[\protect\citename{Domeier et al. }2011b]{Do11}
+  Domeier, M., Van der Voo, R., Tomezzoli, R. N., Tohver, E., Hendriks, B. W.
+  H., Torsvik, T. H., Vizan, H. \& Dominguez, A., 2011. Support for an "A-type"
+  Pangea reconstruction from high-fidelity Late Permian and Early to Middle
+  Triassic paleomagnetic data from Argentina, \textit{Journal of Geophysical
+  Research: Solid Earth}, \textbf{116}, B12114.
 \bibitem[\protect\citename{Fisher }1953]{F53}
   Fisher, R. A., 1953. Dispersion on a sphere, \textit{Proc. Roy. Soc. London
   Ser. A.}, \textbf{217}, 295\textendash305.
