@@ -334,10 +334,9 @@ effect of outliers.
 \centering
 \includegraphics[width=.49\textwidth]{figures/binning.pdf}
 \caption[Moving average (MA) methods]{An example of 10 Myr moving window and 5
-Myr step in the moving average method, based on poles of the $NAC$. Every age
-window has a different color. White points are the midpoints of low and high
-magnetic ages. The vertical axis has no specific meaning here.
-}\label{fig-nac-maplat}
+Myr step in the two moving average methods, AMP and APP, based on poles of the
+$NAC$. Every age window has a different color. White points are the midpoints of
+low and high magnetic ages. The vertical axis has no specific meaning here.}\label{fig-nac-maplat}
 \end{figure}
 
 In addition, technically we don't want to let the step length more than the
@@ -570,21 +569,7 @@ criteria 5; and Pt 18 and 19 are related to the V90 criteria 7.
 
 \subsection{Path Comparison Method}
 
-Except the path comparison method (referred to as Measure 1 in the following
-text) that has been detailedly described in Chapter 2, here is another
-comparison method (referred to as Measure 2 in the following text) developed
-originally.
-
-First, the definition of the significant spatial difference $d_s$ is changed
-into the fraction of $\mathbf{n}$ coeval pole pairs that are statistically
-distinguishable from each other, as determined by a test for a common mean
-direction. Then for the other two shape metrics $d_a$ and $d_l$, there is no
-significance testing on them. The way of combining them three into the final
-composite path difference is still the same.
-
-It will be interesting to see if there is any difference between the results
-given by these two methods. So we will have them both tested in the following
-content.
+The path comparison method has been detailedly described in Chapter 2.
 
 \section{Results and Discussions}
 
@@ -606,8 +591,6 @@ predicted APWP (Fig.~\ref{fig-mhsPred}, Fig.~\ref{fig-mhsPred501},
 Fig.~\ref{fig-mhsPred801}) as the reference path.
 
 \paragraph{10 Myr Binning and 5 Myr Stepping}
-
-\subparagraph{Measure 1: Both Space and Shape Tested}
 
 According to the results (Fig.~\ref{fig-dif} and Fig.~\ref{fig-d-dif}), we can
 observe:
@@ -877,77 +860,8 @@ labeled in green, more than one-standard-deviation interval labeled in
 red.}\label{fig-difAMPvsAPP}
 \end{figure*}
 
-\subparagraph{Measure 2: Only Space Tested}
-
-According to the results (Fig.~\ref{fig-nant-dif}, Fig.~\ref{fig-indnt-dif} and
-Fig.~\ref{fig-aunt-dif}), we can observe:
-%
-\begin{enumerate}
-  \item the groups of picking-method-no 1, 19, 21 and 25 are the best, and 2
-        and 14 the worst, for all the three continents.
-\end{enumerate}
-
-\begin{figure*}
-	\centering
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/101_120_0_.pdf}
-		\caption{North America (101): minimum 0.2536 (1, 1), maximum 0.5104 (14, 4), mean 0.3837, median 0.3912}\label{fig-nant-dif}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/501_120_0_.pdf}
-		\caption{India (501): minimum 0.282 (6, 5), maximum 0.7637 (8, 3), mean 0.4667, median 0.4532}\label{fig-indnt-dif}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/801_120_0_.pdf}
-		\caption{Australia (801): minimum 0.2246 (11, 0), maximum 0.7554 (22, 3), mean 0.502, median 0.5142}\label{fig-aunt-dif}
-	\end{subfigure}
-	\caption[Differences without shape test of each plate's paleomagnetic APWPs
-versus its FHM predicted APWP]{Difference values without shape test between each
-continent's paleomagnetic APWPs and its predicted APWP from FHM and related
-plate circuits. The paths are in 10 Myr bin and 5 Myr step. The difference
-values less than one-standard-deviation interval of the whole 168 values are
-labeled in green, more than one-standard-deviation interval labeled in red. See
-the numbers of picked paleo-poles in Fig.~\ref{fig-dif}.}\label{fig-difnt}
-\end{figure*}
-
-\begin{figure*}
-	\centering
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_10_5_1_1.pdf}
-		\caption{North America (101): minimum 0.2536 (1, 1)}\label{fig-nant-10511}
-	\end{subfigure}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_10_5_14_4.pdf}
-		\caption{North America (101): maximum 0.5104 (14, 4)}\label{fig-nant-105144}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_10_5_6_5.pdf}
-		\caption{India (501): minimum 0.282 (6, 5)}\label{fig-indnt-10565}
-	\end{subfigure}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_10_5_8_3.pdf}
-		\caption{India (501): maximum 0.7637 (8, 3), same as Fig.~\ref{fig-ind-10583}}\label{fig-indnt-10583}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_10_5_11_0.pdf}
-		\caption{Australia (801): minimum 0.2246 (11, 0)}\label{fig-aunt-105110}
-	\end{subfigure}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_10_5_22_3.pdf}
-		\caption{Australia (801): maximum 0.7554 (22, 3), same as Fig.~\ref{fig-au-105223}}\label{fig-aunt-105223}
-	\end{subfigure}
-	\caption[Best and worst differences without shape test (10 Myr bin, 5 Myr
-step)]{Path comparisons with best and worst difference values shown in
-Fig.~\ref{fig-difnt}.}\label{fig-difntbw}
-\end{figure*}
 
 \paragraph{20 Myr Binning and 10 Myr Stepping}
-
-\subparagraph{Measure 1: Both Space and Shape Tested}
 
 According to the results (Fig.~\ref{fig-dif2010}), we can observe:
 %
@@ -1013,71 +927,6 @@ step)]{Path comparisons with best and worst difference values shown in
 Fig.~\ref{fig-dif2010}.}\label{fig-dif2010bw}
 \end{figure*}
 
-\subparagraph{Measure 2: Only Space Tested}
-
-According to the results (Fig.~\ref{fig-dif2010nt}), we can observe:
-%
-\begin{enumerate}
-  \item the groups of picking-method-no 11, 13, 19 and 21 are the best, and 16
-        the worst, for all the three continents.
-\end{enumerate}
-
-\begin{figure*}
-	\centering
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/101_20_10_120_0_.pdf}
-		\caption{North America (101): minimum 0.2768 (19, 0), maximum 0.4683 (14, 5), mean 0.3773, median 0.3855}\label{fig-nant-dif2010}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/501_20_10_120_0_.pdf}
-		\caption{India (501): minimum 0.2676 (7, 3), maximum 0.5027 (23, 1; 27, 1), mean 0.3914, median 0.408}\label{fig-indnt-dif2010}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/801_20_10_120_0_.pdf}
-		\caption{Australia (801): minimum 0.1849 (11, 1), maximum 0.5772 (22, 2), mean 0.3882, median 0.3892}\label{fig-aunt-dif2010}
-	\end{subfigure}
-	\caption[Differences without shape test of each plate's paleomagnetic APWPs
-versus its FHM predicted APWP]{Same as Fig.~\ref{fig-difnt}. The only difference
-is here the paths are in 20 Myr bin and 10 Myr step. The difference values less
-than one-standard-deviation interval of the whole 168 values are labeled in
-green, more than one-standard-deviation interval labeled in red. See the numbers
-of picked paleo-poles in Fig.~\ref{fig-dif}.}\label{fig-dif2010nt}
-\end{figure*}
-
-\begin{figure*}
-	\centering
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_19_0.pdf}
-		\caption{North America (101): minimum 0.2768 (19, 0)}\label{fig-nant-2010190}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_14_5.pdf}
-		\caption{North America (101): maximum 0.4683 (14, 5)}\label{fig-nant-2010145}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_7_3.pdf}
-		\caption{India (501): minimum 0.2676 (7, 3)}\label{fig-indnt-201073}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_23_1.pdf}
-		\caption{India (501): maximum 0.5027 (23, 1; 27, 1)}\label{fig-indnt-2010231}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_11_1.pdf}
-		\caption{Australia (801): minimum 0.1849 (11, 1)}\label{fig-aunt-2010111}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_22_2.pdf}
-		\caption{Australia (801): maximum 0.5772 (22, 2)}\label{fig-aunt-2010222}
-	\end{subfigure}
-	\caption[Best and worst differences without shape test (20 Myr bin, 10 Myr
-step)]{Path comparisons with best and worst difference values shown in
-Fig.~\ref{fig-dif2010nt}.}\label{fig-dif2010ntbw}
-\end{figure*}
 
 \subsubsection{When MHM and Global Plate Tectonic Circuits Predicted APWP as
 Reference}
@@ -1143,8 +992,6 @@ Fig.~\ref{fig-difm}.}\label{fig-difbwm}
 
 \paragraph{10 Myr Binning and 5 Myr Stepping}
 
-\subparagraph{Measure 1: Both Space and Shape Tested}
-
 According to the results (Fig.~\ref{fig-nac-difm}, Fig.~\ref{fig-ind-difm} and
 Fig.~\ref{fig-au-difm}), we can observe:
 %
@@ -1153,69 +1000,14 @@ Fig.~\ref{fig-au-difm}), we can observe:
 		the three continents.
 \end{enumerate}
 
-\begin{figure*}
-	\centering
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/101_120_0_m.pdf}
-		\caption{North America (101): minimum 0.2147 (11, 0), maximum 0.5183 (16, 3), mean 0.3702, median 0.3642}\label{fig-nant-difm}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/501_120_0_m.pdf}
-		\caption{India (501): minimum 0.2961 (26, 3), maximum 0.7779 (8, 3), mean 0.4578, median 0.4306}\label{fig-indnt-difm}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/801_120_0_m.pdf}
-		\caption{Australia (801): minimum 0.2008 (11, 1), maximum 0.7136 (26, 4), mean 0.46, median 0.4726}\label{fig-aunt-difm}
-	\end{subfigure}
-	\caption[Differences without shape test of each plate's paleomagnetic APWPs
-versus its MHM predicted APWP]{Same as Fig.~\ref{fig-difnt} except that the
-reference path is predicted from MHM here. See the numbers of picked paleo-poles
-in Fig.~\ref{fig-dif}.}\label{fig-difntm}
-\end{figure*}
 
-\begin{figure*}
-	\centering
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_10_5_11_0m.pdf}
-		\caption{North America (101): minimum 0.2147 (11, 0)}\label{fig-nant-105110m}
-	\end{subfigure}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_10_5_16_3m.pdf}
-		\caption{North America (101): maximum 0.5183 (16, 3)}\label{fig-nant-105163m}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_10_5_26_3m.pdf}
-		\caption{India (501): minimum 0.2961 (26, 3)}\label{fig-indnt-105263m}
-	\end{subfigure}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_10_5_8_3m.pdf}
-		\caption{India (501): maximum 0.7779 (8, 3), same as Fig.~\ref{fig-ind-10583m}}\label{fig-indnt-10583m}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_10_5_11_1m.pdf}
-		\caption{Australia (801): minimum 0.2008 (11, 1)}\label{fig-aunt-105111m}
-	\end{subfigure}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_10_5_26_4m.pdf}
-		\caption{Australia (801): maximum 0.7136 (26, 4)}\label{fig-aunt-105264m}
-	\end{subfigure}
-	\caption[Best and worst differences without shape test (10 Myr bin, 5 Myr
-step)]{Path comparisons with best and worst difference values shown in
-Fig.~\ref{fig-difntm}.}\label{fig-difntbwm}
-\end{figure*}
+\paragraph{20 Myr Binning and 10 Myr Stepping}
 
-\subparagraph{Measure 2: Only Space Tested}
-
-According to the results (Fig.~\ref{fig-nant-difm}, Fig.~\ref{fig-indnt-difm}
-and Fig.~\ref{fig-aunt-difm}), we can observe:
+According to the results (Fig.~\ref{fig-dif2010m}), we can observe:
 %
 \begin{enumerate}
-  \item the groups of picking-method-no 1, 19 and 21 are the best, and 8, 10
-        and 14 the worst, for all the three continents.
+  \item there is no best picking method, whereas no. 16 is the worst, for all
+		the three continents.
 \end{enumerate}
 
 \begin{figure*}
@@ -1240,113 +1032,6 @@ path is predicted from MHM here. See the numbers of picked paleo-poles in
 Fig.~\ref{fig-dif}.}\label{fig-dif2010m}
 \end{figure*}
 
-\begin{figure*}
-	\centering
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_15_5m.pdf}
-		\caption{North America (101): minimum 0.0058 (15, 5)}\label{fig-nac-2010155m}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_8_4m.pdf}
-		\caption{North America (101): maximum 0.1041 (8, 4)}\label{fig-nac-201084m}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_6_3m.pdf}
-		\caption{India (501): minimum 0.0177 (6, 3)}\label{fig-ind-201063m}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_16_3m.pdf}
-		\caption{India (501): maximum 0.162 (16, 3)}\label{fig-ind-2010163m}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_23_4m.pdf}
-		\caption{Australia (801): minimum 0.0047 (23, 4)}\label{fig-au-2010234m}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_26_3m.pdf}
-		\caption{Australia (801): maximum 0.3158 (26, 3)}\label{fig-au-2010263m}
-	\end{subfigure}
-	\caption[Best and worst differences with test (20 Myr bin, 10 Myr
-step)]{Path comparisons with best and worst difference values shown in
-Fig.~\ref{fig-dif2010m}.}\label{fig-dif2010bwm}
-\end{figure*}
-
-\paragraph{20 Myr Binning and 10 Myr Stepping}
-
-\subparagraph{Measure 1: Both Space and Shape Tested}
-
-According to the results (Fig.~\ref{fig-dif2010m}), we can observe:
-%
-\begin{enumerate}
-  \item there is no best picking method, whereas no. 16 is the worst, for all
-		the three continents.
-\end{enumerate}
-
-\begin{figure*}
-	\centering
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/101_20_10_120_0_m.pdf}
-		\caption{North America (101): minimum 0.1923 (4, 0), maximum 0.4794 (16, 2), mean 0.3384, median 0.3318}\label{fig-nant-dif2010m}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/501_20_10_120_0_m.pdf}
-		\caption{India (501): minimum 0.2462 (6, 0), maximum 0.5417 (8, 3), mean 0.3858, median 0.3659}\label{fig-indnt-dif2010m}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/801_20_10_120_0_m.pdf}
-		\caption{Australia (801): minimum 0.2091 (5, 5), maximum 0.5777 (14, 0), mean 0.3694, median 0.3676}\label{fig-aunt-dif2010m}
-	\end{subfigure}
-	\caption[Differences without shape test of each plate's paleomagnetic APWPs
-versus its MHM predicted APWP]{Same as Fig.~\ref{fig-dif2010nt} except that the
-reference path is predicted from MHM here. See the numbers of picked paleo-poles
-in Fig.~\ref{fig-dif}.}\label{fig-dif2010ntm}
-\end{figure*}
-
-\begin{figure*}
-	\centering
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_4_0m.pdf}
-		\caption{North America (101): minimum 0.1923 (4, 0)}\label{fig-nant-201040m}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_16_2m.pdf}
-		\caption{North America (101): maximum 0.4794 (16, 2)}\label{fig-nant-2010162m}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_6_0m.pdf}
-		\caption{India (501): minimum 0.2462 (6, 0)}\label{fig-indnt-201060m}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_8_3m.pdf}
-		\caption{India (501): maximum 0.5417 (8, 3)}\label{fig-indnt-201083m}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_5_5m.pdf}
-		\caption{Australia (801): minimum 0.2091 (5, 5)}\label{fig-aunt-201055m}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_14_0m.pdf}
-		\caption{Australia (801): maximum 0.5777 (14, 0)}\label{fig-aunt-2010140m}
-	\end{subfigure}
-	\caption[Best and worst differences without shape test (20 Myr bin, 10 Myr
-step)]{Path comparisons with best and worst difference values shown in
-Fig.~\ref{fig-dif2010ntm}.}\label{fig-dif2010ntbwm}
-\end{figure*}
-
-\subparagraph{Measure 2: Only Space Tested}
-
-According to the results (Fig.~\ref{fig-dif2010ntm}), we can observe:
-%
-\begin{enumerate}
-  \item the groups of picking-method-no 15 and 19 are the best, and 8 the worst,
-		for all the three continents.
-\end{enumerate}
 
 \subsubsection{Summary of Results}
 
@@ -1370,129 +1055,68 @@ According to the results (Fig.~\ref{fig-dif2010ntm}), we can observe:
   \multirow{2}{*}{\parbox{2cm}{2, 5, 7, 8, 14, \textbf{16}, 17, 18, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 27/28 & \textbf{15} & 4 & 2 & 3 & 1
   & 4 & Y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-nant-dif} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 15,
-  \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 4, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 2, 3, 8, 10, 12, 14, \textbf{16}, 17, 18, 20, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 71/84 & 9 & \textbf{13} & 0 & 1 & 1
-  & 4 & N/Y \\ \\ \cline{2-14}
 & Fig.~\ref{fig-ind-dif} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7, 9,
   \textbf{19}, \textbf{21}}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 2, 8, 10, 12, \textbf{16}, 18, 20, 24}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 11/14 & \textbf{17} & 1 & 2 & 7 & 1
   & 0 & Y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-indnt-dif} & \multirow{2}{*}{\parbox{2cm}{1, 4, 6, 9, 17,
-  \textbf{19}, \textbf{21}, 25, 26}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 2, 8, 10, 12, 14, \textbf{16}, 18, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 5/7 & \textbf{13} & 1 & 4 & 5 & 0 &
-  5& Y(4y2n)/Y(4y2n) \\ \\ \cline{2-14}
 & Fig.~\ref{fig-au-dif} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 17,
   \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{2, 6, 14, \textbf{16}, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 27/28 & \textbf{11} & 4 & 1 & 8 & 3
   & 1 & N/N \\ \\ \cline{2-14}
-& Fig.~\ref{fig-aunt-dif} & \multirow{2}{*}{\parbox{2cm}{1, 7, 11, 13, 17,
-  \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{2, 6, 14, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 1 & \textbf{9} & 6 & 2 & 7 & 2 & 2 &
-  N/N \\ \\ \cline{2-14}
 & Fig.~\ref{fig-nac-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13,
   15, \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{2, 6, 14, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 3/4 & \textbf{18} & 6 & 0 & 2 & 4 &
   3 & N(5n1y)/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-nant-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 6, 7, 9,
-  11, 13, 15, \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 3, 8, 10, 11, 12, 14, \textbf{16}, 17, 18, 20, 24}}
-  & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 17/21 & \textbf{15} & 6 & 0 & 2 &
-  3& 2 & N/Y \\ \\ \cline{2-14}
 & Fig.~\ref{fig-ind-dif2010} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7,
   \textbf{19}}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 2, 10, 12, \textbf{16}, 18, 20, 23, 24, 27}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 59/84 & \textbf{12} & 6 & 0 & 9 & 0
   & 1 & Y/Y(4y2n) \\ \\ \cline{2-14}
-& Fig.~\ref{fig-indnt-dif2010} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7, 9, 11,
-  13, \textbf{19}, \textbf{21}}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2cm}{0, 2, 8, 10, 12, \textbf{16}, 23, 24,
-  27}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 11/14 & \textbf{9} & 3 & 2 &
-  8 & 3 & 3 & Y(4y2n)/N(5n1y) \\ \\ \cline{2-14}
 & Fig.~\ref{fig-au-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 17,
 \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2cm}{2, 14, \textbf{16}, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 41/42 & 7 & 9 & 0 & \textbf{11} & 1
-  & 2 & N/N(4n2y) \\ \\ \cline{2-14}
-& Fig.~\ref{fig-aunt-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 15, 17,
-  \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
-  \multirow{2}{*}{\parbox{2cm}{2, 4, 5, 14, \textbf{16}, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 41/42 & 6 & 8 & 0 & \textbf{10} & 1
-  & 3 & N/N(4n2y) \\ \\ \hline
+  & 2 & N/N(4n2y) \\ \\ \hline
 \multirow{12}{*}{MHM}
 & Fig.~\ref{fig-nac-difm} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13, 15,
   \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.2cm}{0, 8, 10, 12, 14, \textbf{16}, 17, 18, 20, 22, 24}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 11/12 & \textbf{14} & 6 & 1 & 1 & 2
   & 4 & Y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-nant-difm} & \multirow{2}{*}{\parbox{2cm}{1, 5, 7, 11, 13, 15,
-  \textbf{19}, \textbf{21}, 23, 25, 27}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 8, 10, 12, 14, \textbf{16}, 17, 18, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 27/28 & 6 & \textbf{12} & 0 & 2 & 0
-  & 8 & Y/Y \\ \\ \cline{2-14}
 & Fig.~\ref{fig-ind-difm} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7, \textbf{19}, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 2, 8, 10, 12, \textbf{16}, 18, 20, 24}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 11/14 & \textbf{12} & 3 & 0 & 9 & 1
   & 3 & Y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-indnt-difm} & \multirow{2}{*}{\parbox{2cm}{1, 4, 6, 15, 17,
-  \textbf{19}, \textbf{21}, 22, 26}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 2, 8, 10, 12, 14, \textbf{16}, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 61/84 & 0 & 1 & 7 & 6 & 3 &
-  \textbf{11} & Y/Y(4y2n) \\ \\ \cline{2-14}
 & Fig.~\ref{fig-au-difm} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 17,
   \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{2, 14, \textbf{16}, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 20/21 & 8 & 5 & 1 & \textbf{9} & 4
   & 1 & N/N \\ \\ \cline{2-14}
-& Fig.~\ref{fig-aunt-difm} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 17,
-  \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{2, 6, 8, 10, 14, 18, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 1 & 8 & 3 & 0 & \textbf{11} & 1 & 5 &
-  N/N \\ \\ \cline{2-14}
 & Fig.~\ref{fig-nac-dif2010m} & \multirow{2}{*}{\parbox{2cm}{4, 5, 7, 11,
   15, 22, 26}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 8, 10, 12, 14, \textbf{16}, 18, 20, 24}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 3/4 & \textbf{15} & 6 & 1 & 0 & 1 &
   5 & N(5n1y)/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-nant-dif2010m} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7,
-  11, 13, 15, \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 8, 10, 12, 14, \textbf{16}, 18, 20, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 6/7 & \textbf{8} & 6 & 2 & 6 &
-  3 & 3 & Y(5y1n)/Y(5y1n) \\ \\ \cline{2-14}
 & Fig.~\ref{fig-ind-dif2010m} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7,
   \textbf{19}}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 2, 10, 12, \textbf{16}, 18, 23, 24, 27}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 29/42 & \textbf{8} & \textbf{8} & 2 & 5 & 3
   & 2 & Y/N(5n1y) \\ \\ \cline{2-14}
-& Fig.~\ref{fig-indnt-dif2010m} & \multirow{2}{*}{\parbox{2cm}{6, 9, 15,
-  17, \textbf{19}, 22, 23, 26, 27}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2cm}{0, 2, 3, 8, 10, 12, \textbf{16}, 18, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{1, 2, 3, 4, 5}} & 61/84 & 5 & 4 & 3 &
-  5 & 3 & \textbf{8} & Y/N(5n1y) \\ \\ \cline{2-14}
 & Fig.~\ref{fig-au-dif2010m} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 15, 17,
   \textbf{19}, \textbf{21}, 23, 25, 27}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2cm}{2, 14, \textbf{16}, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 41/42 & \textbf{9} & 5 & 0 & 8 & 5
-  & 1 & N/Y(4y2n) \\ \\ \cline{2-14}
-& Fig.~\ref{fig-aunt-dif2010m} & \multirow{2}{*}{\parbox{2cm}{1, 5, 7, 11, 13, 15,
-  \textbf{19}, \textbf{21}, 23, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2cm}{2, 6, 8, 14, 20, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 1 & 7 & 4 & 0 & \textbf{12} & 4
   & 1 & N/Y(4y2n)
 \end{tabular}%
 }
 \end{table*}
 
-According to all the above results (Fig.~\ref{fig-dif}, Fig.~\ref{fig-difnt},
-Fig.~\ref{fig-dif2010}, Fig.~\ref{fig-dif2010nt}), we can observe:
+According to all the above results (Fig.~\ref{fig-dif} and
+Fig.~\ref{fig-dif2010}), we can observe:
 %
 \begin{enumerate}
   \item generally the APP methods (adding data to a time window with overlapping
@@ -1515,8 +1139,7 @@ Fig.~\ref{fig-dif2010}, Fig.~\ref{fig-dif2010nt}), we can observe:
 		always less than the other two continents'.
   \item for both North America (101) and India (501), more recent studies
         generally give better results than (or results close to) older studies.
-		However, this is not true for Australia (801) (Fig.~\ref{fig-au-dif} and
-		Fig.~\ref{fig-aunt-dif}).
+		However, this is not true for Australia (801) (Fig.~\ref{fig-au-dif}).
 \end{enumerate}
 
 \subsection{Discussions}
@@ -1613,8 +1236,6 @@ paleo-poles that should not be included at that age for mean pole.
 
 \subsubsection{Question: Why the AMP methods sometimes unexceptionally produce
 better similarities than APP methods do?}
-
-\paragraph{Measure 1:}
 
 Because of small number of paleo-poles (not necessarily ``bad'') involved in
 each sliding window, the produced mean poles by AMP should be relatively far
@@ -1773,48 +1394,6 @@ vs 3/0\textendash5, 4/2 vs 5/2, 4/4 vs 5/4, 6/2 vs 7/2, 22/0\textendash5 vs
 Fig.~\ref{fig-ind-dif2010m} 6/0\textendash5 vs 7/0\textendash5, 22/0\textendash5
 vs 23/0\textendash5, 26/0\textendash5 vs 27/0\textendash5.
 
-\paragraph{Measure 2:}
-
-For example, for Fig.~\ref{fig-nant-dif}, there are 13 special (of 84 APP vs.
-AMP comparisons) cases. For the case of 2/3 vs 3/3, coeval segment angular
-differences $d_a$ are greater from APP method than from AMP method (Type 4). For
-the case of 2/0 vs 3/0, 4/5 vs 5/5, 16/2 vs 17/2, 22/0\textendash4 vs
-23/0\textendash4, 26/0\textendash3 vs 27/0\textendash3, fraction of
-distinguishable coeval poles are more from APP method than from AMP method (Type
-5). In addition, segment angular differences $d_l$ could be greater from APP
-method than from AMP method (Type 6).
-
-Other Type 4 cases: Fig.~\ref{fig-nant-dif2010} 10/4 vs 11/4.
-
-Other Type 5 cases: Fig.~\ref{fig-indnt-dif} picking/weighting 4/0\textendash5
-vs 5/0\textendash5, 6/0\textendash5 vs 7/0\textendash5, 22/0\textendash5 vs
-23/0\textendash5, 26/0\textendash5 vs 27/0\textendash5.
-Fig.~\ref{fig-nant-dif2010} 2/4\textendash5 vs 3/4\textendash5, 2/0\textendash2
-vs 3/0\textendash2, 4/1\textendash2 vs 5/1\textendash2, 4/4 vs 5/4, 6/0 vs 7/0,
-6/4\textendash5 vs 7/4\textendash5, 22/4 vs 23/4. 26/4 vs 27/4, 26/0 vs 27/0.
-Fig.~\ref{fig-indnt-difm} 6/0\textendash1 vs 7/0\textendash1, 6/3\textendash4 vs
-7/3\textendash4. Fig.~\ref{fig-nant-dif2010m} 22/1 vs 23/1, 22/3\textendash4 vs
-23/3\textendash4, 26/0\textendash1 vs 27/0\textendash1, 26/3\textendash5 vs
-27/3\textendash5.
-
-Combination of Type 4 and 5 cases: Fig.~\ref{fig-nant-dif2010} 16/4 vs 17/4.
-Fig.~\ref{fig-indnt-dif2010} 22/0\textendash5 vs 23/0\textendash5.
-26/0\textendash3 vs 27/0\textendash3, 26/5 vs 27/5. Fig.~\ref{fig-aunt-dif2010}
-4/2 vs 5/2, 6/2 vs 7/2. Fig.~\ref{fig-nant-difm} 2/1 vs 3/1, 16/1\textendash2 vs
-17/1\textendash2. Fig.~\ref{fig-indnt-difm} 4/0\textendash5 vs 5/0\textendash5,
-22/0\textendash5 vs 23/0\textendash5, 26/0\textendash5 vs 27/0\textendash5.
-Fig.~\ref{fig-nant-dif2010m} 4/4 vs 5/4, 4/2 vs 5/2
-
-Other Type 6 cases: Fig.~\ref{fig-indnt-dif2010} 6/2 vs 7/2.
-
-Combination of Type 5 and 6 case: Fig.~\ref{fig-indnt-difm} 6/2 vs 7/2.
-
-Combination of Type 4 and 6 cases: Fig.~\ref{fig-nant-dif2010m} 4/3 vs 5/3, 4/0
-vs 5/0
-
-Combination of Type 4, 5 and 6: Fig.~\ref{fig-indnt-dif2010m} 6/0\textendash3 vs
-7/0\textendash3, 14/2 vs 15/2, 22/0\textendash5 vs 23/0\textendash5,
-26/0\textendash5 vs 27/0\textendash5.
 
 \subsubsection{Question: Why weighting is not affecting?}
 
@@ -1964,8 +1543,7 @@ recommended for North America.
 \paragraph{Question: Why the picking method 21 is not among the best for
 20 Myr binning and 10 Myr stepping with both space and shape tested?}
 
-As shown in Fig.~\ref{fig-dif}, Fig.~\ref{fig-difnt} and
-Fig.~\ref{fig-dif2010nt}, both the picking methods 19 and 21 are among the
+As shown in Fig.~\ref{fig-dif}, both the picking methods 19 and 21 are among the
 best. However, the picking method 21 is not one of the best any more for 20 Myr
 binning and 10 Myr stepping with both space and shape tested
 (Fig.~\ref{fig-dif2010}). Further, in fact, in Fig.~\ref{fig-dif2010}, we can
@@ -1976,20 +1554,6 @@ method 21 are still closer to the left bound of the one-standard-deviation
 interval 0.0359\textendash0.1072 and relatively farther from the mean 0.074,
 which means the picking method 21 is still a relatively better one.
 
-\paragraph{Question: Why the picking method 16 is not among the worst for 10 Myr
-binning and 5 Myr stepping with only space tested?}
-
-As shown in Fig.~\ref{fig-dif}, Fig.~\ref{fig-dif2010} and
-Fig.~\ref{fig-dif2010nt}, the picking method 16 is always one of the worst.
-However, the picking method 16 is not among the worst any more for 10 Myr
-binning and 5 Myr stepping with only space tested (Fig.~\ref{fig-difnt}).
-Further, in fact, in Fig.~\ref{fig-difnt}, we can see the picking method 16 is
-still one of the worst for North America (101) and India (501), but just not for
-Australia (801). However, even for Australia (801), the difference values
-(ranging 0.564\textendash0.6144) produced by the picking method 16 are still
-closer to the right bound of the one-standard-deviation interval
-0.3102\textendash0.6548 and relatively farther from the mean 0.502, which means
-the picking method 16 is still a relatively worse one.
 
 \subsubsection{Question: Are there particular parts of the path that are more
 variable? Do different methods affect different parts of the path differently?}
@@ -2004,15 +1568,15 @@ Fig.~\ref{fig-nada}).
 A balance needs to be made between having windows that are too wide and steps
 that are too long which will smooth the data so much we miss actual details in
 the APWP (e.g.\ those 20 Myr window 10 Myr step paleomagnetic paths in
-Fig.~\ref{fig-dif2010bw} and Fig.~\ref{fig-dif2010ntbw} and even 30/15 Myr
-window and step; Table.~\ref{tab-pk0vs1bs} and Fig.~\ref{fig-WinStpVsCPD}) and
-windows that are too narrow and steps that are too short which introduces noise
-by having too few poles in each window (e.g.\ 2 Myr window 1 Myr step;
-Table.~\ref{tab-pk0vs1bs} and Fig.~\ref{fig-WinStpVsCPD}). There is a dependence
-here on data density: higher density allows smaller windows/steps (this is one
-of the things we want to test with selective data removal mentioned in Chapter
-4). Fitting curves by moving averaging change with different time window lengths
-and time increment lengths (i.e.\ steps) (e.g., the similarity of the pair in
+Fig.~\ref{fig-dif2010bw} and even 30/15 Myr window and step;
+Table.~\ref{tab-pk0vs1bs} and Fig.~\ref{fig-WinStpVsCPD}) and windows that are
+too narrow and steps that are too short which introduces noise by having too few
+poles in each window (e.g.\ 2 Myr window 1 Myr step; Table.~\ref{tab-pk0vs1bs}
+and Fig.~\ref{fig-WinStpVsCPD}). There is a dependence here on data density:
+higher density allows smaller windows/steps (this is one of the things we want
+to test with selective data removal mentioned in Chapter 4). Fitting curves by
+moving averaging change with different time window lengths and time increment
+lengths (i.e.\ steps) (e.g., the similarity of the pair in
 Fig.~\ref{fig-au-2010223} is improved a bit compared to
 Fig.~\ref{fig-au-105223}). A variety of ways of binning the data (here
 30\textendash2 Myr window size and half of the size as step) are being tested to
@@ -2194,18 +1758,6 @@ Fig.~\ref{fig-nac-dif} & Fig.~\ref{fig-nac-dif2010} & Y &\textendash &
   \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{(0,1,8,10,11,12,18,19,20,21,
   24,25)(0-5) (3,4,14),(0-3,5) (5,7,13,15),(0-2,4,5) 9,(0,2,4,5) 23,(2,3) 27,(0-2); account for 29/42}}} &
   \\ \\ \\ \\ \\ \hline
-Fig.~\ref{fig-nant-dif} & Fig.~\ref{fig-nant-dif2010} & Y &
-  \multirow{2}{*}{\parbox{2.5cm}{5 more best: Picking no. 4, 5, 6, 7 and 9 only for 20/10 (E)}} &
-  \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 11, 13, 15, 19, 21 and 25}} &
-  \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} & \multirow{2}{*}{\parbox{2cm}{Picking no. 2 for 10/5 (E); 11 for 20/10 (UE)}} &
-  \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 0, 3, 8, 10, 12, 14, 16, 17, 18, 20 and 24}} &
-  \multicolumn{1}{l|}{N} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
-  \multicolumn{1}{l|}{N} & \multicolumn{1}{l|}{N} &
-  \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{0,(1,3) (1,21),(0-5)
-  3,(1,2,5) 4,5 5,(0,1,4) 7,(0,2,5) (8,11,13,25),(0-2,4,5) (9,27),(4,5)
-  (10,12,20,24),1 15,(0,1,5) 17,4 19,(1,2,4,5) 22,(0-3,5) 26,(2,3,5); account
-  for 17/42}}} &
-  \\ \\ \\ \\ \\ \\ \\ \\ \hline
 Fig.~\ref{fig-ind-dif} & Fig.~\ref{fig-ind-dif2010} & Y &
   \multirow{2}{*}{\parbox{2.5cm}{2 more best: Picking no. 9 and 21 only for 10/5 (UE)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 4, 5, 6, 7 and 19}} &
@@ -2216,17 +1768,6 @@ Fig.~\ref{fig-ind-dif} & Fig.~\ref{fig-ind-dif2010} & Y &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{N} &
   \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{15,3 19,(0,1,3,5) 21,0
   (22,26),(0-5) 23,(1,3,4) 27,(1,3); account for 23/168}}} &  \\ \\ \\ \\ \hline
-Fig.~\ref{fig-indnt-dif} & Fig.~\ref{fig-indnt-dif2010} &
-  \multirow{2}{*}{\parbox{1cm}{N (partially Y)}} &
-  \multirow{2}{*}{\parbox{2.5cm}{Picking no. 1, 17, 25 and 26 for 10/5 (UE);
-  5, 7, 11 and 13 for 20/10 (E)}} & \multirow{2}{*}{\parbox{2cm}{Same:
-  Picking no. 4, 6, 9, 19 and 21}} & \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} &
-  \multirow{2}{*}{\parbox{2.4cm}{Picking no. 14 and 18 for 10/5 (E); 23 and 27 for 20/10 (UE)}} &
-  \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 0, 2, 8, 10, 12, 16 and 24}} &
-  \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
-  \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{N} &
-  \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{4,5 6,(3-5) 15,3 22,(3,5)
-  23,(0-3) 26,(2,3,5) 27,(0,2,3); account for 17/168}}} &  \\ \\ \\ \\ \hline
 Fig.~\ref{fig-au-dif} & Fig.~\ref{fig-au-dif2010} & Y &\textendash &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 11, 13, 17, 19, 21 and 25}} &
   Y & \multirow{2}{*}{\parbox{2.4cm}{1 more worst: Picking no. 6 only for 10/5 (E)}} &
@@ -2236,15 +1777,6 @@ Fig.~\ref{fig-au-dif} & Fig.~\ref{fig-au-dif2010} & Y &\textendash &
   \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{0,(1,2,5) (1,4,18,25),(0,1,3,5)
   7,0 (8,10,20),(2,5) 9,1 11,3 (12,24),(1,2) 13,(0,1,3) (14,22,26),(0-2,4,5)
   (16,17),(0-5) 19,5 21,(0,1,5); account for 33/84}}} &  \\ \\ \\ \\ \\ \\ \\ \\ \hline
-Fig.~\ref{fig-aunt-dif} & Fig.~\ref{fig-aunt-dif2010} & \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} &
-  \multirow{2}{*}{\parbox{2.5cm}{Picking no. 7 for 10/5 (UE); 15 for 20/10 (E)}} &
-  \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 11, 13, 17, 19, 21 and 25}} &
-  N & \multirow{2}{*}{\parbox{2.4cm}{Picking no. 6 for 10/5 (E); 4, 5 and 16 for 20/10 (UE)}} &
-  \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 2, 14, 22 and 26}} &
-  \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
-  \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{N} &
-  \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{(1,25),(3,5) 5,2 13,3 17,5
-  19,5 21,5; account for 9/168}}} &  \\ \\ \\ \hline
 \multicolumn{15}{c}{MHM} \\ \hline
 Fig.~\ref{fig-nac-difm} & Fig.~\ref{fig-nac-dif2010m} & N &
   \multirow{2}{*}{\parbox{2.5cm}{Picking no. 1, 13, 21 and 25 for 10/5 (UE);
@@ -2258,19 +1790,6 @@ Fig.~\ref{fig-nac-difm} & Fig.~\ref{fig-nac-dif2010m} & N &
   (1,19,21),(0,1,5) 3,5 (5,7),(0-2,4,5) 6,1 (9,13),(0,1,3,5) 23,(1,3)
   27,(1,3,5); account for 53/84}}} &
   \\ \\ \\ \\ \\ \\ \\ \hline
-Fig.~\ref{fig-nant-difm} & Fig.~\ref{fig-nant-dif2010m} &
-  \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} &
-  \multirow{2}{*}{\parbox{2.5cm}{Picking no. 23 and 27 for 10/5 (UE); 4 for 20/10 (E)}} &
-  \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 5, 7, 11, 13, 15, 19, 21 and 25}} &
-  \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} &
-  \multirow{2}{*}{\parbox{2cm}{Picking no. 17 for 10/5 (E); 20 for 20/10 (UE)}} &
-  \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 0, 8, 10, 12, 14, 16, 18 and 24}} &
-  \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
-  \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{N} &
-  \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{(0,3,21),5 (2,8,14),1
-  9,(1,3,5) 10,(2,4) 11,(0,1,5) 15,(2-5) 20,2 23,(1,3) 25,4 27,(0,1,3,5);
-  account for 13/84}}} &
-  \\ \\ \\ \\ \\ \hline
 Fig.~\ref{fig-ind-difm} & Fig.~\ref{fig-ind-dif2010m} & Y &
   \multirow{2}{*}{\parbox{2.5cm}{2 more best: Picking no. 22 and 26 only for 10/5 (UE)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 4, 5, 6, 7 and 19}} &
@@ -2280,17 +1799,6 @@ Fig.~\ref{fig-ind-difm} & Fig.~\ref{fig-ind-dif2010m} & Y &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{N} &
   \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{1,5 (4,15),3 (19,23,27),(0-5)
   21,(0,1,35) 22,(1,4) 25,(3,5) 26,4; account for 5/28}}} &  \\ \\ \\ \\ \hline
-Fig.~\ref{fig-indnt-difm} & Fig.~\ref{fig-indnt-dif2010m} &
-  \multirow{2}{*}{\parbox{1cm}{N (partially Y)}} &
-  \multirow{2}{*}{\parbox{2.5cm}{Picking no. 1, 4 and 21 for 10/5 (UE);
-  9, 23 and 27 for 20/10 (E)}} & \multirow{2}{*}{\parbox{2cm}{Same:
-  Picking no. 6, 15, 17, 19, 22 and 26}} & \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} &
-  \multirow{2}{*}{\parbox{2.4cm}{Picking no. 14 for 10/5 (E); 3 and 18 for 20/10 (UE)}} &
-  \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 0, 2, 8, 10, 12, 16 and 24}} &
-  \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
-  \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{N} &
-  \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{4,5 15,(1-3) 19,2
-  21,(4,5); account for 7/168}}} &  \\ \\ \\ \\ \hline
 Fig.~\ref{fig-au-difm} & Fig.~\ref{fig-au-dif2010m} & Y &
   \multirow{2}{*}{\parbox{2.5cm}{3 more best: Picking no. 15, 23 and 27 only for 20/10 (E)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 11, 13, 17, 19, 21 and 25}} &
@@ -2300,17 +1808,7 @@ Fig.~\ref{fig-au-difm} & Fig.~\ref{fig-au-dif2010m} & Y &
   \multicolumn{1}{l|}{N} & \multicolumn{1}{l|}{N} &
   \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{(0,24),(1,2,5)
   (1,11,13,18,19,21,25),(0,1,3,5) 4,(0,3,5) (5,7),3 (8,17),(0-3,5) 12,(1-3,5)
-  20,(1,2,4,5) 10,(1,2) (14,22,26),(0-2,4,5) 16,(0-5); account for 10/21}}} &  \\ \\ \\ \\ \\ \\ \\ \hline
-Fig.~\ref{fig-aunt-difm} & Fig.~\ref{fig-aunt-dif2010m} &
-  \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} &
-  \multirow{2}{*}{\parbox{2.5cm}{Picking no. 17 for 10/5 (UE); 5, 7, 15, 23 for 20/10 (E)}} &
-  \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 11, 13, 19, 21 and 25}} &
-  N & \multirow{2}{*}{\parbox{2.4cm}{Picking no. 10, 18 for 10/5 (E); 20 for 20/10 (UE)}} &
-  \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 2, 6, 8, 14, 22 and 26}} &
-  \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
-  \multicolumn{1}{l|}{N} & \multicolumn{1}{l|}{N} &
-  \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{(1,11,19,21,25),(0,1,3,5)
-  13,(0,1) 17,(0-3,5); account for 9/56}}} & 
+  20,(1,2,4,5) 10,(1,2) (14,22,26),(0-2,4,5) 16,(0-5); account for 10/21}}} & 
 \end{tabular}%
 }
 \end{table*}
