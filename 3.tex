@@ -569,7 +569,15 @@ criteria 5; and Pt 18 and 19 are related to the V90 criteria 7.
 
 \subsection{Path Comparison Method}
 
-The path comparison method has been detailedly described in Chapter 2.
+Chapter 2 proposes a new method of determining the degree of similarity between
+two APWPs that combines three separate difference metrics that assess both
+spatial distance of coeval points, and similarities in the bearing and length of
+coeval segments using a weighted linear summation. In this chapter, the path
+comparison method is used to measure similarity between the hotspot and
+sea-floor spreading model predicted APWP and the 168 different paleomagnetic
+APWPs. This does not only help us find the most similar paleomagnetic APWP to
+the other-model predicted APWP, but also help further test the validness
+of the measuring tool in practise.
 
 \section{Results and Discussions}
 
@@ -636,7 +644,7 @@ observe:
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/101_120_0.pdf}
-		\caption{North America (101): minimum 0.0053 (11, 0), maximum 0.0921 (16, 3), mean 0.0329, median 0.0334}\label{fig-nac-dif} % subcaption
+		\caption{North America (101 with children): minimum 0.0053 (11, 0), maximum 0.0921 (16, 3), mean 0.0329, median 0.0334}\label{fig-nac-dif} % subcaption
 	\end{subfigure}
 	\vspace{.1em} % here you can insert horizontal or vertical space
 	\begin{subfigure}{1.01\textwidth}
@@ -646,15 +654,15 @@ observe:
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/801_120_0.pdf}
-		\caption{Australia (801): minimum 0.0037 (17, 0), maximum 0.3954 (22, 3), mean 0.0813, median 0.0453}\label{fig-au-dif} % subcaption
+		\caption{Australia (801 with children): minimum 0.0037 (17, 0), maximum 0.3954 (22, 3), mean 0.0813, median 0.0453}\label{fig-au-dif} % subcaption
 	\end{subfigure}
-	\caption[Differences with test of each plate's paleomagnetic APWPs versus
+	\caption[Differences of each plate's paleomagnetic APWPs versus
 its FHM predicted APWP]{Equal-weight composite path difference ($\mathcal{CPD}$)
-values with test between each continent's paleomagnetic APWPs and its predicted
-APWP from FHM and related plate circuits. The paths are in 10 Myr bin and 5 Myr
-step. The difference values less than one-standard-deviation interval of the
-whole 168 values are labeled in green, more than one-standard-deviation interval
-labeled in red.}\label{fig-dif} % caption for whole figure
+values between each continent's paleomagnetic APWPs and its predicted APWP from
+FHM and related plate circuits. The paths are in 10 Myr bin and 5 Myr step. The
+difference values less than one-standard-deviation interval of the whole 168
+values are colored in green, more than one-standard-deviation interval colored
+in red.}\label{fig-dif} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -802,7 +810,7 @@ to each segment-orientation-change's three mean path poles.}\label{fig-nada}
 		\includegraphics[width=\textwidth]{figures/ay18_801comb_10_5_22_3.pdf}
 		\caption{Australia (801): maximum 0.3954 (22, 3)}\label{fig-au-105223}
 	\end{subfigure}
-	\caption[Best and worst differences with test (10 Myr bin, 5 Myr
+	\caption[Best and worst differences (10 Myr bin, 5 Myr
 step)]{Path comparisons with best and worst difference values shown in
 Fig.~\ref{fig-dif}.}\label{fig-difbw}
 \end{figure*}
@@ -823,7 +831,7 @@ Fig.~\ref{fig-dif}.}\label{fig-difbw}
 		\includegraphics[width=\textwidth]{figures/f501d801.pdf}
 		\caption{India (501) - Australia (801)}\label{fig-i-a-dif}
 	\end{subfigure}
-	\caption[Differences of differences with test of each plate's paleomagnetic
+	\caption[Differences of differences of each plate's paleomagnetic
 APWPs versus its FHM predicted APWP]{Differences between grids in
 Fig.~\ref{fig-dif}. The absolute difference values less than
 1.96-standard-deviation interval of the whole 168 values are labeled in green,
@@ -833,27 +841,27 @@ more than 1.96-standard-deviation interval labeled in red.}\label{fig-d-dif}
 \begin{figure*}
 	\centering
 	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/101_120_0AMPvsAPP.pdf}
+		\includegraphics[width=\textwidth]{figures/101_120_0APPvsAMP.pdf}
 		\caption{North America: AMP: minimum 0.00796 (4, 0), maximum 0.0921 (16,
 		3), mean 0.04515, median 0.04664; APP: minimum 0.0053 (11, 0), maximum
 		0.05686 (5/7, 3), mean 0.02059, median 0.01594}\label{fig-na-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/501_120_0AMPvsAPP.pdf}
+		\includegraphics[width=\textwidth]{figures/501_120_0APPvsAMP.pdf}
 		\caption{India: AMP: minimum 0.0292 (4, 3), maximum 0.5137 (8, 3), mean
 		0.1668, median 0.1862; APP: minimum 0.023 (19, 0), maximum 0.1359 (3,
 		4), mean 0.06798, median 0.0609}\label{fig-in-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/801_120_0AMPvsAPP.pdf}
+		\includegraphics[width=\textwidth]{figures/801_120_0APPvsAMP.pdf}
 		\caption{Australia: AMP: minimum 0.0231 (4, 0), maximum 0.3954 (22,
 		3), mean 0.1203, median 0.0598; APP: minimum 0.0037 (17, 0), maximum
 		0.11035 (15, 3), mean 0.04225, median 0.02692}\label{fig-au-difAMPvsAPP}
 	\end{subfigure}
-	\caption[Differences with test of each plate's paleomagnetic APWPs versus
-its FHM predicted APWP (AMP vs APP)]{Separated results from AMP and APP in
+	\caption[Differences of each plate's paleomagnetic APWPs versus its FHM
+predicted APWP (AMP vs APP)]{Separated results from AMP and APP in
 Fig.~\ref{fig-dif}. For each grid block (left: AMP; right: APP), the difference
 values less than one-standard-deviation interval of the whole 84 values are
 labeled in green, more than one-standard-deviation interval labeled in
@@ -886,7 +894,7 @@ According to the results (Fig.~\ref{fig-dif2010}), we can observe:
 		\includegraphics[width=\textwidth]{figures/801_20_10_120_0.pdf}
 		\caption{Australia (801): minimum 0.0022 (11, 0), maximum 0.3265 (22, 3), mean 0.0686, median 0.0346}\label{fig-au-dif2010}
 	\end{subfigure}
-	\caption[Differences with test of each plate's paleomagnetic APWPs versus
+	\caption[Differences of each plate's paleomagnetic APWPs versus
 its FHM predicted APWP]{Same as Fig.~\ref{fig-dif}. The only difference is here
 the paths are in 20 Myr bin and 10 Myr step. The difference values less than
 one-standard-deviation interval of the whole 168 values are labeled in green,
@@ -922,7 +930,7 @@ of picked paleo-poles in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
 		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_22_3.pdf}
 		\caption{Australia (801): maximum 0.3265 (22, 3)}\label{fig-au-2010223}
 	\end{subfigure}
-	\caption[Best and worst differences with test (20 Myr bin, 10 Myr
+	\caption[Best and worst differences (20 Myr bin, 10 Myr
 step)]{Path comparisons with best and worst difference values shown in
 Fig.~\ref{fig-dif2010}.}\label{fig-dif2010bw}
 \end{figure*}
@@ -951,7 +959,7 @@ Fig.~\ref{fig-mhsPred801}) as the reference path.
 		\includegraphics[width=\textwidth]{figures/801_120_0m.pdf}
 		\caption{Australia (801): minimum 0.0024 (17, 5), maximum 0.3662 (22, 3), mean 0.0744, median 0.0374}\label{fig-au-difm}
 	\end{subfigure}
-	\caption[Differences with test of each plate's paleomagnetic APWPs versus
+	\caption[Differences of each plate's paleomagnetic APWPs versus
 its MHM predicted APWP]{Same as Fig.~\ref{fig-dif} except that the reference
 path is predicted from MHM here. See the numbers of picked paleo-poles in
 Fig.~\ref{fig-dif}.}\label{fig-difm}
@@ -985,7 +993,7 @@ Fig.~\ref{fig-dif}.}\label{fig-difm}
 		\includegraphics[width=\textwidth]{figures/ay18_801comb_10_5_22_3m.pdf}
 		\caption{Australia (801): maximum 0.3662 (22, 3)}\label{fig-au-105223m}
 	\end{subfigure}
-	\caption[Best and worst differences with test (10 Myr bin, 5 Myr
+	\caption[Best and worst differences (10 Myr bin, 5 Myr
 step)]{Path comparisons with best and worst difference values shown in
 Fig.~\ref{fig-difm}.}\label{fig-difbwm}
 \end{figure*}
@@ -1026,10 +1034,43 @@ According to the results (Fig.~\ref{fig-dif2010m}), we can observe:
 		\includegraphics[width=\textwidth]{figures/801_20_10_120_0m.pdf}
 		\caption{Australia (801): minimum 0.0047 (23, 4), maximum 0.3158 (26, 3), mean 0.0638, median 0.0307}\label{fig-au-dif2010m}
 	\end{subfigure}
-	\caption[Differences with test of each plate's paleomagnetic APWPs versus
+	\caption[Differences of each plate's paleomagnetic APWPs versus
 its MHM predicted APWP]{Same as Fig.~\ref{fig-dif2010} except that the reference
 path is predicted from MHM here. See the numbers of picked paleo-poles in
 Fig.~\ref{fig-dif}.}\label{fig-dif2010m}
+\end{figure*}
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_15_5m.pdf}
+		\caption{North America (101): minimum 0.0058 (15, 5)}\label{fig-nac-2010155m}
+	\end{subfigure}
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_8_4m.pdf}
+		\caption{North America (101): maximum 0.1041 (8, 4)}\label{fig-nac-201084m}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_6_3m.pdf}
+		\caption{India (501): minimum 0.0177 (6, 3)}\label{fig-ind-201063m}
+	\end{subfigure}
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_16_3m.pdf}
+		\caption{India (501): maximum 0.162 (16, 3)}\label{fig-ind-2010163m}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_23_4m.pdf}
+		\caption{Australia (801): minimum 0.0047 (23, 4)}\label{fig-au-2010234m}
+	\end{subfigure}
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_26_3m.pdf}
+		\caption{Australia (801): maximum 0.3158 (26, 3)}\label{fig-au-2010263m}
+	\end{subfigure}
+	\caption[Best and worst differences (20 Myr bin, 10 Myr
+step)]{Path comparisons with best and worst difference values shown in
+Fig.~\ref{fig-dif2010m}.}\label{fig-dif2010bwm}
 \end{figure*}
 
 
