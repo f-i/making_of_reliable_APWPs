@@ -391,27 +391,32 @@ No. & Picking Algorithm \\ \midrule
 \subparagraph{Filtering through $\alpha$95 and Age Range}
 
 For this specific filter (Picking No 2 and 3; Table.~\ref{tab-pick}), the
-paleopoles are picked out through setting $\alpha$95 of $\leq15\degree$ and age
-uncertainty of $\leq20$ Myr.
+paleopoles are picked out through setting $\alpha$95 of $\leq15\degree$
+(referring to the BC02's $\alpha$95 filter for the Mesozoic~\cite{B02} and
+SS05's $\alpha$95 filter~\cite{S05}) and age uncertainty of $\leq20$ Myr
+(a bit stricter than BC02's $\leq30$ Myr age uncertainty filter~\cite{B02} and
+SS05's $\leq40$ Myr filter~\cite{S05}). This filter considers both spacial and
+temporal uncertainties of the paleopoles.
 
 \subparagraph{Filtering Out Non-igneous Derived Poles}
 
 With this filter (Picking No 4 and 5; Table.~\ref{tab-pick}), the paleopoles are
 mainly (mostly but also containing sedimentary or metamorphic or both) or only
-from igneous rocks with extrusive or intrusive type.
+from igneous rocks with extrusive or intrusive type. In fact, most paleopoles
+picked by this filter are derived from igneous-only rocks.
 
 \subparagraph{Filtering Out Igneous Unrelated Poles}
 
-With this filter, the poles are from rocks that contain extrusive or intrusive
-igneous type. In other words, the rock type could be mainly sedimentary or
-metamorphic.
+With this filter (Picking No 6 and 7; Table.~\ref{tab-pick}), the poles are from
+rocks that contain extrusive or intrusive igneous type. In other words, the rock
+type could be mainly sedimentary or metamorphic.
 
 \subparagraph{Inclination Shallowing and Unflattening}
 
 To test if unflattening possible inclination shallowing in sedimentary rocks can
 improve the APWP fitting outcomes, the flattening function~\cite{K55} $\tan I_o
 = f \tan I_f$ is used to unflatten assumed existing inclination shallowing in
-sedimentary-based or redbeds-based paleomagnetic data (No $5$ and $7$ in
+sedimentary-based or redbeds-based paleomagnetic data (No $8,9$ and $12,13$ in
 Table.~\ref{tab-pick}), where $I_o$ is the observed inclination, $I_f$ is the
 unflattened inclination, and $f$ is the flattening factor (or shallowing
 coefficient) ranging from unity (no flattening) to 0 (completely flattened).
@@ -434,22 +439,24 @@ derived results (Picking No 4\textendash7 in Table.~\ref{tab-pick}).
 \subparagraph{Filtering Out Poles Published Earlier or Later}
 
 It is also worthy to see if recently published data is able to produce a more
-reliable APWP than relatively older data. Here 1983 is chosen as the division,
-because the mean of the data publication years is about 1983.
+reliable APWP than relatively older data. Here 1983 is chosen as the division
+(Picking No $14,15$ and $16,17$; Table.~\ref{tab-pick}), because the mean of all
+the data publication years in GPMDB 4.6b is about 1983.
 
 \subparagraph{Filtering Out Poles Influenced by Local Rotations or Secondary
 Print}
 
 Some publications of paleomagnetic data suggest the data has probably been
-affected by local rotations or secondary overprints. So for this filter, this
-type of data are removed.
+affected by local rotations or secondary overprints. So for this filter
+(Picking No 18 and 19; Table.~\ref{tab-pick}), this type of data are removed.
 
 \subparagraph{Filtering Out Poles Influenced by Local Rotations or Correcting
 Them if Suggested}
 
 Some publications suggest the data has been through local rotation and propose a
-solution of correction. With this filter, if there is a correction suggestion,
-the data is corrected; if no, the data is simply removed.
+solution of correction. With this filter (Picking No 20 and 21;
+Table.~\ref{tab-pick}), if there is a correction suggestion, the data is
+corrected; if no, the data is simply removed.
 
 \subparagraph{Filtering Using SS05 Liability Criteria}
 
@@ -457,12 +464,19 @@ SS05~\cite{S05} provided their criteria of picking paleomagnetic data for
 producing their APWPs. This filter is reproducing their criteria by setting
 $\alpha$95 of $\leq15\degree$, age uncertainty of $\leq40$ Myr, sampling sites'
 quantity of $\geq4$, samples' quantity of at least 4 times of the sites, and
-laboratory analytical procedure code of at least 2.
+laboratory analytical procedure code of at least 2 (Picking No 22 and 23;
+Table.~\ref{tab-pick}).
 
 \subparagraph{Filtering Out Superseded Data}
 
-In this filter, those superseded data already included in other newer results
-are excluded.
+In this filter (Picking No 24 and 25; Table.~\ref{tab-pick}), those superseded
+data already included in other newer results are excluded.
+
+\subparagraph{Filtering Using SS05 Liability Criteria Without Superseded Data}
+
+The last two filters are also combined into one (Picking No 26 and 27;
+Table.~\ref{tab-pick}) to see if SS05 Liability Criteria~\cite{S05} performs
+better using renewed datasets.
 
 \paragraph{Weighting}
 
@@ -932,7 +946,7 @@ of picked paleo-poles in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
 	\end{subfigure}
 	\caption[Best and worst differences (20 Myr bin, 10 Myr
 step)]{Path comparisons with best and worst difference values shown in
-Fig.~\ref{fig-dif2010}.}\label{fig-dif2010bw}
+Fig.~\ref{fig-dif2010}. The parenthetical remarks are Picking No and Weighting No.}\label{fig-dif2010bw}
 \end{figure*}
 
 
@@ -995,7 +1009,7 @@ Fig.~\ref{fig-dif}.}\label{fig-difm}
 	\end{subfigure}
 	\caption[Best and worst differences (10 Myr bin, 5 Myr
 step)]{Path comparisons with best and worst difference values shown in
-Fig.~\ref{fig-difm}.}\label{fig-difbwm}
+Fig.~\ref{fig-difm}. The parenthetical remarks are Picking No and Weighting No.}\label{fig-difbwm}
 \end{figure*}
 
 \paragraph{10 Myr Binning and 5 Myr Stepping}
@@ -1070,7 +1084,7 @@ Fig.~\ref{fig-dif}.}\label{fig-dif2010m}
 	\end{subfigure}
 	\caption[Best and worst differences (20 Myr bin, 10 Myr
 step)]{Path comparisons with best and worst difference values shown in
-Fig.~\ref{fig-dif2010m}.}\label{fig-dif2010bwm}
+Fig.~\ref{fig-dif2010m}. The parenthetical remarks are Picking No and Weighting No.}\label{fig-dif2010bwm}
 \end{figure*}
 
 
