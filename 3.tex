@@ -170,7 +170,7 @@ nature of the reference APWP.
 
 \subsection{Paleomagnetic Data}
 
-Collections of poles with a minimum age (LOWMAGAGE) $\leq$135 Ma for the North
+Collections of poles with a minimum age (LOMAGAGE) $\leq$135 Ma for the North
 American (Plate ID 101), the Indian (ID 501) and Australian (ID 801) plates,
 were extracted from the GPMDB\@. In order to include valid paleopoles from
 blocks that moved independently prior to 120 Ma, which therefore have different
@@ -184,63 +184,36 @@ the search region was defined by the North American (ID 101), Avalon/Acadia (ID
 model of~\cite{Y18}. Following extraction, 58 poles from southwestern North
 America that have been affected by regional rotations since 36 Ma~\cite{Mc06},
 were removed. The final dataset consists of 135 paleopoles
-(Fig.~\ref{fig_NAfinal}), with 76 (about 56.3\%) sampled from dominantly igneous
-sequences; 56 (about 41.5\%) sampled from mostly sedimentary sequences,
+(Fig.~\ref{fig-120NAhist}), with 76 (about 56.3\%) sampled from dominantly
+igneous sequences; 56 (about 41.5\%) sampled from mostly sedimentary sequences,
 including 6 from redbeds); and 3 (about 2.2\%) from metamorphic sequences. The
 principal features of the age distribution are a larger number of young ($<$5
 Ma) poles, and relatively fewer poles in the Late Cretaceous and Miocene.
 
-\begin{figure}
-\includegraphics[scale=.4]{figures/Appendix/101.pdf}
-\caption{The final filtered datasets (red triangle-inside-circles) for later
-analysis on 120\textendash0 Ma North America. Those poles that had been
-influenced by local tectonic rotations are shown as white
-circles.}\label{fig_NAfinal}
-\end{figure}
-
 \subparagraph{for India,}
 the Indian block (ID 501) as defined by~\cite{Y18} was used, but following
-extraction xx poles associated with parts of the northern margin that
-have undergone regional rotations since the Jurassic (Gaina et al. 2015) were
-removed. The final dataset consists of 74 paleopoles (current Fig. 5),
-with xx (xx\%) sampled from dominantly(?) igneous sequences and yy (yy\%) sampled
-from mostly sedimentary sequences, including 3 from redbeds). There is a high
-concentration of poles from the latest Cretaceous-early Cenozoic (70-60 Ma),
-many of which are igneous; in younger and older intervals, there are fewer,
-mostly sedimentary poles.
+extraction 31 paleopoles associated with parts of the northern margin that
+have undergone regional rotations since the Jurassic~\cite{G15} were removed.
+The final dataset consists of 75 paleopoles (Fig.~\ref{fig-120INhist}), with
+39 (52\%) sampled from dominantly igneous sequences and 36 (48\%) sampled from
+mostly sedimentary sequences, including 3 from redbeds). There is a high
+concentration of poles from the latest Cretaceous\textendash{}Early Cenozoic
+(c.70\textendash60 Ma), many of which are igneous; in younger and older
+intervals, there are fewer, mostly sedimentary poles.
 
 \subparagraph{for Australia,}
-the Australia (ID 801), Sumba (ID 675), and Timor (ID 684) blocks as defined by
-Young et al. (2018) were used, in combination with data from the Tasmania block
-(ID 805) younger than c. 100 Ma [It is actually unclear how you filtered this
-data; give a specific criterion], prior to which it was not fixed with respect
-to Australia (Young et al. 2018). The final dataset consists of 97
-paleopoles (current Fig. 6), with xx (xx\%) sampled from dominantly(?)
-igneous sequences and yy (yy\%) sampled from mostly sedimentary sequences,
-including yy from redbeds). The temporal distribution of poles is relatively
-uniform.
+the Australia (ID 801), Sumba (ID 675), and Timor (ID 684) blocks as defined
+by~\cite{Y18} were used, in combination with data from the Tasmania block (ID
+805) younger than c. 100 Ma (with a maximum age (HIMAGAGE) $\leq$100 Ma), prior
+to which it was not fixed with respect to Australia~\cite{Y18}. The final
+dataset consists of 99 paleopoles (Fig.~\ref{fig-120AUhist}), with 61 (61.6\%)
+sampled from dominantly igneous sequences and 38 (38.4\%) sampled from mostly
+sedimentary sequences, including 9 from redbeds). The temporal distribution of
+poles is relatively uniform.
 
-A polygon can be
-drawn around a set of data, whose sampling sites we believe belong to a specific
-plate or rigid block. Then the {\em Spatial Join\/} technique~\cite{J07} helps
-join attributes from the polygon to the paleomagnetic data based on the spatial
-relationship allowing data within this polygon to be extracted from the whole
-raw large dataset without splitting a subset just for a specific plate. That
-allows us to quickly select subsets of the database based on geographic
-constraints just as easily as for age. Of course, the boundary of this polygon
-must be reasonably along a tectonic boundary. Regions like those close to the
-plate boundaries are usually tectonically active (e.g.\ local rotations), so we
-should also be careful when we deal with the paleopoles derived from this type
-of locations. For example, the published plate polygons~\cite{Y18} are used to
-extract data for 120\textendash0 Ma North America, and then another set of
-higher-resolution plate polygons and rotations of West US~\cite{Mc06} are used
-to remove the datasets that are influenced by local rotations (see the details
-about data filtering for North America, India and Australia in the Supplementary
-Material). The temporal distributions of North American, Indian and Australian
-120\textendash0 Ma poles are shown in Fig.~\ref{fig-120NAhist},
-Fig.~\ref{fig-120INhist} and Fig.~\ref{fig-120AUhist}. Compared with North
-American and Australian paleopoles, Indian paleopoles are in relatively lower
-density in general except during the period of about 60\textendash70 Ma
+Compared with North American (Fig.~\ref{fig-120NAhist}) and Australian
+(Fig.~\ref{fig-120AUhist}) paleopoles, Indian paleopoles are in relatively lower
+density in general except during the period of about 70\textendash60 Ma
 (Fig.~\ref{fig-120INhist}).
 
 \begin{figure*}
@@ -2061,6 +2034,11 @@ Center for their remote HPC resources.
   Besse, J. \& Courtillot, V., 2002, Apparent and true polar wander and the
   geometry of the geomagnetic field over the last 200 Myr, \jgr{}\textbf{107},
   2300.
+\bibitem[\protect\citename{Christeson et al. }2014]{C14}
+  Christeson, G. L., Van Avendonk, H. J. A., Norton, I. O., Snedden, J. W.,
+  Eddy, D. R., Karner, G. D. \& Johnson, C. A., 2014. Deep crustal structure in
+  the eastern Gulf of Mexico, \textit{J. Geophys. Res. Solid Earth},
+  \textbf{401}, 183\textendash195.
 \bibitem[\protect\citename{Domeier et al. }2011a]{D11}
   Domeier, M., van der Voo, R. \& Denny, F. B., 2011. Widespread inclination
   shallowing in Permian and Triassic paleomagnetic data from Laurentia: Support
@@ -2076,6 +2054,11 @@ Center for their remote HPC resources.
 \bibitem[\protect\citename{Fisher }1953]{F53}
   Fisher, R. A., 1953. Dispersion on a sphere, \textit{Proc. Roy. Soc. London
   Ser. A.}, \textbf{217}, 295\textendash305.
+\bibitem[\protect\citename{Gaina et al. }2015]{G15}
+  Gaina, C., van Hinsbergen D. J. J. \& Spakman, W., 2015. Tectonic interactions
+  between India and Arabia since the Jurassic reconstructed from marine
+  geophysics, ophiolite geology, and seismic tomography, \textit{Tectonics},
+  \textbf{34}, 875\textendash906.
 \bibitem[\protect\citename{Jacox \& Samet }2007]{J07}
   Jacox, E. H. \& Samet, H., 2007. Spatial Join Techniques, \textit{ACM Trans.
   Database Syst.}. \textbf{32}, 7.
@@ -2154,6 +2137,60 @@ Center for their remote HPC resources.
 \appendix
 \section{Constrain Paleopoles For A Certain Tectonic Plate}
 
+A polygon can be drawn around a set of paleomagnetic data, whose sampling sites
+we believe belong to a specific plate or rigid block. Then the {\em Spatial
+Join\/} technique~\cite{J07} helps join attributes from the polygon to the
+paleomagnetic data based on the spatial relationship allowing data within this
+polygon to be extracted from the whole raw large dataset without splitting a
+subset just for a specific plate. That allows us to quickly select subsets of
+the database based on geographic constraints just as easily as for age. Of
+course, the boundary of this polygon must be reasonably along a tectonic
+boundary. Regions like those close to the plate boundaries are usually
+tectonically active (e.g.\ local rotations), so we should also be careful when
+we deal with the paleopoles derived from this type of locations.
+
 \subsection{120\textendash0 Ma North America}
 
-The data-constraining polygons are from the recently published plate~\label{lastpage}
+The data-constraining polygons are from the recently published plate
+model~\cite{Y18} (Fig.~\ref{fig_NAfinal}). Plate ID 101 polygon in the
+recently published Plate Model~\cite{Y18}, including its children 108
+(Avalon/Acadia block) and 109 (Piedmont block) polygons for 120\textendash0 Ma,
+is used to select the sampling sites of the paleopoles for North America.
+According to the plate model rotation data~\cite{Y18}, 108 is fixed to 101
+during the geologic period from Cretaceous to the present day. 109 is also fixed
+to 101 since about 300 Ma~\cite{C14}. Then in order to be compared with the FHM
+(120\textendash0 Ma)~\cite{M93,M99}, the paleopoles with age ranging
+120\textendash0 Ma are further selected through constraining the lower magnetic
+age ``LOMAGAGE $<=$ 135'' (here it is not 120 but 135, because for the lower
+resolution case when the window length is 30 Myr, the Age Position Picking
+method will include those data with their lower magnetic age between 120 Ma and
+135 Ma). In addition, the RESULTNO=6007 dataset should also be included
+according to a published plate kinematic model~\cite{Mc06}
+with a relatively higher resolution of polygons and
+rotations, although the dataset is in the PlateID=178 polygon. In the end, 193
+datasets in total are extracted (both white circles and red
+triangle-inside-circles in Fig.~\ref{fig_NAfinal}).
+
+Also based on this model of southwestern North America since 36 Ma~\cite{Mc06},
+part of the paleopoles constrained by the four small western terranes whose
+Plate IDs are also 101 (white circles in Fig.~\ref{fig_NAfinal}) in fact had gone through regional
+rotations and here are removed. However, the poles with age younger than 10 Ma
+located within the largest western 101 terrane (on the south of the smallest
+western 101 terrane; corresponding to the RANGE\_ID=74 polygon in the
+model~\cite{Mc06}) should be included. So finally 135 of the 193 datasets remain
+(Fig.~\ref{fig_NAfinal}). Spatially North American paleomagnetic data are mainly
+from the western and eastern margins of the plate.
+
+\begin{figure}
+\includegraphics[scale=.4]{figures/Appendix/101.pdf}
+\caption{The final filtered datasets (red triangle-inside-circles) for later
+analysis on 120\textendash0 Ma North America. Those poles that had been
+influenced by local tectonic rotations are shown as white
+circles.}\label{fig_NAfinal}
+\end{figure}
+
+\subsection{120\textendash0 Ma India}
+
+Plate ID 501 polygons in the recently published Plate Model~\cite{Y18} includes
+the two small polygons of the northern Lesser Himalayan pass margin Greater
+Indian Basin and Tethyan Himalayan microcontinent of Greater India~\label{lastpage}
