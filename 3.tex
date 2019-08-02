@@ -162,7 +162,7 @@ issues.
 In this study, we use paleopoles extracted from the GPMDB to generate APWPs for
 the period 120\textendash0 Ma. A range of possible APWP paths for North America,
 India and Australia can be generated from the extracted sets of paleopoles using
-various windowing, filtering and weighting methods (Tables.~\ref{tab-pick}
+various binning, filtering and weighting methods (Tables.~\ref{tab-pick}
 and~\ref{tab-weit}). These paths can then be compared to synthetic APWPs
 independently generated from an absolute plate motion model. The three plates
 chosen have different attributes, both in terms of the input data set and the
@@ -220,19 +220,20 @@ density in general except during the period of about 70\textendash60 Ma
 \centering
 \includegraphics[width=.85\textwidth]{figures/120NAhist.pdf}
 \caption[Distribution of 120\textendash0 Ma North American poles]{Temporal
-distribution of 120\textendash0 Ma $NAC$ (101) paleopoles in 10 Myr binning and
-5 Myr step. For distribution a, each bin only counts in the midpoints (circles)
-of pole error bars (not including those right at bin edges); For distribution b,
-as long as the bar intersects with the bin (not including those intersecting
-only at one of bin edges), it is counted in. Inside the parentheses, i means
-igneous rocks derived (red bars; only two poles, 83\textendash77 Ma and
-80\textendash65 Ma, from igneous and also sedimentary; only one pole,
-72\textendash40 Ma, from igneous and also metamorphic), r means sedimentary
-rocks with redbeds involved derived (orange bars), and m means metamorphic rocks
-derived (blue bars); the left are non-redbed sedimentary rocks derived (black
-bars; only two poles, 146\textendash65 Ma [RESULTNO 6679] and 2\textendash0 Ma
-[RESULTNO 1227], are from sedimentary and also metamorphic). The data published
-before 1984 are shown as circles with a dot.}\label{fig-120NAhist}
+distribution of 120\textendash0 Ma $NAC$ (101) paleopoles in 10 Myr window
+length and 5 Myr step length. For distribution a, each bin only counts in the
+midpoints (circles) of pole error bars (not including those right at bin edges);
+For distribution b, as long as the bar intersects with the bin (not including
+those intersecting only at one of bin edges), it is counted in. Inside the
+parentheses, i means igneous rocks derived (red bars; only two poles,
+83\textendash77 Ma and 80\textendash65 Ma, from igneous and also sedimentary;
+only one pole, 72\textendash40 Ma, from igneous and also metamorphic), r means
+sedimentary rocks with redbeds involved derived (orange bars), and m means
+metamorphic rocks derived (blue bars); the left are non-redbed sedimentary rocks
+derived (black bars; only two poles, 146\textendash65 Ma [RESULTNO 6679] and
+2\textendash0 Ma [RESULTNO 1227], are from sedimentary and also metamorphic).
+The data published before 1984 are shown as circles with a
+dot.}\label{fig-120NAhist}
 \end{figure*}
 
 \begin{figure*}
@@ -258,88 +259,47 @@ metamorphic rocks. See Fig.~\ref{fig-120NAhist} for more
 information.}\label{fig-120AUhist}
 \end{figure*}
 
-\subsection{Reference Paths: The Hotspot and Seafloor Spreading Model Predicted}
+\subsection{APWP Generation}
 
-After about 170 Ma, multiple data sources can help constrain plate motions in
-more accurate ways. One of the most developed and studied plate kinematics
-models is the Fixed Hotspot Model (FHM)~\cite{M93,M99}, which assumes the
-Atlantic and Indian hotspots are relatively fixed. Another one is the Moving
-Hotspot Model (MHM)~\cite{O05}, which is based on mantle convection models that
-indicate large motions of the Indo-Atlantic hotspots.
+Multiple APWPs were generated using the selected poles for each of the three
+plates as follows:
 
-Such a model like FHM or MHM can predict APWPs for main continents, e.g.\ the
-North America (Plate ID 101) (Fig.~\ref{fig-mhsPred}), the India (501)
-(Fig.~\ref{fig-mhsPred501}) and the Australia (801) (Fig.~\ref{fig-mhsPred801}),
-with the help of global tectonic plate motion
-data (i.e.\ plate circuits) from the ocean basins (i.e.\ spreading sea floors)
-that has been reconstructed for the last c. 180\textendash200 Myr (although the
-extrapolation is required; hard to constrain uncertainties). These more accurate
-and totally different-source derived model-predicted APWPs can be compared to
-data from the paleomagnetic database. For about 120 Ma to the present, India
-drifts much faster than North America and Australia. North America has been
-drifting rather slow. Australia's drifting rate is between North America and
-India. In addition, India drifts almost north, whereas North America east and
-then north, and Australia west and then north. So these three continents are
-representatives for three different types of plate kinematics.
+\subparagraph{Picking/binning.} A moving average or moving window technique
+was used: paleopoles were selected for each APWP time step (initially 5 Myr
+step length from 0 to 120 Ma) if their age fell within a window centered on the
+current step age. In this study, the width of the moving window was always twice
+that of time step (i.e.\ initially 10 Myr), such that each window half-overlaps
+with its neighbours.
 
-The oldest pole that can be predicted from the FHM is about 120 Ma. For example,
-the North American 120\textendash0 Ma APWP predicted from this rotation model
-and latest published spreading ridge rotations (collected plate circuit data
-will be shared as a supplementary material) will be taken as a reference path
-(Fig.~\ref{fig-mhsPred}), which will be compared with paleomagnetic APWPs for
-the same plate or continent.
+\subparagraph{Filtering.} Poles with characteristics thought to correspond to
+poor data quality, or lacking characteristics thought to correspond to good
+data quality, were discarded (or in some cases, corrected).
 
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/fhs_m.pdf}
-\caption[120\textendash0 Ma MHM vs FHM predicted APWP of North America]{MHM
-predicted 120\textendash0 Ma APWP (solid line) for $NAC$ through the North
-America\textendash{}Nubia\textendash{}Mantle plate circuit. Its age step is 5
-Myr. The dashed line is the FHM predicted path for comparison.}\label{fig-mhsPred}
-\end{figure*}
+\subparagraph{Weighting.} Calculation of a weighted Fisher mean~\cite{F53} of
+the remaining poles within each window, using weighting functions intended to
+increase the influence of higher quality poles relative to lower quality ones.
 
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/fhs501_m.pdf}
-\caption[120\textendash0 Ma MHM vs FHS predicted APWP of India]{MHM predicted
-120\textendash0 Ma APWP (solid line) for India through the
-India\textendash{}Somalia\textendash{}Nubia\textendash{}Mantle plate circuit.
-Its age step is 5 Myr. The dashed line is the FHM predicted path shown for
-comparison. The inset shows paths for fast moving India and also much slower
-moving North America shown in Fig.~\ref{fig-mhsPred}.}\label{fig-mhsPred501}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{figures/mhs801.pdf}
-\caption[120\textendash0 Ma MHM vs FHM predicted APWP of Australia]{MHM
-predicted 120\textendash0 Ma APWP (solid line) for Australia through the
-Australia\textendash{}East
-Antarctica\textendash{}Somalia\textendash{}Nubia\textendash{}Mantle plate
-circuit. Its age step is 5 Myr. The dashed line is the FHM predicted path shown
-for comparison. The inset shows paths for fast moving India shown in
-Fig.~\ref{fig-mhsPred501}, much slower moving North America shown in
-Fig.~\ref{fig-mhsPred}, and also relatively intermediate moving
-Australia.}\label{fig-mhsPred801}
-\end{figure*}
-
-\subsection{Picking Data for A Certain Time Window}
+28 different picking and filtering algorithms were tested
+(Table.~\ref{tab-pick}), in combination with 6 different weighting algorithms
+(Table.~\ref{tab-weit}), for the three plates. The effects of changing the time
+step length and width of the moving window, and the reference path, were also
+examined.
 
 \subsubsection{Moving Average}
 
 The moving average method, also called ``running mean'' or ``moving
 window''~\cite{T08} method, calculates the average of values between a certain
 data (age in our case) range; the average is then recalculated as the limits of
-the bin are repeatedly incremented upwards. In addition to the traditional
-moving windows averaging algorithm, a newly developed moving average method is
+the bin are repeatedly incremented upwards. In addition to this traditional
+moving windows averaging algorithm, a less restrictive moving average method is
 also used, referred to here as the ``Age Position Picking (APP)'' method. The
-difference of this moving average method from the one built in
+difference of this new moving average method from the traditional one built in
 GMAP~\cite{T99,T08} is that the whole magnetic age range is taken into account
 in each window, while GMAP only considers the mid-point of the low and high
 magnetic age of each pole, an algorithm referred to as the ``Age Mean Picking
 (AMP)'' method.
 
-Normally each paleo-pole in the paleomagnetic database is treated as a point
+Normally each paleopole in the paleomagnetic database is treated as a point
 with an age that is the mid-point between the upper and lower age limits, i.e.
 AMP, but this is problematic for paleomagnetic data with large age ranges
 (especially if they turn out to be primary magnetization that should plot at old
@@ -427,7 +387,7 @@ paleopoles are picked out through setting $\alpha$95 of $\leq15\degree$
 (referring to the BC02's $\alpha$95 filter for the Mesozoic~\cite{B02} and
 SS05's $\alpha$95 filter~\cite{S05}) and age uncertainty of $\leq20$ Myr
 (a bit stricter than BC02's $\leq30$ Myr age uncertainty filter~\cite{B02} and
-SS05's $\leq40$ Myr filter~\cite{S05}). This filter considers both spacial and
+SS05's $\leq40$ Myr filter~\cite{S05}). This filter considers both spatial and
 temporal uncertainties of the paleopoles.
 
 \subparagraph{Filtering Out Non-igneous Derived Poles}
@@ -613,6 +573,71 @@ criteria 2; Pt 22 and 23 are related to the V90 criteria 3; The data
 constraining described in the Supplementary Material is related to the V90
 criteria 5; and Pt 18 and 19 are related to the V90 criteria 7.
 
+\subsection{Reference Paths: The Hotspot and Seafloor Spreading Model Predicted}
+
+After about 170 Ma, multiple data sources can help constrain plate motions in
+more accurate ways. One of the most developed and studied plate kinematics
+models is the Fixed Hotspot Model (FHM)~\cite{M93,M99}, which assumes the
+Atlantic and Indian hotspots are relatively fixed. Another one is the Moving
+Hotspot Model (MHM)~\cite{O05}, which is based on mantle convection models that
+indicate large motions of the Indo-Atlantic hotspots.
+
+Such a model like FHM or MHM can predict APWPs for main continents, e.g.\ the
+North America (Plate ID 101) (Fig.~\ref{fig-mhsPred}), the India (501)
+(Fig.~\ref{fig-mhsPred501}) and the Australia (801) (Fig.~\ref{fig-mhsPred801}),
+with the help of global tectonic plate motion
+data (i.e.\ plate circuits) from the ocean basins (i.e.\ spreading sea floors)
+that has been reconstructed for the last c. 180\textendash200 Myr (although the
+extrapolation is required; hard to constrain uncertainties). These more accurate
+and totally different-source derived model-predicted APWPs can be compared to
+data from the paleomagnetic database. For about 120 Ma to the present, India
+drifts much faster than North America and Australia. North America has been
+drifting rather slow. Australia's drifting rate is between North America and
+India. In addition, India drifts almost north, whereas North America east and
+then north, and Australia west and then north. So these three continents are
+representatives for three different types of plate kinematics.
+
+The oldest pole that can be predicted from the FHM is about 120 Ma. For example,
+the North American 120\textendash0 Ma APWP predicted from this rotation model
+and latest published spreading ridge rotations (collected plate circuit data
+will be shared as a supplementary material) will be taken as a reference path
+(Fig.~\ref{fig-mhsPred}), which will be compared with paleomagnetic APWPs for
+the same plate or continent.
+
+\begin{figure*}
+\centering
+\includegraphics[width=1.01\textwidth]{figures/fhs_m.pdf}
+\caption[120\textendash0 Ma MHM vs FHM predicted APWP of North America]{MHM
+predicted 120\textendash0 Ma APWP (solid line) for $NAC$ through the North
+America\textendash{}Nubia\textendash{}Mantle plate circuit. Its age step is 5
+Myr. The dashed line is the FHM predicted path for comparison.}\label{fig-mhsPred}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\includegraphics[width=1.01\textwidth]{figures/fhs501_m.pdf}
+\caption[120\textendash0 Ma MHM vs FHS predicted APWP of India]{MHM predicted
+120\textendash0 Ma APWP (solid line) for India through the
+India\textendash{}Somalia\textendash{}Nubia\textendash{}Mantle plate circuit.
+Its age step is 5 Myr. The dashed line is the FHM predicted path shown for
+comparison. The inset shows paths for fast moving India and also much slower
+moving North America shown in Fig.~\ref{fig-mhsPred}.}\label{fig-mhsPred501}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\includegraphics[width=1.01\textwidth]{figures/mhs801.pdf}
+\caption[120\textendash0 Ma MHM vs FHM predicted APWP of Australia]{MHM
+predicted 120\textendash0 Ma APWP (solid line) for Australia through the
+Australia\textendash{}East
+Antarctica\textendash{}Somalia\textendash{}Nubia\textendash{}Mantle plate
+circuit. Its age step is 5 Myr. The dashed line is the FHM predicted path shown
+for comparison. The inset shows paths for fast moving India shown in
+Fig.~\ref{fig-mhsPred501}, much slower moving North America shown in
+Fig.~\ref{fig-mhsPred}, and also relatively intermediate moving
+Australia.}\label{fig-mhsPred801}
+\end{figure*}
+
 \subsection{Path Comparison Method}
 
 Chapter 2 proposes a new method of determining the degree of similarity between
@@ -743,7 +768,7 @@ in red.}\label{fig-dif} % caption for whole figure
 		\caption{For Weighting No. 5}\label{fig-na-dsw5}
 	\end{subfigure}
 	\caption[ds of each pair of poles for North American 10/5 Myr APWPs]{Tested
-spacial difference ($ds$) values (color shaded) between North American
+spatial difference ($ds$) values (color shaded) between North American
 paleomagnetic APWPs and its predicted APWP from FHM and related plate circuits.
 The paths are in 10 Myr bin and 5 Myr step. The labeled numbers on the grids
 are the numbers of site mean poles that are contributing to each mean path
@@ -1338,7 +1363,7 @@ orientation-change pair and two more significant $d_l$ segment pair
 (Table.~\ref{tab-w3p4vs5}). If we observe carefully, it is because of the much
 smaller 15 Ma A95 for 5/3. The similar phenomenon occurs to the case of 6/3 vs
 7/3, a relatively much smaller paleomagnetic A95 causes more distinguishable
-$d_a$ and $d_l$ for the APP results, and they offset the improvement of spacial
+$d_a$ and $d_l$ for the APP results, and they offset the improvement of spatial
 similarity $d_s$ APP brings.
 
 For 4/5 vs 5/5, all $d_a$ and $d_l$ are indistinguishable. Compared with the
@@ -1980,7 +2005,7 @@ hypothesis is proved valid for at least the last 120 Myr.
 		AMP.
   \item APP itself helps incorporate temporal uncertainty into the algorithm.
 		With the bootstraps test helping incorporate spatial uncertainty into
-		the algorithm together, both spacial and temporal uncertainties are
+		the algorithm together, both spatial and temporal uncertainties are
 		successfully considered in APP methods.
 \end{description}
 
@@ -2186,7 +2211,7 @@ from the western and eastern margins of the plate.
 \caption{The final filtered datasets (red triangle-inside-circles) for later
 analysis on 120\textendash0 Ma North America. Those poles that had been
 influenced by local tectonic rotations are shown as white
-circles.}\label{fig_INfinal}
+circles.}\label{fig_NAfinal}
 \end{figure}
 
 \subsection{120\textendash0 Ma India}
@@ -2195,7 +2220,7 @@ Plate ID 501 polygons in the recently published Plate Model~\cite{Y18} also
 include the two small polygons of the northern ``Lesser Himalayan passive
 margin of Greater Indian Basin'' and ``Tethyan Himalayan microcontinent of
 Greater India'' (Fig.~\ref{fig_INfinal}). The polygons are used to select the
-sampling sites of the paleopoles for India (Fig.~\ref{fig_INpmdata}).
+sampling sites of the paleopoles for India (Fig.~\ref{fig_INfinal}).
 
 \begin{figure}
 \includegraphics[scale=.4]{figures/Appendix/501.pdf}
@@ -2203,11 +2228,11 @@ sampling sites of the paleopoles for India (Fig.~\ref{fig_INpmdata}).
 analysis on 120\textendash0 Ma India. Those poles that had been influenced by
 local tectonic rotations are shown as white circles. The rifts, faults and
 detachments (red lines) around India are used to filter out those data that
-are influenced by local tectonic rotations.}\label{fig_NAfinal}
+are influenced by local tectonic rotations.}\label{fig_INfinal}
 \end{figure}
 
 Based on the model of the tectonic interactions between India, Arabia and Asia
-since the Jurassic~\cite{G15} (Fig.~\ref{fig_INrfd}), part of the paleopoles
+since the Jurassic~\cite{G15} (Fig.~\ref{fig_INfinal}), part of the paleopoles
 constrained by the north two small terranes whose Plate IDs are also 501 in fact
 had gone through regional rotations and here are removed. So finally 75 datasets
 are left (Fig.~\ref{fig_INfinal}). Spatially Indian paleomagnetic data are more
