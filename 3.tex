@@ -303,30 +303,14 @@ Fig.~\ref{fig-dif} and subsequent figures). The APP algorithm will pick more
 paleopoles in each moving window than the AMP algorithm
 (Figs.~\ref{fig-120NAhist}-\ref{fig-120AUhist}; Fig.~\ref{fig-nac-maplat}).
 
-A shorter step and narrower window will potentially increase the clustering of
-the selected paleopoles, but will reduce their number. Conversely, a longer step
-and wider window will increase the number of poles, but potentially decrease
-their clustering. To investigate these trade-offs, every picking/filtering and
-weighting method was also used to generate APWPs with a time step and window
-doubled to 10 Myr and 20 Myr, respectively. Paths generated using AMP and APP
-with no filtering, and every weighting method, with time steps from 1 Myr to 15
-Myr in 1 Myr increments and window widths from 2 Myr to 30 Myr in 2 Myr
-increments, were also analysed. In all cases the oldest time step was 120 Ma.
-
 If, for example, we have a paleopole which is constrained to within 10 and 20 Ma
 of age, and we have a 2 Myr moving window with a 1 Myr age step, then it
-is included just in the 14\textendash16 Ma bin (for the mid-point age of 15
-Ma) for AMP\@. It should be in the 9\textendash11,10\textendash12,
-11\textendash13,12\textendash14\ldots17\textendash19,18\textendash20, and
-19\textendash21 Ma bins for APP\@. So the average poles are produced from each
-bin, and each original paleopole is represented over its entire possible
-acquisition age for APP.
-
-From comparison of mean poles of the picked poles for the
-dashed-line age window with the two different algorithms (the 10 Ma mean poles
-in Fig.~\ref{fig-mhsPred}), the mean pole calculated by the APP method is closer to the
-10 Ma pole in the FHM predicted path, which indicates more data diluting the
-effect of outliers.
+is included just in the 14\textendash16 Ma window (for the mid-point age of 15
+Ma) for AMP\@. For APP, this paleopole falls in the 9\textendash11,
+10\textendash12, 11\textendash13, 12\textendash14 \ldots 17\textendash19,
+18\textendash20 and 19\textendash21 Ma windows. So the average poles are
+produced from each window, and each original paleopole is represented over its
+entire possible acquisition age.
 
 \begin{figure}
 \centering
@@ -341,14 +325,23 @@ method calculates the mean pole (dark circle in Fig.~\ref{fig-mhsPred}) of 9
 paleopoles.}\label{fig-nac-maplat}
 \end{figure}
 
-In addition, technically we don't want to let the step length more than the
-window length, in which cases we would lose data between windows.
+A shorter step and narrower window will potentially increase the clustering of
+the selected paleopoles, but will reduce their number. Conversely, a longer step
+and wider window will increase the number of poles, but potentially decrease
+their clustering. To investigate these trade-offs, every picking/filtering and
+weighting method was also used to generate APWPs with a time step and window
+doubled to 10 Myr and 20 Myr, respectively. Paths generated using AMP and APP
+with no filtering, and every weighting method, with time steps from 1 Myr to 15
+Myr in 1 Myr increments and window widths from 2 Myr to 30 Myr in 2 Myr
+increments, were also analysed. In all cases the oldest time step was 120 Ma.
 
-\paragraph{Picking}
+\subsubsection{Filtering}
 
-The 28 picking methods include AMP (Picking No 0), APP (Picking No 1) and also
-those with filtering or corrections implemented onto the two
-(Table.~\ref{tab-pick}).
+14 different filters or corrections (Table.~\ref{tab-pick}) were applied to both
+data picked using the AMP moving window method (even numbers) and data picked
+using the APP moving window method (odd numbers), resulting in a total of 28
+unique picking algorithms. The filters or corrections can be characterised as
+follows:
 
 \begin{table}
 \centering
@@ -390,43 +383,44 @@ No. & Picking Algorithm \\ \midrule
 \raggedright{Notes: SS05,~\cite{S05}}
 \end{table}
 
-\subparagraph{Filtering through $\alpha$95 and Age Range}
+\subparagraph{No modification (method 0/1).}
 
-For this specific filter (Picking No 2 and 3; Table.~\ref{tab-pick}), the
-paleopoles are picked out through setting $\alpha$95 of $\leq15\degree$
-(referring to the BC02's $\alpha$95 filter for the Mesozoic~\cite{B02} and
-SS05's $\alpha$95 filter~\cite{S05}) and age uncertainty of $\leq20$ Myr
-(a bit stricter than BC02's $\leq30$ Myr age uncertainty filter~\cite{B02} and
-SS05's $\leq40$ Myr filter~\cite{S05}). This filter considers both spatial and
-temporal uncertainties of the paleopoles.
+\subparagraph{Removal of poles with large spatial and temporal uncertainties
+(method 2/3).} Paleopoles with both large $\alpha$95 (ED95 $>15\degree$,
+following the BC02 threshold for the Mesozoic) and wide acquisition age limits
+(difference between HIMAGAGE and LOMAGAGE $>20$ Myr, following the V90 criteria
+about age within a half of a geological period; the average of the geological
+periods between 120 and 0 Ma is about 20 Myr) which are less likely to provide a
+good estimate of the actual pole position within any specific age window, were
+excluded.
 
-\subparagraph{Filtering Out Non-igneous Derived Poles}
+\subparagraph{Prefer poles from igneous rocks (methods 4/5, 6/7).} Method 4/5
+removes paleopoles potentially affected by inclination flattening by selecting
+only paleopoles coded as igneous or mostly igneous (ROCKTYPE starting with
+``intrusive'' or ``extrusive''). In fact, most of the paleopoles picked by
+method 4/5 are derived from igneous-only rocks. Method 6/7 selects paleopoles
+coded as containing igneous (ROCKTYPE containing ``intrusive'' or
+``extrusive''); this is a less strict filter, because the dominant rock type
+could potentially be another lithology. So method 6 includes also poles from
+method 4, and method 7 includes poles from method 5.
 
-With this filter (Picking No 4 and 5; Table.~\ref{tab-pick}), the paleopoles are
-mainly (mostly but also containing sedimentary or metamorphic or both) or only
-from igneous rocks with extrusive or intrusive type. In fact, most paleopoles
-picked by this filter are derived from igneous-only rocks.
+\subparagraph{Correct sedimentary poles for inclination shallowing (method
+8/9).} Rather than excluding paleopoles from sedimentary rocks, paleopoles coded
+as sedimentary or redbeds were instead corrected for inclination flattening
+using the flattening function $\tan I_o = f \tan I_f$~\cite{K55}, where $I_o$ is
+the observed inclination, $I_f$ is the unflattened inclination, and $f$ is the
+flattening factor (also known as shallowing coefficient; 1=no flattening,
+0=completely flattened). Here $f=0.6$ is used in all cases,
+following~\cite{T12}, unless when the rock type is not sedimentary dominated but
+contains sedimentary, $f=0.8$ is used instead, following the minimum
+anisotropy-of-thermal-remanence determined f-correction~\cite{D11,Do11}.
 
-\subparagraph{Filtering Out Igneous Unrelated Poles}
-
-With this filter (Picking No 6 and 7; Table.~\ref{tab-pick}), the poles are from
-rocks that contain extrusive or intrusive igneous type. In other words, the rock
-type could be mainly sedimentary or metamorphic.
 
 \subparagraph{Inclination Shallowing and Unflattening}
 
-To test if unflattening possible inclination shallowing in sedimentary rocks can
-improve the APWP fitting outcomes, the flattening function~\cite{K55} $\tan I_o
-= f \tan I_f$ is used to unflatten assumed existing inclination shallowing in
-sedimentary-based or redbeds-based paleomagnetic data (No $8,9$ and $12,13$ in
-Table.~\ref{tab-pick}), where $I_o$ is the observed inclination, $I_f$ is the
-unflattened inclination, and $f$ is the flattening factor (or shallowing
-coefficient) ranging from unity (no flattening) to 0 (completely flattened).
-Here $f=0.6$ is used for the sedimentary-dominated rocks derived paleopoles in
-our calculations, according to the previous experience~\cite{T12}. And $f=0.8$
-(the minimum anisotropy-of-thermal-remanence-determined
-f-correction)~\cite{D11,Do11} is used for the sedimentary-contained (not
-dominated) rocks derived paleopoles in the calculations.
+The flattening function  is used to unflatten
+assumed existing inclination shallowing in redbeds-based
+paleomagnetic data ($12,13$ in Table.~\ref{tab-pick}).
 
 \subparagraph{Filtering Out Poles Related to Red-beds}
 
@@ -619,8 +613,13 @@ the same plate or continent.
 \includegraphics[width=1.01\textwidth]{figures/fhs_m.pdf}
 \caption[120\textendash0 Ma MHM vs FHM predicted APWP of North America]{MHM
 predicted 120\textendash0 Ma APWP (solid line) for $NAC$ through the North
-America\textendash{}Nubia\textendash{}Mantle plate circuit. Its age step is 5
-Myr. The dashed line is the FHM predicted path for comparison.}\label{fig-mhsPred}
+America\textendash{}Nubia\textendash{}Mantle plate circuit. The FHM predicted
+path (dashed line with shaded uncertainties) is also shown for comparison. The
+age step is 5 Myr. Compared with the 10 Ma paleomagnetic mean pole calculated by
+the AMP method (dark triangle), the coeval mean pole derived from the APP method
+is closer to both FHM and MHM predicted 10 Ma poles, which indicates more data
+diluting the effect of outliers. See also the paleopoles that the two mean poles
+are composed of in Fig.~\ref{fig-nac-maplat}.}\label{fig-mhsPred}
 \end{figure*}
 
 \begin{figure*}
@@ -725,12 +724,14 @@ observe:
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/101_120_0.pdf}
-		\caption{North America (101 with children): minimum 0.0053 (11, 0), maximum 0.0921 (16, 3), mean 0.0329, median 0.0334}\label{fig-nac-dif} % subcaption
+		\caption{Plate ID 101 with children: minimum 0.0053 (11, 0),
+		maximum 0.0921 (16, 3), mean 0.0335, median 0.0342}\label{fig-nac-dif} % subcaption
 	\end{subfigure}
 	\vspace{.1em} % here you can insert horizontal or vertical space
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/501_120_0.pdf}
-		\caption{India (501): minimum 0.023 (19, 0), maximum 0.5137 (8, 3), mean 0.1174, median 0.0818}\label{fig-ind-dif} % subcaption
+		\caption{Plate ID 501: minimum 0.023 (19, 0), maximum 0.5137 (8, 3),
+		mean 0.1181, median 0.0818}\label{fig-ind-dif} % subcaption
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
@@ -923,16 +924,16 @@ more than 1.96-standard-deviation interval labeled in red.}\label{fig-d-dif}
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/101_120_0APPvsAMP.pdf}
-		\caption{North America: AMP: minimum 0.00796 (4, 0), maximum 0.0921 (16,
-		3), mean 0.04515, median 0.04664; APP: minimum 0.0053 (11, 0), maximum
-		0.05686 (5/7, 3), mean 0.02059, median 0.01594}\label{fig-na-difAMPvsAPP}
+		\caption{AMP: minimum 0.0292 (4/6, 5), maximum 0.0921 (16,
+		3), mean 0.04641, median 0.04664; APP: minimum 0.0053 (11, 0), maximum
+		0.05686 (5/7, 3), mean 0.02055, median 0.01594}\label{fig-na-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/501_120_0APPvsAMP.pdf}
-		\caption{India: AMP: minimum 0.0292 (4, 3), maximum 0.5137 (8, 3), mean
-		0.1668, median 0.1862; APP: minimum 0.023 (19, 0), maximum 0.1359 (3,
-		4), mean 0.06798, median 0.0609}\label{fig-in-difAMPvsAPP}
+		\caption{AMP: minimum 0.047 (4/6, 3), maximum 0.5137 (8, 3), mean
+		0.1684, median 0.1862; APP: minimum 0.023 (19, 0), maximum 0.1359 (3,
+		4), mean 0.06786, median 0.0609}\label{fig-in-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
