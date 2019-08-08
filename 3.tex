@@ -1,3 +1,43 @@
+% gjilguid2e.tex
+% V2.1 released 2003 Oct 7 -- Gregor Hutton, updated the web address for the style files.
+
+\documentclass{gji}
+
+\usepackage{timet,booktabs,gensymb,graphicx,caption,multirow}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+\usepackage[xcdraw]{xcolor}  %colorful words in tables
+
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+\title[How to generate APWPs]{Methods for Producing a Reliable APWP}
+\author[Chenjian Fu]{Chenjian Fu$^1$\thanks{Email: cfu3@kent.edu} Chris
+Rowan$^2$ \\$^1$ Department of Geology, Kent State University, 325 S Lincoln St,
+Kent, OH \emph{44242}, USA \\$^2$ Department of Geology, Kent State University,
+325 S Lincoln St, Kent, OH \emph{44242}, USA}
+\date{Received 2018 December 28; in original form 2018 November 22}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\volume{0}
+\pubyear{2018}
+
+%\def\LaTeX{L\kern-.36em\raise.3ex\hbox{{\small A}}\kern-.15em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
+%\def\LATeX{L\kern-.36em\raise.3ex\hbox{{\Large A}}\kern-.15em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
+% Authors with AMS fonts and mssymb.tex can comment out the following
+% line to get the correct symbol for Geophysical Journal International.
+\let\leqslant=\leq{}
+
+\newtheorem{theorem}{Theorem}[section]
+
+
+\begin{document}\label{firstpage}
+
+\maketitle
+
+
 \begin{summary}
 First, new picking/weighting methods developed here and previously published
 picking/weighting methods are compiled together to generate 168 different
@@ -736,7 +776,8 @@ observe:
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/801_120_0.pdf}
-		\caption{Australia (801 with children): minimum 0.0037 (17, 0), maximum 0.3954 (22, 3), mean 0.0813, median 0.0453}\label{fig-au-dif} % subcaption
+		\caption{Plate ID 801 with children: minimum 0.0037 (17, 0), maximum
+		0.3954 (22, 3), mean 0.08432, median 0.05037}\label{fig-au-dif} % subcaption
 	\end{subfigure}
 	\caption[Differences of each plate's paleomagnetic APWPs versus
 its FHM predicted APWP]{Equal-weight composite path difference ($\mathcal{CPD}$)
@@ -938,9 +979,9 @@ more than 1.96-standard-deviation interval labeled in red.}\label{fig-d-dif}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/801_120_0APPvsAMP.pdf}
-		\caption{Australia: AMP: minimum 0.0231 (4, 0), maximum 0.3954 (22,
-		3), mean 0.1203, median 0.0598; APP: minimum 0.0037 (17, 0), maximum
-		0.11035 (15, 3), mean 0.04225, median 0.02692}\label{fig-au-difAMPvsAPP}
+		\caption{AMP: minimum 0.0305 (0/20, 3), maximum 0.3954 (22,
+		3), mean 0.1264, median 0.0951; APP: minimum 0.0037 (17, 0), maximum
+		0.11035 (15, 3), mean 0.04225, median 0.0282}\label{fig-au-difAMPvsAPP}
 	\end{subfigure}
 	\caption[Differences of each plate's paleomagnetic APWPs versus its FHM
 predicted APWP (AMP vs APP)]{Separated results from AMP and APP in
@@ -2273,3 +2314,5 @@ by local tectonic rotations are shown as white circles. The Plate ID 850 helps
 increase the amount of qualified datasets for 100\textendash0
 Ma.}\label{fig_AUfinal}
 \end{figure}~\label{lastpage}
+
+\end{document}
