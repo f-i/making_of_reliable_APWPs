@@ -1,43 +1,3 @@
-% gjilguid2e.tex
-% V2.1 released 2003 Oct 7 -- Gregor Hutton, updated the web address for the style files.
-
-\documentclass{gji}
-
-\usepackage{timet,booktabs,gensymb,graphicx,caption,multirow}
-\usepackage{subcaption}
-\captionsetup{compatibility=false}
-
-\usepackage[xcdraw]{xcolor}  %colorful words in tables
-
-\usepackage[normalem]{ulem}
-\useunder{\uline}{\ul}{}
-
-\title[How to generate APWPs]{Methods for Producing a Reliable APWP}
-\author[Chenjian Fu]{Chenjian Fu$^1$\thanks{Email: cfu3@kent.edu} Chris
-Rowan$^2$ \\$^1$ Department of Geology, Kent State University, 325 S Lincoln St,
-Kent, OH \emph{44242}, USA \\$^2$ Department of Geology, Kent State University,
-325 S Lincoln St, Kent, OH \emph{44242}, USA}
-\date{Received 2018 December 28; in original form 2018 November 22}
-\pagerange{\pageref{firstpage}--\pageref{lastpage}}
-\volume{0}
-\pubyear{2018}
-
-%\def\LaTeX{L\kern-.36em\raise.3ex\hbox{{\small A}}\kern-.15em
-%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
-%\def\LATeX{L\kern-.36em\raise.3ex\hbox{{\Large A}}\kern-.15em
-%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
-% Authors with AMS fonts and mssymb.tex can comment out the following
-% line to get the correct symbol for Geophysical Journal International.
-\let\leqslant=\leq{}
-
-\newtheorem{theorem}{Theorem}[section]
-
-
-\begin{document}\label{firstpage}
-
-\maketitle
-
-
 \begin{summary}
 First, new picking/weighting methods developed here and previously published
 picking/weighting methods are compiled together to generate 168 different
@@ -942,17 +902,20 @@ Fig.~\ref{fig-dif}. The parenthetical remarks are Picking No and Weighting No.}\
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/f501d101.pdf}
-		\caption{India (501) - North America (101 with children)}\label{fig-i-n-dif}
+		\caption{Differences between Fig.~\ref{fig-ind-dif} (India) and
+		Fig.~\ref{fig-nac-dif} (North America)}\label{fig-i-n-dif}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/f801d101.pdf}
-		\caption{Australia (801 with children) - North America (101 with children)}\label{fig-a-n-dif}
+		\caption{Differences between Fig.~\ref{fig-au-dif} (Australia) and
+		Fig.~\ref{fig-nac-dif} (North America)}\label{fig-a-n-dif}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/f501d801.pdf}
-		\caption{India (501) - Australia (801 with children)}\label{fig-i-a-dif}
+		\caption{Differences between Fig.~\ref{fig-ind-dif} (India) and
+		Fig.~\ref{fig-au-dif} (Australia)}\label{fig-i-a-dif}
 	\end{subfigure}
 	\caption[Differences of differences of each plate's paleomagnetic
 APWPs versus its FHM predicted APWP]{Differences between grids in
@@ -2314,5 +2277,3 @@ by local tectonic rotations are shown as white circles. The Plate ID 850 helps
 increase the amount of qualified datasets for 100\textendash0
 Ma.}\label{fig_AUfinal}
 \end{figure}~\label{lastpage}
-
-\end{document}
