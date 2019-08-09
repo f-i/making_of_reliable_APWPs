@@ -345,14 +345,12 @@ follows:
 
 \begin{table}
 \centering
-\caption{List of all Picking (i.e. Binning) algorithms developed in this paper.
-         AMP, Age Mean Picking (See Section ``Moving Average''); APP, Age
-         Position Picking.}\label{tab-pick}
+\caption{List of all Picking/Binning algorithms developed here.}\label{tab-pick}
 \begin{tabular}{@{}ll@{}}
 \toprule
 No. & Picking Algorithm \\ \midrule
-0 & AMP \\
-1 & APP \\
+0 & AMP: Age Mean Picking, see Section ``APWP Generation'' \\
+1 & APP: Age Position Picking \\
 2 & AMP (``$\alpha$95/Age range'' no more than ``15/20'') \\
 3 & APP (``$\alpha$95/Age range'' no more than ``15/20'') \\
 4 & AMP (mainly or only igneous) \\
@@ -390,9 +388,9 @@ No. & Picking Algorithm \\ \midrule
 following the BC02 threshold for the Mesozoic) and wide acquisition age limits
 (difference between HIMAGAGE and LOMAGAGE $>20$ Myr, following the V90 criteria
 about age within a half of a geological period; the average of the geological
-periods between 120 and 0 Ma is about 20 Myr) which are less likely to provide a
-good estimate of the actual pole position within any specific age window, were
-excluded.
+periods between 120 and 0 Ma [Quaternary, Neogene, Paleogene and Cretaceous] is
+about 20 Myr) which are less likely to provide a good estimate of the actual
+pole position within any specific age window, were excluded.
 
 \subparagraph{Prefer poles from igneous rocks (methods 4/5, 6/7).} Method 4/5
 removes paleopoles potentially affected by inclination flattening by selecting
@@ -411,70 +409,56 @@ using the flattening function $\tan I_o = f \tan I_f$~\cite{K55}, where $I_o$ is
 the observed inclination, $I_f$ is the unflattened inclination, and $f$ is the
 flattening factor (also known as shallowing coefficient; 1=no flattening,
 0=completely flattened). Here $f=0.6$ is used in all cases,
-following~\cite{T12}, unless when the rock type is not sedimentary dominated but
-contains sedimentary, $f=0.8$ is used instead, following the minimum
-anisotropy-of-thermal-remanence determined f-correction~\cite{D11,Do11}.
+following~\cite{T12}, unless when the rock type (ROCKTYPE field in the database)
+is not sedimentary dominated but contains sedimentary, $f=0.8$ is used instead,
+following the minimum anisotropy-of-thermal-remanence determined
+f-correction~\cite{D11,Do11}.
 
+\subparagraph{Remove redbeds (method 10/11) or correct them for inclination
+shallowing (method 12/13).} Bias toward shallow inclinations is also observed
+in paleomagnetic data derived from red-beds~\cite[e.g., in central Asia,
+Mediterranean region, North America, etc.]{T04,K04,T07,B10}. This bias can be
+addressed by removing the source (method 10/11; ROCKTYPE containing redbeds), or
+correcting for inclination flattening, setting $f=0.6$ as previously described
+(method 12/13). In the latter case, the assumption is being made that the
+redbeds are carrying a detrital paleomagnetic signal.
 
-\subparagraph{Inclination Shallowing and Unflattening}
+\subparagraph{Prefer poles from younger (methods 14/15, 24/25) or older (method
+16/17) studies.} Advancements in equipment (e.g., cryogenic magnetometers) and
+analytical techniques (e.g., stepwise demagnetisation) mean that more recently
+published paleopoles are potentially more reliable than older ones. Method 14/15
+removes any paleopoles published prior to 1983 (YEAR $>$ 1983)\textemdash{}the
+mean publication date for paleopoles in the GPMDB\@. Method 24/25 takes a
+similar but less aggressive approach by excluding paleopoles that have been
+superseded (99 datasets) by later studies from the same sequence, which are
+presumed to represent a more accurate determination of the paleopole position.
+Conversely, removing paleopoles published after 1983 (method 16/17; YEAR $\leq$
+1983) should have a negative effect.
 
-The flattening function  is used to unflatten
-assumed existing inclination shallowing in redbeds-based
-paleomagnetic data ($12,13$ in Table.~\ref{tab-pick}).
+\subparagraph{Exclude suspected local rotations and secondary overprints
+(method 18/19), or correct for them where possible (method 20/21).} Secondary
+remanence components and local tectonic deformation can both displace the
+measured pole position away from its ``true'' position. Such poles can be
+identified based on demagnetisation data, or comparison to the pre-existing
+APWP\@. Method 18/19 removes paleopoles that were identified as such in the
+COMMENTS field (all the paleopoles affected by local rotations are picked out
+by carefully going through all the datasets, including two groups with [19
+datasets] and without [47 datasets] suggested corrections; the paleopoles
+affected by secondary overprints are extracted with the keyword ``econd''
+contained in the COMMENTS). A subset (19 datasets) of these paleopoles have a
+suggested correction associated with them; method 20/21 retains these paleopoles
+after applying the suggested correction.
 
-\subparagraph{Filtering Out Poles Related to Red-beds}
+\subparagraph{SS05 quality criteria (methods 22/23).} As with method 2/3,
+SS05~\cite{S05} removes paleopoles with high spatial ($\alpha$95 $>15\degree$)
+and temporal (age range $>$ 40 Myr) uncertainty, but additionally remove
+paleopoles where samples had poor sampling coverage (sampling sites' quantity
+[B] of $<4$, samples' quantity [N] of $<4$ times of the sites [B]) and were not
+subjected to even a blanket demagnetisation treatment (laboratory cleaning
+procedure code DEMAGCODE $<2$). Method 26/27 also uses these criteria, but
+further excludes superseded data.
 
-Bias toward shallow inclinations is also observed in paleomagnetic data derived
-from red-beds~\cite{T04}. The question raised here is: are the red-beds the main
-component that contributes the inclination shallowing? In this filter (Picking
-No 10\textendash11 in Table.~\ref{tab-pick}), we want to simply remove all
-red-beds related paleopoles to see if there is any improvement from matching the
-hotspot model predicted path or if there is any difference from the igneous
-derived results (Picking No 4\textendash7 in Table.~\ref{tab-pick}).
-
-\subparagraph{Filtering Out Poles Published Earlier or Later}
-
-It is also worthy to see if recently published data is able to produce a more
-reliable APWP than relatively older data. Here 1983 is chosen as the division
-(Picking No $14,15$ and $16,17$; Table.~\ref{tab-pick}), because the mean of all
-the data publication years in GPMDB 4.6b is about 1983.
-
-\subparagraph{Filtering Out Poles Influenced by Local Rotations or Secondary
-Print}
-
-Some publications of paleomagnetic data suggest the data has probably been
-affected by local rotations or secondary overprints. So for this filter
-(Picking No 18 and 19; Table.~\ref{tab-pick}), this type of data are removed.
-
-\subparagraph{Filtering Out Poles Influenced by Local Rotations or Correcting
-Them if Suggested}
-
-Some publications suggest the data has been through local rotation and propose a
-solution of correction. With this filter (Picking No 20 and 21;
-Table.~\ref{tab-pick}), if there is a correction suggestion, the data is
-corrected; if no, the data is simply removed.
-
-\subparagraph{Filtering Using SS05 Liability Criteria}
-
-SS05~\cite{S05} provided their criteria of picking paleomagnetic data for
-producing their APWPs. This filter is reproducing their criteria by setting
-$\alpha$95 of $\leq15\degree$, age uncertainty of $\leq40$ Myr, sampling sites'
-quantity of $\geq4$, samples' quantity of at least 4 times of the sites, and
-laboratory analytical procedure code of at least 2 (Picking No 22 and 23;
-Table.~\ref{tab-pick}).
-
-\subparagraph{Filtering Out Superseded Data}
-
-In this filter (Picking No 24 and 25; Table.~\ref{tab-pick}), those superseded
-data already included in other newer results are excluded.
-
-\subparagraph{Filtering Using SS05 Liability Criteria Without Superseded Data}
-
-The last two filters are also combined into one (Picking No 26 and 27;
-Table.~\ref{tab-pick}) to see if SS05 Liability Criteria~\cite{S05} performs
-better using renewed datasets.
-
-\paragraph{Weighting}
+\subsubsection{Weighting}
 
 Because all data is not created equal, we want to calculate a weighted mean pole
 for a time interval with `better' (more likely to be reliable) poles counting
@@ -490,8 +474,7 @@ different qualities.
 
 \begin{table}
 \centering
-\caption{List of all weighting algorithms developed in this
-         paper.}\label{tab-weit}
+\caption{List of all weighting algorithms developed here.}\label{tab-weit}
 \begin{tabular}{@{}ll@{}}
 \toprule
 No. & Weighting Algorithm \\ \midrule
@@ -2074,6 +2057,11 @@ Center for their remote HPC resources.
   Besse, J. \& Courtillot, V., 2002, Apparent and true polar wander and the
   geometry of the geomagnetic field over the last 200 Myr, \jgr{}\textbf{107},
   2300.
+\bibitem[\protect\citename{Bilardello \& Kodama }2010]{B10}
+  Bilardello, D. \& Kodama, K. P., 2010, Palaeomagnetism and magnetic
+  anisotropy of Carboniferous red beds from the Maritime Provinces of Canada:
+  evidence for shallow palaeomagnetic inclinations and implications for North
+  American apparent polar wander, \gji{}\textbf{180}, 1013\textendash1029.
 \bibitem[\protect\citename{Christeson et al. }2014]{C14}
   Christeson, G. L., Van Avendonk, H. J. A., Norton, I. O., Snedden, J. W.,
   Eddy, D. R., Karner, G. D. \& Johnson, C. A., 2014. Deep crustal structure in
@@ -2106,6 +2094,10 @@ Center for their remote HPC resources.
   King, R. F., 1955. The remanent magnetism of artificially deposited sediments,
   \textit{Geophys. Suppl. Mon. Not. Roy. Astron. Soc. Lett.}, \textbf{7},
   115\textendash134.
+\bibitem[\protect\citename{Krijgsman \& Tauxe }2004]{K04}
+  Krijgsman, W \& Tauxe, L., 2004. Shallow bias in Mediterranean paleomagnetic
+  directions caused by inclination error, \textit{Earth Planet. Sci. Lett.},
+  \textbf{222}, 685\textendash695.
 \bibitem[\protect\citename{M{\"{u}}ller et al. }1993]{M93}
   M{\"{u}}ller, R. D., Royer, J. Y. \& Lawver, L. A., 1993. Revised plate
   motions relative to the hotspots from combined Atlantic and Indian-Ocean
@@ -2148,6 +2140,12 @@ Center for their remote HPC resources.
   geomagnetic field and the detection of shallow bias in paleomagnetic
   inclinations: Was the ancient magnetic field dipolar? \textit{Geophys.
   Monogr. AGU}, \textbf{145}, 101\textendash115.
+\bibitem[\protect\citename{Tan et al. }2007]{T07}
+  Tan, X., Kodama, K. P., Gilder, S., \& Courtillot, V., 2007. Rock magnetic
+  evidence for inclination shallowing in the Passaic Formation red beds from
+  the Newark basin and a systematic bias of the Late Triassic apparent polar
+  wander path for North America, \textit{Earth Planet. Sci. Lett.},
+  \textbf{254}, 345\textendash357.
 \bibitem[\protect\citename{Torsvik et al. }2008]{T08}
   Torsvik, T. H., M{\"{u}}ller, R. D., van der Voo, R., Steinberger, B., \&
   Gaina, C., 2008. Global plate motion frames: Toward a unified model,
