@@ -69,7 +69,7 @@ For poor consistency of data, it is potentially because of different
 inclinations or declinations. The first thing we should consider about is their
 lithology. We want to check if the sample rock are igneous or sedimentary,
 because sediment compaction can result in anomalously shallow
-inclinations~\cite{T18}. In addition, we also can check if the rock are redbeds
+inclinations~\cite{T19}. In addition, we also can check if the rock are redbeds
 or non-redbeds. Although whether redbeds record a detrital signal or a later
 Chemical Remanent Magnetization (CRM) is still somewhat controversial, both
 sedimentary rocks and redbeds could lead to inconsistency in direction compared
@@ -169,13 +169,41 @@ nature of the reference APWP.
 
 \subsection{Paleomagnetic Data}
 
-Collections of poles with a minimum age (LOMAGAGE) $\leq$135 Ma for the North
-American (Plate ID 101), the Indian (ID 501) and Australian (ID 801) plates,
-were extracted from the GPMDB\@. In order to include valid paleopoles from
-blocks that moved independently prior to 120 Ma, which therefore have different
-assigned plate codes in the GPMDB, the spatial join technique~\cite{J07} was
-used to find all poles within the geographic region that defines the rigid plate
-within the period of interest (see also Appendix A):
+\subsubsection{Used Specific Field Codes of GPMDB}
+
+Data analysis includes a tremendous amount of manipulation of data
+fields/columns in the GPMDB\@. In the following content, several specific fields
+and field codes will be referred to. They are listed below for easy reference.
+
+\begin{table}
+\centering
+\caption{List of the used fields and field codes of the GPMDB.}\label{tab-fld}
+\begin{tabular}{@{}ll@{}}
+\toprule
+No. & Weighting Algorithm \\ \midrule
+LOMAGAGE & Lower best estimate of the magnetic age of the magnetisation component \\
+HIMAGAGE & Upper best estimate of the magnetic age of the magnetisation component \\
+B & Number of sites \\
+N & Number of samples \\
+ED95 & Radius of Circle of 95\% confidence about mean direction, i.e. $\alpha$95 \\
+KD & Fisher precision parameter for mean direction \\
+DP & Half-angle of confidence on the pole in the direction of paleomeridian \\
+DM & Half-angle of confidence on the pole perpendicular to paleomeridian \\
+K\_NORM & Fisher precision parameter for Normal directions \\
+  \bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Paleomagnetic Data of Three Representative Continents}
+
+Collections of paleopoles with a minimum age (LOMAGAGE) $\leq$135 Ma for the
+North American (Plate ID 101), the Indian (ID 501) and Australian (ID 801)
+plates, were extracted from the GPMDB\@. In order to include valid paleopoles
+from blocks that moved independently prior to 120 Ma, which therefore have
+different assigned plate codes in the GPMDB, the spatial join
+technique~\cite{J07} was used to find all poles within the geographic region
+that defines the rigid plate within the period of interest (see also Appendix
+A):
 
 \subparagraph{for North America,}
 the search region was defined by the North American (ID 101), Avalon/Acadia (ID
@@ -480,7 +508,21 @@ different qualities.
 No. & Weighting Algorithm \\ \midrule
 0 & None (No weighting) \\
 1 & Larger Numbers of sites (B), Observations (N), greater weight \\
+  & \vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
+	0.2\textrm{, if both B \& N are missing, or B$\leq1$ \& N$\leq1$;} \\
+	(1-\frac{1}{B})*0.5\textrm{, if only N is missing, or N$\leq1$ \& B$>$1;} \\
+	(1-\frac{1}{N})*0.5\textrm{, if only B is missing, or B$\leq1$ \& N$>$1;} \\
+    (1-\frac{1}{B})*(1-\frac{1}{N})\textrm{, if B$>$1 \& N$>$1;}
+\end{array}\right.\end{equation*}} \\
 2 & Lower Age uncertainty, greater weight \\
+  & \begin{minipage}{8cm}age\_range=HIMAGAGE-LOMAGAGE \\
+    age\_midpoint=(HIMAGAGE+LOMAGAGE)*0.5 \\
+    if age\_midpoint$<$2.58 (Ma; start of the Quaternary), \\
+    \vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
+    1\textrm{, if age\_range$\leq$1.29} \\
+    \frac{1.29}{age\_range}\textrm{, if age\_range$>$1.29;}
+    \end{array}\right.\end{equation*}}
+  \end{minipage} \\
 3 & $\alpha$95 (Normal distribution: standard deviation 10) \\
 4 & Age error Position to bin (more overlap, greater weight) \\
 5 & comb of 3 and 4 \\ \bottomrule
@@ -489,7 +531,7 @@ No. & Weighting Algorithm \\ \midrule
 
 In order to average errors in orientation of the samples and scatter caused by
 secular variation, a ``sufficient'' number of individually oriented samples
-(observations) from ``enough'' sites must be satisfied~\cite{T18,v90,B02}. So
+(observations) from ``enough'' sites must be satisfied~\cite{T19,v90,B02}. So
 for the ``Numbers of sites (B), Observations (N)'' weighting (No $1$ in
 Table.~\ref{tab-weit}), larger B and N mean stronger weighting. Through knowing
 the pattern of all B and N in the database, the proposed solutions are as
@@ -505,7 +547,7 @@ missing), weight=0.2.
 
 As for the ``Age uncertainty'' weighting (No $2$ in Table.~\ref{tab-weit}), a
 well-constrained age should be known to within a half of a geological period
-(e.g., Quaternary, Neogene, Triassic) for Phanerozoic data~\cite{v90,T18}.
+(e.g., Quaternary, Neogene, Triassic) for Phanerozoic data~\cite{v90,T19}.
 Generally, this work follows this principle. However, for the periods of
 Paleogene, Cretaceous, and Jurassic, their halves are all beyond a time span of
 at least 20 Myr, which is relatively large for these relatively young geologic
@@ -2156,9 +2198,9 @@ Center for their remote HPC resources.
   Tohver, E., Meert, J. G., McCausland, P. J. A. \& Cocks, L. R. M., 2012.
   Phanerozoic polar wander, palaeogeography and dynamics, \textit{Earth Sci.
   Rev.}, \textbf{114}, 325\textendash368.
-\bibitem[\protect\citename{Tauxe et al. }2018]{T18}
-  Tauxe L., Banerjee S.K., Butler R.F. \& van der Voo R., 2018.
-  \textit{Essentials of Paleomagnetism}, 5th web edn, Available on line
+\bibitem[\protect\citename{Tauxe et al. }2019]{T19}
+  Tauxe L., Banerjee S.K., Butler R.F. \& van der Voo R., 2019.
+  \textit{Essentials of Paleomagnetism}, 5th web edn, Available on line.
 \bibitem[\protect\citename{van der Voo }1990]{v90}
   van der Voo, R., 1990. The reliability of paleomagnetic data,
   \tecto{}\textbf{184}, 1\textendash9.
