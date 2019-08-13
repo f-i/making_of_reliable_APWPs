@@ -507,24 +507,55 @@ different qualities.
 \toprule
 No. & Weighting Algorithm \\ \midrule
 0 & None (No weighting) \\
-1 & Larger Numbers of sites (B), Observations (N), greater weight \\
+1 & Larger numbers of sites (B) \& observations (N), greater weight: \\
   & \vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
 	0.2\textrm{, if both B \& N are missing, or B$\leq1$ \& N$\leq1$;} \\
 	(1-\frac{1}{B})*0.5\textrm{, if only N is missing, or N$\leq1$ \& B$>$1;} \\
 	(1-\frac{1}{N})*0.5\textrm{, if only B is missing, or B$\leq1$ \& N$>$1;} \\
-    (1-\frac{1}{B})*(1-\frac{1}{N})\textrm{, if B$>$1 \& N$>$1;}
+    (1-\frac{1}{B})*(1-\frac{1}{N})\textrm{, if B$>$1 \& N$>$1.}
 \end{array}\right.\end{equation*}} \\
-2 & Lower Age uncertainty, greater weight \\
+2 & Lower age uncertainty, greater weight: \\
   & \begin{minipage}{8cm}age\_range=HIMAGAGE-LOMAGAGE \\
     age\_midpoint=(HIMAGAGE+LOMAGAGE)*0.5 \\
     if age\_midpoint$<$2.58 (Ma; start of the Quaternary), \\
     \vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
     1\textrm{, if age\_range$\leq$1.29} \\
     \frac{1.29}{age\_range}\textrm{, if age\_range$>$1.29;}
+    \end{array}\right.\end{equation*}} \\
+    if 2.58$\leq$age\_midpoint$<$23.03 (Ma; Neogene), \\
+    \vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
+    1\textrm{, if age\_range$\leq$10.225} \\
+    \frac{10.225}{age\_range}\textrm{, if age\_range$>$10.225;}
+    \end{array}\right.\end{equation*}} \\
+    if 23.03$\leq$age\_midpoint$<$201.3 (Ma; Paleogene,Cretaceous,Jurassic), \\
+    \vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
+    1\textrm{, if age\_range$\leq$15} \\
+    \frac{15}{age\_range}\textrm{, if age\_range$>$15.}
     \end{array}\right.\end{equation*}}
   \end{minipage} \\
-3 & $\alpha$95 (Normal distribution: standard deviation 10) \\
-4 & Age error Position to bin (more overlap, greater weight) \\
+3 & Lower $\alpha$95, greater weight: \\
+  & \begin{minipage}{8cm}Positive half Normal distribution with a mean and standard deviation \\
+    of 0 and 10, scaled with $10\sqrt{2\pi}$ (to make the peak reach 1) \\
+    \vbox{\begin{equation*}W=e^{-\frac{\alpha_{95}^2}{200}},\end{equation*}} \\
+    where \\
+    \vbox{\begin{equation*}\alpha95=\left\{\begin{array}{lllllllllllllll}
+    ED95 \\
+    DP\textrm{, if ED95 is missing} \\
+    \frac{140}{\sqrt{KD*N}}\textrm{, if ED95 \& DP are missing} \\
+    \frac{140}{\sqrt{K\_NORM*N}}\textrm{, if ED95, DP \& KD are missing} \\
+    \frac{140}{\sqrt{K\_NORM*B}}\textrm{, if ED95, DP, KD \& N are missing} \\
+    \frac{140}{\sqrt{1.7*B}}\textrm{, if ED95, DP, KD \& K\_NORM are missing,} \\
+    \qquad\qquad\textrm{using the lowest KD in GPMDB, about 1.7}
+    \end{array}\right.\end{equation*}}
+    \end{minipage} \\
+4 & Age error Position to bin (more overlap, greater weight): \\
+  & \begin{minipage}{8cm}wha: window high age, wla: window low age\\\vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
+    \frac{wha-wla}{age\_range} \\
+    \frac{wha-LOMAGAGE}{age\_range}\textrm{, if LOMAGAGE$>$wla \& HIMAGAGE$>$wha} \\
+    \frac{HIMAGAGE-wla}{age\_range}\textrm{, if LOMAGAGE$<$wla \& HIMAGAGE$<$wha},
+    \end{array}\right.\end{equation*}}
+    finally W=1 if W$>$1
+    \end{minipage} \\
 5 & comb of 3 and 4 \\ \bottomrule
 \end{tabular}
 \end{table}
