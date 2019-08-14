@@ -185,7 +185,7 @@ LOMAGAGE & Lower best estimate of the magnetic age of the magnetisation componen
 HIMAGAGE & Upper best estimate of the magnetic age of the magnetisation component \\
 B & Number of sites \\
 N & Number of samples \\
-ED95 & Radius of Circle of 95\% confidence about mean direction, i.e. $\alpha$95 \\
+ED95 & Radius of circle of 95\% confidence about mean direction, i.e. $\alpha$95 \\
 KD & Fisher precision parameter for mean direction \\
 DP & Half-angle of confidence on the pole in the direction of paleomeridian \\
 DM & Half-angle of confidence on the pole perpendicular to paleomeridian \\
@@ -488,17 +488,12 @@ further excludes superseded data.
 
 \subsubsection{Weighting}
 
-Because all data is not created equal, we want to calculate a weighted mean pole
-for a time interval with `better' (more likely to be reliable) poles counting
-more than `worse'. For example, a pole with small $\alpha$95 and very well
-constrained age is more likely to reflect APWP position at the selected age
-point than a pole with large $\alpha$95 and very broad age range. There are many
-potential ways to weight this data set which can obviously greatly influence the
-final result, and we want to test this.
+Following filtering, weights were assigned to each of the remaining paleopoles
+using one of the following six algorithms (Table~\ref{tab-weit}), prior to
+calculation of a weighted Fisher mean:
 
-Six weighting algorithms (Table.~\ref{tab-weit}) have currently been developed
-or reproduced according to published work to give different weights to data with
-different qualities.
+\subparagraph{No weighting (Weighting 0).} Weighting factor=1 for all
+paleopoles.
 
 \begin{table}
 \centering
@@ -507,28 +502,28 @@ different qualities.
 \toprule
 No. & Weighting Algorithm \\ \midrule
 0 & None (No weighting) \\
-1 & Larger numbers of sites (B) \& observations (N), greater weight: \\
-  & \vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
-	0.2\textrm{, if both B \& N are missing, or B$\leq1$ \& N$\leq1$;} \\
-	(1-\frac{1}{B})*0.5\textrm{, if only N is missing, or N$\leq1$ \& B$>$1;} \\
-	(1-\frac{1}{N})*0.5\textrm{, if only B is missing, or B$\leq1$ \& N$>$1;} \\
+1 & Larger numbers of sites (B) \& observations (N), greater $weight$ ($w$): \\
+  & \vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
+    0.2\textrm{, if both B \& N are missing, or B$\leq1$ \& N$\leq1$;} \\
+    (1-\frac{1}{B})*0.5\textrm{, if only N is missing, or N$\leq1$ \& B$>$1;} \\
+    (1-\frac{1}{N})*0.5\textrm{, if only B is missing, or B$\leq1$ \& N$>$1;} \\
     (1-\frac{1}{B})*(1-\frac{1}{N})\textrm{, if B$>$1 \& N$>$1.}
 \end{array}\right.\end{equation*}} \\
 2 & Lower age uncertainty, greater weight: \\
   & \begin{minipage}{8cm}age\_range=HIMAGAGE-LOMAGAGE \\
     age\_midpoint=(HIMAGAGE+LOMAGAGE)*0.5 \\
-    if age\_midpoint$<$2.58 (Ma; start of the Quaternary), \\
-    \vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
-    1\textrm{, if age\_range$\leq$1.29} \\
+    if age\_midpoint$<$2.58 (Ma; start of the Quaternary, according to GSA Geologic Time Scale), \\
+    \vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
+    1\textrm{, if age\_range$\leq$1.29 (from $\frac{2.58-0}{2})$} \\
     \frac{1.29}{age\_range}\textrm{, if age\_range$>$1.29;}
     \end{array}\right.\end{equation*}} \\
     if 2.58$\leq$age\_midpoint$<$23.03 (Ma; Neogene), \\
-    \vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
-    1\textrm{, if age\_range$\leq$10.225} \\
+    \vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
+    1\textrm{, if age\_range$\leq$10.225 (from $\frac{23.03-2.58}{2})$} \\
     \frac{10.225}{age\_range}\textrm{, if age\_range$>$10.225;}
     \end{array}\right.\end{equation*}} \\
     if 23.03$\leq$age\_midpoint$<$201.3 (Ma; Paleogene,Cretaceous,Jurassic), \\
-    \vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
+    \vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
     1\textrm{, if age\_range$\leq$15} \\
     \frac{15}{age\_range}\textrm{, if age\_range$>$15.}
     \end{array}\right.\end{equation*}}
@@ -536,7 +531,7 @@ No. & Weighting Algorithm \\ \midrule
 3 & Lower $\alpha$95, greater weight: \\
   & \begin{minipage}{8cm}Positive half Normal distribution with a mean and standard deviation \\
     of 0 and 10, scaled with $10\sqrt{2\pi}$ (to make the peak reach 1) \\
-    \vbox{\begin{equation*}W=e^{-\frac{\alpha_{95}^2}{200}},\end{equation*}} \\
+    \vbox{\begin{equation*}w=e^{-\frac{\alpha_{95}^2}{200}},\end{equation*}} \\
     where \\
     \vbox{\begin{equation*}\alpha95=\left\{\begin{array}{lllllllllllllll}
     ED95 \\
@@ -547,83 +542,79 @@ No. & Weighting Algorithm \\ \midrule
     \frac{140}{\sqrt{1.7*B}}\textrm{, if ED95, DP, KD \& K\_NORM are missing,} \\
     \qquad\qquad\textrm{using the lowest KD in GPMDB, about 1.7}
     \end{array}\right.\end{equation*}}
+    finally $w$=0 if this $\alpha$95 completely overlaps with another smaller
+    $\alpha$95 whose paleopole is exactly derived from the same place and same
+    rock.
     \end{minipage} \\
 4 & Age error Position to bin (more overlap, greater weight): \\
-  & \begin{minipage}{8cm}wha: window high age, wla: window low age\\\vbox{\begin{equation*}W=\left\{\begin{array}{lllllllllllllll}
-    \frac{wha-wla}{age\_range} \\
+  & \begin{minipage}{8cm}wha, window high age; wla, window low age\\\vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
     \frac{wha-LOMAGAGE}{age\_range}\textrm{, if LOMAGAGE$>$wla \& HIMAGAGE$>$wha} \\
-    \frac{HIMAGAGE-wla}{age\_range}\textrm{, if LOMAGAGE$<$wla \& HIMAGAGE$<$wha},
+    \frac{HIMAGAGE-wla}{age\_range}\textrm{, if LOMAGAGE$<$wla \& HIMAGAGE$<$wha} \\
+    \frac{wha-wla}{age\_range}\textrm{, if LOMAGAGE$<$wla \& HIMAGAGE$>$wha} \\
+    1\textrm{, if LOMAGAGE$>$wla \& HIMAGAGE$<$wha}.
     \end{array}\right.\end{equation*}}
-    finally W=1 if W$>$1
     \end{minipage} \\
-5 & comb of 3 and 4 \\ \bottomrule
+5 & Combining 3 and 4: average of the two weights from 3 and 4 \\ \bottomrule
 \end{tabular}
 \end{table}
 
-In order to average errors in orientation of the samples and scatter caused by
-secular variation, a ``sufficient'' number of individually oriented samples
-(observations) from ``enough'' sites must be satisfied~\cite{T19,v90,B02}. So
-for the ``Numbers of sites (B), Observations (N)'' weighting (No $1$ in
-Table.~\ref{tab-weit}), larger B and N mean stronger weighting. Through knowing
-the pattern of all B and N in the database, the proposed solutions are as
-follows. If both B and N are more than 1, weight=$(1- \frac{1}{B})*(1-
-\frac{1}{N})$. There are data in GPMDB with only the number of sampling sites
-(at least greater than 1) given, but no number of samples or only one sample
-given, so for this case, if B$>$1 and N $\leq$ 1, weight=$(1- \frac{1}{B})*0.5$.
-If only the number of samples (at least greater than 1) is given, and the
-number of sampling sites is missing or only one, i.e. B$\leq$ 1 and N$>$1,
-weight=$(1- \frac{1}{N})*0.5$. If B $\leq$ 1 and N $\leq$ 1 (there are only 23
-datasets for the whole GPMDB 4.6b, including 18 with both B and N informations
-missing), weight=0.2.
+\subparagraph{Weighting by sample and site number (Weighting 1).} Paleopoles
+derived from more individually oriented samples (observations; N) collected from
+more sampling levels/sites (B) are more likely to average out secular variation
+and accurately sample the GAD field~\cite{T19,v90,B02}, and are given a
+weighting closer to 1. Unfortunately, in the GPMDB, not all paleopoles' B or N
+are given. There are datasets with only number of sampling sites (B; at least
+greater than 1) given, but no number of samples (N) or only one sample given, so
+for this case, if B$>$1 and N $\leq$ 1, weight=$(1- \frac{1}{B})*0.5$ (for
+120\textendash0 Ma North America, there are 8 such datasets, India 4, Australia
+1). If only N (at least greater than 1) is given, and B is missing or only one,
+i.e. B$\leq$ 1 and N$>$1, weight=$(1-\frac{1}{N})*0.5$ (for 120\textendash0 Ma
+North America, there are 20 such datasets, India 26, Australia 22). If B $\leq$
+1 and N $\leq$ 1 (there are only 23 datasets for the whole GPMDB 4.6b, including
+18 with both B and N informations missing; for 120\textendash0 Ma North America,
+India and Australia, there is no such dataset), weight=0.2.
 
-As for the ``Age uncertainty'' weighting (No $2$ in Table.~\ref{tab-weit}), a
-well-constrained age should be known to within a half of a geological period
-(e.g., Quaternary, Neogene, Triassic) for Phanerozoic data~\cite{v90,T19}.
-Generally, this work follows this principle. However, for the periods of
-Paleogene, Cretaceous, and Jurassic, their halves are all beyond a time span of
-at least 20 Myr, which is relatively large for these relatively young geologic
-periods. So for these three periods, a tighter age constraint is set using age
-uncertainties of $\leq15$ Myr. So, for example, for NAC's Neogene
-(23.03\textendash2.58 Ma according to GSA Geologic Time Scale) data, if age
-uncertainty (the high magnetic age $-$ the low magnetic age) $\leq$ 10.225 (from
-0.5* (23.03$-$2.58)) Myr, its weight = 1; if age uncertainty $>$ 10.225 Myr, its
-weight = 10.225 / (high magnetic age $-$ low magnetic age). For the periods
-spanning Jurassic to Paleogene, if age uncertainty $\leq15$ Myr, it get its
-weight of 1; if age uncertainty $>15$ Myr, a weight of 15 / (high magnetic age
-$-$ low magnetic age) is assigned instead.
+\subparagraph{Weighting by age uncertainty (Weighting 2)} Above a maximum age
+range that represents a well-constrained age, defined as half of each geological
+period in the Phanerozoic Eon (e.g., Quaternary, Neogene)~\cite{v90,T19} or 15
+Myr (the halves of the Paleogene, Cretaceous, and Jurassic periods are all at
+least 20 Myr, which is large for these relatively young geologic periods),
+whichever is smaller, paleopoles are given an increasingly small weight as the
+age uncertainty (the high magnetic age $-$ the low magnetic age) increases.
 
-For the ``$\alpha$95'' weighting (No $3$ in Table.~\ref{tab-weit}), smaller
-radius of circle of 95\% confidence about mean remanence direction means less
-error, so should get larger weight. Here, weight is from a Gaussian distribution
-centered on 0 with standard deviation of 10, i.e., when $\alpha$95$>$0,
-weight$<$1. There is no such case as $\alpha$95$=$0, while there exists a blank
-$\alpha$95 in the database. If $\alpha$95 is not given, DP (the semi-axis of
-the confidence ellipse along the great circle path from site to pole) is
-assigned as $\alpha$95. If DP is also not given, $\alpha$95 was further
-approximated by $\frac{140}{KD*N}$, where KD is Fisher precision parameter for
-mean direction if this parameter is given, or Fisher precision parameter for
-Normal directions (K\_NORM) if only K\_NORM is given when KD is missing. If N is
-not given, B is used as N. If even K\_NORM is also missing, the lowest KD value
-1.7 that can be found in GPMDB 4.6b is used as KD\@. It is also worthwhile to
-mention that if samples, where two poles are derived, are exactly from the same
-place and same rock, and one $\alpha$95 is completely inside the other
-$\alpha$95, a zero is assigned as the weight of the data with the larger
-$\alpha$95. In fact, in the above described procedure A95 (circle of 95\%
-confidence about mean pole) is a better alternative instead of $\alpha$95,
-because A95 is directly reflecting the uncertainty of the paleopoles. However,
-the A95s of the most paleopoles are not given in GPMDB 4.6b, so $\alpha$95 is
-used instead since $\alpha$95 is also indirectly reflecting the quality of the
-dataset.
+\subparagraph{Weighting by spatial uncertainty (Weighting 3).} Paleopoles with a
+smaller $\alpha$95 confidence ellipse are given a higher weighting than those
+with a larger $\alpha$95, using a Gaussian/Normal distribution centered on 0
+with standard deviation of 10. However, not all paleopoles' $\alpha$95 are given
+in the database. If $\alpha$95 is not given, DP (the semi-axis of the confidence
+ellipse along the great circle path from site to pole) is assigned as
+$\alpha$95. If DP is also not given, $\alpha$95 was further approximated by
+$\frac{140}{KD*N}$, where KD is Fisher precision parameter for mean direction if
+this parameter is given, or Fisher precision parameter for Normal directions
+(K\_NORM) if only K\_NORM is given when KD is missing. If N is not given, B is
+used as N. If even K\_NORM is also missing, the lowest KD value 1.7 in GPMDB
+4.6b is used as KD\@. It is also worthwhile to mention that if samples, where
+two paleopoles are derived, are exactly from the same place and same rock, and
+one $\alpha$95 is completely inside the other $\alpha$95, a zero is assigned as
+the weight of the data with the larger $\alpha$95. In fact, in the above
+described procedure A95 (circle of 95\% confidence about mean pole) is a better
+alternative instead of $\alpha$95, because A95 is directly reflecting the
+spatial uncertainty of the paleopoles. However, most paleopoles' A95s are not
+given in GPMDB 4.6b, so $\alpha$95 is used instead since $\alpha$95 is also
+indirectly reflecting the quality of the dataset.
 
-For the ``Age error Position to window'' weighting (No $4$ in
-Table.~\ref{tab-weit}), if window intersects with young/old end of age bracket
-or whole window overlaps with a part of age range, weight= (overlapping part)
-/ (age range width); if whole age range is within window, weight= (window width)
-/ (age range width) (note that when weight $>1$, it is set back to 1).
+\subparagraph{Weighting by degree of overlap between moving window and pole age
+uncertainty (Weighting 4).} If a large fraction of the age range for an
+individual paleopole falls within the current window, it is given a higher
+weighting than a pole where the overlap is smaller, because it is more likely
+to be close to the true pole position in the window interval. In other words, if
+window intersects with part of age range, weight= (intersecting part) / (age
+range width).
 
-The ``Age error Position to window, and $\alpha$95'' weighting (No $5$ in
-Table.~\ref{tab-weit}), is a combination of No $3$ (but here the standard
-deviation is 15 though) and No $4$.
+\subparagraph{Weighting by both spatial and temporal uncertainty (Weighting 5).}
+This weighting method is a combination of No $3$ (but here the standard
+deviation is 15 though) and No $4$. It takes the average of sums of the weights
+generated by weighting methods 3 and 4.
 
 Some of the picking (Table.~\ref{tab-pick}) and weighting
 (Table.~\ref{tab-weit}) methods developed here are also connected with the V90 Q
@@ -659,8 +650,8 @@ representatives for three different types of plate kinematics.
 
 The oldest pole that can be predicted from the FHM is about 120 Ma. For example,
 the North American 120\textendash0 Ma APWP predicted from this rotation model
-and latest published spreading ridge rotations (collected plate circuit data
-will be shared as a supplementary material) will be taken as a reference path
+and latest published spreading ridge rotations (see the collected plate circuit
+data in the supplementary material) will be taken as a reference path
 (Fig.~\ref{fig-mhsPred}), which will be compared with paleomagnetic APWPs for
 the same plate or continent.
 
