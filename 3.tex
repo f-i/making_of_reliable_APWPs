@@ -631,8 +631,12 @@ kinematic model that is tied in to an absolute reference frame. Here, we use
 the rotations of~\cite{O05}, which describe motion of Nubia (plate ID 701)
 relative to the Indo-Atlantic hotspots. North America is linked to this
 reference frame across the Mid-Atlantic ridge, using North America-Nubia
-rotations from~\cite{M99} to chron C34y (83 Ma) and~\cite{M97} from C34y to
-chron M0 (about 125 Ma). India is linked via the East African Rift Valley
+rotations from~\cite{D10} to C-Sequence chron C1no (0.78 Ma), from~\cite{S12} to
+chron C2An.2n (2.7 Ma), from~\cite{M99} to chron C5n.1ny (9.74 Ma),
+from~\cite{G13} to chron C5n.2o (10.949 Ma), from~\cite{M99} to chron C6ny
+(19.05 Ma), from~\cite{G13} to chron C6no (20.131 Ma), from~\cite{M99} to chron
+C34ny (83.5 Ma), from C34ny to about 118.1 Ma~\cite{S12}, and to closure at
+C34no (120.6 Ma)~\cite{G13}. India is linked via the East African Rift Valley
 (Somalia-Nubia rotations to chron C1no [0.78 Ma] from~\cite{D17}, to chron
 C2A.2no [3.22 Ma] from~\cite{H05}, and to closure at C7.2m [25.01 Ma]
 from~\cite{R16} and C34 [85 Ma; Rowley, pers.\ comm.], and finally extended to
@@ -648,6 +652,39 @@ from~\cite{D17}, to chron C6no [20.13 Ma] from~\cite{C04}, to chron C8o [26 Ma]
 from~\cite{G18}, to chron C17n.3no [38.11 Ma] from~\cite{C04}, to C34ny [83.5
 Ma] from~\cite{Wh13}, to the Quiet Zone Boundary [96 Ma] from~\cite{W07}, to
 closure at 136 Ma from~\cite{Wh13}).
+
+To reconstruct a reference APWP at the required time steps for comparison with
+the paleomagnetic APWPs, rotations and their associated uncertainties were
+interpolated between constraining finite rotation poles according to the method
+of~\cite{D08}, assuming constant rates.
+
+Neither the hotspot reference frame nor the paleomagnetic reference frame are
+truly fixed with respect to the solid Earth. In the former case, hotspots are
+not truly stationary in the mantle~\cite{S98}; in the latter, true polar wander
+(TPW) may also lead to differential movements of the solid earth with respect to
+the spin axis~\cite{E03}. In reality, it is difficult to untangle these effects.
+Whilst there is little clear evidence for significant TPW in the past about 120
+Myr~\cite{C00,R04}, modeling suggests that the effects of hotspot drift can
+start to become significant over 80\textendash100 Myr timescales~\cite{O05}.
+Because paleomagnetic APWPs have large associated spatial errors, a synthetic
+APWP calculated using a fixed hotspot reference frame is unlikely to deviate
+significantly from the `true' APWP, and most comparison experiments use a fixed
+hotspot model (FHM) reference path for North America (Fig.~\ref{fig-mhsPred}),
+India (Fig.~\ref{fig-mhsPred501}) and Australia (Fig.~\ref{fig-mhsPred801}).
+However, the full set of comparisons for the 28 picking methods and 6 weighting
+methods was also run for reference paths generated using the moving hotspot
+model (MHM) rotations of~\cite{O05}, which incorporate motions of the
+Indo-Atlantic hotspots relative to the mantle derived from mantle convection
+modeling.
+
+When comparing the synthetic APWP paths for the three plates (inset,
+Fig.~\ref{fig-mhsPred801}), there are clear differences. The predicted mean
+pole for North America at 120 Myr is still at about 75$^{\circ}$N
+(Fig.~\ref{fig-mhsPred}), indicating rather slow drift with respect to the spin
+axis; this is due to a large component of the North American plate's absolute
+motion in the past 120 Myr being to the west. In contrast, the rapid northward
+motion of the Indian plate in the same period, particularly prior to its
+collision with Asia at about 50\textendash55 Ma
 
 After about 170 Ma, multiple data sources can help constrain plate motions in
 more accurate ways. One of the most developed and studied plate kinematics
@@ -2149,6 +2186,9 @@ Center for their remote HPC resources.
   anisotropy of Carboniferous red beds from the Maritime Provinces of Canada:
   evidence for shallow palaeomagnetic inclinations and implications for North
   American apparent polar wander, \gji{}\textbf{180}, 1013\textendash1029.
+\bibitem[\protect\citename{Cottrell \& Tarduno }2000]{C00}
+  Cottrell, R. D. \& Tarduno, J. A., 2000. Late Cretaceous True Polar Wander:
+  Not So Fast, \textit{Science}, \textbf{288}, 2283.
 \bibitem[\protect\citename{Cande \& Stock }2004]{C04}
   Cande, S. C. \& Stock, J. M., 2004. Pacific–Antarctic–Australia motion and
   the formation of the Macquarie Plate, \gji{}\textbf{157}, 399\textendash414.
@@ -2161,6 +2201,14 @@ Center for their remote HPC resources.
   Eddy, D. R., Karner, G. D. \& Johnson, C. A., 2014. Deep crustal structure in
   the eastern Gulf of Mexico, \textit{J. Geophys. Res. Solid Earth},
   \textbf{401}, 183\textendash195.
+\bibitem[\protect\citename{Doubrovine \& Tarduno }2008]{D08}
+  Doubrovine, P. V. \& Tarduno, J. A., 2008. Linking the Late Cretaceous to
+  Paleogene Pacific plate and the Atlantic bordering continents using plate
+  circuits and paleomagnetic data, \textit{J. Geophys. Res. Solid Earth},
+  \textbf{113}, B07104.
+\bibitem[\protect\citename{DeMets et al. }2010]{D10}
+  DeMets, C., Gordon, R. G. \& Argus, D. F., 2010. Geologically current plate
+  motions, \gji{}\textbf{181}, 1\textendash80.
 \bibitem[\protect\citename{Domeier et al. }2011a]{D11}
   Domeier, M., van der Voo, R. \& Denny, F. B., 2011. Widespread inclination
   shallowing in Permian and Triassic paleomagnetic data from Laurentia: Support
@@ -2177,9 +2225,17 @@ Center for their remote HPC resources.
   DeMets, C., Calais, E. \& Merkouriev, S., 2017. Reconciling geodetic and
   geological estimates of recent plate motion across the Southwest Indian Ridge,
   \gji{}\textbf{208}, 118\textendash133.
+\bibitem[\protect\citename{Evans }2003]{E03}
+  Evans, D. A. D., 2003. True polar wander and supercontinents,
+  \textit{Tectonophysics}, \textbf{362}, 303\textendash320.
 \bibitem[\protect\citename{Fisher }1953]{F53}
   Fisher, R. A., 1953. Dispersion on a sphere, \textit{Proc. Roy. Soc. London
   Ser. A.}, \textbf{217}, 295\textendash305.
+\bibitem[\protect\citename{Gaina et al. }2013]{G13}
+  Gaina, C., Torsvik, T. H., van Hinsbergen D. J. J., Medvedev, S., Werner, S.
+  C. \& Labails, C., 2013. The African Plate: A history of oceanic crust
+  accretion and subduction since the Jurassic, \textit{Tectonophysics},
+  \textbf{604}, 4\textendash25.
 \bibitem[\protect\citename{Gaina et al. }2015]{G15}
   Gaina, C., van Hinsbergen D. J. J. \& Spakman, W., 2015. Tectonic interactions
   between India and Arabia since the Jurassic reconstructed from marine
@@ -2254,14 +2310,29 @@ Center for their remote HPC resources.
   Patriat, P., Sloan, H. \& Sauter, D., 2008. From slow to ultraslow: A
   previously undetected event at the Southwest Indian Ridge at ca. 24 Ma,
   \textit{Geology}, \textbf{36}, 207\textendash210.
+\bibitem[\protect\citename{Riisager et al. }2004]{R04}
+  Riisager, P., Hall, S., Antretter, M. \& Zhao, X., 2004. Early Cretaceous
+  Pacific palaeomagnetic pole from Ontong Java Plateau basement rocks, in
+  \textit{Origin and Evolution of the Ongong Java Plateau}, \textbf{229}, pp.
+  31\textendash44, eds Fitton, J. G., Mahoney, J. J., Wallace, P. J. \&
+  Saunders, A. D., Geological Society of London Special Publications.
 \bibitem[\protect\citename{Rowan \& Rowley }2016]{R16}
   Rowan, C. J. \& Rowley, D. B., 2016. Preserved history of global mean
   spreading rate: 83 Ma to present, \gji{}\textbf{208}, 1173\textendash1183.
+\bibitem[\protect\citename{Steinberger \& O'Connell }1998]{S98}
+  Steinberger, B. \& O'Connell, R. J., 1998. Advection of plumes in mantle
+  flow: implications for hotspot motion, mantle viscosity and plume
+  distribution, \gji{}\textbf{132}, 412\textendash434.
 \bibitem[\protect\citename{Schettino \& Scotese }2005]{S05}
   Schettino, A. \& Scotese, C. R., 2005. Apparent polar wander paths for the
   major continents (200 Ma to the present day): a palaeomagnetic reference frame
   for global plate tectonic reconstructions, \gji{}\textbf{163},
   727\textendash759.
+\bibitem[\protect\citename{Shephard et al. }2012]{S12}
+  Shephard, G. E., Bunge, H.-P., Schuberth, B. S. A., M{\"{u}}ller, R. D.,
+  Talsma, A. S., Moder, C. \& Landgrebe, T. C. W., 2012. Testing absolute plate
+  reference frames and the implications for the generation of geodynamic mantle
+  heterogeneity structure, \epsl{}\textbf{317\textendash318}, 204\textendash217.
 \bibitem[\protect\citename{Torsvik et al. }1992]{T92}
   Torsvik, T. H., Smethurst, M. A., van der Voo, R., Trench, A., Abrahamsen, N.
   \& Halvorsen, E., 1992. Baltica. A synopsis of Vendian-Permian palaeomagnetic
