@@ -13,6 +13,8 @@ paths. The "MHM" includes all the results from comparisons of Plates 101, 501
 and 801's paleomagnetic paths and their Moving Hotspot model (MHM) predicted
 paths.
 
+    data/SpreadingRidgeRotationFile.txt: Compilation of rotations of spreading ridges
+
     data/101FHS120predictPWP105.d: FHM and plate circuit predicted APWP (10 Myr sliding window, 5 Myr step) for Plate 101
 
     data/101FHS120predictPWP2010.d: FHM and plate circuit predicted APWP (20 Myr sliding window, 10 Myr step) for Plate 101
