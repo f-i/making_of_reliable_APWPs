@@ -746,23 +746,189 @@ Australia.}\label{fig-mhsPred801}
 
 Comparisons between APWPs generated using different picking and weighting
 algorithms and the synthetic reference APWPs were performed using the composite
-path difference (CPD) algorithm described in Chapter 2, with equal weighting
-given to the spatial, angular and weight differences (i.e., W$_s$ = W$_a$ =
-W$_l$ = $\frac{1}{3}$).
+path difference ($\mathcal{CPD}$) algorithm described in Chapter 2, with equal
+weighting given to the spatial, length and angular differences (i.e., W$_s$ =
+W$_l$ = W$_a$ = $\frac{1}{3}$).
 
-Chapter 2 proposes a new method of determining the degree of similarity between
-two APWPs that combines three separate difference metrics that assess both
-spatial distance of coeval points, and similarities in the bearing and length of
-coeval segments using a weighted linear summation. In this chapter, the path
-comparison method is used to measure similarity between the hotspot and
-ocean-floor spreading model predicted APWP and the 168 different paleomagnetic
-APWPs. This does not only help us find the most similar paleomagnetic APWP to
-the other-model predicted APWP, but also help further test the validness
-of the measuring tool in practise.
+This does not only help find the most similar paleomagnetic APWP (from the best
+algorithm) to the reference APWP, but also help further test and demonstrate the
+validness of the similarity measuring tool in practise.
 
 \section{Results and Discussions}
 
 \subsection{Results}
+
+\subsubsection{Baseline results: 10 Myr window, 5 Myr step, fixed hotspot
+reference}
+
+Fig.~\ref{fig-dif} shows the $\mathcal{CPD}$ scores for the APWPs generated with
+all 28 picking methods (AMP and APP with one of 14 separate filters applied) and
+one of 6 weighted mean calculations then applied, compared to the FHM reference
+path for North America (Fig.~\ref{fig-na-dif}), India (Fig.~\ref{fig-in-dif})
+and Australia (Fig.~\ref{fig-au-dif}). The 27 lowest and highest of the 168
+scores for each plate (values greater than 1 standard deviation from the mean)
+are marked in green and red, respectively. Different combinations of windowing
+method, filtering and weighting clearly affect the difference score, with
+$\mathcal{CPD}$ values ranging from 0.0037 to 0.5137. The fits for paths with
+low difference scores are clearly much better than for those with high ones
+(Fig.~\ref{fig-difbw}). From Fig.~\ref{fig-dif}, it is clear that:
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/101_120_0.pdf}
+		\caption{Plate ID 101 with children: minimum 0.0053 (11, 0),
+		maximum 0.0921 (16, 3), mean 0.0335, median 0.0342}\label{fig-na-dif} % subcaption
+	\end{subfigure}
+	\vspace{.1em} % here you can insert horizontal or vertical space
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/501_120_0.pdf}
+		\caption{Plate ID 501: minimum 0.023 (19, 0), maximum 0.5137 (8, 3),
+		mean 0.1181, median 0.0818}\label{fig-in-dif} % subcaption
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/801_120_0.pdf}
+		\caption{Plate ID 801 with children: minimum 0.0037 (17, 0), maximum
+		0.3954 (22, 3), mean 0.08432, median 0.05037}\label{fig-au-dif} % subcaption
+	\end{subfigure}
+	\caption[Differences of each plate's paleomagnetic APWPs versus
+its FHM predicted APWP]{Equal-weight composite path difference ($\mathcal{CPD}$)
+values between each continent's paleomagnetic APWPs and its predicted APWP from
+FHM and related plate circuits. The paths are in 10 Myr bin and 5 Myr step. The
+difference values less than one-standard-deviation interval of the whole 168
+values are colored in green, more than one-standard-deviation interval colored
+in red.}\label{fig-dif} % caption for whole figure
+\end{figure*}
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{.42\textwidth} % width of left subfigure
+		\includegraphics[width=\textwidth]{figures/ay18_101comb_10_5_11_0.pdf}
+		\caption{North America: minimum 0.0053 (11, 0)}\label{fig-nac-105110}
+	\end{subfigure}
+	\begin{subfigure}{.42\textwidth} % width of right subfigure
+		\includegraphics[width=\textwidth]{figures/ay18_101comb_10_5_16_3.pdf}
+		\caption{North America: maximum 0.0921 (16, 3)}\label{fig-nac-105163}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{.42\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_501comb_10_5_19_0.pdf}
+		\caption{India: minimum 0.023 (19, 0)}\label{fig-ind-105190}
+	\end{subfigure}
+	\begin{subfigure}{.42\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_501comb_10_5_8_3.pdf}
+		\caption{India: maximum 0.5137 (8, 3)}\label{fig-ind-10583}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{.42\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_801comb_10_5_17_0.pdf}
+		\caption{Australia: minimum 0.0037 (17, 0)}\label{fig-au-105170}
+	\end{subfigure}
+	\begin{subfigure}{.42\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_801comb_10_5_22_3.pdf}
+		\caption{Australia: maximum 0.3954 (22, 3)}\label{fig-au-105223}
+	\end{subfigure}
+	\caption[Best and worst differences (10 Myr bin, 5 Myr
+step)]{Path comparisons with best and worst difference values shown in
+Fig.~\ref{fig-dif}. The parenthetical remarks are Picking No and Weighting
+No.}\label{fig-difbw}
+\end{figure*}
+
+\begin{enumerate}
+  \item There is much more variation in scores along the horizontal axes than
+	the vertical axes, suggesting that the choice of windowing and filtering
+	method has a much greater impact than weighting.
+  \item Many of the highest scores (worst fits) are associated with
+	even-numbered picking and filtering methods, i.e., those which use the AMP
+	windowing algorithm.
+  \item The magnitude and range of $\mathcal{CPD}$ scores for each of the three
+	plates is different, with the North American plate having the lowest
+	magnitudes and range (Fig.~\ref{fig-na-dif}), and the Indian plate having
+	the highest (Fig.~\ref{fig-in-dif}).
+  \item Although there is some overlap, the best- and worst-performing
+	picking/filtering and weighting algorithms are not exactly the same for
+	each plate.
+\end{enumerate}
+
+\subsubsection{Effects of windowing method}
+
+Dividing $\mathcal{CPD}$ scores according to whether the AMP or APP windowing
+method was used (Fig.~\ref{fig-difAMPvsAPP}) confirms that whilst the lowest
+$\mathcal{CPD}$ scores for paths generated by the AMP windowing algorithm are close to the
+lowest scores generated using the AMP method, the highest scores are much
+higher. The mean of the $\mathcal{CPD}$ scores for APWPs generated using AMP is greater
+than the maximum APP-derived score for the Indian and Australian plates
+(Figs.~\ref{fig-in-difAMPvsAPP},~\ref{fig-au-difAMPvsAPP}), and more than 1
+standard deviation greater than the APP mean for North American APWPs
+(Fig.~\ref{fig-na-difAMPvsAPP}).
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/101_120_0APPvsAMP.pdf}
+		\caption{AMP: minimum 0.0292 (4/6, 5), maximum 0.0921 (16,
+		3), mean 0.04641, median 0.04664; APP: minimum 0.0053 (11, 0), maximum
+		0.05686 (5/7, 3), mean 0.02055, median 0.01594}\label{fig-na-difAMPvsAPP}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/501_120_0APPvsAMP.pdf}
+		\caption{AMP: minimum 0.047 (4/6, 3), maximum 0.5137 (8, 3), mean
+		0.1684, median 0.1862; APP: minimum 0.023 (19, 0), maximum 0.1359 (3,
+		4), mean 0.06786, median 0.0609}\label{fig-in-difAMPvsAPP}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/801_120_0APPvsAMP.pdf}
+		\caption{AMP: minimum 0.0305 (0/20, 3), maximum 0.3954 (22,
+		3), mean 0.1264, median 0.0951; APP: minimum 0.0037 (17, 0), maximum
+		0.11035 (15, 3), mean 0.04225, median 0.0282}\label{fig-au-difAMPvsAPP}
+	\end{subfigure}
+	\caption[Differences of each plate's paleomagnetic APWPs versus its FHM
+predicted APWP (AMP vs APP)]{Separated results from AMP and APP in
+Fig.~\ref{fig-dif}. For each grid block (left: AMP; right: APP), the difference
+values less than one-standard-deviation interval of the whole 84 values are
+labeled in green, more than one-standard-deviation interval labeled in
+red.}\label{fig-difAMPvsAPP}
+\end{figure*}
+
+For each of the 84 possible combinations of filter method and weighting, the
+AMP-derived score is typically 3-5 times higher than the equivalent APP-derived
+score. APP-generated paths yield a lower $\mathcal{CPD}$ score than the
+equivalent AMP-generated path for 82 (97.6\%) of the North America scores, 72
+(85.7\%) of the India scores, and 84 (100\%) of the Australia scores. For the
+North American and Indian plates, filtering that prefers igneous poles (picking
+methods 4/5 and 6/7) or removes poles with large age uncertainties (methods 2/3,
+22/23 and 26/27) is most likely to produce AMP scores close to (less than 1.5
+times) or less than the APP scores
+(Figs.~\ref{fig-na-difAMPvsAPP},~\ref{fig-in-difAMPvsAPP}). In the former case,
+the scores are comparable and relatively low; in the latter case, they are
+comparable but relatively high. For the Australian plate, only strict spatial
+and temporal uncertainty filtering (method 2/3) and correcting for inclination
+shallowing (method 8/9) produces comparable scores
+(Fig.~\ref{fig-au-difAMPvsAPP}), producing comparable but moderate scores in
+both cases.
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{.9\textwidth}
+		\includegraphics[width=\textwidth]{figures/101_10_5FHM.pdf}
+		\caption{}\label{fig-na-boxAMPvsAPP}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{.9\textwidth}
+		\includegraphics[width=\textwidth]{figures/501_10_5FHM.pdf}
+		\caption{}\label{fig-in-boxAMPvsAPP}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{.9\textwidth}
+		\includegraphics[width=\textwidth]{figures/801_10_5FHM.pdf}
+		\caption{}\label{fig-au-boxAMPvsAPP}
+	\end{subfigure}
+	\caption[]{Box-and-whisker plots of Fig.~\ref{fig-difAMPvsAPP}.
+}\label{fig-boxAMPvsAPP}
+\end{figure*}
 
 Is there any common pattern of the similarities for all the three continents?
 First, the best and worst methods need to be determined. Here, the difference
@@ -820,34 +986,6 @@ observe:
 		sometimes, Wt 3 does not work well with these lithology-related methods
 		(Fig.~\ref{fig-dif} and Fig.~\ref{fig-difAMPvsAPP}).
 \end{enumerate}
-
-\begin{figure*}
-	\centering
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/101_120_0.pdf}
-		\caption{Plate ID 101 with children: minimum 0.0053 (11, 0),
-		maximum 0.0921 (16, 3), mean 0.0335, median 0.0342}\label{fig-nac-dif} % subcaption
-	\end{subfigure}
-	\vspace{.1em} % here you can insert horizontal or vertical space
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/501_120_0.pdf}
-		\caption{Plate ID 501: minimum 0.023 (19, 0), maximum 0.5137 (8, 3),
-		mean 0.1181, median 0.0818}\label{fig-ind-dif} % subcaption
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/801_120_0.pdf}
-		\caption{Plate ID 801 with children: minimum 0.0037 (17, 0), maximum
-		0.3954 (22, 3), mean 0.08432, median 0.05037}\label{fig-au-dif} % subcaption
-	\end{subfigure}
-	\caption[Differences of each plate's paleomagnetic APWPs versus
-its FHM predicted APWP]{Equal-weight composite path difference ($\mathcal{CPD}$)
-values between each continent's paleomagnetic APWPs and its predicted APWP from
-FHM and related plate circuits. The paths are in 10 Myr bin and 5 Myr step. The
-difference values less than one-standard-deviation interval of the whole 168
-values are colored in green, more than one-standard-deviation interval colored
-in red.}\label{fig-dif} % caption for whole figure
-\end{figure*}
 
 \begin{figure*}
 	\centering
@@ -968,54 +1106,21 @@ to each segment-orientation-change's three mean path poles.}\label{fig-nada}
 
 \begin{figure*}
 	\centering
-	\begin{subfigure}{.42\textwidth} % width of left subfigure
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_10_5_11_0.pdf}
-		\caption{North America: minimum 0.0053 (11, 0)}\label{fig-nac-105110}
-	\end{subfigure}
-	\begin{subfigure}{.42\textwidth} % width of right subfigure
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_10_5_16_3.pdf}
-		\caption{North America: maximum 0.0921 (16, 3)}\label{fig-nac-105163}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_10_5_19_0.pdf}
-		\caption{India: minimum 0.023 (19, 0)}\label{fig-ind-105190}
-	\end{subfigure}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_10_5_8_3.pdf}
-		\caption{India: maximum 0.5137 (8, 3)}\label{fig-ind-10583}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_10_5_17_0.pdf}
-		\caption{Australia: minimum 0.0037 (17, 0)}\label{fig-au-105170}
-	\end{subfigure}
-	\begin{subfigure}{.42\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_10_5_22_3.pdf}
-		\caption{Australia: maximum 0.3954 (22, 3)}\label{fig-au-105223}
-	\end{subfigure}
-	\caption[Best and worst differences (10 Myr bin, 5 Myr
-step)]{Path comparisons with best and worst difference values shown in
-Fig.~\ref{fig-dif}. The parenthetical remarks are Picking No and Weighting No.}\label{fig-difbw}
-\end{figure*}
-
-\begin{figure*}
-	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/f501d101.pdf}
-		\caption{Differences between Fig.~\ref{fig-ind-dif} (India) and
-		Fig.~\ref{fig-nac-dif} (North America)}\label{fig-i-n-dif}
+		\caption{Differences between Fig.~\ref{fig-in-dif} (India) and
+		Fig.~\ref{fig-na-dif} (North America)}\label{fig-i-n-dif}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/f801d101.pdf}
 		\caption{Differences between Fig.~\ref{fig-au-dif} (Australia) and
-		Fig.~\ref{fig-nac-dif} (North America)}\label{fig-a-n-dif}
+		Fig.~\ref{fig-na-dif} (North America)}\label{fig-a-n-dif}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/f501d801.pdf}
-		\caption{Differences between Fig.~\ref{fig-ind-dif} (India) and
+		\caption{Differences between Fig.~\ref{fig-in-dif} (India) and
 		Fig.~\ref{fig-au-dif} (Australia)}\label{fig-i-a-dif}
 	\end{subfigure}
 	\caption[Differences of differences of each plate's paleomagnetic
@@ -1023,36 +1128,6 @@ APWPs versus its FHM predicted APWP]{Differences between grids in
 Fig.~\ref{fig-dif}. The absolute difference values less than
 1.96-standard-deviation interval of the whole 168 values are labeled in green,
 more than 1.96-standard-deviation interval labeled in red.}\label{fig-d-dif}
-\end{figure*}
-
-\begin{figure*}
-	\centering
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/101_120_0APPvsAMP.pdf}
-		\caption{AMP: minimum 0.0292 (4/6, 5), maximum 0.0921 (16,
-		3), mean 0.04641, median 0.04664; APP: minimum 0.0053 (11, 0), maximum
-		0.05686 (5/7, 3), mean 0.02055, median 0.01594}\label{fig-na-difAMPvsAPP}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/501_120_0APPvsAMP.pdf}
-		\caption{AMP: minimum 0.047 (4/6, 3), maximum 0.5137 (8, 3), mean
-		0.1684, median 0.1862; APP: minimum 0.023 (19, 0), maximum 0.1359 (3,
-		4), mean 0.06786, median 0.0609}\label{fig-in-difAMPvsAPP}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/801_120_0APPvsAMP.pdf}
-		\caption{AMP: minimum 0.0305 (0/20, 3), maximum 0.3954 (22,
-		3), mean 0.1264, median 0.0951; APP: minimum 0.0037 (17, 0), maximum
-		0.11035 (15, 3), mean 0.04225, median 0.0282}\label{fig-au-difAMPvsAPP}
-	\end{subfigure}
-	\caption[Differences of each plate's paleomagnetic APWPs versus its FHM
-predicted APWP (AMP vs APP)]{Separated results from AMP and APP in
-Fig.~\ref{fig-dif}. For each grid block (left: AMP; right: APP), the difference
-values less than one-standard-deviation interval of the whole 84 values are
-labeled in green, more than one-standard-deviation interval labeled in
-red.}\label{fig-difAMPvsAPP}
 \end{figure*}
 
 
@@ -1069,12 +1144,12 @@ According to the results (Fig.~\ref{fig-dif2010}), we can observe:
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/101_20_10_120_0.pdf}
-		\caption{North America (101 with children): minimum 0.0115 (13, 0), maximum 0.0635 (16, 2), mean 0.0335, median 0.0285}\label{fig-nac-dif2010}
+		\caption{North America (101 with children): minimum 0.0115 (13, 0), maximum 0.0635 (16, 2), mean 0.0335, median 0.0285}\label{fig-na-dif2010}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/501_20_10_120_0.pdf}
-		\caption{India (501): minimum 0.0143 (6, 3), maximum 0.1543 (16, 3), mean 0.074, median 0.0755}\label{fig-ind-dif2010}
+		\caption{India (501): minimum 0.0143 (6, 3), maximum 0.1543 (16, 3), mean 0.074, median 0.0755}\label{fig-in-dif2010}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
@@ -1134,12 +1209,12 @@ Fig.~\ref{fig-mhsPred801}) as the reference path.
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/101_120_0m.pdf}
-		\caption{North America (101 with children): minimum 0.00077 (4, 0), maximum 0.0926 (16, 5), mean 0.0361, median 0.0325}\label{fig-nac-difm}
+		\caption{North America (101 with children): minimum 0.00077 (4, 0), maximum 0.0926 (16, 5), mean 0.0361, median 0.0325}\label{fig-na-difm}
 	\end{subfigure}
 	\vspace{1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/501_120_0m.pdf}
-		\caption{India (501): minimum 0.0228 (4, 3), maximum 0.5188 (8, 3), mean 0.113, median 0.0746}\label{fig-ind-difm}
+		\caption{India (501): minimum 0.0228 (4, 3), maximum 0.5188 (8, 3), mean 0.113, median 0.0746}\label{fig-in-difm}
 	\end{subfigure}
 	\vspace{1em}
 	\begin{subfigure}{1.01\textwidth}
@@ -1187,7 +1262,7 @@ Fig.~\ref{fig-difm}. The parenthetical remarks are Picking No and Weighting No.}
 
 \paragraph{10 Myr Binning and 5 Myr Stepping}
 
-According to the results (Fig.~\ref{fig-nac-difm}, Fig.~\ref{fig-ind-difm} and
+According to the results (Fig.~\ref{fig-na-difm}, Fig.~\ref{fig-in-difm} and
 Fig.~\ref{fig-au-difm}), we can observe:
 %
 \begin{enumerate}
@@ -1209,12 +1284,12 @@ According to the results (Fig.~\ref{fig-dif2010m}), we can observe:
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/101_20_10_120_0m.pdf}
-		\caption{North America (101 with children): minimum 0.0058 (15, 5), maximum 0.1041 (8, 4), mean 0.0437, median 0.0267}\label{fig-nac-dif2010m}
+		\caption{North America (101 with children): minimum 0.0058 (15, 5), maximum 0.1041 (8, 4), mean 0.0437, median 0.0267}\label{fig-na-dif2010m}
 	\end{subfigure}
 	\vspace{1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/501_20_10_120_0m.pdf}
-		\caption{India (501): minimum 0.0177 (6, 3), maximum 0.162 (16, 3), mean 0.0759, median 0.0621}\label{fig-ind-dif2010m}
+		\caption{India (501): minimum 0.0177 (6, 3), maximum 0.162 (16, 3), mean 0.0759, median 0.0621}\label{fig-in-dif2010m}
 	\end{subfigure}
 	\vspace{1em}
 	\begin{subfigure}{1.01\textwidth}
@@ -1278,12 +1353,12 @@ Fig.~\ref{fig-dif2010m}. The parenthetical remarks are Picking No and Weighting 
 \multicolumn{2}{l|}{} & Picking & Weighting & Picking & Weighting &  & 0 & 1 &
   2 & 3 & 4 & 5 &  \\ \hline
 \multirow{12}{*}{FHM}
-& Fig.~\ref{fig-nac-dif} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13, 15,
+& Fig.~\ref{fig-na-dif} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13, 15,
   \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 5}} &
   \multirow{2}{*}{\parbox{2cm}{2, 5, 7, 8, 14, \textbf{16}, 17, 18, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 27/28 & \textbf{15} & 4 & 2 & 3 & 1
   & 4 & Y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-ind-dif} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7, 9,
+& Fig.~\ref{fig-in-dif} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7, 9,
   \textbf{19}, \textbf{21}}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 2, 8, 10, 12, \textbf{16}, 18, 20, 24}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 11/14 & \textbf{17} & 1 & 2 & 7 & 1
@@ -1293,12 +1368,12 @@ Fig.~\ref{fig-dif2010m}. The parenthetical remarks are Picking No and Weighting 
   \multirow{2}{*}{\parbox{2.4cm}{2, 6, 14, \textbf{16}, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 27/28 & \textbf{11} & 4 & 1 & 8 & 3
   & 1 & N/N \\ \\ \cline{2-14}
-& Fig.~\ref{fig-nac-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13,
+& Fig.~\ref{fig-na-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13,
   15, \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{2, 6, 14, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 3/4 & \textbf{18} & 6 & 0 & 2 & 4 &
   3 & N(5n1y)/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-ind-dif2010} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7,
+& Fig.~\ref{fig-in-dif2010} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7,
   \textbf{19}}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 2, 10, 12, \textbf{16}, 18, 20, 23, 24, 27}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 59/84 & \textbf{12} & 6 & 0 & 9 & 0
@@ -1309,12 +1384,12 @@ Fig.~\ref{fig-dif2010m}. The parenthetical remarks are Picking No and Weighting 
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 41/42 & 7 & 9 & 0 & \textbf{11} & 1
   & 2 & N/N(4n2y) \\ \\ \hline
 \multirow{12}{*}{MHM}
-& Fig.~\ref{fig-nac-difm} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13, 15,
+& Fig.~\ref{fig-na-difm} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13, 15,
   \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.2cm}{0, 8, 10, 12, 14, \textbf{16}, 17, 18, 20, 22, 24}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 11/12 & \textbf{14} & 6 & 1 & 1 & 2
   & 4 & Y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-ind-difm} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7, \textbf{19}, 22, 26}} &
+& Fig.~\ref{fig-in-difm} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7, \textbf{19}, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 2, 8, 10, 12, \textbf{16}, 18, 20, 24}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 11/14 & \textbf{12} & 3 & 0 & 9 & 1
@@ -1324,12 +1399,12 @@ Fig.~\ref{fig-dif2010m}. The parenthetical remarks are Picking No and Weighting 
   \multirow{2}{*}{\parbox{2.4cm}{2, 14, \textbf{16}, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 20/21 & 8 & 5 & 1 & \textbf{9} & 4
   & 1 & N/N \\ \\ \cline{2-14}
-& Fig.~\ref{fig-nac-dif2010m} & \multirow{2}{*}{\parbox{2cm}{4, 5, 7, 11,
+& Fig.~\ref{fig-na-dif2010m} & \multirow{2}{*}{\parbox{2cm}{4, 5, 7, 11,
   15, 22, 26}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 8, 10, 12, 14, \textbf{16}, 18, 20, 24}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 3/4 & \textbf{15} & 6 & 1 & 0 & 1 &
   5 & N(5n1y)/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-ind-dif2010m} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7,
+& Fig.~\ref{fig-in-dif2010m} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7,
   \textbf{19}}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 2, 10, 12, \textbf{16}, 18, 23, 24, 27}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 29/42 & \textbf{8} & \textbf{8} & 2 & 5 & 3
@@ -1405,7 +1480,7 @@ orientation difference'', and (d) ``mean significant length difference'' between
 paleomagnetic APWP and its corresponding FHM-and-plate-circuit predicted APWP\@.
 Starting points of the arrows are results from AMP, while ending points are from
 APP\@. Black color filled arrow heads are the small number of special cases of
-AMP derived equal-weight CPDs better than APP (see details in
+AMP derived equal-weight $\mathcal{CPD}$s better than APP (see details in
 Fig.~\ref{fig-dif}).}\label{fig-A95mG105F}
 \end{figure}
 
@@ -1426,7 +1501,7 @@ Fig.~\ref{fig-dif}).}\label{fig-A95mG105F}
   \end{subfigure}
 \caption[APP spatially better than AMP]{Differences of APP and AMP coordinates
 shown in Fig.~\ref{fig-A95mG105F}. Crosses locates the small minority cases of
-AMP derived equal-weight CPDs better than APP (see details in
+AMP derived equal-weight $\mathcal{CPD}$s better than APP (see details in
 Fig.~\ref{fig-dif}).}\label{fig-A95mG105Fd}
 \end{figure}
 
@@ -1469,7 +1544,7 @@ each sliding window, the produced mean poles by AMP should be relatively far
 from its contemporary model-predicted pole. In other words, AMP intends to give
 fairly small change in accuracy. This also could potentially bring more
 distinguishable $d_s$ for AMP\@ if the corresponding A95 is not large enough.
-For example, for Fig.~\ref{fig-nac-dif}, there are only three special (of 84 APP
+For example, for Fig.~\ref{fig-na-dif}, there are only three special (of 84 APP
 vs. AMP comparisons) cases picking/weighting 4/3, 4/5, 6/3 better than 5/3, 5/5,
 7/3 respectively. Compared with the picking/weighting 4/3 APWP, although most of
 the mean paleopoles are closer to the FHM predicted APWP and also the number of
@@ -1489,7 +1564,7 @@ generally decreased paleomagnetic A95s, which potentially brings more
 statistically distinguishable coeval poles (e.g.\ the 15 Ma and 30 Ma poles for
 picking 5 and weighting 5; Table.~\ref{tab-w5p4vs5}). This further causes
 greater distinguishable mean $d_s$ from the APP methods. The similar phenomenon
-occurs to Fig.~\ref{fig-ind-dif} picking 4 vs 5 with all the six types of
+occurs to Fig.~\ref{fig-in-dif} picking 4 vs 5 with all the six types of
 weightings, Fig.~\ref{fig-au-dif} picking/weighting 4/2\textendash3 vs
 5/2\textendash3, 4/5 vs 5/5.
 
@@ -1502,7 +1577,7 @@ A95. However, sometimes a rare case (e.g.\ the 0 Ma comparison shown in
 Table.~\ref{tab-501w0p22vs23}) happens. It is sometimes that an additional
 very ``bad'' paleopole gets included by APP and this increases both coeval pole
 distance and paleomagnetic A95 even though N increases. Such cases include
-Fig.~\ref{fig-ind-dif} picking 22 vs 23 (actually exactly the same as picking 26
+Fig.~\ref{fig-in-dif} picking 22 vs 23 (actually exactly the same as picking 26
 vs 27) with all the six types of weightings.
 
 So generally as we discussed in the last section APP decreases the distances
@@ -1593,32 +1668,32 @@ Age (Ma) & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & 
 \end{tabular}
 \end{table*}
 
-Other Type 1 (e.g. Table.~\ref{tab-w3p4vs5}) cases: Fig.~\ref{fig-nac-dif2010}
-picking/weighting 22/3 vs 23/3. Fig.~\ref{fig-nac-difm} 6/3 vs 7/3.
+Other Type 1 (e.g. Table.~\ref{tab-w3p4vs5}) cases: Fig.~\ref{fig-na-dif2010}
+picking/weighting 22/3 vs 23/3. Fig.~\ref{fig-na-difm} 6/3 vs 7/3.
 
-Other Type 2 (e.g. Table.~\ref{tab-w5p4vs5}) cases: Fig.~\ref{fig-nac-dif2010}
+Other Type 2 (e.g. Table.~\ref{tab-w5p4vs5}) cases: Fig.~\ref{fig-na-dif2010}
 picking/weighting 2/0\textendash5 vs 3/0\textendash5, 4/0\textendash2 vs
 5/0\textendash2, 4/4 vs 5/4, 6/5 vs 7/5, 6/2\textendash3 vs 7/2\textendash3,
 22/4\textendash5 vs 23/4\textendash5, 22/1 vs 23/1, 26/4 vs 27/4, 26/2 vs 27/2.
-Fig.~\ref{fig-ind-dif2010} 14/3 vs 15/3. Fig.~\ref{fig-au-dif2010} 4/2 vs 5/2.
-Fig.~\ref{fig-nac-difm} 4/0\textendash1 vs 5/0\textendash1.
-Fig.~\ref{fig-ind-difm} 4/0\textendash4 vs 5/0\textendash4, 22/0\textendash1 vs
+Fig.~\ref{fig-in-dif2010} 14/3 vs 15/3. Fig.~\ref{fig-au-dif2010} 4/2 vs 5/2.
+Fig.~\ref{fig-na-difm} 4/0\textendash1 vs 5/0\textendash1.
+Fig.~\ref{fig-in-difm} 4/0\textendash4 vs 5/0\textendash4, 22/0\textendash1 vs
 23/0\textendash1, 22/3\textendash4 vs 23/3\textendash4, Fig.~\ref{fig-au-difm}
-4/3 vs 5/3, 4/0 vs 5/0, 8/5 vs 9/5, 8/3 vs 9/3. Fig.~\ref{fig-ind-dif2010m}
+4/3 vs 5/3, 4/0 vs 5/0, 8/5 vs 9/5, 8/3 vs 9/3. Fig.~\ref{fig-in-dif2010m}
 14/2\textendash3 vs 15/2\textendash3. Fig.~\ref{fig-au-dif2010m} 4/4 vs 5/4.
 
-Combination of both Type 1 and 2 cases: Fig.~\ref{fig-nac-dif2010}
-picking/weighting 26/0\textendash1 vs 27/0\textendash1. Fig.~\ref{fig-nac-difm}
-4/3 vs 5/3. Fig.~\ref{fig-ind-difm} 22/2 vs 23/2, 22/5 vs 23/5, 26/0\textendash5
+Combination of both Type 1 and 2 cases: Fig.~\ref{fig-na-dif2010}
+picking/weighting 26/0\textendash1 vs 27/0\textendash1. Fig.~\ref{fig-na-difm}
+4/3 vs 5/3. Fig.~\ref{fig-in-difm} 22/2 vs 23/2, 22/5 vs 23/5, 26/0\textendash5
 vs 27/0\textendash5.
 
-Other Type 3 (e.g. Table.~\ref{tab-501w0p22vs23}) cases: Fig.~\ref{fig-ind-dif2010}
+Other Type 3 (e.g. Table.~\ref{tab-501w0p22vs23}) cases: Fig.~\ref{fig-in-dif2010}
 picking/weighting 6/0\textendash5 vs 7/0\textendash5, 22/0\textendash5 vs
-23/0\textendash5, 26/0\textendash5 vs 27/0\textendash5. Fig.~\ref{fig-nac-difm}
-4/2\textendash5 vs 5/2\textendash5. Fig.~\ref{fig-nac-dif2010m} 2/0\textendash5
+23/0\textendash5, 26/0\textendash5 vs 27/0\textendash5. Fig.~\ref{fig-na-difm}
+4/2\textendash5 vs 5/2\textendash5. Fig.~\ref{fig-na-dif2010m} 2/0\textendash5
 vs 3/0\textendash5, 4/2 vs 5/2, 4/4 vs 5/4, 6/2 vs 7/2, 22/0\textendash5 vs
 23/0\textendash5, 26/0\textendash5 vs 27/0\textendash5.
-Fig.~\ref{fig-ind-dif2010m} 6/0\textendash5 vs 7/0\textendash5, 22/0\textendash5
+Fig.~\ref{fig-in-dif2010m} 6/0\textendash5 vs 7/0\textendash5, 22/0\textendash5
 vs 23/0\textendash5, 26/0\textendash5 vs 27/0\textendash5.
 
 
@@ -1628,10 +1703,10 @@ Generally, weighting does not affect the similarities dramatically, because the
 six results from the six weighting methods are mostly very close. There are a
 few special cases that one of them dramatically changes similarity (e.g.\ for
 picking method (Pk) 5 and weighting method (Wt) 3, etc.;
-Fig.~\ref{fig-nac-dif}). As follows, those normal cases with close results are
+Fig.~\ref{fig-na-dif}). As follows, those normal cases with close results are
 discussed first. Those rare cases are examined later.
 
-For Pk 0 in the North America (101) example (Fig.~\ref{fig-nac-dif}), the reason
+For Pk 0 in the North America (101) example (Fig.~\ref{fig-na-dif}), the reason
 of why Wt 1\textendash4 do not produce better similarity scores than Wt 0 (i.e.\
 no weighting) does is examined here. Take the comparison between Wt 0 and Wt 1
 (Table.~\ref{tab-101p0w0vs1}) as an example, although APP indeed decreases the
@@ -1669,12 +1744,12 @@ differentiated (Fig.~\ref{fig-na-dlw0} and
 Fig.~\ref{fig-na-dlw1}).}\label{fig-101_8085}
 \end{figure}
 
-For Fig.~\ref{fig-nac-dif} Pk 1, Wt 0 generates the best similarity. Wt
+For Fig.~\ref{fig-na-dif} Pk 1, Wt 0 generates the best similarity. Wt
 2\textendash5 cause at least 3 more pairs of distinguishable mean poles ($d_s$)
 than other weighting methods. Wt 1 increases the GCDs of all the distinguishable
 pole pairs (0, 5 and 120 Ma).
 
-For Fig.~\ref{fig-nac-dif} Pk 2, Wt 0 generates the best similarity. Wt
+For Fig.~\ref{fig-na-dif} Pk 2, Wt 0 generates the best similarity. Wt
 1\textendash5 cause at least 1 more pair of distinguishable mean poles ($d_s$)
 than Wt 0 (60 Ma). Wt 4 also increases another pair of distinguishable mean 
 poles ($d_s$) (80 Ma).
@@ -1837,8 +1912,8 @@ in red.}\label{fig-f105d2010}
 
 For Pk 2 (AMP with ``$\alpha$95/Age range'' no more than
 ``15\degree/20\degree''), the 20/10 Myr bin/step methods always generate better
-similarities than the 10/5 Myr ones (e.g.\ Fig.~\ref{fig-nac-dif2010} versus
-Fig.~\ref{fig-nac-dif}).
+similarities than the 10/5 Myr ones (e.g.\ Fig.~\ref{fig-na-dif2010} versus
+Fig.~\ref{fig-na-dif}).
 
 Interestingly, only for North America, the 10/5 Myr bin/step methods generally
 and unexceptionally produce better similarities than the 20/10 Myr methods do
@@ -1873,10 +1948,10 @@ averaging, although weighting methods are also important.
 
 \begin{table*}
 \centering
-\caption{Equal-weight 120\textendash0 Ma CPDs for the three continents'
-paleomagnetic APWPs compared with their FHM predicted APWPs. The best are in
-dark green and underlined, second best in green and third in light green.}
-\label{tab-pk0vs1bs}
+\caption{Equal-weight 120\textendash0 Ma $\mathcal{CPD}$s for the three
+continents' paleomagnetic APWPs compared with their FHM predicted APWPs. The
+best are in dark green and underlined, second best in green and third in light
+green.}\label{tab-pk0vs1bs}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|}
 \hline
@@ -1975,7 +2050,7 @@ Fig.~\ref{fig-WinStpVsCPD}.
   \multicolumn{1}{c|}{Notes} & \multicolumn{1}{c|}{Y/N} &
   \multicolumn{1}{c|}{Special Case(s)} & \multicolumn{1}{c|}{Notes} & \multicolumn{1}{c|}{Mean} & \multicolumn{1}{c|}{Median} & \multicolumn{1}{c|}{Maximum} & \multicolumn{1}{c|}{Minimum} & \multicolumn{1}{c|}{All} & \multicolumn{1}{c|}{If No, Unexpected Case (s)} & \multicolumn{1}{c}{Notes} \\ \hline
 \multicolumn{15}{c}{FHM} \\ \hline
-Fig.~\ref{fig-nac-dif} & Fig.~\ref{fig-nac-dif2010} & Y &\textendash &
+Fig.~\ref{fig-na-dif} & Fig.~\ref{fig-na-dif2010} & Y &\textendash &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 1, 4, 5, 7, 11, 13, 15, 19, 21 and 25}} &
   N & \multirow{2}{*}{\parbox{2.4cm}{Picking no. 2, 5, 7, 22 and 26 for
   10/5 (E); 0, 10, 12, 20 and 24 for 20/10 (UE)}} &
@@ -1985,7 +2060,7 @@ Fig.~\ref{fig-nac-dif} & Fig.~\ref{fig-nac-dif2010} & Y &\textendash &
   \multicolumn{1}{l|}{\multirow{2}{*}{\parbox{3cm}{(0,1,8,10,11,12,18,19,20,21,
   24,25)(0-5) (3,4,14),(0-3,5) (5,7,13,15),(0-2,4,5) 9,(0,2,4,5) 23,(2,3) 27,(0-2); account for 29/42}}} &
   \\ \\ \\ \\ \\ \hline
-Fig.~\ref{fig-ind-dif} & Fig.~\ref{fig-ind-dif2010} & Y &
+Fig.~\ref{fig-in-dif} & Fig.~\ref{fig-in-dif2010} & Y &
   \multirow{2}{*}{\parbox{2.5cm}{2 more best: Picking no. 9 and 21 only for 10/5 (UE)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 4, 5, 6, 7 and 19}} &
   \multirow{2}{*}{\parbox{1cm}{N (almost Y)}} &
@@ -2005,7 +2080,7 @@ Fig.~\ref{fig-au-dif} & Fig.~\ref{fig-au-dif2010} & Y &\textendash &
   7,0 (8,10,20),(2,5) 9,1 11,3 (12,24),(1,2) 13,(0,1,3) (14,22,26),(0-2,4,5)
   (16,17),(0-5) 19,5 21,(0,1,5); account for 33/84}}} &  \\ \\ \\ \\ \\ \\ \\ \\ \hline
 \multicolumn{15}{c}{MHM} \\ \hline
-Fig.~\ref{fig-nac-difm} & Fig.~\ref{fig-nac-dif2010m} & N &
+Fig.~\ref{fig-na-difm} & Fig.~\ref{fig-na-dif2010m} & N &
   \multirow{2}{*}{\parbox{2.5cm}{Picking no. 1, 13, 21 and 25 for 10/5 (UE);
   22 and 26 for 20/10 (E)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 4, 5, 7, 11, and 15}} & Y &
@@ -2017,7 +2092,7 @@ Fig.~\ref{fig-nac-difm} & Fig.~\ref{fig-nac-dif2010m} & N &
   (1,19,21),(0,1,5) 3,5 (5,7),(0-2,4,5) 6,1 (9,13),(0,1,3,5) 23,(1,3)
   27,(1,3,5); account for 53/84}}} &
   \\ \\ \\ \\ \\ \\ \\ \hline
-Fig.~\ref{fig-ind-difm} & Fig.~\ref{fig-ind-dif2010m} & Y &
+Fig.~\ref{fig-in-difm} & Fig.~\ref{fig-in-dif2010m} & Y &
   \multirow{2}{*}{\parbox{2.5cm}{2 more best: Picking no. 22 and 26 only for 10/5 (UE)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Picking no. 4, 5, 6, 7 and 19}} &
   N & \multirow{2}{*}{\parbox{2.4cm}{Picking no. 8, 20 for 10/5 (E); 23 and 27 for 20/10 (UE)}} &
@@ -2068,13 +2143,13 @@ not a priority.
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/mf101.pdf}
-		\caption{Fig.~\ref{fig-nac-difm}-Fig.~\ref{fig-nac-dif}; Percentage for
+		\caption{Fig.~\ref{fig-na-difm}-Fig.~\ref{fig-na-dif}; Percentage for
 		positive values: about 61.31\%}\label{fig-mf101}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/mf501.pdf}
-		\caption{Fig.~\ref{fig-ind-difm}-Fig.~\ref{fig-ind-dif}; Percentage for
+		\caption{Fig.~\ref{fig-in-difm}-Fig.~\ref{fig-in-dif}; Percentage for
 		positive values: about 21.19\%}\label{fig-mf501}
 	\end{subfigure}
 	\vspace{.1em}
