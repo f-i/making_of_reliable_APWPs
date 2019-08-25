@@ -754,11 +754,9 @@ This does not only help find the most similar paleomagnetic APWP (from the best
 algorithm) to the reference APWP, but also help further test and demonstrate the
 validness of the similarity measuring tool in practise.
 
-\section{Results and Discussions}
+\section{Results}
 
-\subsection{Results}
-
-\subsubsection{Baseline results: 10 Myr window, 5 Myr step, fixed hotspot
+\subsection{Baseline results: 10 Myr window, 5 Myr step, fixed hotspot
 reference}
 
 Fig.~\ref{fig-dif} shows the $\mathcal{CPD}$ scores for the APWPs generated with
@@ -852,7 +850,7 @@ No.}\label{fig-difbw}
 	each plate.
 \end{enumerate}
 
-\subsubsection{Effects of windowing method}
+\subsection{Effects of windowing method}
 
 Dividing $\mathcal{CPD}$ scores according to whether the AMP or APP windowing
 method was used (Fig.~\ref{fig-difAMPvsAPP}) confirms that whilst the lowest
@@ -947,17 +945,64 @@ Australian plate, but removal of poles published after 1983 (picking method
 occurs when poles with suspected overprints or local rotations are removed
 (picking method 18/19, Fig.~\ref{fig-in-difAMPvsAPP}).
 
+\subsection{Effects of filtering and weighting}
+
+When $\mathcal{CPD}$ scores are separated by windowing method
+(Fig.~\ref{fig-difAMPvsAPP}), the effects of particular filtering and weighting
+methods become easier to discern. In general, different filters (rows) produce
+larger variations in scores than different weighting methods (columns). With
+the exception of AMP-derived paths for India, the $\mathcal{CPD}$ score for
+paths with no filtering (picking method 0/1) and no weighting (weighting method
+0) is lower than the mean scores for that plate and windowing method. Therefore
+filtering and weighting at best slightly improves, and at worst significantly
+degrades, the APWP fit to the reference path.
+
+\subsubsection{Filter aggression}
+
+When considering the effects of filtering, it is important to consider how many
+poles within the data set have been removed or corrected: if there is very
+little alteration of the data set, little change from no filtering (methods
+0/1) would be expected. In terms of the numbers of poles affected, the most
+consequential filters are:
+%
+\begin{enumerate}
+  \item removal of sedimentary poles (methods 4/5 and 6/7), which removes
+        40-50\% of the dataset on all 3 plates, with the highest proportion
+		being removed on the Indian plate. Although method 4/5 is more strict,
+		it does not remove many more poles than method 6/7. Especially for North
+		America and India, the numbers of the filtered paleopoles by method 4/5
+		and 6/7 are actually the same.
+  \item correction of sedimentary poles for inclination flattening (filter
+		8/9), which affects 38-48\% of the dataset, with the highest affected
+		proportion on the Indian plate.
+  \item removal of poles with large temporal and spatial uncertainty (methods
+		2/3, 22/23), particularly for the Australian plate, where the SS05
+		filtering criteria removes about 70\% of the poles. Filter 26/27
+		combines methods 22/23 and 24/25, but no or very few (in the case of
+		Australia only 1 additional pole) are actually removed.
+  \item filtering based on publication date (methods 14/15 and 16/17), with the
+		ratio of pre/post 1983 poles varying from about 50/50 on the North
+		American plate to 70/30 on the Australian plate.
+\end{enumerate}
+
+Conversely, filtering or correction for redbeds (methods 10/11 and 12/13),local
+rotations and overprints (methods 18/19 and 20/21), or superseded data (method
+24/25) affected 4\% or less of the poles on any plate.
+
+\subsubsection{Filter performance}
+
+\subsubsection{Weighting performance}
+
+\subsection{Effects of window size}
+
+\subsection{Different reference path}
+
 \subsubsection{When FHM and Global Plate Tectonic Circuits Predicted APWP as
 Reference}
 
-First, we focus on analysing the results with FHM and global plate circuits
-predicted APWP (Fig.~\ref{fig-mhsPred}, Fig.~\ref{fig-mhsPred501},
-Fig.~\ref{fig-mhsPred801}) as the reference path.
-
 \paragraph{10 Myr Binning and 5 Myr Stepping}
 
-According to the results (Fig.~\ref{fig-dif} and Fig.~\ref{fig-d-dif}), we can
-observe:
+According to Fig.~\ref{fig-dif} and Fig.~\ref{fig-d-dif},
 %
 \begin{enumerate}
   \item the groups of picking-method-no 19 (APP with commented local-rotation or
@@ -971,14 +1016,13 @@ observe:
   \item for both North America (101) and Australia (801), the groups of
         picking-method-no 1, 11, 13, 19, 21 and 25 (Table.~\ref{tab-pick}) are
         the best, and 2, 14, 16, 22 and 26 the worst. For both North America
-		(101) and India (501), the groups of picking-method-no 4, 5, 7, 19 and
-		21 are the best, and 2, 8, 16 and 18 the worst. For both India (501)
-		and Australia (801), the best 19, 21 and the worst 2, 16 are the same as
-		the ones for all the three continents as above-mentioned. These results
-		also further indicate that APP methods generally produce better
-		similarity than AMP methods, however, the picking-method-no 4 is
-		special, which is one of the AMP methods but also one of the best for
-		both North America and India.
+		(101) and India (501), the groups of picking-method-no 5, 7, 19 and 21
+		are the best, and 2, 8, 16 and 18 the worst. For both India (501) and
+		Australia (801), the best 19, 21 and the worst 2, 16 are the same as the
+		ones for all the three continents as above-mentioned. These results also
+		further indicate that APP methods generally produce better similarity
+		than AMP methods, however, the picking-method-no 4 is special, which is
+		one of the AMP methods but also one of the best for India.
   \item the results of North America (101) and Australia (801) are closer
 		(Fig.~\ref{fig-d-dif}).
   \item For North America and India, newer studies (later than 1983) give
