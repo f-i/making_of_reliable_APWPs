@@ -773,19 +773,19 @@ low difference scores are clearly much better than for those with high ones
 
 \begin{figure*}
 	\centering
-	\begin{subfigure}{1.01\textwidth}
+	\begin{subfigure}{.95\textwidth}
 		\includegraphics[width=\textwidth]{figures/101_120_0.pdf}
 		\caption{Plate ID 101 with children: minimum 0.0053 (11, 0),
 		maximum 0.0921 (16, 3), mean 0.0335, median 0.0342}\label{fig-na-dif} % subcaption
 	\end{subfigure}
 	\vspace{.1em} % here you can insert horizontal or vertical space
-	\begin{subfigure}{1.01\textwidth}
+	\begin{subfigure}{.95\textwidth}
 		\includegraphics[width=\textwidth]{figures/501_120_0.pdf}
 		\caption{Plate ID 501: minimum 0.023 (19, 0), maximum 0.5137 (8, 3),
-		mean 0.1181, median 0.0818}\label{fig-in-dif} % subcaption
+		mean 0.1182, median 0.0818}\label{fig-in-dif} % subcaption
 	\end{subfigure}
 	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
+	\begin{subfigure}{.95\textwidth}
 		\includegraphics[width=\textwidth]{figures/801_120_0.pdf}
 		\caption{Plate ID 801 with children: minimum 0.0037 (17, 0), maximum
 		0.3954 (22, 3), mean 0.08432, median 0.05037}\label{fig-au-dif} % subcaption
@@ -796,8 +796,11 @@ values between each continent's paleomagnetic APWPs and its predicted APWP from
 FHM and related plate circuits. The paths are in 10 Myr bin and 5 Myr step. The
 difference values less than one-standard-deviation interval of the whole 168
 values (lower 15.866 per cent) are colored in green, more than
-one-standard-deviation interval (upper 15.866 per cent) colored in
-red.}\label{fig-dif} % caption for whole figure
+one-standard-deviation interval (upper 15.866 per cent) colored in red. Exactly
+the same columns are connected. The percentages of removed paleopoles are
+derived relative to picking 1, corrected relative to each corresponding picking
+method (8, 9, 12, 13; 1 removed and 1 corrected by 20, 21 for
+India).}\label{fig-dif} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -868,15 +871,15 @@ APWPs (Figs.~\ref{fig-na-difAMPvsAPP},~\ref{fig-na-boxAMPvsAPP}).
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/101_120_0APPvsAMP.pdf}
 		\caption{AMP: minimum 0.0292 (4/6, 5), maximum 0.0921 (16,
-		3), mean 0.04641, median 0.04664; APP: minimum 0.0053 (11, 0), maximum
-		0.05686 (5/7, 3), mean 0.02055, median 0.01594}\label{fig-na-difAMPvsAPP}
+		3), mean 0.0465, median 0.0464; APP: minimum 0.0053 (11, 0), maximum
+		0.05686 (5/7, 3), mean 0.0205, median 0.01594}\label{fig-na-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/501_120_0APPvsAMP.pdf}
 		\caption{AMP: minimum 0.047 (4/6, 3), maximum 0.5137 (8, 3), mean
 		0.1684, median 0.1862; APP: minimum 0.023 (19, 0), maximum 0.1359 (3,
-		4), mean 0.06786, median 0.0609}\label{fig-in-difAMPvsAPP}
+		4), mean 0.06788, median 0.06023}\label{fig-in-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
@@ -985,13 +988,71 @@ consequential filters are:
 		American plate to 70/30 on the Australian plate.
 \end{enumerate}
 
-Conversely, filtering or correction for redbeds (methods 10/11 and 12/13),local
-rotations and overprints (methods 18/19 and 20/21), or superseded data (method
-24/25) affected 4\% or less of the poles on any plate.
+Conversely, filtering or correction for redbeds (methods 10/11 and 12/13), local
+rotations and overprints (methods 18/19 and 20/21 [one paleopole influenced by
+local rotation removed, and one corrected, for only India; about 2.7 per cent,
+Fig.~\ref{fig-in-dif}]), or superseded data (method 24/25) affected 4\% or less
+of the poles on any plate.
 
 \subsubsection{Filter performance}
 
+Focussing on the filtering and weighting methods with aggressive filtering,
+some commonalities in the best- and worst-performing methods can be observed,
+although there are usually exceptions for particular plates and/or windowing
+methods:
+%
+\begin{enumerate}
+  \item For all 3 plates, higher $\mathcal{CPD}$ scores are commonly associated
+		with filtering based on $\alpha$95 and age range (picking methods
+		2/3, 22/23, 26/27), with the exception of AMP-derived paths for India,
+		where picking methods 22 and 26 produce some of the lowest scores.
+  \item For North America and India, low scores are commonly associated with
+		removal of non-igneous poles (methods 4/5 and 6/7), particularly for
+		AMP-derived paths. On the Australian plate, these filters are less
+		effective.
+  \item For North America and Australia, correction for inclination flattening
+		generates $\mathcal{CPD}$ scores very similar to scores with no
+		filtering for AMP-derived paths (method 8), and increases scores for
+		APP-derived paths (method 9). In contrast, for India there is a small
+		decrease in $\mathcal{CPD}$ scores compared to no filtering for both
+		AMP- and APP-derived paths.
+  \item Many of the highest difference scores for North America and India occur
+		when paleopoles published after 1983 are removed (method 16/17), whilst
+		removing paleopoles published before 1983 (method 14/15) generates 
+		$\mathcal{CPD}$ scores comparable to scores with no filtering. In
+		contrast, for Australia methods 14/15 produces some of the highest
+		$\mathcal{CPD}$ scores, and methods 16/17 have little effect.
+\end{enumerate}
+
+Whilst it is generally true that methods with low-aggression filters do not
+generate scores that differ much from the no-filtering scores, there are some
+exceptions:
+%
+\begin{enumerate}
+  \item For North America and Australia, removing superseded paleopoles (picking
+		method 24/25) produces lower $\mathcal{CPD}$ scores.
+  \item Removing paleopoles suspected to be affected by overprints or local
+		rotations (picking method 18/19) consistently produces lower
+		$\mathcal{CPD}$ scores for Indian APP-derived paths.
+\end{enumerate}
+
 \subsubsection{Weighting performance}
+
+Compared to the variations resulting from different windowing methods and
+filters, Figs.~\ref{fig-difAMPvsAPP},~\ref{fig-nads},~\ref{fig-nadl}
+and~\ref{fig-nada} indicate that the effect of weighting the data prior to
+calculating a Fisher mean is generally small. Where an effect can be seen, it is
+negative, generating larger CPD scores.
+%
+\begin{enumerate}
+  \item For APP-derived paths from the North American and Australian plates,
+		weighting method 0 (no weighting) and 1 (weighting by sample and site
+		number) appear to produce slightly better $\mathcal{CPD}$ scores than
+		other weighting methods.
+  \item Weighting method 3 (weighting by spatial uncertainty) is most likely to
+		generate much higher $\mathcal{CPD}$ scores, particular for AMP-derived
+		paths, and particular for the Indian plate.
+\end{enumerate}
 
 \subsection{Effects of window size}
 
@@ -1073,9 +1134,9 @@ According to Fig.~\ref{fig-dif} and Fig.~\ref{fig-d-dif},
 	\end{subfigure}
 	\caption[ds of each pair of poles for North American 10/5 Myr APWPs]{Tested
 spatial difference ($ds$) values (color shaded) between North American
-paleomagnetic APWPs and its predicted APWP from FHM and related plate circuits.
-The paths are in 10 Myr bin and 5 Myr step. The labeled numbers on the grids
-are the numbers of site mean poles that are contributing to each mean path
+paleomagnetic APWPs and its predicted APWP from the FHM and related plate
+circuits. The paths are in 10 Myr bin and 5 Myr step. The labeled numbers on the
+grids are the numbers of site mean poles that are contributing to each mean path
 pole.}\label{fig-nads}
 \end{figure*}
 
