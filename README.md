@@ -41,15 +41,15 @@ paths.
 
     data/ay18_101comb contains: Plate 101's paleomagnetic paths
 
-    data/ay18/101comb contains: Plate 101's raw VGPs, VGPs after filtering and (sub-folders) VGPs in each sliding window with weights and rock types
+    data/ay18/101comb contains: Plate 101's raw paleopoles, paleopoles after filtering and (sub-folders) paleopoles in each sliding window with weights and rock types
 
     data/ay18_501comb contains: Plate 501's paleomagnetic paths
 
-    data/ay18/501comb contains: Plate 501's raw VGPs, VGPs after filtering and (sub-folders) VGPs in each sliding window with weights and rock types
+    data/ay18/501comb contains: Plate 501's raw paleopoles, paleopoles after filtering and (sub-folders) paleopoles in each sliding window with weights and rock types
 
     data/ay18_801comb contains: Plate 801's paleomagnetic paths
 
-    data/ay18/801comb contains: Plate 801's raw VGPs, VGPs after filtering and (sub-folders) VGPs in each sliding window with weights and rock types
+    data/ay18/801comb contains: Plate 801's raw paleopoles, paleopoles after filtering and (sub-folders) paleopoles in each sliding window with weights and rock types
 
 
 
