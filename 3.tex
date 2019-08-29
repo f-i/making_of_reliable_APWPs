@@ -1043,63 +1043,6 @@ filters, Figs.~\ref{fig-difAMPvsAPP},~\ref{fig-nads},~\ref{fig-nadl}
 and~\ref{fig-nada} indicate that the effect of weighting the data prior to
 calculating a Fisher mean is generally small. Where an effect can be seen, it is
 negative, generating larger CPD scores.
-%
-\begin{enumerate}
-  \item For APP-derived paths from the North American and Australian plates,
-		weighting method 0 (no weighting) and 1 (weighting by sample and site
-		number) appear to produce slightly better $\mathcal{CPD}$ scores than
-		other weighting methods.
-  \item Weighting method 3 (weighting by spatial uncertainty) is most likely to
-		generate much higher $\mathcal{CPD}$ scores, particular for AMP-derived
-		paths, and particular for the Indian plate.
-\end{enumerate}
-
-\subsection{Effects of window size}
-
-\subsection{Different reference path}
-
-\subsubsection{When FHM and Global Plate Tectonic Circuits Predicted APWP as
-Reference}
-
-\paragraph{10 Myr Binning and 5 Myr Stepping}
-
-According to Fig.~\ref{fig-dif} and Fig.~\ref{fig-d-dif},
-%
-\begin{enumerate}
-  \item the groups of picking-method-no 19 (APP with commented local-rotation or
-        secondary-print studies excluded) and 21 (APP with local rotation
-        excluded or corrected as suggested in the original sources)
-        (Table.~\ref{tab-pick}) are among the best ones for all the three
-        continents, while the groups of picking-method-no 2 (AMP with
-        ``$\alpha$95/Age range'' no more than ``15\degree/20 Myr'') and 16 (AMP
-        with only earlier-than-1983 studies), (Table.~\ref{tab-pick}) are among
-        the worst for all them three.
-  \item for both North America (101) and Australia (801), the groups of
-        picking-method-no 1, 11, 13, 19, 21 and 25 (Table.~\ref{tab-pick}) are
-        the best, and 2, 14, 16, 22 and 26 the worst. For both North America
-		(101) and India (501), the groups of picking-method-no 5, 7, 19 and 21
-		are the best, and 2, 8, 16 and 18 the worst. For both India (501) and
-		Australia (801), the best 19, 21 and the worst 2, 16 are the same as the
-		ones for all the three continents as above-mentioned. These results also
-		further indicate that APP methods generally produce better similarity
-		than AMP methods, however, the picking-method-no 4 is special, which is
-		one of the AMP methods but also one of the best for India.
-  \item the results of North America (101) and Australia (801) are closer
-		(Fig.~\ref{fig-d-dif}).
-  \item For North America and India, newer studies (later than 1983) give
-		better results, whereas for Australia older studies (before 1983) give
-		better results, mainly because the number of older studies (65;
-		Fig.~\ref{fig-au-dif}) is much greater than the number of newer studies
-		(27).
-  \item Weighting influences more to APP than AMP, especially for the cases
-		when there are plenty of paleopoles (e.g., for North America and
-		Australia; Fig.~\ref{fig-difAMPvsAPP}). Wt 0 and 1 generally work well
-		with APP.
-  \item Lithology related picking methods (Pt 4\textendash13) are generally
-		improving the fits, compared with other picking methods. However,
-		sometimes, Wt 3 does not work well with these lithology-related methods
-		(Fig.~\ref{fig-dif} and Fig.~\ref{fig-difAMPvsAPP}).
-\end{enumerate}
 
 \begin{figure*}
 	\centering
@@ -1217,6 +1160,175 @@ plate circuits. The paths are in 10 Myr bin and 5 Myr step. The labeled numbers
 on the grids are the averaged numbers of site mean poles that are contributing
 to each segment-orientation-change's three mean path poles.}\label{fig-nada}
 \end{figure*}
+%
+\begin{enumerate}
+  \item For APP-derived paths from the North American and Australian plates,
+		weighting method 0 (no weighting) and 1 (weighting by sample and site
+		number) appear to produce slightly better $\mathcal{CPD}$ scores than
+		other weighting methods.
+  \item Weighting method 3 (weighting by spatial uncertainty) is most likely to
+		generate much higher $\mathcal{CPD}$ scores, particular for AMP-derived
+		paths, and particular for the Indian plate.
+\end{enumerate}
+
+\subsection{Effects of window size}
+
+Fig.~\ref{fig-dif2010} shows the $\mathcal{CPD}$ scores for the APWPs generated
+with all 28 picking and 6 weighting methods, compared to the FHM reference
+paths, with the picking time window width increased from 10 to 20 Myr, and the
+window step increased from 5 to 10 Myr.
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{.96\textwidth}
+		\includegraphics[width=\textwidth]{figures/101_20_10_120_0.pdf}
+		\caption{North America (101 with children): minimum 0.0115 (13, 0),
+		maximum 0.0635 (16, 2), mean 0.0334, median 0.02786}\label{fig-na-dif2010}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{.96\textwidth}
+		\includegraphics[width=\textwidth]{figures/501_20_10_120_0.pdf}
+		\caption{India (501): minimum 0.0143 (6, 3), maximum 0.1543 (16, 3),
+		mean 0.0738, median 0.0754}\label{fig-in-dif2010}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{.96\textwidth}
+		\includegraphics[width=\textwidth]{figures/801_20_10_120_0.pdf}
+		\caption{Australia (801 with children): minimum 0.0022 (11, 0), maximum
+		0.3265 (22, 3), mean 0.0693, median 0.0362}\label{fig-au-dif2010}
+	\end{subfigure}
+	\caption[Differences of each plate's paleomagnetic APWPs versus its FHM
+predicted APWP]{As Fig.~\ref{fig-dif}, here the paths are generated in 20 Myr
+bin and 10 Myr step. The difference values less than one-standard-deviation
+interval of the whole 168 values are colored in green, more than
+one-standard-deviation interval colored in red. Compare the numbers of picked
+paleopoles with those in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
+\end{figure*}
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_13_0.pdf}
+		\caption{North America: minimum 0.0115 (13, 0)}\label{fig-nac-2010130}
+	\end{subfigure}
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_16_2.pdf}
+		\caption{North America: maximum 0.0635 (16, 2)}\label{fig-nac-2010162}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_6_3.pdf}
+		\caption{India: minimum 0.0143 (6, 3)}\label{fig-ind-201063}
+	\end{subfigure}
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_16_3.pdf}
+		\caption{India: maximum 0.1543 (16, 3)}\label{fig-ind-2010163}
+	\end{subfigure}
+	\vspace{.1em}
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_11_0.pdf}
+		\caption{Australia: minimum 0.0022 (11, 0)}\label{fig-au-2010110}
+	\end{subfigure}
+	\begin{subfigure}{.43\textwidth}
+		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_22_3.pdf}
+		\caption{Australia: maximum 0.3265 (22, 3)}\label{fig-au-2010223}
+	\end{subfigure}
+	\caption[Best and worst differences (20 Myr bin, 10 Myr step)]{Path
+comparisons with best and worst difference values shown in
+Fig.~\ref{fig-dif2010}. The parenthetical remarks are Picking No and Weighting
+No.}\label{fig-dif2010bw}
+\end{figure*}
+
+Along with the increasing sizes of moving window and step, mean, median and
+range values of $\mathcal{CPD}$ scores shrink, except for North America, the
+mean value of $\mathcal{CPD}$ scores keeps fixed (Fig.~\ref{fig-dif} and
+Fig.~\ref{fig-dif2010}).
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/101f105d2010.pdf}
+		\caption{North America (101): Generally Bin/Step 10/5 Myr is better
+		($\frac{107}{168}\approx63.7\%$)}\label{fig-101f105d2010}
+	\end{subfigure}
+	\vspace{1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/501f105d2010.pdf}
+		\caption{India (501): Generally Bin/Step 20/10 Myr is better
+		($\frac{145}{168}\approx86.31\%$)}\label{fig-501f105d2010}
+	\end{subfigure}
+	\vspace{1em}
+	\begin{subfigure}{1.01\textwidth}
+		\includegraphics[width=\textwidth]{figures/801f105d2010.pdf}
+		\caption{Australia (801): Generally Bin/Step 20/10 Myr is better
+		($\frac{13}{21}\approx61.9\%$)}\label{fig-801f105d2010}
+	\end{subfigure}
+	\caption[]{Differences between grids in Fig.~\ref{fig-dif} (10 Myr bin, 5
+Myr step) and Fig.~\ref{fig-dif2010} (20 Myr bin, 10 Myr step). The absolute
+difference values less than 1.96-standard-deviation interval of the whole 168
+values are labeled in green, more than 1.96-standard-deviation interval labeled
+in red.}\label{fig-f105d2010}
+\end{figure*}
+
+\begin{enumerate}
+  \item Many of the highest changes for North America and India occur when
+		paleopoles published after 1983 are removed and calculation is based on
+		AMP (method 16). In contrast, for Australia method 15 produces some of
+		the highest changes, and methods 16/17 have little effect
+		(Fig.~\ref{fig-f105d2010}).
+  \item Only for North America, the 10/5 Myr bin/step methods generally and
+		unexceptionally produce better similarities than the 20/10 Myr methods
+		do (Fig.~\ref{fig-f105d2010}).
+  \item All the APP methods with kinds of corrections, 1, 9, 13, 19, 21 and 25,
+		show less changes for all the three plates. Methods 23 and 27 show less
+		changes for North America and India, but more changes for Australia.
+\end{enumerate}
+
+
+\subsection{Different reference path}
+
+\subsubsection{When FHM and Global Plate Tectonic Circuits Predicted APWP as
+Reference}
+
+\paragraph{10 Myr Binning and 5 Myr Stepping}
+
+According to Fig.~\ref{fig-dif} and Fig.~\ref{fig-d-dif},
+%
+\begin{enumerate}
+  \item the groups of picking-method-no 19 (APP with commented local-rotation or
+        secondary-print studies excluded) and 21 (APP with local rotation
+        excluded or corrected as suggested in the original sources)
+        (Table.~\ref{tab-pick}) are among the best ones for all the three
+        continents, while the groups of picking-method-no 2 (AMP with
+        ``$\alpha$95/Age range'' no more than ``15\degree/20 Myr'') and 16 (AMP
+        with only earlier-than-1983 studies), (Table.~\ref{tab-pick}) are among
+        the worst for all them three.
+  \item for both North America (101) and Australia (801), the groups of
+        picking-method-no 1, 11, 13, 19, 21 and 25 (Table.~\ref{tab-pick}) are
+        the best, and 2, 14, 16, 22 and 26 the worst. For both North America
+		(101) and India (501), the groups of picking-method-no 5, 7, 19 and 21
+		are the best, and 2, 8, 16 and 18 the worst. For both India (501) and
+		Australia (801), the best 19, 21 and the worst 2, 16 are the same as the
+		ones for all the three continents as above-mentioned. These results also
+		further indicate that APP methods generally produce better similarity
+		than AMP methods, however, the picking-method-no 4 is special, which is
+		one of the AMP methods but also one of the best for India.
+  \item the results of North America (101) and Australia (801) are closer
+		(Fig.~\ref{fig-d-dif}).
+  \item For North America and India, newer studies (later than 1983) give
+		better results, whereas for Australia older studies (before 1983) give
+		better results, mainly because the number of older studies (65;
+		Fig.~\ref{fig-au-dif}) is much greater than the number of newer studies
+		(27).
+  \item Weighting influences more to APP than AMP, especially for the cases
+		when there are plenty of paleopoles (e.g., for North America and
+		Australia; Fig.~\ref{fig-difAMPvsAPP}). Wt 0 and 1 generally work well
+		with APP.
+  \item Lithology related picking methods (Pt 4\textendash13) are generally
+		improving the fits, compared with other picking methods. However,
+		sometimes, Wt 3 does not work well with these lithology-related methods
+		(Fig.~\ref{fig-dif} and Fig.~\ref{fig-difAMPvsAPP}).
+\end{enumerate}
 
 \begin{figure*}
 	\centering
@@ -1253,63 +1365,6 @@ According to the results (Fig.~\ref{fig-dif2010}), we can observe:
   \item the groups of picking-method-no 19 is the best, and 16 the worst, for
         all the three continents.
 \end{enumerate}
-
-\begin{figure*}
-	\centering
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/101_20_10_120_0.pdf}
-		\caption{North America (101 with children): minimum 0.0115 (13, 0), maximum 0.0635 (16, 2), mean 0.0335, median 0.0285}\label{fig-na-dif2010}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/501_20_10_120_0.pdf}
-		\caption{India (501): minimum 0.0143 (6, 3), maximum 0.1543 (16, 3), mean 0.074, median 0.0755}\label{fig-in-dif2010}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/801_20_10_120_0.pdf}
-		\caption{Australia (801 with children): minimum 0.0022 (11, 0), maximum 0.3265 (22, 3), mean 0.0686, median 0.0346}\label{fig-au-dif2010}
-	\end{subfigure}
-	\caption[Differences of each plate's paleomagnetic APWPs versus
-its FHM predicted APWP]{Same as Fig.~\ref{fig-dif}. The only difference is here
-the paths are in 20 Myr bin and 10 Myr step. The difference values less than
-one-standard-deviation interval of the whole 168 values are colored in green,
-more than one-standard-deviation interval colored in red. See the numbers
-of picked paleopoles in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
-\end{figure*}
-
-\begin{figure*}
-	\centering
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_13_0.pdf}
-		\caption{North America: minimum 0.0115 (13, 0)}\label{fig-nac-2010130}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_20_10_16_2.pdf}
-		\caption{North America: maximum 0.0635 (16, 2)}\label{fig-nac-2010162}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_6_3.pdf}
-		\caption{India: minimum 0.0143 (6, 3)}\label{fig-ind-201063}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_501comb_20_10_16_3.pdf}
-		\caption{India: maximum 0.1543 (16, 3)}\label{fig-ind-2010163}
-	\end{subfigure}
-	\vspace{.1em}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_11_0.pdf}
-		\caption{Australia: minimum 0.0022 (11, 0)}\label{fig-au-2010110}
-	\end{subfigure}
-	\begin{subfigure}{.43\textwidth}
-		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_22_3.pdf}
-		\caption{Australia: maximum 0.3265 (22, 3)}\label{fig-au-2010223}
-	\end{subfigure}
-	\caption[Best and worst differences (20 Myr bin, 10 Myr
-step)]{Path comparisons with best and worst difference values shown in
-Fig.~\ref{fig-dif2010}. The parenthetical remarks are Picking No and Weighting No.}\label{fig-dif2010bw}
-\end{figure*}
 
 
 \subsubsection{When MHM and Global Plate Tectonic Circuits Predicted APWP as
@@ -1998,41 +2053,15 @@ Fig.~\ref{fig-au-105223}). A variety of ways of binning the data (here
 30\textendash2 Myr window size and half of the size as step) are being tested to
 see which one produces the better and more appropriately smoothed fit.
 
-\begin{figure*}
-	\centering
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/101f105d2010.pdf}
-		\caption{North America (101): Generally Bin/Step 10/5 Myr is better
-		($\frac{29}{42}\approx69.05\%$)}\label{fig-101f105d2010}
-	\end{subfigure}
-	\vspace{1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/501f105d2010.pdf}
-		\caption{India (501): Generally Bin/Step 20/10 Myr is better
-		($\frac{145}{168}\approx86.31\%$)}\label{fig-501f105d2010}
-	\end{subfigure}
-	\vspace{1em}
-	\begin{subfigure}{1.01\textwidth}
-		\includegraphics[width=\textwidth]{figures/801f105d2010.pdf}
-		\caption{Australia (801): Generally Bin/Step 20/10 Myr is better
-		($\frac{17}{28}\approx60.71\%$)}\label{fig-801f105d2010}
-	\end{subfigure}
-	\caption[]{Differences between grids in Fig.~\ref{fig-dif} (10 Myr bin, 5
-Myr step) and Fig.~\ref{fig-dif2010} (20 Myr bin, 10 Myr step). The absolute
-difference values less than 1.96-standard-deviation interval of the whole 168
-values are labeled in green, more than 1.96-standard-deviation interval labeled
-in red.}\label{fig-f105d2010}
-\end{figure*}
-
 For Pk 2 (AMP with ``$\alpha$95/Age range'' no more than
 ``15\degree/20\degree''), the 20/10 Myr bin/step methods always generate better
 similarities than the 10/5 Myr ones (e.g.\ Fig.~\ref{fig-na-dif2010} versus
 Fig.~\ref{fig-na-dif}).
 
-Interestingly, only for North America, the 10/5 Myr bin/step methods generally
-and unexceptionally produce better similarities than the 20/10 Myr methods do
+For only North America, the 10/5 Myr bin/step methods generally and
+unexceptionally produce better similarities than the 20/10 Myr methods do
 (Fig.~\ref{fig-f105d2010}), which mainly depends on the picking methods. Note
-that as mentioned in Appendix A and also Chapter 4, there are 135, 75 and 99
+that there are 135, 75 and 99
 paleopoles that compose of 120\textendash0 Ma APWPs of North America, India and
 Australia respectively. Does the reason could be because of the relatively
 larger number of paleopoles for North America? Since theoretically for each
@@ -2041,19 +2070,17 @@ we should obtain. In the contrary, the less paleopoles the window contains, the
 weaker the effect of averaging out ``bad'' poles' influence would be. So is
 there a threshold number of paleopoles for making an paleomagnetic APWP\@? For
 example, for making a 120\textendash0 Ma APWP, do the results indicate the best
-number of paleopoles we need should be some value between 99 and 135? We did
-the test in Chapter 2 on the 530\textendash0 Ma paleomagnetic APWP using the AMP
-method, and we did find that longer windows and steps bring the paleomagnetic
-APWPs closer to the reference path. Here another test will be implemented as
-follows. With the results from the 10/5 and 20/10 bin/step together, 2/1, 4/2,
-6/3, 8/4, 12/6, 14/7, 16/8, 20/10, 24/12 and 30/15 Myr bin/step will be used to
-generate paleomagnetic APWPs for North America, India and Australia to see which
-one would make the paleomagnetic APWP closest to the reference paths. Will the
-similarities they generate be generally worse than those the 10/5 Myr bin/step
-generates? Or will they be better first and then worse than those the 10/5 Myr
-bin/step generates when the bin/step sizes increase up to 20/10 Myr? For the
+number of paleopoles we need should be some value between 99 and 135? Here a
+test is implemented as follows. With the results from the 10/5 and 20/10
+bin/step together, 2/1, 4/2, 6/3, 8/4, 12/6, 14/7, 16/8, 20/10, 24/12 and 30/15
+Myr bin/step will be used to generate paleomagnetic APWPs for North America,
+India and Australia to see which one would make the paleomagnetic APWP closest
+to the reference paths. Will the similarities they generate be generally worse
+than those the 10/5 Myr bin/step generates? Or will they be better first and
+then worse than those the 10/5 Myr bin/step generates when the bin/step sizes
+increase up to 20/10 Myr? For the
 best results (Table.~\ref{tab-pk0vs1bs}), as expected, AMP needs wider sliding
-window and step to get close to the reference while APP does not
+window and step to get closer to the reference path while APP does not
 (Fig.~\ref{fig-WinStpVsCPD}). Even the best sizes of sliding window and step are
 assigned for AMP, the results from APP are still much better than those from
 AMP\@. Picking methods (directly related to N) are still the key influence
