@@ -1,3 +1,43 @@
+% gjilguid2e.tex
+% V2.1 released 2003 Oct 7 -- Gregor Hutton, updated the web address for the style files.
+
+\documentclass{gji}
+
+\usepackage{timet,booktabs,gensymb,graphicx,caption,multirow,amsmath}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+\usepackage[xcdraw]{xcolor}  %colorful words in tables
+
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+\title[How to generate APWPs]{Methods for Producing a Reliable APWP}
+\author[Chenjian Fu]{Chenjian Fu$^1$\thanks{Email: cfu3@kent.edu} Chris
+Rowan$^2$ \\$^1$ Department of Geology, Kent State University, 325 S Lincoln St,
+Kent, OH \emph{44242}, USA \\$^2$ Department of Geology, Kent State University,
+325 S Lincoln St, Kent, OH \emph{44242}, USA}
+\date{Received 2018 December 28; in original form 2018 November 22}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\volume{0}
+\pubyear{2018}
+
+%\def\LaTeX{L\kern-.36em\raise.3ex\hbox{{\small A}}\kern-.15em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
+%\def\LATeX{L\kern-.36em\raise.3ex\hbox{{\Large A}}\kern-.15em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
+% Authors with AMS fonts and mssymb.tex can comment out the following
+% line to get the correct symbol for Geophysical Journal International.
+\let\leqslant=\leq{}
+
+\newtheorem{theorem}{Theorem}[section]
+
+
+\begin{document}\label{firstpage}
+
+\maketitle
+
+
 \begin{summary}
 First, new picking/weighting methods developed here and previously published
 picking/weighting methods are compiled together to generate 168 different
@@ -970,10 +1010,11 @@ degrades, the APWP fit to the reference path.
 \subsubsection{Filter aggression}
 
 When considering the effects of filtering, it is important to consider how many
-poles within the data set have been removed or corrected: if there is very
-little alteration of the data set, little change from no filtering (methods
-0/1) would be expected. In terms of the numbers of poles affected, the most
-consequential filters are:
+poles within the data set have been removed (related to picking no
+2\textendash7, 10, 11, and 14\textendash27) or corrected (8, 9, 12 and 13): if
+there is very little alteration of the data set, little change from no filtering
+(methods 0/1) would be expected. In terms of the numbers of poles affected, the
+most consequential filters are:
 %
 \begin{enumerate}
   \item removal of sedimentary poles (methods 4/5 and 6/7), which removes
@@ -1205,6 +1246,8 @@ to each segment-orientation-change's three mean path poles.}\label{fig-nada}
   \item Weighting method 3 (weighting by spatial uncertainty) is most likely to
 		generate much higher $\mathcal{CPD}$ scores, particular for AMP-derived
 		paths, and particular for the Indian plate.
+  \item Weighting method 0, 1 and 5 are generally producing better similarity
+		than 2, 3 and 4.
 \end{enumerate}
 
 \subsection{Effects of window size}
@@ -1283,11 +1326,11 @@ value of $\mathcal{CPD}$ scores keeping unchanged (Fig.~\ref{fig-dif} and
 Fig.~\ref{fig-dif2010}). For North America, most scores actually increase (i.e.
 10-5 is better) except for methods 2, 4, 6, 16/17, 22/23, 26/27 where 20-10
 better ('quality filtering' is less `bad’?). For India, most scores are lower
-(20-10 better) except methods 22 and 26 (all), 19(0,1,3,5), 21(0) and
-27(1,3,4). Biggest decreases are associated with weighting 3 (i.e., effect of
-weighting is being diluted). For Australia, changes are largely negative, which
-means 20-10 is better. Also negative change is large for 3, 4, 6, 23, 27. For
-method 14, 10-5 is much better, whereas for 15, 20-10 is much better.
+(20-10 better) except methods 22 and 26(all), 19(0,1,3,5), 21(0) and 27(1,3,4).
+Biggest decreases are associated with weighting 3 (i.e., effect of weighting is
+being diluted). For Australia, changes are largely negative, which means 20-10
+is better. Also negative change is large for 3, 4, 6, 23, 27. For method 14,
+10-5 is much better, whereas for 15, 20-10 is much better.
 
 \begin{figure*}
 	\centering
@@ -1331,11 +1374,10 @@ in red.}\label{fig-f105d2010}
   \item All the APP methods with kinds of corrections, 1, 9, 13, 19, 21 and 25,
 		show less changes for all the three plates. Methods 23 and 27 show less
 		changes for North America and India, but more changes for Australia.
-  \item APP still outperforms AMP\@. However, for North America and India, the
-		percentage of factor of greater than 3 (about 28.6\% and 3.8\%
-		respectively) is less than 10-5 (about 40.5\% and 39.3\% respectively),
-		while for Australia the percentage (about 71.4\%) is more than 10-5
-		(50\%).
+  \item APP still outperforms AMP\@. For North America and India, the percentage
+		of factor of greater than 3 (about 28.6\% and 3.8\% respectively) is
+		less than 10-5 (about 40.5\% and 39.3\% respectively), while for
+		Australia the percentage (about 71.4\%) is more than 10-5 (50\%).
   \item Both scores and AMP/APP difference are low for methods 4/5, 6/7.
   \item Both scores and AMP/APP difference are high for methods 16/17.
   \item Scores are high but AMP/APP difference are low for methods 2/3, 22/23
@@ -1450,32 +1492,23 @@ variety of ways of binning the data (here 30\textendash2 Myr window size and
 half of the size as step) are being tested to see which one produces the better
 and more appropriately smoothed fit.
 
-For Pk 2 (AMP with ``$\alpha$95/Age range'' no more than
-``15\degree/20\degree''), the 20/10 Myr bin/step methods always generate better
-similarities than the 10/5 Myr ones (e.g.\ Fig.~\ref{fig-na-dif2010} versus
-Fig.~\ref{fig-na-dif}).
-
-For only North America, the 10/5 Myr bin/step methods generally and
-unexceptionally produce better similarities than the 20/10 Myr methods do
-(Fig.~\ref{fig-f105d2010}), which mainly depends on the picking methods. Note
-that there are 135, 75 and 99
-paleopoles that compose of 120\textendash0 Ma APWPs of North America, India and
-Australia respectively. Does the reason could be because of the relatively
-larger number of paleopoles for North America? Since theoretically for each
-sliding window, the more ``bad'' paleopoles it contains, the worse similarity
-we should obtain. In the contrary, the less paleopoles the window contains, the
-weaker the effect of averaging out ``bad'' poles' influence would be. So is
-there a threshold number of paleopoles for making an paleomagnetic APWP\@? For
-example, for making a 120\textendash0 Ma APWP, do the results indicate the best
-number of paleopoles we need should be some value between 99 and 135? Here a
-test is implemented as follows. With the results from the 10/5 and 20/10
-bin/step together, 2/1, 4/2, 6/3, 8/4, 12/6, 14/7, 16/8, 20/10, 24/12 and 30/15
-Myr bin/step will be used to generate paleomagnetic APWPs for North America,
-India and Australia to see which one would make the paleomagnetic APWP closest
-to the reference paths. Will the similarities they generate be generally worse
-than those the 10/5 Myr bin/step generates? Or will they be better first and
-then worse than those the 10/5 Myr bin/step generates when the bin/step sizes
-increase up to 20/10 Myr? For the
+Note that there are 135, 75 and 99 paleopoles that compose of 120\textendash0 Ma
+APWPs of North America, India and Australia respectively. Does the reason of
+10/5 Myr generally better than 20/10 could be the relatively larger number of
+paleopoles for North America? Since theoretically for each sliding window, the
+more ``bad'' paleopoles it contains, the worse similarity we should obtain. In
+the contrary, the less paleopoles the window contains, the weaker the effect of
+averaging out ``bad'' poles' influence would be. So is there a threshold number
+of paleopoles for making an paleomagnetic APWP\@? For example, for making a
+120\textendash0 Ma APWP, do the results indicate the best number of paleopoles
+we need should be some value between 99 and 135? Here a test is implemented as
+follows. With the results from the 10/5 and 20/10 bin/step together, 2/1, 4/2,
+6/3, 8/4, 12/6, 14/7, 16/8, 20/10, 24/12 and 30/15 Myr bin/step are also used to
+generate paleomagnetic APWPs for North America, India and Australia to see which
+bin/step size would make paleomagnetic APWP closest to reference path. Will the
+similarities they generate be generally worse than those the 10/5 Myr bin/step
+generates? Or will they be better first and then worse than those the 10/5 Myr
+bin/step generates when the bin/step sizes increase up to 20/10 Myr? For the
 best results (Table.~\ref{tab-pk0vs1bs}), as expected, AMP needs wider sliding
 window and step to get closer to the reference path while APP does not
 (Fig.~\ref{fig-WinStpVsCPD}). Even the best sizes of sliding window and step are
@@ -1571,9 +1604,9 @@ green.}\label{tab-pk0vs1bs}
 \end{figure}
 
 \paragraph{What to expect is}
-the difference values for 20/10 window/step should be generally lower than those
-for 10/5 window/step, which further could result in more best methods and less
-worst methods.
+the difference values for larger window/step size should be generally lower than
+those for smaller window/step size, which further could result in more best
+methods and less worst methods.
 
 \paragraph{The results}
 are summarised in Table.~\ref{tab-2010vs105F}, Table.~\ref{tab-pk0vs1bs} and
@@ -1583,15 +1616,15 @@ Fig.~\ref{fig-WinStpVsCPD}.
 
 \subparagraph{If AMP has to be used, better results can be obtained through
 using large sizes of sliding window and step, commonly more than 24/12 Myr. In
-addition, we should be cautious when Wt 3 is used with AMP.}
+addition, we should be cautious when weighting 3 is used with AMP.}
 
-\subparagraph{APP is recommended, not only because the temporal uncertainty is
-incorporated into the algorithm but also the results from APP are not as that
-sensitive as AMP to the changes of sliding window and step sizes. In fact, for
-APP the results from different window and step sizes are much more stable than
-those from AMP (Fig.~\ref{fig-WinStpVsCPD}). This means we actually do not need
-to worry about what sizes should be chosen for the sliding window and step when
-we use APP method.}
+\subparagraph{APP is still recommended, not only because the temporal
+uncertainty is incorporated into the algorithm but also the results from APP are
+not as that sensitive as AMP to the changes of sliding window and step sizes. In
+fact, for APP the results from different window and step sizes are much more
+stable than those from AMP (Fig.~\ref{fig-WinStpVsCPD}). This means we actually
+do not need to worry about what sizes should be chosen for the sliding window
+and step when we use APP method.}
 
 
 \subsection{Different reference path}
@@ -1725,11 +1758,15 @@ step)]{Path comparisons with best and worst difference values shown in
 Fig.~\ref{fig-dif2010m}. The parenthetical remarks are Picking No and Weighting No.}\label{fig-dif2010bwm}
 \end{figure*}
 
-The differences (Fig.~\ref{fig-dmf}) are all lower than 0.041, and most are less
-than 0.01. That indicates the uncertainties of paleomagnetic mean poles are
-relatively large enough to make uses of Fixed and Moving Hotspot Models as
-references not quite differentiated. So far choosing Fixed or Moving model is
-not a priority.
+For 10/5 Myr bin/step, the absolute differences (Fig.~\ref{fig-dmf}) are all
+lower than 0.041, and most are less than 0.01. This indicates that for comparing
+with paleomagnetic APWPs choosing fixed or moving hotspot model for generating a
+reference path is not quite different. Therefore selecting fixed or moving model
+for having a reference path is not a priority. However, based on the signs of
+the differences between the scores from FHM and MHM (Fig.~\ref{fig-dmf}), for
+North America (Fig.~\ref{fig-mf101}), FHM derived path is a slighly better
+reference in general, while for both India (Fig.~\ref{fig-mf501}) and Australia
+(Fig.~\ref{fig-mf801}), generally MHM derived path is a slightly better choice.
 
 \begin{figure*}
 	\centering
@@ -1751,44 +1788,49 @@ not a priority.
 		positive values: about 19.62\%}\label{fig-mf801}
 	\end{subfigure}
 	\caption[Differences between results from FHM and MHM]{Differences between
-	results from two different reference paths, FHM (Fig.~\ref{fig-dif}) and MHM
-	(Fig.~\ref{fig-difm}) derived.}\label{fig-dmf}
+results from two different reference paths, FHM (Fig.~\ref{fig-dif}) and MHM
+(Fig.~\ref{fig-difm}) derived. The absolute difference values less than
+1.96-standard-deviation interval of the whole 168 values are labeled in green,
+more than 1.96-standard-deviation interval labeled in red.}\label{fig-dmf}
 \end{figure*}
 
-However, through looking at the signs of these differences
-(Fig.~\ref{fig-dmf}), for North America (Fig.~\ref{fig-mf101}), FHM and the
-North America\textendash{}Nubia\textendash{}Mantle plate circuit derived
-path is a better reference option in general, while for both India
-(Fig.~\ref{fig-mf501}) and Australia (Fig.~\ref{fig-mf801}), MHM and the related
-plate circuit derived path is a generally better choice.
+For North America, neigher more nor less change is favored by any particular
+picking method or weighting method. For example, methods 8(0,4), 12(3), (14,24)2
+show more change and (9,22,26)1, (23,27)2, and 24(5) show less. However, methods
+23 and 27 show more change for India, and 22 and 26 show more change for
+Australia. Methods 8, 17 and 21 show less change for India, and 1, 21 and 25
+show less change for Australia.
 
-\subsubsection{MHM and Global Plate Tectonic Circuits Predicted APWP as
-Reference}
+\subsubsection{Relative performance of methods}
 
-Then, based on Fig.~\ref{fig-mhsPred}, Fig.~\ref{fig-mhsPred501},
-Fig.~\ref{fig-mhsPred801},
-
-\paragraph{10 Myr Binning and 5 Myr Stepping}
-
-According to Fig.~\ref{fig-na-difm}, Fig.~\ref{fig-in-difm} and
-Fig.~\ref{fig-au-difm},
-%
 \begin{enumerate}
-  \item there is no best picking method, whereas no. 16 is the worst, for all
-		three continents.
+  \item When 10/5 Myr bin/step is applied, method 19 is still among the best,
+	and 16 still one of the worst, for all 3 plates. Even when 20/10 Myr
+	bin/step is applied, 19 is still relatively a ``good'' method, and 16 a
+	``bad'' one.
+  \item APP still outperforms AMP\@. For 10/5 Myr bin/step, the percentage of
+	factor of greater than 3 (about 19.05\%, 38.1\% and 48.81\% for North
+	America, India and Australia respectively) is less than FHM (about 40.5\%,
+	39.3\% and 50\%). For 20/10 Myr bin/step, the percentage of factor of
+	greater than 3 (about 3.6\% and 46.43\% for India and Australia) is still
+	less than FHM (about 3.8\% and 71.4\%) whilst for North America the
+	percentage (about 44.05\%) is more than FHM (28.6\%).
+  \item Both scores and AMP/APP difference are still low for methods 4/5, 6/7.
+  \item Both scores and AMP/APP difference are still high for methods 16/17
+	(method 17 gives low scores for Australia).
+  \item Still scores are high but AMP/APP difference are low for methods 2/3.
+  \item Still scores are low but AMP/APP difference are high for 0/1 on
+	Australia.
+  \item Comparable AMP/APP (20-10 vs. 10-5, or FHM vs. MHM) still appears for
+	8/9 on Australian plate.
+  \item Method 1 is still a good performer.
+  \item Methods 4/5, 6/7 are still `good' aggressive filters.
+  \item Methods 2/3 (at least 2) are still `bad' aggressive filters.
+  \item For 10/5 Myr bin/step, method 22 is still better than 23 for India. For
+	20/10 Myr bin/step, method 22 is still better than 23 for both North
+	America and India.
+  \item Methods 16/17 are still `bad' for North America and India.
 \end{enumerate}
-
-\paragraph{20 Myr Binning and 10 Myr Stepping}
-
-According to Fig.~\ref{fig-dif2010m},
-%
-\begin{enumerate}
-  \item there is no best picking method, whereas no. 16 is the worst, for all
-		three continents.
-\end{enumerate}
-
-
-\subsubsection{Summary of Results}
 
 \begin{table*}
 \centering
@@ -1805,7 +1847,7 @@ According to Fig.~\ref{fig-dif2010m},
 \multicolumn{2}{l|}{} & Picking & Weighting & Picking & Weighting &  & 0 & 1 &
   2 & 3 & 4 & 5 &  \\ \hline
 \multirow{12}{*}{FHM}
-& Fig.~\ref{fig-na-dif} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13, 15,
+& Fig.~\ref{fig-na-dif} & \multirow{2}{*}{\parbox{2cm}{1, 5, 7, 11, 13, 15,
   \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 5}} &
   \multirow{2}{*}{\parbox{2cm}{2, 5, 7, 8, 14, \textbf{16}, 17, 18, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 27/28 & \textbf{15} & 4 & 2 & 3 & 1
@@ -1820,8 +1862,8 @@ According to Fig.~\ref{fig-dif2010m},
   \multirow{2}{*}{\parbox{2.4cm}{2, 6, 14, \textbf{16}, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 27/28 & \textbf{11} & 4 & 1 & 8 & 3
   & 1 & N/N \\ \\ \cline{2-14}
-& Fig.~\ref{fig-na-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13,
-  15, \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
+& Fig.~\ref{fig-na-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 5, 7, 11, 13, 15,
+  \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{2, 6, 14, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 3/4 & \textbf{18} & 6 & 0 & 2 & 4 &
   3 & N(5n1y)/Y \\ \\ \cline{2-14}
@@ -1836,7 +1878,7 @@ According to Fig.~\ref{fig-dif2010m},
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 41/42 & 7 & 9 & 0 & \textbf{11} & 1
   & 2 & N/N(4n2y) \\ \\ \hline
 \multirow{12}{*}{MHM}
-& Fig.~\ref{fig-na-difm} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 7, 11, 13, 15,
+& Fig.~\ref{fig-na-difm} & \multirow{2}{*}{\parbox{2cm}{1, 5, 7, 11, 13, 15,
   \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.2cm}{0, 8, 10, 12, 14, \textbf{16}, 17, 18, 20, 22, 24}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 11/12 & \textbf{14} & 6 & 1 & 1 & 2
@@ -1851,7 +1893,7 @@ According to Fig.~\ref{fig-dif2010m},
   \multirow{2}{*}{\parbox{2.4cm}{2, 14, \textbf{16}, 22, 26}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 20/21 & 8 & 5 & 1 & \textbf{9} & 4
   & 1 & N/N \\ \\ \cline{2-14}
-& Fig.~\ref{fig-na-dif2010m} & \multirow{2}{*}{\parbox{2cm}{4, 5, 7, 11,
+& Fig.~\ref{fig-na-dif2010m} & \multirow{2}{*}{\parbox{2cm}{5, 7, 11,
   15, 22, 26}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
   \multirow{2}{*}{\parbox{2.4cm}{0, 8, 10, 12, 14, \textbf{16}, 18, 20, 24}} &
   \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 3/4 & \textbf{15} & 6 & 1 & 0 & 1 &
@@ -1870,25 +1912,7 @@ According to Fig.~\ref{fig-dif2010m},
 }
 \end{table*}
 
-According to all the results (Fig.~\ref{fig-dif} and
-Fig.~\ref{fig-dif2010}), we can observe:
-%
-\begin{enumerate}
-  \item generally the APP methods (adding data to a time window with overlapping
-        age selection criterion) produce better similarities than the AMP
-        methods (Table.~\ref{tab-bw}).
-  \item filtering (picking no 2\textendash7, 10, 11, and 14\textendash27) and
-        correcting (picking no 8, 9, 12 and 13) has limited effectiveness.
-  \item weighting is not always making similarities better. In fact, for quite
-        many of the methods, no weighting is the best performer
-		(Table.~\ref{tab-bw}).
-  \item the picking method no 19 is always the best when the FHM predicted APWP
-		is the reference.
-  \item the weighting method no 0, 1 and 5 are generally producing better
-        similarity than 2, 3 and 4.
-\end{enumerate}
-
-\subsection{Discussions}
+\section{Discussions}
 
 The following discussions will be in Q\&A style.
 
@@ -2324,15 +2348,19 @@ GAD hypothesis is proved valid for at least the last 120 Myr.
 		improve the similarity score generally, for example, Pt 11 (APP without
 		redbed-derived data) and 13 (APP with redbed-derived data corrected) are
 		better than Pt 0 for all the three continents.
-  \item APP is better than AMP for making paleomagnetic APWPs, for both kinds
-		of situations when there are lots of data (APP even better, e.g.\ for
-		North America and Australia) and not much data (APP still a better
-		option, e.g.\ for India; Table.~\ref{tab-bw}). APP with filters (Pt
-		3, 5, 7, 9, 11, \ldots, 27) is generally worse than APP without any
-		filter (Pt 1).
-  \item Weighting is actually not affecting, and in some cases makes it much
-		worse, for example, likely worse for the combined methods of Wt 3 and
-		AMP.
+  \item APP (adding data to a time window with overlapping age selection
+	criterion) is better than AMP for making paleomagnetic APWPs, for both kinds
+	of situations when there are lots of data (APP even better, e.g.\ for North
+	America and Australia) and not much data (APP still a better option, e.g.\
+	for India; Table.~\ref{tab-bw}). APP with filters (Pt 3, 5, 7, 9, 11,
+	\ldots, 27) is generally worse than APP without any filter (Pt 1).
+  \item Generally the APP methods produce better similarities than the AMP
+        methods (Table.~\ref{tab-bw}).
+  \item Actually weighting is not always affecting. In fact, for quite
+	many of the methods, no weighting is the best performer
+	(Table.~\ref{tab-bw}). For example, score is likely worse for the combined
+	methods of weight method 3 and AMP.
+  \item weighting is not always making similarities better
   \item APP itself helps incorporate temporal uncertainty into the algorithm.
 		With the bootstraps test helping incorporate spatial uncertainty into
 		the algorithm together, both spatial and temporal uncertainties are
@@ -2704,3 +2732,5 @@ by local tectonic rotations are shown as white circles. The Plate ID 850 helps
 increase the amount of qualified datasets for 100\textendash0
 Ma.}\label{fig_AUfinal}
 \end{figure}~\label{lastpage}
+
+\end{document}
