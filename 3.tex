@@ -1,3 +1,43 @@
+% gjilguid2e.tex
+% V2.1 released 2003 Oct 7 -- Gregor Hutton, updated the web address for the style files.
+
+\documentclass{gji}
+
+\usepackage{timet,booktabs,gensymb,graphicx,caption,multirow,amsmath}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+
+\usepackage[xcdraw]{xcolor}  %colorful words in tables
+
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+\title[How to generate APWPs]{Methods for Producing a Reliable APWP}
+\author[Chenjian Fu]{Chenjian Fu$^1$\thanks{Email: cfu3@kent.edu} Chris
+Rowan$^2$ \\$^1$ Department of Geology, Kent State University, 325 S Lincoln St,
+Kent, OH \emph{44242}, USA \\$^2$ Department of Geology, Kent State University,
+325 S Lincoln St, Kent, OH \emph{44242}, USA}
+\date{Received 2018 December 28; in original form 2018 November 22}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\volume{0}
+\pubyear{2018}
+
+%\def\LaTeX{L\kern-.36em\raise.3ex\hbox{{\small A}}\kern-.15em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
+%\def\LATeX{L\kern-.36em\raise.3ex\hbox{{\Large A}}\kern-.15em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
+% Authors with AMS fonts and mssymb.tex can comment out the following
+% line to get the correct symbol for Geophysical Journal International.
+\let\leqslant=\leq{}
+
+\newtheorem{theorem}{Theorem}[section]
+
+
+\begin{document}\label{firstpage}
+
+\maketitle
+
+
 \begin{summary}
 First, new picking/weighting methods developed here and previously published
 picking/weighting methods are compiled together to generate 168 different
@@ -775,20 +815,20 @@ low difference scores are clearly much better than for those with high ones
 	\centering
 	\begin{subfigure}{.94\textwidth}
 		\includegraphics[width=\textwidth]{figures/101_120_0.pdf}
-		\caption{Plate ID 101 with children: minimum 0.0053 (11(0)), maximum
-		0.0921 (16(3)), mean 0.0335, median 0.0342}\label{fig-na-dif} % subcaption
+		\caption{Plate ID 101 with children: minimum 0.00573 (25(0)), maximum
+		0.08601 (16(2)), mean 0.032403, median 0.032395}\label{fig-na-dif} % subcaption
 	\end{subfigure}
 	\vspace{.1em} % here you can insert horizontal or vertical space
 	\begin{subfigure}{.94\textwidth}
 		\includegraphics[width=\textwidth]{figures/501_120_0.pdf}
 		\caption{Plate ID 501: minimum 0.023 (19(0)), maximum 0.5137 (8(3)),
-		mean 0.1182, median 0.0818}\label{fig-in-dif} % subcaption
+		mean 0.1182, median 0.0835}\label{fig-in-dif} % subcaption
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{.94\textwidth}
 		\includegraphics[width=\textwidth]{figures/801_120_0.pdf}
-		\caption{Plate ID 801 with children: minimum 0.0037 (17(0)), maximum
-		0.3954 (22(3)), mean 0.08432, median 0.05037}\label{fig-au-dif} % subcaption
+		\caption{Plate ID 801 with children: minimum 0.00227 (11(0)), maximum
+		0.3934 (26(3)), mean 0.08373, median 0.05}\label{fig-au-dif} % subcaption
 	\end{subfigure}
 	\caption[Differences of each plate's paleomagnetic APWPs versus
 its FHM predicted APWP]{Equal-weight composite path difference ($\mathcal{CPD}$)
@@ -876,23 +916,23 @@ APWPs (Figs.~\ref{fig-na-difAMPvsAPP},~\ref{fig-na-boxAMPvsAPP}).
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/101_120_0APPvsAMP.pdf}
-		\caption{AMP: minimum 0.0292 (4(5)), maximum 0.0921 (16(3)), mean
-		0.0465, median 0.0464; APP: minimum 0.0053 (11(0)), maximum
-		0.05686 (5(3)), mean 0.0205, median 0.01594}\label{fig-na-difAMPvsAPP}
+		\caption{AMP: minimum 0.02652 (4(1)), maximum 0.08601 (16(2)), mean
+		0.045092, median 0.04570025; APP: minimum 0.00573 (25(0)), maximum
+		0.05835 (17(5)), mean 0.019714, median 0.0149414}\label{fig-na-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/501_120_0APPvsAMP.pdf}
 		\caption{AMP: minimum 0.047 (4(3)), maximum 0.5137 (8(3)), mean
-		0.1684, median 0.1862; APP: minimum 0.023 (19(0)), maximum 0.1359
-		(3(4)), mean 0.06788, median 0.06023}\label{fig-in-difAMPvsAPP}
+		0.16881, median 0.189189; APP: minimum 0.023 (19(0)), maximum 0.1359
+		(3(4)), mean 0.067555, median 0.0602}\label{fig-in-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{figures/801_120_0APPvsAMP.pdf}
-		\caption{AMP: minimum 0.0305 (0(3)), maximum 0.3954 (22(3)), mean
-		0.1264, median 0.0951; APP: minimum 0.0037 (17(0)), maximum 0.11035
-		(15(3)), mean 0.04225, median 0.0282}\label{fig-au-difAMPvsAPP}
+		\caption{AMP: minimum 0.0285868 (3(0)), maximum 0.3934 (26(3)), mean
+		0.12675, median 0.0938; APP: minimum 0.00227 (11(0)), maximum 0.11445
+		(3(2)), mean 0.04071, median 0.025625}\label{fig-au-difAMPvsAPP}
 	\end{subfigure}
 	\caption[Differences of each plate's paleomagnetic APWPs versus its FHM
 predicted APWP (AMP vs APP)]{Separated results from AMP and APP in
@@ -2691,3 +2731,5 @@ by local tectonic rotations are shown as white circles. The Plate ID 850 helps
 increase the amount of qualified datasets for 100\textendash0
 Ma.}\label{fig_AUfinal}
 \end{figure}~\label{lastpage}
+
+\end{document}
