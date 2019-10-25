@@ -1,5 +1,5 @@
 00_no	01_tstop	10_spa_pol_dif	11_spa_pol_tes	20_ang_seg_dif	21_ang_seg_tes	30_len_seg_dif	31_len_seg_tes	22_course_seg1	23_course_seg2	32_len_seg1	33_len_seg2
-0	0	3.65750854	1	nan	nan	nan	nan	nan	nan	nan	nan
+0	0	3.65750854	0	nan	nan	nan	nan	nan	nan	nan	nan
 1	10	3.86914619	0	nan	nan	1.51089804	0	0	194.905067	0	1.51089804
 2	20	4.7528702	0	88.4221282	0	5.52360082	0	-98.7297723	-10.3076442	7.15450856	1.63090774
 3	30	3.82776312	0	30.1206762	0	0.75647843	0	-20.51704	9.6036362	0.680271463	1.43674989
