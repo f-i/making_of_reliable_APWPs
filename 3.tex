@@ -767,7 +767,7 @@ and Australia (Fig.~\ref{fig-au-dif}). The 27 lowest and highest of the 168
 scores for each plate (values greater than 1 standard deviation from the mean)
 are marked in green and red, respectively. Different combinations of windowing
 method, filtering and weighting clearly affect the difference score, with
-$\mathcal{CPD}$ values ranging from 0.0037 to 0.5137. The fits for paths with
+$\mathcal{CPD}$ values ranging from 0.0023 to 0.5137. The fits for paths with
 low difference scores are clearly much better than for those with high ones
 (Fig.~\ref{fig-difbw}). From Fig.~\ref{fig-dif}, it is clear that:
 
@@ -856,9 +856,9 @@ The parenthetical remarks are Picking No and Weighting No.}\label{fig-difbw}
   \item Although there is some overlap (e.g., picking methods 19, 21 [best], and
 	2, 16 [worst] for all the three plates or for both India and Australia; 1,
 	11, 13, 19, 21, 25 [best], and 2, 14, 16, 22, 26 [worst] for both North
-	America and Australia; 5, 7, 19, 21 [best], 2, 8, 16, 18 [worst] for both
-	North America and India), the best- and worst-performing picking/filtering
-	and weighting algorithms are not exactly the same for each plate.
+	America and Australia; 5, 7, 19, 21 [best], 2, 16, 18 [worst] for both North
+	America and India), the best- and worst-performing picking/filtering and
+	weighting algorithms are not exactly the same for each plate.
 \end{enumerate}
 
 \subsection{Effects of windowing method}
@@ -911,15 +911,13 @@ $\mathcal{CPD}$ score than the equivalent AMP-generated path for 82 (97.6\%) of
 the North America scores, 72 (85.7\%) of the India scores, and 84 (100\%) of the
 Australia scores. For the North American and Indian plates, filtering that
 prefers igneous poles (picking methods 4/5 and 6/7) or removes poles with large
-age uncertainties (methods 2/3, 22/23 and 26/27) is most likely to produce AMP
+various uncertainties (methods 22/23 and 26/27) is most likely to produce AMP
 scores close to (less than 1.5 times) or less than the APP scores
 (Figs.~\ref{fig-na-difAMPvsAPP},~\ref{fig-in-difAMPvsAPP}). In the former case,
 the scores are comparable and relatively low; in the latter case, they are
-comparable but relatively high. For the Australian plate, only strict spatial
-and temporal uncertainty filtering (method 2/3) and correcting for inclination
-shallowing (method 8/9) produces comparable scores
-(Fig.~\ref{fig-au-difAMPvsAPP}), producing comparable but moderate scores in
-both cases.
+comparable but relatively high. For the Australian plate, only correcting for
+sedimentary inclination shallowing (method 8/9) produces comparable but moderate
+scores (Fig.~\ref{fig-au-difAMPvsAPP}).
 
 \begin{figure*}
 	\centering
@@ -953,8 +951,9 @@ applied (Fig.~\ref{fig-na-difAMPvsAPP}). This pattern is also seen for the
 Australian plate, but removal of poles published after 1983 (picking method
 16/17) also results in significantly better performance of the APP method
 (Fig.~\ref{fig-au-difAMPvsAPP}). For the Indian plate, the largest difference
-occurs when poles with suspected overprints or local rotations are removed
-(picking method 18/19, Fig.~\ref{fig-in-difAMPvsAPP}).
+occurs when poles with sedimentary inclination shallowing (method 8/9) are
+corrected, or suspected overprints or local rotations are removed (picking
+method 18/19, Fig.~\ref{fig-in-difAMPvsAPP}).
 
 \subsection{Effects of filtering and weighting}
 
@@ -978,7 +977,7 @@ there is very little alteration of the data set, little change from no filtering
 most consequential filters are:
 %
 \begin{enumerate}
-  \item removal of sedimentary poles (methods 4/5 and 6/7), which removes
+  \item removal of sedimentary poles (methods 4/5 and 6/7), which removes about
         40-50\% of the dataset on all 3 plates, with the highest proportion
 		being removed on the Indian plate. Although method 4/5 is more strict,
 		it does not remove many more poles than method 6/7. Especially for North
@@ -990,11 +989,11 @@ most consequential filters are:
   \item removal of poles with large temporal and spatial uncertainty (methods
 		2/3, 22/23), particularly for the Australian plate, where the SS05
 		filtering criteria removes about 70\% of the poles. Filter 26/27
-		combines methods 22/23 and 24/25, but no or very few (in the case of
-		Australia only 1 additional pole) are actually removed.
+		combines methods 22/23 and 24/25, but no or very few (in the only case
+		of Australia only 1 additional pole) are actually removed.
   \item filtering based on publication date (methods 14/15 and 16/17), with the
 		ratio of pre/post 1983 poles varying from about 50/50 on the North
-		American plate to 70/30 on the Australian plate.
+		American plate to about 70/30 on the Australian plate.
 \end{enumerate}
 
 Conversely, filtering or correction for redbeds (methods 10/11 and 12/13), local
@@ -1021,10 +1020,10 @@ methods:
 		effective.
   \item For North America and Australia, correction for inclination flattening
 		generates $\mathcal{CPD}$ scores very similar to scores with no
-		filtering for AMP-derived paths (method 8), and increases scores for
-		APP-derived paths (method 9). In contrast, for India there is a small
-		decrease in $\mathcal{CPD}$ scores compared to no filtering for both
-		AMP- and APP-derived paths.
+		filtering for AMP-derived paths (method 8 vs.\ method 0), and increases
+		scores for APP-derived paths (method 9 vs.\ method 1). In contrast, for
+		India generally there is a small decrease in $\mathcal{CPD}$ scores
+		compared to no filtering for both AMP- and APP-derived paths.
   \item Many of the highest difference scores for North America and India occur
 		when paleopoles published after 1983 are removed (method 16/17), whilst
 		removing paleopoles published before 1983 (method 14/15) generates
@@ -1202,12 +1201,12 @@ to each segment-orientation-change's three mean path poles.}\label{fig-nada}
 \begin{enumerate}
   \item For APP-derived paths from the North American and Australian plates,
 		weighting method 0 (no weighting) and 1 (weighting by sample and site
-		number) appear to produce slightly better $\mathcal{CPD}$ scores than
-		other weighting methods.
-  \item Weighting method 3 (weighting by spatial uncertainty) is most likely to
-		generate much higher $\mathcal{CPD}$ scores, particular for AMP-derived
-		paths, and particular for the Indian plate.
-  \item Weighting method 0, 1 and 5 are generally producing better similarity
+		number) appear to usually produce slightly better $\mathcal{CPD}$ scores
+		than other weighting methods.
+  \item Weighting method 3 (weighting by spatial uncertainty) seems most likely
+		to generate much higher $\mathcal{CPD}$ scores, particular for
+		AMP-derived paths, and particular for the Indian plate.
+  \item Weighting methods 0, 1 and 5 are generally producing better similarity
 		than 2, 3 and 4.
 \end{enumerate}
 
@@ -1267,7 +1266,7 @@ paleopoles with those in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
 	\vspace{.1em}
 	\begin{subfigure}{.43\textwidth}
 		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_11_0.pdf}
-		\caption{Australia: minimum 0 (11(0)), FQ B-A}
+		\caption{Australia: minimum 0 (11(0)), FQ B-A}\label{fig-au-2010110}
 	\end{subfigure}
 	\begin{subfigure}{.43\textwidth}
 		\includegraphics[width=\textwidth]{figures/ay18_801comb_20_10_22_3.pdf}
@@ -1283,15 +1282,16 @@ No.}\label{fig-dif2010bw}
 
 Along with the increasing sizes of moving window and step, mean, median and
 range values of $\mathcal{CPD}$ scores shrink, except for North America the mean
-value of $\mathcal{CPD}$ scores keeping unchanged (Fig.~\ref{fig-dif} and
+value of $\mathcal{CPD}$ scores slightly increase (Fig.~\ref{fig-dif} and
 Fig.~\ref{fig-dif2010}). For North America, most scores actually increase (i.e.
-10-5 is better) except for methods 2, 4, 6, 16/17, 22/23, 26/27 where 20-10
-better ('quality filtering' is less `bad’?). For India, most scores are lower
-(20-10 better) except methods 22 and 26(all), 19(0,1,3,5), 21(0) and 27(1,3,4).
-Biggest decreases are associated with weighting 3 (i.e., effect of weighting is
-being diluted). For Australia, changes are largely negative, which means 20-10
-is better. Also negative change is large for 3, 4, 6, 23, 27. For method 14,
-10-5 is much better, whereas for 15, 20-10 is much better.
+10-5 is better; Fig.~\ref{fig-101f105d2010}) except for methods 2, 4, 6, 16/17,
+22, 26 wherein 20-10 is better ('quality filtering' is less `bad’?). For India,
+most scores are lower (20-10 is better) except methods 22/26(1,2), 15(1,3),
+19(0,1,3), 21(0,1) and 23/27(4,5). Biggest decreases are associated with
+weighting 3 (i.e., effect of weighting is being diluted). For Australia, changes
+are largely negative, which means 20-10 is better. Also negative change is large
+for methods 3, 4, 6, 15, 23, 27. For method 14(0-2,4,5), 10-5 is much better,
+whereas for method 15, 20-10 is much better.
 
 \begin{figure*}
 	\centering
@@ -1336,21 +1336,24 @@ in red.}\label{fig-f105d2010}
 		show less changes for all the three plates. Methods 23 and 27 show less
 		changes for North America and India, but more changes for Australia.
   \item APP still outperforms AMP\@. For North America and India, the percentage
-		of factor of greater than 3 (about 28.6\% and 3.8\% respectively) is
-		less than 10-5 (about 40.5\% and 39.3\% respectively), while for
-		Australia the percentage (about 71.4\%) is more than 10-5 (50\%).
-  \item Both scores and AMP/APP difference are low for methods 4/5, 6/7.
+		of factor of greater than 3 (about 26.19\% and 3.57\% respectively) is
+		less than 10-5 (about 44.05\% and 40.48\% respectively), while for
+		Australia the percentage (about 70.24\%) is more than 10-5 (58.33\%).
+  \item Both scores and AMP/APP difference are low for methods 4/5, 6/7 applied
+		onto North America and India.
   \item Both scores and AMP/APP difference are high for methods 16/17.
   \item Scores are high but AMP/APP difference are low for methods 2/3, 22/23
 		on North America and India.
-  \item Scores are low but AMP/APP difference are high for 0/1 on Australia.
+  \item Scores are low but AMP/APP difference are high for methods 0/1 on North
+		America and Australia.
   \item Comparable AMP/APP (20-10 vs 10-5) appears for 8/9 on Australian plate.
   \item Method 1 is still a good performer.
   \item Methods 4/5, 6/7 are still `good' aggressive filters.
   \item Methods 2/3, 22/23 (at least 2 and 22) are still `bad' aggressive
 		filters. And the scores derived from these methods have control on
 		overall range of scores.
-  \item Methods 16/17 are still `bad' for North America and India.
+  \item Methods 16/17 are still `bad' for North America and India. Method 16 is
+		still `bad' and method 17 is still `good' for Australia.
 \end{enumerate}
 
 \begin{table*}
@@ -1438,8 +1441,8 @@ Fig.~\ref{fig-au-difm} & Fig.~\ref{fig-au-dif2010m} & Y &
 
 Fitting curves by moving averaging change with different time window lengths and
 time increment lengths (i.e.\ steps) (e.g., the similarity of the pair in
-Fig.~\ref{fig-au-2010223} is improved a bit compared to
-Fig.~\ref{fig-au-105223}). A balance needs to be made between having windows
+Fig.~\ref{fig-au-2010110} is improved a bit compared to
+Fig.~\ref{fig-au-105110}). A balance needs to be made between having windows
 that are too wide and steps that are too long which will smooth the data so much
 we miss actual details in the APWP (e.g.\ those 20 Myr window 10 Myr step
 paleomagnetic paths in Fig.~\ref{fig-dif2010bw} and even 30/15 Myr window and
@@ -1720,14 +1723,15 @@ Fig.~\ref{fig-dif2010m}. The parenthetical remarks are Picking No and Weighting 
 \end{figure*}
 
 For 10/5 Myr bin/step, the absolute differences (Fig.~\ref{fig-dmf}) are all
-lower than 0.041, and most are less than 0.01. This indicates that for comparing
-with paleomagnetic APWPs choosing fixed or moving hotspot model for generating a
-reference path is not quite different. Therefore selecting fixed or moving model
-for having a reference path is not a priority. However, based on the signs of
-the differences between the scores from FHM and MHM (Fig.~\ref{fig-dmf}), for
-North America (Fig.~\ref{fig-mf101}), FHM derived path is a slighly better
-reference in general, while for both India (Fig.~\ref{fig-mf501}) and Australia
-(Fig.~\ref{fig-mf801}), generally MHM derived path is a slightly better choice.
+lower than 0.066, and actually most are less than 0.01. This indicates that for
+comparing with paleomagnetic APWPs choosing fixed or moving hotspot model for
+generating a reference path is not quite different. Therefore selecting fixed or
+moving model for having a reference path is not a priority. However, based on
+the signs of the differences between the scores from FHM and MHM
+(Fig.~\ref{fig-dmf}), for North America (Fig.~\ref{fig-mf101}), FHM derived path
+is a slighly better reference in general, while for both India
+(Fig.~\ref{fig-mf501}) and Australia (Fig.~\ref{fig-mf801}), generally MHM
+derived path is a slightly better choice.
 
 \begin{figure*}
 	\centering
@@ -1755,12 +1759,11 @@ results from two different reference paths, FHM (Fig.~\ref{fig-dif}) and MHM
 more than 1.96-standard-deviation interval labeled in red.}\label{fig-dmf}
 \end{figure*}
 
-For North America, neigher more nor less change is favored by any particular
-picking method or weighting method. For example, methods 8(0,4), 12(3), (14,24)2
-show more change and (9,22,26)1, (23,27)2, and 24(5) show less. However, methods
-23 and 27 show more change for India, and 22 and 26 show more change for
-Australia. Methods 8, 17 and 21 show less change for India, and 1, 21 and 25
-show less change for Australia.
+For North America, large changes seem favored by weighting method 3, and small
+changes seem favored by weighting method 5 or picking method 15
+(Fig.~\ref{fig-dmf}). Method 3 brings minor changes to both North America and
+India. Methods 22 and 26 show large changes and methods 17, 19, 21 and 25 show
+minor changes for both India and Australia.
 
 \subsubsection{Relative performance of methods}
 
