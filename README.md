@@ -51,7 +51,7 @@ paths.
 
     data/ay18/801comb contains: Plate 801's raw paleopoles, paleopoles after filtering and (sub-folders) paleopoles in each sliding window with weights and rock types
 
-	data/OtherWindowSizes contains: picking number 0 and 1 datasets with 2, 4, 6, 8, 12, 14, 16, 24 and 30 Myr sliding window sizes with half steps for the three representative continents (120-0 Ma)
+    data/OtherWindowSizes contains: picking number 0 and 1 datasets with 2, 4, 6, 8, 12, 14, 16, 24 and 30 Myr sliding window sizes with half steps for the three representative continents (120-0 Ma)
 
 
 
