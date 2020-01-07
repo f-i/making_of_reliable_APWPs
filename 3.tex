@@ -631,9 +631,27 @@ Traditionally, weights are directly integrated by being multiplied with the
 variable we would like to do weighting to. For example, here weights can be
 directly multiplied with the Cartesian x, y and z components of each paleopole.
 However, this direct multiplying causes the decreasing of $R$, which further
-sensitively and extremely increases $\alpha$95. The consequence would be that
-all the $\alpha$95s of mean poles are extremely large in size and difficult to
-be spatially differentiated.
+sensitively and extremely increases $\alpha$95 (Fig.~\ref{fig-alpha95}),
+especially because $R$ is always less than $N$ and $N$ is usually not that high
+(more than about 50 is rather rare, around 10 averagely). The consequence would
+be that all the $\alpha$95s of mean poles are extremely large in size and
+difficult to be spatially differentiated.
+
+\begin{figure*}
+	\centering
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=\textwidth]{figures/alpha95_000082.png}
+		\caption{perspective view a}
+	\end{subfigure}
+	\begin{subfigure}{.49\textwidth}
+		\includegraphics[width=\textwidth]{figures/alpha95_000094.png}
+		\caption{perspective view b}
+	\end{subfigure}
+	\caption[ ]{Visualization of Equation 11.9 of Essentials of Paleomagnetism:
+Fifth Web Edition, about the estimating of the circle of 95\% confidence
+($p$=0.05) about the mean, $\alpha$95, from resultant vector $R$ and number of
+directions (or paleopoles) $N$.}\label{fig-alpha95}
+\end{figure*}
 
 Therefore, here weights are scaled before being multiplied with the Cartesian
 x, y and z components by
