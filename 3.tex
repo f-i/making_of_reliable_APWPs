@@ -661,8 +661,10 @@ x, y and z components by
 \end{equation*}
 %
 where $N$ is number of paleopoles for making a mean pole. So the scaled weight
-could be greater than 1. This scaling does not only keep the effect of
-weighting but also avoid extremely changing $R$ and indirectly $\alpha$95.
+could be greater than 1 because it is actually scaled through being divided by
+the mean of the weights. This scaling does not only keep the effect of weighting
+but also avoid dramatically changing $R$ and indirectly and extremely changing
+$\alpha$95.
 
 Some of the picking (Table~\ref{tab-pick}) and weighting
 (Table~\ref{tab-weit}) methods developed here are also connected with the V90 Q
@@ -2270,61 +2272,93 @@ Other Type 3 (e.g. Table~\ref{tab-501w0p22vs23}) cases: Fig.~\ref{fig-na-difm}
 Generally, weighting does not affect the similarities dramatically, because the
 six results from the six weighting methods are mostly very close
 (Fig.~\ref{fig-dif}, Fig.~\ref{fig-dif2010}, Fig.~\ref{fig-difm},
-Fig.~\ref{fig-dif2010m}). From the general statistics of performance of the six
-weighting methods shown in Table~\ref{tab-bw}, Weighting No. 1 mostly performs
-the best or at least the second best, which means no weighting works better in
-general. There are a few special cases that one of them dramatically changes
-similarity (e.g.\ for picking method (Pk) 5 and weighting method (Wt) 3, etc.;
-Fig.~\ref{fig-na-dif}). As follows, those normal cases with close results are
-discussed first. Those rare cases are examined later.
+Fig.~\ref{fig-dif2010m}). This closeness is also generally observed in the form
+of clusters in Fig.~\ref{fig-w} and Fig.~\ref{fig-wu}. In addition, from the
+general statistics of performance of the six weighting methods shown in
+Table~\ref{tab-bw}, Weighting No. 0 mostly performs the best or at least the
+second best, which means no weighting works better in general.
 
-For Pk 0 in the North America (101) example (Fig.~\ref{fig-na-dif}), the reason
-of why Wt 1,2,4,5 do not produce better similarity scores than Wt 0 (i.e.\
-no weighting) does is examined here. Take the comparison between Wt 0 and Wt 1
-(Table~\ref{tab-101p0w0vs1}) as an example, although APP indeed decreases the
-values of most distances from the reference and most A95s, APP also brings one
-more significant differentiated segment-length difference (80\textendash85 Ma
-coeval segments; Fig.~\ref{fig-101_8085}) because of the slightly larger A95 and
-shorter coeval pole GCD for 80 Ma Pk 0 Wt 1. Although they are distinguishable,
-the overlapping of their distributions is quite small
-(Fig.~\ref{fig-nac105_00vs01dl}). Wt 2 and 4 cause one more pair of
-distinguishable mean poles ($d_s$) than other weighting methods. However,
-compared with Wt 0, Wt 5 (i.e.\ combination of $\alpha$95 and age error position
-to bin) does affect and bring the best similarity, because Wt 5 decreases the
-GCDs of the 20, 80 and especially 100 Ma distinguishable pole pairs (by more
-than 2 degrees; Table~\ref{tab-101p0w0vs1}).
+When the above-mentioned question, about why APP generally produces better fits
+than AMP, is tackled, we already find that both accuracy (how closely do the
+pairs/segments/angles match) and precision (how large are the uncertainties on
+the pairs/segments/angles, i.e.\ how difficult do they distinguish) can be the
+factors that finally determine the difference score. Although another factor,
+resolution (how many pairs/segments/angles are actually being compared) can
+also influence the difference score (e.g. Table~\ref{tab-pk0vs1bs}), here this
+factor is not relevant to comparisons between different weightings for a
+certain picking method, because the numbers of picked paleopoles are the same
+for the six weighting methods.
 
-\begin{figure}
-\captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
-	\centering
-	\begin{subfigure}{.49\textwidth}
-		\caption{}\label{fig-nac105_00vs01}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb_10_5_0_0vs0_1.pdf}
-	\end{subfigure}
-	\vspace{1em}
-	\begin{subfigure}{.49\textwidth}
-		\caption{}\label{fig-nac105_00vs01dl}
-		\includegraphics[width=\textwidth]{figures/ay18_101comb10_5_0_0vs1_80_85dl.pdf}
-	\end{subfigure}
-	\caption[101 10 5 0 0 vs 0 1 80\textendash85 Ma dl]{Significance testing on
-the 80\textendash85 segment length difference between North American
-paleomagnetic APWPs derived from picking 0 and weightings 0 and 1 and the FHM
-predicted APWP (Fig.~\ref{fig-mhsPred}; Table~\ref{tab-101p0w0vs1}). (a) The
-thin segment through stars is from FHM predicted path, and the bold solid and
-dashed are from paleomagnetic paths. (b) The results from Wt 1 are
-differentiated (Fig.~\ref{fig-na-dlw0} and
-Fig.~\ref{fig-na-dlw1}).}\label{fig-101_8085}
-\end{figure}
+Therefore, at the very basic level, for example, a lower score is the result of
+one of, or combination of:
 
-For Fig.~\ref{fig-na-dif} Pk 1, Wt 0 generates the best similarity. Wt
-2\textendash5 cause at least 3 more pairs of distinguishable mean poles ($d_s$)
-than other weighting methods. Wt 1 increases the GCDs of all the distinguishable
-pole pairs (0, 5 and 120 Ma).
+1. A reduction in the difference scores of significantly different
+pairs/segments, straightforwardly interpreted as a better fit (improved
+accuracy).
 
-For Fig.~\ref{fig-na-dif} Pk 2, Wt 0 generates the best similarity. Wt
-1\textendash5 cause at least 1 more pair of distinguishable mean poles ($d_s$)
-than Wt 0 (60 Ma). Wt 4 also increases another pair of distinguishable mean 
-poles ($d_s$) (80 Ma).
+2. Previously significantly different pairs/segments becoming insignificant.
+This can occur either because the fit is better (improved accuracy), or because
+of an increase in the uncertainty of the mean poles (they become less
+distinguishable - decreased precision).
+
+Fig.~\ref{fig-wp} and Fig.~\ref{fig-wpu} show that the proportions of results
+from Weighting No 1\textendash5 to result from 0 are generally in the second
+quadrant of the coordinate plane, where proportional change in difference score
+is positive whereas proportional change in paleomagnetic FQ score is negative.
+This means weightings do make effects, not obviously in accuracy but mainly in
+improving precision, which could potentially expose more pairs of
+distinguishable poles/segments/angle-changes. Or even accuracy is improved in a
+small amount, improved precision intends to cancel out the effects from
+improved accuracy.
+
+There are a few special cases that one of them dramatically changes similarity
+(e.g.\ for picking method (Pk) 5 and weighting method (Wt) 3, etc.;
+Fig.~\ref{fig-na-dif}).
+
+\begin{figure*}
+\centering
+\includegraphics[width=1\textwidth]{figures/w.pdf}
+\caption[Paleomagnetic APWP's FQ score versus significant difference
+score]{10/5 Myr bin/step paleomagnetic APWP's FQ score (different from FQ, see
+the definitions of FQ and FQ score in Chapter 2) versus significant
+$\mathcal{CPD}$ score (reference path: FHM predicted) for the 28 different
+picking methods. See the significant $\mathcal{CPD}$ scores and Ppath-Rpath FQ
+in Fig.~\ref{fig-dif}.}\label{fig-w}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\includegraphics[width=1\textwidth]{figures/wu.pdf}
+\caption[Paleomagnetic APWP's FQ score versus raw difference score]{10/5 Myr
+bin/step paleomagnetic APWP's FQ score (different from FQ, see the definitions
+of FQ and FQ score in Chapter 2) versus raw difference score (reference path:
+FHM predicted) for the 28 different picking methods. See FQ vs significant
+difference score in Fig.~\ref{fig-w}.}\label{fig-wu}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\includegraphics[width=1\textwidth]{figures/wp.pdf}
+\caption[Proportional changes of weighting 1-5 to 0: Paleomagnetic APWP's FQ
+score versus significant difference score]{Proportion of weighting 1\textendash5
+to 0: Proportional change in 10/5 Myr bin/step paleomagnetic APWP's FQ score
+(different from FQ, see the definitions of FQ and FQ score in Chapter 2) versus
+proportional change in significant $\mathcal{CPD}$ score (reference path: FHM
+predicted) for the 28 different picking methods. See the significant
+$\mathcal{CPD}$ scores and Ppath-Rpath FQ in Fig.~\ref{fig-dif}.}\label{fig-wp}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\includegraphics[width=1\textwidth]{figures/wpu.pdf}
+\caption[Proportional changes of weighting 1-5 to 0: Paleomagnetic APWP's FQ
+score versus raw difference score]{Proportion of weighting 1\textendash5 to 0:
+Proportional change in 10/5 Myr bin/step paleomagnetic APWP's FQ score
+(different from FQ, see the definitions of FQ and FQ score in Chapter 2) versus
+proportional change in raw difference score (reference path: FHM predicted) for
+the 28 different picking methods. See FQ vs significant
+difference score in Fig.~\ref{fig-wp}.}\label{fig-wpu}
+\end{figure*}
 
 \begin{table*}
 \centering
@@ -2351,7 +2385,7 @@ poles ($d_s$) (80 Ma).
 \end{tabular}
 \end{table*}
 
-As the above examples shown, although no weighting is often better than
+As discussed above, although no weighting is often better than
 weighting, the results are actually rather close to each other and also APP
 still improves precision and accuracy of most poles for the cases with larger
 difference scores, although APP brings extra significant differences in shape
