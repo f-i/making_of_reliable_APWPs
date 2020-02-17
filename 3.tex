@@ -2270,7 +2270,7 @@ Other Type 3 (e.g. Table~\ref{tab-501w0p22vs23}) cases: Fig.~\ref{fig-na-difm}
 \subsubsection{Question: Why weighting is not affecting?}
 
 Generally, weighting does not affect the similarities dramatically, because the
-six results from the six weighting methods are mostly very close
+six results from the six weighting methods are mostly very close to each other
 (Fig.~\ref{fig-dif}, Fig.~\ref{fig-dif2010}, Fig.~\ref{fig-difm},
 Fig.~\ref{fig-dif2010m}). This closeness is also generally observed in the form
 of clusters in Fig.~\ref{fig-w} and Fig.~\ref{fig-wu}. In addition, from the
@@ -2311,9 +2311,16 @@ distinguishable poles/segments/angle-changes. Or even accuracy is improved in a
 small amount, improved precision intends to cancel out the effects from
 improved accuracy.
 
-There are a few special cases that one of them dramatically changes similarity
-(e.g.\ for picking method (Pk) 5 and weighting method (Wt) 3, etc.;
-Fig.~\ref{fig-na-dif}).
+There are a few special cases that one or two of the six weighting methods gives
+a result with a dramatically worsened difference score, e.g.\ for weighting
+method (Wt) 3 (Fig.~\ref{fig-dif}). From the labeled dots of Wt 3 in
+Fig.~\ref{fig-w}, Fig.~\ref{fig-wu}, Fig.~\ref{fig-wp} and Fig.~\ref{fig-wpu},
+we can get a general impression that weighting 3 is indeed improving precision
+but not accuracy (at least not enough to offset the effects from improved
+precision) so that this precision improvement is also the culprit that worsens
+the final score. Highly improved precision without corresponding improved
+accuracy would potentially bring more significant differences in shape metrics.
+Wt 3 is exactly performing in this form.
 
 \begin{figure*}
 \centering
@@ -2323,7 +2330,8 @@ score]{10/5 Myr bin/step paleomagnetic APWP's FQ score (different from FQ, see
 the definitions of FQ and FQ score in Chapter 2) versus significant
 $\mathcal{CPD}$ score (reference path: FHM predicted) for the 28 different
 picking methods. See the significant $\mathcal{CPD}$ scores and Ppath-Rpath FQ
-in Fig.~\ref{fig-dif}.}\label{fig-w}
+in Fig.~\ref{fig-dif}. Only those results dramatically worsened by weighting 3
+are labeled.}\label{fig-w}
 \end{figure*}
 
 \begin{figure*}
@@ -2333,7 +2341,8 @@ in Fig.~\ref{fig-dif}.}\label{fig-w}
 bin/step paleomagnetic APWP's FQ score (different from FQ, see the definitions
 of FQ and FQ score in Chapter 2) versus raw difference score (reference path:
 FHM predicted) for the 28 different picking methods. See FQ vs significant
-difference score in Fig.~\ref{fig-w}.}\label{fig-wu}
+difference score in Fig.~\ref{fig-w}. Only those results dramatically worsened
+by weighting 3 are labeled.}\label{fig-wu}
 \end{figure*}
 
 \begin{figure*}
@@ -2345,7 +2354,8 @@ to 0: Proportional change in 10/5 Myr bin/step paleomagnetic APWP's FQ score
 (different from FQ, see the definitions of FQ and FQ score in Chapter 2) versus
 proportional change in significant $\mathcal{CPD}$ score (reference path: FHM
 predicted) for the 28 different picking methods. See the significant
-$\mathcal{CPD}$ scores and Ppath-Rpath FQ in Fig.~\ref{fig-dif}.}\label{fig-wp}
+$\mathcal{CPD}$ scores and Ppath-Rpath FQ in Fig.~\ref{fig-dif}. Only those
+results dramatically worsened by weighting 3 are labeled.}\label{fig-wp}
 \end{figure*}
 
 \begin{figure*}
@@ -2356,96 +2366,28 @@ score versus raw difference score]{Proportion of weighting 1\textendash5 to 0:
 Proportional change in 10/5 Myr bin/step paleomagnetic APWP's FQ score
 (different from FQ, see the definitions of FQ and FQ score in Chapter 2) versus
 proportional change in raw difference score (reference path: FHM predicted) for
-the 28 different picking methods. See FQ vs significant
-difference score in Fig.~\ref{fig-wp}.}\label{fig-wpu}
+the 28 different picking methods. See FQ vs significant difference score in
+Fig.~\ref{fig-wp}. Only those results dramatically worsened by weighting 3 are
+labeled.}\label{fig-wpu}
 \end{figure*}
 
-\begin{table*}
-\centering
-\caption{My caption}
-\label{tab-101p0w0vs1}
-\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
-\hline
-\multicolumn{2}{|c|}{\multirow{2}{*}{FHM predicted for 101}} & \multicolumn{2}{c|}{Pk 0 + Wt 0} & \multicolumn{4}{c|}{Pk 0 + Wt 1} & \multicolumn{2}{c|}{Pk 0 + Wt 5} \\ \cline{3-10} 
-\multicolumn{2}{|c|}{} & \multicolumn{2}{c|}{ds} & \multicolumn{2}{c|}{ds} & \multicolumn{2}{c|}{dl} & \multicolumn{2}{c|}{ds} \\ \hline
-\multicolumn{1}{|c|}{Age (Ma)} & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & Dist (\degree) & \multicolumn{1}{c|}{Pmag A95 (\degree)} & Dist (\degree) & Age (Ma) & Diff (\degree) & Pmag A95 (\degree) & Dist (\degree) \\ \hline
-0 & 0 & 4.27286602 & 5.01 & 3.950661 & \textbf{5.05647} & \textbf{80-85} & \textbf{11.103} & 4.143 & 5.356 \\ \hline
-5 & 1.56039/0.87367 & 4.22350537 & 5.146 & 3.936601 & 5.1286 & \multicolumn{2}{l|}{\multirow{12}{*}{\textbf{}}} & 4.0534 & 5.407 \\ \cline{1-6} \cline{9-10} 
-10 & 2.89214/1.58743 & 20.9920176 & 3.076 & 19.826829 & \textbf{3.22624} & \multicolumn{2}{l|}{} & 19.868 & 3.36 \\ \cline{1-6} \cline{9-10} 
-15 & 2.575/1.63303 & 13.8698147 & 10.3 & 13.827757 & \textbf{10.34} & \multicolumn{2}{l|}{} & 13.85 & 10.2753 \\ \cline{1-6} \cline{9-10} 
-20 & 3.16077/2.20094 & 8.36501201 & 7.2162 & \textbf{8.463096} & 6.9973 & \multicolumn{2}{l|}{} & 8.413 & \textbf{6.7906} \\ \cline{1-6} \cline{9-10} 
-50 & 7.15565/3.22656 & 4.3991229 & 6.22 & \textbf{4.651517} & \textbf{6.273} & \multicolumn{2}{l|}{} & 4.3326 & 6.3563 \\ \cline{1-6} \cline{9-10} 
-55 & 7.17564/4.28065 & 5.6991191 & 8.647 & 5.670719 & \textbf{9.6724} & \multicolumn{2}{l|}{} & 5.52 & 8.53 \\ \cline{1-6} \cline{9-10} 
-60 & 9.71876/6.35204 & 7.71537555 & 9.498 & 6.889233 & 8.607 & \multicolumn{2}{l|}{} & 7.77 & 9.8237 \\ \cline{1-6} \cline{9-10} 
-80 & 8.76515/5.14459 & 6.29356332 & 9.26 & \textbf{6.452368} & 8.098 & \multicolumn{2}{l|}{} & 6.033 & \textbf{8.369} \\ \cline{1-6} \cline{9-10} 
-85 & 5.54221/2.65419 & 8.7/6.7 & 18.995 & 8.7/6.7 & 18.995 & \multicolumn{2}{l|}{} & 8.7/6.7 & 18.995 \\ \cline{1-6} \cline{9-10} 
-100 & 5.79659/5.36693 & 10.2720657 & 10.75658 & 9.286878 & 9.035 & \multicolumn{2}{l|}{} & 9.045 & \textbf{8.68} \\ \cline{1-6} \cline{9-10} 
-115 & 9.27023/5.16012 & 19.767437 & 9.074 & 18.483547 & \textbf{10.054} & \multicolumn{2}{l|}{} & 19.652 & 9.3547 \\ \cline{1-6} \cline{9-10} 
-120 & 14.6882/8.12086 & 3.56957955 & 17.3331 & 3.060561 & 17.062 & \multicolumn{2}{l|}{} & 3.606 & 17.47 \\ \cline{1-6} \cline{9-10} 
-\end{tabular}
-\end{table*}
+In addition, for Wt 3, a small size of $\alpha$95 (high precision) could be
+caused by those sampled directions not covering enough long period (thought to
+be at least about $10^4$ years) to ``average out'' secular variation for giving
+a paleopole. That is to say, the smallest $\alpha$95s could get the greatest
+weights that they should not deserve.
 
-As discussed above, although no weighting is often better than
-weighting, the results are actually rather close to each other and also APP
-still improves precision and accuracy of most poles for the cases with larger
-difference scores, although APP brings extra significant differences in shape
-metrics which is also the main cause of their larger difference scores
-(Table~\ref{tab-101p0w0vs1}). However, APP does not always improves precision
-or accuracy, for example, for the Pt 5 (mainly or only igneous derived) and Wt 3
-(according to $\alpha$95) results (Table~\ref{tab-101p5}). For Pt 5, the result
-with no weighting is still the best, and the results from Wt 0\textendash2, 4, 5
-are close and APP generally improves precision and accuracy, just like the above
-mentioned general cases. Only for Wt 3, APP worsens precision and improves
-accuracy of most poles at the same time. This makes the difference score
-dramatically larger than others. In addition, Wt 3 brings more significant
-differences in shape metrics, which causes the difference score even larger
-(Table~\ref{tab-101p5}). That Wt 3 sometimes gives dramatical worse similarity
-could be related to the way we do the weighting according to the size of
-$\alpha$95, i.e.\, the smaller the $\alpha$95 is, the larger the assigned
-weight is (see more details about Weighting No. 3 in the Weighting paragraph).
-However, small size of $\alpha$95 (high accuracy) could be because of those
-sampled directions not covering enough long period (thought to be at least about
-$10^4$ years) to ``average out'' secular variation for giving a paleopole. That
-is to say, the smallest $\alpha$95s could get the greatest weights that they
-should not deserve.
-
-\begin{table*}
-\centering
-\caption{Highest and lowest values for the same variable are highlighted in red
-  and green respectively.}
-\label{tab-101p5}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{|l|l|llllllllllllll}
-\hline
-\multicolumn{2}{|c|}{} & \multicolumn{2}{c|}{Pk 5 + Wt 0} & \multicolumn{2}{c|}{Pk 5 + Wt 1} & \multicolumn{2}{c|}{Pk 5 + Wt 2} & \multicolumn{4}{c|}{Pk 5 + Wt 3} & \multicolumn{2}{c|}{Pk 5 + Wt 4} & \multicolumn{2}{c|}{Pk 0 + Wt 5} \\ \cline{3-16} 
-\multicolumn{2}{|c|}{\multirow{-2}{*}{FHM predicted for 101}} & \multicolumn{2}{c|}{ds} & \multicolumn{2}{c|}{ds} & \multicolumn{2}{c|}{ds} & \multicolumn{2}{c|}{ds} & \multicolumn{2}{c|}{da} & \multicolumn{2}{c|}{ds} & \multicolumn{2}{c|}{ds} \\ \hline
-\multicolumn{1}{|c|}{Age (Ma)} & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & \multicolumn{1}{l|}{Dist (\degree)} & \multicolumn{1}{l|}{Pmag A95 (\degree)} & \multicolumn{1}{l|}{Dist (\degree)} & \multicolumn{1}{l|}{Pmag A95 (\degree)} & \multicolumn{1}{l|}{Dist (\degree)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & \multicolumn{1}{l|}{Dist (\degree)} & \multicolumn{1}{l|}{Age (Ma)} & \multicolumn{1}{l|}{Diff (\degree)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & \multicolumn{1}{c|}{Dist (\degree)} & \multicolumn{1}{l|}{Pmag A95 (\degree)} & \multicolumn{1}{l|}{Dist (\degree)} \\ \hline
-0 & 0 & \multicolumn{1}{l|}{7.458} & \multicolumn{1}{l|}{2.058} & \multicolumn{1}{l|}{7.4575} & \multicolumn{1}{l|}{2.387} & \multicolumn{1}{l|}{8.027} & \multicolumn{1}{l|}{3.539} & \multicolumn{1}{l|}{7.598} & \multicolumn{1}{l|}{{\color[HTML]{FE0000} \textbf{3.885}}} & \multicolumn{1}{l|}{10-15-20} & \multicolumn{1}{l|}{{\color[HTML]{FE0000} \textbf{126.5907}}} & \multicolumn{1}{l|}{7.7351} & \multicolumn{1}{l|}{3.624} & \multicolumn{1}{l|}{7.67} & \multicolumn{1}{l|}{3.3909} \\ \hline
-5 & 1.56039/0.87367 & \multicolumn{1}{l|}{7.3814} & \multicolumn{1}{l|}{2.624} & \multicolumn{1}{l|}{7.3814} & \multicolumn{1}{l|}{2.995} & \multicolumn{1}{l|}{7.887} & \multicolumn{1}{l|}{3.876} & \multicolumn{1}{l|}{{\color[HTML]{32CB00} \textbf{6.8}}} & \multicolumn{1}{l|}{{\color[HTML]{FE0000} \textbf{4.3453}}} & \multicolumn{2}{l}{\textbf{}} & \multicolumn{1}{l|}{7.515} & \multicolumn{1}{l|}{3.9475} & \multicolumn{1}{l|}{7.29} & \multicolumn{1}{l|}{3.74} \\ \hline
-10 & 2.89214/1.58743 & \multicolumn{4}{l|}{} & \multicolumn{1}{l|}{15.208} & \multicolumn{1}{l|}{3.402} & \multicolumn{1}{l|}{{\color[HTML]{32CB00} \textbf{8.602}}} & \multicolumn{1}{l|}{{\color[HTML]{FE0000} \textbf{5.79}}} & \multicolumn{2}{c|}{dl} & \multicolumn{1}{l|}{16.783} & \multicolumn{1}{l|}{4.2726} & \multicolumn{1}{l|}{14.598} & \multicolumn{1}{l|}{2.87} \\ \hline
-15 & 2.575/1.63303 & \multicolumn{1}{l|}{12.421} & \multicolumn{1}{l|}{9.2} & \multicolumn{1}{l|}{12.4213} & \multicolumn{1}{l|}{9.077} & \multicolumn{1}{l|}{12.384} & \multicolumn{1}{l|}{9.4} & \multicolumn{1}{l|}{{\color[HTML]{32CB00} \textbf{2.0857}}} & \multicolumn{1}{l|}{{\color[HTML]{FE0000} \textbf{11.805}}} & \multicolumn{1}{l|}{Age (Ma)} & \multicolumn{1}{l|}{Diff (\degree)} & \multicolumn{1}{l|}{12.3843} & \multicolumn{1}{l|}{9.4} & \multicolumn{1}{l|}{10.153} & \multicolumn{1}{l|}{10.71} \\ \hline
-20 & 3.16077/2.20094 & \multicolumn{8}{l}{} & \multicolumn{1}{l|}{10-15} & \multicolumn{1}{l|}{{\color[HTML]{FE0000} \textbf{13.52}}} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} \\ \cline{1-2} \cline{5-6} \cline{9-14}
-25 & 4.96061/2.2183 & \multicolumn{2}{l}{} & \multicolumn{1}{l|}{6.463} & \multicolumn{1}{l|}{6.2097} & \multicolumn{2}{l}{} & \multicolumn{1}{l|}{{\color[HTML]{32CB00} \textbf{6.336}}} & \multicolumn{1}{l|}{{\color[HTML]{FE0000} \textbf{6.873}}} & \multicolumn{1}{l|}{15-20} & \multicolumn{1}{l|}{{\color[HTML]{FE0000} \textbf{14.68}}} & \multicolumn{1}{l|}{6.435} & \multicolumn{1}{l|}{6.68} & \multicolumn{2}{l}{\multirow{-2}{*}{}} \\ \cline{1-2} \cline{5-6} \cline{9-16} 
-30 & 3.39692/2.57114 & \multicolumn{4}{l}{} & \multicolumn{2}{l}{} & \multicolumn{1}{l|}{{\color[HTML]{32CB00} \textbf{6.678}}} & \multicolumn{1}{l|}{{\color[HTML]{FE0000} \textbf{6.458}}} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \multicolumn{1}{l|}{6.97} & \multicolumn{1}{l|}{5.724} \\ \cline{1-2} \cline{9-10} \cline{13-16} 
-50 & 7.15565/3.22656 & \multicolumn{4}{l}{} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \multicolumn{1}{l|}{3.34} & \multicolumn{1}{l|}{4.51} & \multicolumn{2}{l}{} \\ \cline{1-2} \cline{13-14}
-55 & 7.17564/4.28065 & \multicolumn{4}{l}{} & \multicolumn{2}{l}{\multirow{-4}{*}{}} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \multicolumn{1}{l|}{5.44} & \multicolumn{1}{l|}{6.2034} & \multicolumn{2}{l}{} \\ \cline{1-2} \cline{7-8} \cline{13-14}
-65 & 7.37969/4.60029 & \multicolumn{4}{l}{} & \multicolumn{1}{l|}{7.6917} & \multicolumn{1}{l|}{7.214} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} \\ \cline{1-2} \cline{7-8} \cline{13-14}
-100 & 5.79659/5.36693 & \multicolumn{4}{l}{} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{\multirow{-4}{*}{}} & \multicolumn{2}{l}{} & \multicolumn{1}{l|}{8.275} & \multicolumn{1}{l|}{7.013} & \multicolumn{2}{l}{\multirow{-4}{*}{}} \\ \cline{1-2} \cline{7-10} \cline{13-16} 
-115 & 9.27023/5.16012 & \multicolumn{4}{l}{\multirow{-6}{*}{}} & \multicolumn{1}{l|}{5.1} & \multicolumn{1}{l|}{12.92} & \multicolumn{1}{l|}{8.5} & \multicolumn{1}{l|}{11.704} & \multicolumn{2}{l}{} & \multicolumn{1}{l|}{5.92} & \multicolumn{1}{l|}{12.355} & \multicolumn{1}{l|}{9.452} & \multicolumn{1}{l|}{11.276} \\ \cline{1-10} \cline{13-16} 
-120 & 14.6882/8.12086 & \multicolumn{1}{l|}{11.4266} & \multicolumn{1}{l|}{13.435} & \multicolumn{1}{l|}{11.4266} & \multicolumn{1}{l|}{13.0664} & \multicolumn{1}{l|}{4.7143} & \multicolumn{1}{l|}{16.543} & \multicolumn{1}{l|}{7.728} & \multicolumn{1}{l|}{15.258} & \multicolumn{2}{l}{\multirow{-7}{*}{}} & \multicolumn{1}{l|}{4.509} & \multicolumn{1}{l|}{17.112} & \multicolumn{1}{l|}{7.943} & \multicolumn{1}{l|}{15.511} \\ \cline{1-10} \cline{13-16} 
-\end{tabular}%
-}
-\end{table*}
-
-Generally, weighting does not improve fit. In other words, Wt 0 is generaly the
-best. Wt 2 or 4 is not recommended, because they never have generated the best
+Generally, weighting is affecting because different weighting functions give
+different results. Weighting generally does improve precision whereas does not
+improve fit. Interestingly no weighting (Wt 0) is generally giving the best fit.
+Wt 2 or 4 is not recommended, because they never have generated the best
 similarities (Table~\ref{tab-bw}), compared with other weighting methods. There
 is no general pattern about which weighting (of Wt 1\textendash5) is better or
 worse. So weighting, for making a paleomagnetic APWP, is not absolutely
 necessary. However, there are some patterns about which weighting is better or
-worse for some specific continent. For example, Wt 3 prefers Australia
-(Table~\ref{tab-bw}). Wt 3 works fine with India. However, Wt 3 is not
-recommended for North America.
+worse for some specific continent or some specific picking methods. For example,
+Wt 3 works generally fine with Australian data (Table~\ref{tab-bw}). However, Wt
+3 is not recommended for North America and India.
 
 \subsubsection{Question: Why best and worst methods are not consistent?}
 \paragraph{Question: Why the picking method 21 is not among the best for
