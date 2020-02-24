@@ -2305,11 +2305,11 @@ Fig.~\ref{fig-wp} and Fig.~\ref{fig-wpu} show that the proportions of results
 from Weighting No 1\textendash5 to result from 0 are generally in the second
 quadrant of the coordinate plane, where proportional change in difference score
 is positive whereas proportional change in paleomagnetic FQ score is negative.
-This means weightings do make effects, not obviously in accuracy but mainly in
-improving precision, which could potentially expose more pairs of
-distinguishable poles/segments/angle-changes. Or even accuracy is improved in a
-small amount, improved precision intends to cancel out the effects from
-improved accuracy.
+This means the five weightings (Wt 1\textendash5) do make effects, not obviously
+in accuracy but mainly in improving precision, which could potentially expose
+more pairs of distinguishable poles/segments/angle-changes. Or even accuracy is
+improved in a small amount, improved precision intends to cancel out the effects
+from improved accuracy.
 
 There are a few special cases that one or two of the six weighting methods gives
 a result with a dramatically worsened difference score, e.g.\ for weighting
@@ -2378,32 +2378,45 @@ a paleopole. That is to say, the smallest $\alpha$95s could get the greatest
 weights that they should not deserve.
 
 Generally, weighting is affecting because different weighting functions give
-different results. Weighting generally does improve precision whereas does not
-improve fit. Interestingly no weighting (Wt 0) is generally giving the best fit.
-Wt 2 or 4 is not recommended, because they never have generated the best
-similarities (Table~\ref{tab-bw}), compared with other weighting methods. There
-is no general pattern about which weighting (of Wt 1\textendash5) is better or
-worse. So weighting, for making a paleomagnetic APWP, is not absolutely
-necessary. However, there are some patterns about which weighting is better or
-worse for some specific continent or some specific picking methods. For example,
-Wt 3 works generally fine with Australian data (Table~\ref{tab-bw}). However, Wt
-3 is not recommended for North America and India.
+obviously different results. However, interestingly weighting does not improve
+fit and generally no weighting (Wt 0) is giving the best fit, although in most
+cases weighting does improve precision. Wt 2 or 4 is not recommended, because
+they never have generated the best similarities (Table~\ref{tab-bw}), compared
+with other weighting methods. There is no general pattern about which weighting
+(of Wt 1\textendash5) is better or worse. So weighting, for making a
+paleomagnetic APWP, is not absolutely necessary. However, there are some
+patterns about which weighting is better or worse for some specific continent or
+some specific picking methods. For example, Wt 3 works generally fine with
+Australian data (Table~\ref{tab-bw}). However, Wt 3 is not recommended for North
+America and India.
 
 \subsubsection{Question: Why best and worst methods are not consistent?}
-\paragraph{Question: Why the picking method 21 is not among the best for
-20 Myr binning and 10 Myr stepping with both space and shape tested?}
 
-As shown in Fig.~\ref{fig-dif}, both the picking methods 19 and 21 are among the
-best. However, the picking method 21 is not one of the best any more for 20 Myr
-binning and 10 Myr stepping with both space and shape tested
-(Fig.~\ref{fig-dif2010}). Further, in fact, in Fig.~\ref{fig-dif2010}, we can
-see the picking method 21 is still one of the best for North America (101) and
-Australia (801), but just not for India (501). However, even for India (501),
-the difference values (ranging 0.0483\textendash0.0535) produced by the picking
-method 21 are still closer to the left bound of the one-standard-deviation
-interval 0.0359\textendash0.1072 and relatively farther from the mean 0.074,
-which means the picking method 21 is still a relatively better one.
+For all the three continents, North America, India and Australia, picking
+methods 19 (APP with local rotation or secondary print excluded) and 21 (APP
+with local rotation and secondary print corrected) are consistently the best or
+at least the relatively better (for example, in Fig.~\ref{fig-in-dif2010},
+picking 21 results are not colored in green, but ranging from
+0.0483\textendash0.0561 that is still much less than the mean, 0.074 and also
+the median, 0.072); whereas picking methods 16 (AMP with publications before
+1983) and 18 (AMP with local rotation or secondary print excluded) are
+consistently the worst or at least the relatively worse.
 
+Nevertheless, for each single continent, they have their own consistently best
+and worst picking methods that are not the best or worst for other continents.
+For example, picking method 15 (APP with publications after 1983) works well
+with North America. We know that 70 North American paleopoles (about 53\%) have
+contributed to picking method 15 for 120\textendash0 Ma. However, only 28 Indian
+paleopoles (about 38\%) and 29 Australian paleopoles (about 30\%) have
+contributed to method 15. In contrast, the picking method 17 (APP with
+publications before 1983) works well with only Australia. This also tells that
+number of paleopoles is a key factor that affects the fit score. The fact that
+picking method 22 (AMP with SS05 criteria) doesn't work well with only Australia
+also reflects the importance of this factor.
+
+In summary, the reason why some best and worst methods are not consistent is
+generally that different continents have their unique data sets and get their
+own paleomagnetic studies in varying degrees.
 
 \subsubsection{Question: Are there particular parts of the path that are more
 variable? Do different methods affect different parts of the path differently?}
@@ -2424,35 +2437,38 @@ GAD hypothesis is proved valid for at least the last 120 Myr.
 \subsection{Universal Rules of Ways of Processing Paleomagnetic Data:}
 %
 \begin{description}
-  \item Although effects of filters (all the picking methods except Pk 1) have
-		marginal change in reducing N (precision going down), some filters do
-		improve the similarity score generally, for example, Pt 11 (APP without
-		redbed-derived data) and 13 (APP with redbed-derived data corrected) are
-		better than Pt 0 for all the three continents.
+  \item Although effects of filters (all the picking methods where number of
+	paleopoles shrinks compared to Pt 0 and Pt 1; see Fig.~\ref{fig-dif}) have a
+	marginal change in reducing N (precision potentially going down), some
+	filters do improve the similarity score, for example, Pt 25 (APP without
+	superseded data) is always giving better scores than Pt 1 for all the
+	three continents. However, Pt 0 and Pt 1 (no filtering and corrections
+	applied) still generally perform well.
   \item APP (adding data to a time window with overlapping age selection
 	criterion) is better than AMP for making paleomagnetic APWPs, for both kinds
 	of situations when there are lots of data (APP even better, e.g.\ for North
 	America and Australia) and not much data (APP still a better option, e.g.\
-	for India; Table~\ref{tab-bw}). APP with filters (Pt 3, 5, 7, 9, 11,
-	\ldots, 27) is generally worse than APP without any filter (Pt 1).
-  \item Generally the APP methods produce better similarities than the AMP
-        methods (Table~\ref{tab-bw}).
-  \item Actually weighting is not always affecting. In fact, for quite
-	many of the methods, no weighting is the best performer
+	for India; Table~\ref{tab-bw}). APP with most filters/corrections (Pt 3, 5,
+	7, 9, 11, \ldots, 27) are generally giving worse scores than APP without any
+	filter/correction (Pt 1).
+  \item In most cases the APP methods produce better similarities than the AMP
+	methods (Table~\ref{tab-bw}).
+  \item Actually weighting is not improving the fit but improving precision
+	generally. For quite many of the methods, no weighting is the best performer
 	(Table~\ref{tab-bw}). For example, score is likely worse for the combined
 	methods of weight method 3 and AMP.
-  \item weighting is not always making similarities better
   \item APP itself helps incorporate temporal uncertainty into the algorithm.
-		With the bootstraps test helping incorporate spatial uncertainty into
-		the algorithm together, both spatial and temporal uncertainties are
-		successfully considered in APP methods.
+	With the bootstraps test helping incorporate spatial uncertainty into the
+	algorithm together, both spatial and temporal uncertainties are successfully
+	considered in APP methods.
 \end{description}
 
 \subsection{Conditional Rules of Ways of Processing Paleomagnetic Data:}
 %
 \begin{description}
-  \item Picking method no. 16 (AMP with data from old studies) is not
-		recommended, e.g.\ before 1983) for generating a paleomagnetic APWP.
+  \item Picking methods no. 16 (AMP with data from old studies) and 18 (AMP
+	without data affected by rotations and secondary print) are not recommended
+	for generating a paleomagnetic APWP.
 \end{description}
 
 \subsection{Summary}
