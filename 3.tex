@@ -572,15 +572,18 @@ i.e. B$\leq$ 1 and N$>$1, weight=$(1-\frac{1}{N})*0.5$ (for 120\textendash0 Ma
 North America, there are 20 such datasets, India 26, Australia 22). If B $\leq$
 1 and N $\leq$ 1 (there are only 23 datasets for the whole GPMDB 4.6b, including
 18 with both B and N informations missing; for 120\textendash0 Ma North America,
-India and Australia, there is no such dataset), weight=0.2.
+India and Australia, there is no such dataset), weight=0.2 (No. 1 in
+Table~\ref{tab-weit}).
 
 \subparagraph{Weighting by age uncertainty (Weighting 2)} Above a maximum age
 range that represents a well-constrained age, defined as half of each geological
-period in the Phanerozoic Eon (e.g., Quaternary, Neogene)~\cite{v90,T19} or 15
-Myr (the halves of the Paleogene, Cretaceous, and Jurassic periods are all at
-least 20 Myr, which is large for these relatively young geologic periods),
-whichever is smaller, paleopoles are given an increasingly small weight as the
-age uncertainty (the high magnetic age $-$ the low magnetic age) increases.
+period in the Phanerozoic Eon (e.g., Quaternary, Neogene; here the geological
+period that the middle point of the paleopole's age range falls within is
+assigned)~\cite{v90,T19} or 15 Myr (the halves of the Paleogene, Cretaceous, and
+Jurassic periods are all at least 20 Myr, which is large for these relatively
+young geologic periods), whichever is smaller, paleopoles are given an
+increasingly small weight as the age uncertainty (the high magnetic age $-$ the
+low magnetic age) increases (No. 2 in Table~\ref{tab-weit}).
 
 \subparagraph{Weighting by spatial uncertainty (Weighting 3).} Paleopoles with a
 smaller $\alpha$95 confidence ellipse are given a higher weighting than those
