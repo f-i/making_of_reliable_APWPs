@@ -1,3 +1,4 @@
+# **The content in this repository has been integrated as Chapter 3 with my dissertation (https://github.com/f-i/dissertation).**
 # Making of Reliable APWPs
 
 About how many ways we have to make paleomagnetic APWPs, and most importantly
